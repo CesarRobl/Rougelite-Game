@@ -21,5 +21,6 @@ public class PelletController : MonoBehaviour
             ai.HP--;
             Destroy(gameObject);
         }
+        else if(col.gameObject.layer != 7) Destroy(gameObject);
     }
 }

@@ -9,13 +9,21 @@ public class TestAI : MonoBehaviour
     public bool found;
     public float drange;
 
-    // Update is called once per frame
+    private Vector3 pastpos;
+    private void Start()
+    {
+        pastpos= transform.position;
+    }
+
     void Update()
     {
         Debug.Log(drange);
-      if(found)MoveToPlayer();
+        if (found) MoveToPlayer();
+        else transform.position = pastpos;
       SeekPlayer();
         if(HP <= 0) Die();
+        
+        
     }
 
     void MoveToPlayer()

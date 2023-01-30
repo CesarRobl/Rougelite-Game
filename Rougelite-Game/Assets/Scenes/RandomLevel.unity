@@ -338,7 +338,8 @@ MonoBehaviour:
   rb: {fileID: 493472918}
   speed: 5
   timer: 0
-  shootdelay: 8
+  shootdelay: 10
+  movedelay: 6
   dir: {x: 0, y: 0, z: 0}
   pos: {x: 0, y: 0, z: 0}
   dir2: {x: 0, y: 0, z: 0}
@@ -551,8 +552,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1063,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 618334365546585377, guid: 796ff84a333a01547bd1284dc4b23723, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 6165929809796948070, guid: 5cae6b160c2b49c4b8e49b880dd70206, type: 3}
     - target: {fileID: 6778406420929001713, guid: 796ff84a333a01547bd1284dc4b23723, type: 3}
       propertyPath: m_Name
       value: ObjectManager

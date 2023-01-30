@@ -5,5 +5,6 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
    public GameObject pellet;
+   public GameObject enemy;
 
 }

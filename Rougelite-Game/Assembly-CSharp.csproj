@@ -46,6 +46,7 @@
      <Compile Include="Assets\TestItems\TempPlayer.cs" />
      <Compile Include="Assets\Scripts\ObjectController.cs" />
      <Compile Include="Assets\Scripts\GMController.cs" />
+     <Compile Include="Assets\Scripts\SpawnController.cs" />
      <Compile Include="Assets\Scripts\Roomlist.cs" />
      <Compile Include="Assets\TestItems\TestAI.cs" />
      <Compile Include="Assets\Scripts\DoorScript.cs" />

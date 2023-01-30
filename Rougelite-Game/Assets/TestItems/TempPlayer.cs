@@ -9,7 +9,7 @@ public class TempPlayer : MonoBehaviour
 
     public GameObject cam;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed,timer,shootdelay;
+    [SerializeField] private float speed,timer,shootdelay,movedelay;
     private Vector2 fast;
     public Vector3 dir,pos,dir2,pos2;
     [HideInInspector] public bool entering;
@@ -56,7 +56,7 @@ public class TempPlayer : MonoBehaviour
         }
         else vel.x = 0;
         
-        rb.velocity = Vector2.Lerp(rb.velocity, vel, 3 * Time.deltaTime);
+        rb.velocity = Vector2.Lerp(rb.velocity, vel, movedelay * Time.deltaTime);
         // rb.velocity = vel;
     }
 

@@ -41,20 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
-     <Folder Include="Assets" />
-     <Folder Include="Assets/Scenes" />
-     <Reference Include="UnityEngine">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.CoreModule">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
-=======
-     <Compile Include="Assets\StageController.cs" />
-     <Compile Include="Assets\Roomlist.cs" />
+     <Compile Include="Assets\Scripts\RoomController.cs" />
+     <Compile Include="Assets\Scripts\StageController.cs" />
+     <Compile Include="Assets\TestItems\TempPlayer.cs" />
+     <Compile Include="Assets\Scripts\ObjectController.cs" />
+     <Compile Include="Assets\Scripts\GMController.cs" />
+     <Compile Include="Assets\Scripts\Roomlist.cs" />
+     <Compile Include="Assets\TestItems\TestAI.cs" />
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
+     <Compile Include="Assets\TestItems\PelletController.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -255,7 +250,6 @@
      </Reference>
      <Reference Include="UnityEditor">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll</HintPath>
->>>>>>> e74ae0fb060784d52ffd8f54259339e82fcbf0ed
      </Reference>
      <Reference Include="UnityEditor.CoreModule">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>

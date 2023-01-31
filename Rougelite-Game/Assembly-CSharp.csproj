@@ -50,7 +50,7 @@
      <Compile Include="Assets\Scripts\Roomlist.cs" />
      <Compile Include="Assets\TestItems\TestAI.cs" />
      <Compile Include="Assets\Scripts\DoorScript.cs" />
-     <Compile Include="Assets\movement.cs" />
+     <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\TestItems\PelletController.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

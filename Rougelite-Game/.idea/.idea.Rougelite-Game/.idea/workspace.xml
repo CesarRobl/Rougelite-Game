@@ -7,8 +7,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+=======
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TestItems/TestAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Platformer/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+>>>>>>> 8bf60c9663c3d2e0037fc01ca9370518aec84379
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +81,14 @@
       <updated>1675030456563</updated>
       <workItem from="1675030458656" duration="3066000" />
       <workItem from="1675033594048" duration="4107000" />
+<<<<<<< HEAD
       <workItem from="1675184507921" duration="908000" />
+=======
+      <workItem from="1675073187370" duration="999000" />
+      <workItem from="1675081962957" duration="15322000" />
+      <workItem from="1675107323942" duration="2244000" />
+      <workItem from="1675120563438" duration="405000" />
+>>>>>>> 8bf60c9663c3d2e0037fc01ca9370518aec84379
     </task>
     <servers />
   </component>

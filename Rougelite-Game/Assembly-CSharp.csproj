@@ -41,10 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
-     <Compile Include="Assets\StageController.cs" />
-     <Compile Include="Assets\Roomlist.cs" />
+     <Compile Include="Assets\Scripts\RoomController.cs" />
+     <Compile Include="Assets\Scripts\StageController.cs" />
+     <Compile Include="Assets\TestItems\TempPlayer.cs" />
+     <Compile Include="Assets\Scripts\ObjectController.cs" />
+     <Compile Include="Assets\Scripts\GMController.cs" />
+     <Compile Include="Assets\Scripts\SpawnController.cs" />
+     <Compile Include="Assets\Scripts\Roomlist.cs" />
+     <Compile Include="Assets\TestItems\TestAI.cs" />
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
      <Compile Include="Assets\movement.cs" />
+     <Compile Include="Assets\TestItems\PelletController.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -80,53 +87,6 @@
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
-=======
-     <Compile Include="Assets\Scripts\RoomController.cs" />
-     <Compile Include="Assets\Scripts\StageController.cs" />
-     <Compile Include="Assets\TestItems\TempPlayer.cs" />
-     <Compile Include="Assets\Scripts\ObjectController.cs" />
-     <Compile Include="Assets\Scripts\GMController.cs" />
-     <Compile Include="Assets\Scripts\SpawnController.cs" />
-     <Compile Include="Assets\Scripts\Roomlist.cs" />
-     <Compile Include="Assets\TestItems\TestAI.cs" />
-     <Compile Include="Assets\Scripts\DoorScript.cs" />
-     <Compile Include="Assets\TestItems\PelletController.cs" />
-     <Reference Include="UnityEngine">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AIModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ARModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AccessibilityModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AndroidJNIModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AnimationModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AssetBundleModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.AudioModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClothModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterInputModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterRendererModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.CoreModule">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
->>>>>>> 8bf60c9663c3d2e0037fc01ca9370518aec84379
      </Reference>
      <Reference Include="UnityEngine.CrashReportingModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
@@ -291,11 +251,7 @@
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor">
-<<<<<<< HEAD
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
-=======
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll</HintPath>
->>>>>>> 8bf60c9663c3d2e0037fc01ca9370518aec84379
      </Reference>
      <Reference Include="UnityEditor.CoreModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>
@@ -732,6 +688,9 @@
      <Reference Include="Unity.2D.Tilemap.Extras">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Animation.Editor">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
@@ -743,9 +702,6 @@
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
@@ -777,8 +733,11 @@
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <Reference Include="Unity.2D.Path.Editor">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
@@ -792,14 +751,17 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <Reference Include="Unity.2D.Psdimporter.Editor">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
@@ -812,6 +774,9 @@
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Welcome.Editor">
+     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.Welcome.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
@@ -839,15 +804,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Welcome.Editor">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.VisualScripting.Welcome.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Path.Editor">
-     <HintPath>/Users/isaias/Desktop/five guys /Rougelite-Game/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

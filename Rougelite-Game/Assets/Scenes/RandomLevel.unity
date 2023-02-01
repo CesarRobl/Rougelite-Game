@@ -1076,7 +1076,7 @@ PrefabInstance:
     - target: {fileID: 618334365546585377, guid: 796ff84a333a01547bd1284dc4b23723, type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 6165929809796948070, guid: 9aed555cf22f34f478c430662d8decc6, type: 3}
+      objectReference: {fileID: 6165929809796948070, guid: 7c98d0f8293994a51b91bb99bef2f78c, type: 3}
     - target: {fileID: 6778406420929001713, guid: 796ff84a333a01547bd1284dc4b23723, type: 3}
       propertyPath: m_Name
       value: ObjectManager

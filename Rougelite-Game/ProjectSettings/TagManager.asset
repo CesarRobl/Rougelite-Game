@@ -8,6 +8,9 @@ TagManager:
   - TestPlayer
   - Door
   - HealthDrop
+  - Walls
+  - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX

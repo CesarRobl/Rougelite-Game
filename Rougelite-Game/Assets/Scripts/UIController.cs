@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public TextMeshProUGUI PlayerHP;
+    public TextMeshProUGUI TestFrame;
     void Start()
     {
         
@@ -16,5 +17,6 @@ public class UIController : MonoBehaviour
     void Update()
     {
         PlayerHP.text = "HP:" + " " + GMController.gm.playerhealth;
+        TestFrame.text = "Playerhurt: " + GMController.gm.playerhurt;
     }
 }

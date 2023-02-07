@@ -23,9 +23,13 @@ public class TempPlayer : MonoBehaviour
     {
        TempMovement();
         Shoot();
-        
+        if(Input.GetMouseButtonDown(0) ) AttackCode();
     }
 
+    void AttackCode()
+    {
+        GMController.gm.ani.sword.SetTrigger("Swing");
+    }
     void TempMovement()
     {
         Vector2 vel = rb.velocity;

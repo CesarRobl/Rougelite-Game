@@ -9,8 +9,9 @@ public class TestAI : MonoBehaviour
     public bool found;
     public float drange;
 
-    private Vector3 pastpos;
-    private void Start()
+    [HideInInspector]public Vector3 pastpos;
+    private Vector2 dir;
+    private void Awake()
     {
         pastpos= transform.position;
     }
@@ -21,7 +22,7 @@ public class TestAI : MonoBehaviour
         if (found) MoveToPlayer();
         else transform.position = pastpos;
       SeekPlayer();
-        if(HP <= 0) Die();
+        if(HP <= 0) GMController.gm.Die(gameObject);
         
         
     }
@@ -34,7 +35,7 @@ public class TestAI : MonoBehaviour
 
     void SeekPlayer()
     {
-        Vector2 dir = GMController.gm.player.position - transform.position;
+         dir = GMController.gm.player.position - transform.position;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~LayerMask.NameToLayer("Pellet"));
         if (hit.collider != null)
         {
@@ -48,10 +49,12 @@ public class TestAI : MonoBehaviour
         }
     }
 
-    void Die()
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        Destroy(gameObject);
+        TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
+        if (tp != null)
+        {
+            
+        }
     }
-
-    
 }

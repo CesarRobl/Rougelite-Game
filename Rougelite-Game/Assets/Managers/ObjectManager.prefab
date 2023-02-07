@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592107225010878585}
-  - component: {fileID: 618334365546585377}
+  - component: {fileID: 234466346267259753}
+  - component: {fileID: 3776519307180248193}
   m_Layer: 0
   m_Name: ObjectManager
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &618334365546585377
+--- !u!114 &234466346267259753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,4 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da21719695a29b74a975b6201e6c4c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pellet: {fileID: 8674995396899424546, guid: ecdafa7a7ff784d45973fa87f5cfb81d, type: 3}
+  elist: {fileID: 3776519307180248193}
+  pellet: {fileID: 4050828239492021010, guid: 771eace760b4d6c4fb10ccd76427ee66, type: 3}
+  enemy: {fileID: 6165929809796948070, guid: 7c98d0f8293994a51b91bb99bef2f78c, type: 3}
+  block: {fileID: 6816733930417872858, guid: 398a915b25e45e1409c4930f860a801e, type: 3}
+  Heathdrop: {fileID: 3491668872186029063, guid: 56bb43e8bebc14846b08d959d5eb79b2, type: 3}
+--- !u!114 &3776519307180248193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778406420929001713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028ae32f56c6f6d4f968d2e6c950a8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  etype:
+  - {fileID: 4943919189498352127, guid: 7185333091a7e8d4bb2d168553c26f96, type: 3}
+  - {fileID: 6165929809796948070, guid: 7c98d0f8293994a51b91bb99bef2f78c, type: 3}

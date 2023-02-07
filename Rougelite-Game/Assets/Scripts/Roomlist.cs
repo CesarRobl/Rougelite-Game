@@ -12,6 +12,7 @@ public class Roomlist : MonoBehaviour
     public GameObject[] leftrooms;
     public GameObject[] rightrooms;
     public GameObject[] cornerrooms;
+    public GameObject bossroom;
 
     private void Start()
     {

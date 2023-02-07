@@ -21,7 +21,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TempMovement();
+       TempMovement();
         Shoot();
         
     }
@@ -117,6 +117,11 @@ public class TempPlayer : MonoBehaviour
             dir = col.gameObject.GetComponent<DoorScript>().dir;
             dir2 = col.gameObject.GetComponent<DoorScript>().dir;
             StartCoroutine(EnterRoom());
+        }
+        if((col.gameObject.CompareTag("HealthDrop")))
+        {
+            GMController.gm.playerhealth++;
+            Destroy(col.gameObject);
         }
     }
 

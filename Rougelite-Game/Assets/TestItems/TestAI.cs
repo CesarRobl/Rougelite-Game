@@ -9,7 +9,7 @@ public class TestAI : MonoBehaviour
     public bool found;
     public float drange;
 
-    private Vector3 pastpos;
+    [HideInInspector]public Vector3 pastpos;
     private Vector2 dir;
     private void Awake()
     {

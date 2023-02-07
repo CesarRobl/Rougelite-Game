@@ -120,6 +120,7 @@ public class TempPlayer : MonoBehaviour
         }
         if((col.gameObject.CompareTag("HealthDrop")))
         {
+            GMController.gm.playerhealth++;
             Destroy(col.gameObject);
         }
     }

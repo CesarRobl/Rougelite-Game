@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemy : MonoBehaviour
+public class RangedEnemy : TestAI
 {
-    public int HP;
-    public bool found;
-    public float drange;
+   
     [SerializeField] private float shootdelay;
 
-    private Vector3 pastpos;
+   
     void Awake()
     {
         pastpos= transform.position;

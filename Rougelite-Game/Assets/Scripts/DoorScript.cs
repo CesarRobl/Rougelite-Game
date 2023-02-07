@@ -26,10 +26,10 @@ public class DoorScript : MonoBehaviour
       // if ( hit.collider.gameObject.CompareTag("Walls"))
       // {
       //   SpawnWall();
-      //   stop = true;
+      //   
       // }
       
-     
+     stop = true;
    }
    private void OnDrawGizmos()
    {

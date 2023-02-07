@@ -7,8 +7,7 @@ TagManager:
   - StageSpawn
   - TestPlayer
   - Door
-  - Walls
-  - Enemy
+  - HealthDrop
   layers:
   - Default
   - TransparentFX

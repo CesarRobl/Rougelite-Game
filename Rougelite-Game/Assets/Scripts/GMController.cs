@@ -74,6 +74,11 @@ public class GMController : MonoBehaviour
     }
     public void Die(GameObject enemy)
     {
+        int rand = Random.Range(0, 100);
+        if (rand >= 50)
+        {
+            Instantiate(oc.Heathdrop,enemy.transform.position,Quaternion.identity);
+        }
         Destroy(enemy);
     }
 }

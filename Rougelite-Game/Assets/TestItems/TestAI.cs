@@ -21,7 +21,7 @@ public class TestAI : MonoBehaviour
         if (found) MoveToPlayer();
         else transform.position = pastpos;
       SeekPlayer();
-        if(HP <= 0) Die();
+        if(HP <= 0) GMController.gm.Die(gameObject);
         
         
     }
@@ -48,10 +48,7 @@ public class TestAI : MonoBehaviour
         }
     }
 
-    void Die()
-    {
-        Destroy(gameObject);
-    }
+   
 
     
 }

@@ -21,7 +21,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TempMovement();
+        // TempMovement();
         Shoot();
         
     }

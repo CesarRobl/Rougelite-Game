@@ -17,7 +17,7 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(drange);
+        
         if (found) MoveToPlayer();
         else transform.position = pastpos;
       SeekPlayer();

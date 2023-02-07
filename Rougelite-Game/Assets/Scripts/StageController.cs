@@ -10,13 +10,23 @@ public class StageController : MonoBehaviour
     public int NumDir;
 
     private int ran;
-    private bool spawned, touching;
+    private bool touching,stop;
+    [HideInInspector] public bool spawned;
+    
     void Awake()
     {
-        if(!spawned && !touching)Invoke("SpawnRoom", 15f * Time.deltaTime);
+        if(!touching & !spawned)Invoke("SpawnRoom", 15f * Time.deltaTime);
     }
 
-    
+
+    private void FixedUpdate()
+    {
+        if (!stop)
+        {
+            GMController.gm.sc.Add(this);
+            stop = true;
+        }
+    }
 
     void SpawnRoom()
     {
@@ -45,7 +55,7 @@ public class StageController : MonoBehaviour
             Instantiate(Roomlist.rl.rightrooms[ran], transform.position, Quaternion.identity);
         }
 
-        spawned = true;
+        GMController.gm.roomint++;
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -55,6 +65,7 @@ public class StageController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Destroy(gameObject);
         StageController sc = col.GetComponent<StageController>();
 
         if (sc != null)

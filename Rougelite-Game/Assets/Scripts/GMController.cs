@@ -30,7 +30,7 @@ public class GMController : MonoBehaviour
     {
         timer = hurtdelay;
         maxhealth = playerhealth;
-        // Cursor.visible = false;
+        Cursor.visible = true;
         gm = this;
     }
 

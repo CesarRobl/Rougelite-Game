@@ -40,7 +40,7 @@ public class GMController : MonoBehaviour
     void Update()
     {
        if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
-        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
         if(playerhealth <= 0) PlayerDie();
         if (playerhealth > maxhealth) playerhealth = maxhealth;

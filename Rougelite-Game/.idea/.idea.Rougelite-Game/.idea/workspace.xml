@@ -10,6 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AniController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -85,6 +88,8 @@
       <workItem from="1675208517134" duration="1008000" />
       <workItem from="1675636791969" duration="3387000" />
       <workItem from="1675768999841" duration="1969000" />
+      <workItem from="1675797133142" duration="10085000" />
+      <workItem from="1675943144102" duration="2501000" />
     </task>
     <servers />
   </component>

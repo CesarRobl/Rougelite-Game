@@ -52,9 +52,15 @@ public class TestAI : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
-        if (tp != null)
+        if (tp != null & !GMController.gm.playerhurt)
         {
-            
+            GMController.gm.playerhealth--;
+            GMController.gm.playerhurt = true;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Sword")) HP--;
     }
 }

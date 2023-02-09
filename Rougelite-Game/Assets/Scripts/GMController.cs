@@ -17,7 +17,9 @@ public class GMController : MonoBehaviour
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
-
+    [SerializeField] private Transform holder;
+    [SerializeField] private Transform sword;
+    
     public int roomint, roommax,playerhealth;
     private int maxhealth;
     public float pelletspeed, hurtdelay;
@@ -42,6 +44,7 @@ public class GMController : MonoBehaviour
         if(playerhurt) IFrames();
         if(playerhealth <= 0) PlayerDie();
         if (playerhealth > maxhealth) playerhealth = maxhealth;
+        Holder();
         
     }
 
@@ -50,7 +53,7 @@ public class GMController : MonoBehaviour
         FollowCursor();
     }
 
-    // prevents the player from getting hurt from the samething multiple times in a single second
+    // prevents the player from getting hurt from the same thing multiple times in a single second
     void IFrames()
     {
         if (timer <= 0)
@@ -108,7 +111,12 @@ public class GMController : MonoBehaviour
         
         return z;
     }
-
+    
+    // use the holder position for the sword
+    void Holder()
+    {
+        holder.position = new Vector2(gm.temp.transform.position.x, gm.temp.transform.position.y);
+    }
     public void PlayerDie()
     { 
         SceneManager.LoadScene(0);

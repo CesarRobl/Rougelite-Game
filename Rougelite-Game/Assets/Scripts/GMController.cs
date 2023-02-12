@@ -22,12 +22,13 @@ public class GMController : MonoBehaviour
     
     public int roomint, roommax,playerhealth;
     private int maxhealth;
-    public float pelletspeed, hurtdelay;
+    public float pelletspeed, hurtdelay, maxforce;
     private float timer;
     private Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
     private bool spawnedboss;
+    
     void Start()
     {
         timer = hurtdelay;

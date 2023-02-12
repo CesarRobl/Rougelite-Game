@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RandomLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RandomLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-2700fc85f6a33d0488fe24bb67611332" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-34fe8bbfae8446046b5b2b2bd0cdb33f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-3c0fae881a1bef84687a80f538bdf190" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityLockfile" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/UnityLockfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/UnityLockfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/workerlic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <workItem from="1675184507921" duration="1425000" />
       <workItem from="1675204366957" duration="4000" />
       <workItem from="1675208517134" duration="1008000" />
-      <workItem from="1675636791969" duration="3387000" />
+      <workItem from="1675636791969" duration="3584000" />
     </task>
     <servers />
   </component>

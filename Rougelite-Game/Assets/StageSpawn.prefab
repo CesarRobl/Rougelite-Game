@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2775734673891975144}
   - component: {fileID: 5969984835272650083}
   - component: {fileID: 4751893226416727551}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StageSpawn
   m_TagString: StageSpawn
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumDir: 0
+  spawned: 0
 --- !u!61 &5969984835272650083
 BoxCollider2D:
   m_ObjectHideFlags: 0

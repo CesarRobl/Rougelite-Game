@@ -23,9 +23,13 @@ public class TempPlayer : MonoBehaviour
     {
        TempMovement();
         Shoot();
-        
+        if(Input.GetMouseButtonDown(0) ) AttackCode();
     }
 
+    void AttackCode()
+    {
+        GMController.gm.ani.sword.SetTrigger("Swing");
+    }
     void TempMovement()
     {
         Vector2 vel = rb.velocity;
@@ -120,6 +124,7 @@ public class TempPlayer : MonoBehaviour
         }
         if((col.gameObject.CompareTag("HealthDrop")))
         {
+            GMController.gm.playerhealth++;
             Destroy(col.gameObject);
         }
     }

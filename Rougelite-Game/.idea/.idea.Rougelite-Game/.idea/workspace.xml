@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-2700fc85f6a33d0488fe24bb67611332" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-34fe8bbfae8446046b5b2b2bd0cdb33f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-3c0fae881a1bef84687a80f538bdf190" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityLockfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/workerlic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +9,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AniController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,8 +23,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -84,7 +77,11 @@
       <workItem from="1675184507921" duration="1425000" />
       <workItem from="1675204366957" duration="4000" />
       <workItem from="1675208517134" duration="1008000" />
-      <workItem from="1675636791969" duration="3584000" />
+      <workItem from="1675636791969" duration="3387000" />
+      <workItem from="1675768999841" duration="1969000" />
+      <workItem from="1675797133142" duration="10085000" />
+      <workItem from="1675943144102" duration="2501000" />
+      <workItem from="1675970125801" duration="725000" />
     </task>
     <servers />
   </component>

@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Aidan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Aidan.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangedEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestItems/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/RangedEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestItems/RangedEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +84,7 @@
       <workItem from="1675797133142" duration="10085000" />
       <workItem from="1675943144102" duration="2501000" />
       <workItem from="1675970125801" duration="725000" />
-      <workItem from="1676242311733" duration="2452000" />
+      <workItem from="1676242311733" duration="3163000" />
     </task>
     <servers />
   </component>

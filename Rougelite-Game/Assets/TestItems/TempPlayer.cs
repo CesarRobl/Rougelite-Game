@@ -116,12 +116,33 @@ public class TempPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        DoorScript ds = col.gameObject.GetComponent<DoorScript>();
         if (col.gameObject.CompareTag("Door") & !entering)
         {
-            dir = col.gameObject.GetComponent<DoorScript>().dir;
-            dir2 = col.gameObject.GetComponent<DoorScript>().dir;
-            StartCoroutine(EnterRoom());
+            if (!ds.bossdoor)
+            {
+                dir = col.gameObject.GetComponent<DoorScript>().dir;
+                dir2 = col.gameObject.GetComponent<DoorScript>().dir;
+                StartCoroutine(EnterRoom());
+            }
+            else
+            {
+                Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                    .position;
+                transform.position = GMController.gm.info.startingloc[0].position;
+                cam.transform.position = new Vector3(loc.x, loc.y, -1);
+            }
         }
+
+        if (col.gameObject.CompareTag("Exit"))
+        {
+            Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
+                .position;
+            transform.position = GMController.gm.info.startingloc[1].position;
+
+            cam.transform.position = new Vector3(loc.x, loc.y, -1);
+        }
+        
         if((col.gameObject.CompareTag("HealthDrop")))
         {
             GMController.gm.playerhealth++;

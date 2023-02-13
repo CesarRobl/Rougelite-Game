@@ -8,9 +8,10 @@ public class UIController : MonoBehaviour
 {
     public TextMeshProUGUI PlayerHP;
     public TextMeshProUGUI TestFrame;
+    public Transform[] BlackBorder;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -18,5 +19,10 @@ public class UIController : MonoBehaviour
     {
         PlayerHP.text = "HP:" + " " + GMController.gm.playerhealth;
         TestFrame.text = "Playerhurt: " + GMController.gm.playerhurt;
+
+        
+        
+            
+
     }
 }

@@ -14,6 +14,9 @@ public class Roomlist : MonoBehaviour
     public GameObject[] cornerrooms;
     public GameObject bossroom;
 
+    public GameObject[] longUD;
+    public GameObject[] longLR;
+
     private void Start()
     {
         rl = this;

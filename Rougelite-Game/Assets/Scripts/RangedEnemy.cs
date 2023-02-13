@@ -4,29 +4,33 @@ using UnityEngine;
 
 public class RangedEnemy : TestAI
 {
-   
-    [SerializeField] private float shootdelay;
 
-   
+    [SerializeField] private float shootdelay;
+    [SerializeField] private bool Stop;
+    [SerializeField] private Rigidbody2D RB;
+    private Vector2 dir;
+
     void Awake()
     {
-        pastpos= transform.position;
+        pastpos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        dir = GMController.gm.temp.transform.position - transform.position;
         SeekPlayer();
-         if(found)RangedAI();
+        if (found) RangedAI();
         else transform.position = pastpos;
-        if(HP <= 0) GMController.gm.Die(gameObject);
+        if (HP <= 0) GMController.gm.Die(gameObject);
     }
 
     void RangedAI()
     {
         MoveToPlayer();
-       ShootPlayer();
+        ShootPlayer();
     }
+
     void MoveToPlayer()
     {
         transform.position =
@@ -42,6 +46,7 @@ public class RangedEnemy : TestAI
         }
         else shootdelay -= Time.deltaTime;
     }
+
     void SeekPlayer()
     {
         Vector2 dir = GMController.gm.player.position - transform.position;
@@ -56,4 +61,26 @@ public class RangedEnemy : TestAI
             else found = false;
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Sword"))
+        {
+            //HP--;
+            if (Stop == false)
+            {
+                Stop = true;
+                Knockback(GMController.gm.maxforce);
+            }
+        }
+    }
+
+    public void Knockback(float force)
+    {
+        Debug.Log("force");
+        RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Force);
+        Stop = false;
+        
+    }
+
 }

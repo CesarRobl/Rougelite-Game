@@ -106,22 +106,25 @@ public class StageController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-       
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == 3)Destroy(gameObject);
-        
+       Debug.Log(gameObject.name + " " + col.gameObject.name);
         StageController sc = col.gameObject.GetComponent<StageController>();
         if (col.gameObject.CompareTag("StageSpawn"))
         {
+            
             float time = NumDir;
             touching = true;
             if (GMController.gm.roomint <= GMController.gm.roommax - 2) Invoke("FixRoomSpawn", time / 10 );
             // Invoke("SpawnBlock", .2f);
 
         }
+         Destroy(gameObject);
+        
+       
       
     }
 }

@@ -16,14 +16,14 @@ public class StageController : MonoBehaviour
     private bool touching,stop;
     void Awake()
     {
-        col = GetComponent<BoxCollider2D>();
-        longorsmall = Random.Range(0, 100);
-        if (longorsmall > 10) Invoke("SpawnRoom", .1f);
-        else if (longorsmall <= 10 )
-        {
-            CheckSpace();
-            Invoke("SpawnLongRoom", .1f);
-        }
+        // col = GetComponent<BoxCollider2D>();
+        // longorsmall = Random.Range(0, 100);
+        Invoke("SpawnRoom", .1f);
+        // else if (longorsmall <= 10 )
+        // {
+        //     CheckSpace();
+        //     Invoke("SpawnLongRoom", .1f);
+        // }
         
         Invoke("SpawnCornerRoom", .2f);
         
@@ -163,13 +163,13 @@ public class StageController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (longorsmall <= 10) Debug.Log( GetComponentInParent<GameObject>().gameObject.name + " " + col.gameObject.name + longorsmall);
+       
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (longorsmall <= 10) Debug.Log(gameObject.name + " " + col.gameObject.name + longorsmall); 
+       
         StageController sc = col.gameObject.GetComponent<StageController>();
         if (col.gameObject.CompareTag("StageSpawn"))
         {

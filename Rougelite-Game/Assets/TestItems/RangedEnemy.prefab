@@ -132,6 +132,8 @@ MonoBehaviour:
   RB: {fileID: -9077085294572619035}
   Stop: 0
   shootdelay: 0
+  stop: 0
+  rb: {fileID: -9077085294572619035}
 --- !u!50 &-9077085294572619035
 Rigidbody2D:
   serializedVersion: 4

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +27,7 @@ public class GMController : MonoBehaviour
     private int maxhealth;
     public float pelletspeed, hurtdelay, maxforce;
     private float timer;
-    private Vector3 pos;
+    [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;
@@ -68,6 +69,7 @@ public class GMController : MonoBehaviour
         else timer -= Time.deltaTime; 
     }
 
+    // Allows the holder to rotate towards where the cursor is
     void FollowCursor()
     {
          pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -79,6 +81,7 @@ public class GMController : MonoBehaviour
         arrow.transform.rotation = Quaternion.Slerp(arrow.transform.rotation, rotation, 10f * Time.deltaTime);
     }
     
+    // Spawn the room that leads to the boss also starts the function to cover up doors that lead outside of the level
     void SpawnBossRoom()
     {
         for (int i = 0; i < rc.Count; i++)
@@ -92,32 +95,26 @@ public class GMController : MonoBehaviour
                 rc.Remove(rc[i]);
                 spawnedboss = true;
             }
-            rc[i].Invoke("CheckDoor", .5f);
+            if(!rc[i].bossroom)rc[i].Invoke("CheckDoor", .5f);
         }
            
     }
 
-    float SetBossRot(float z ,string roomname)
-    {
-        if (roomname == "U(Clone)") z = 90;
-        else if (roomname == "L(Clone)") z = 180;
-        else if (roomname == "D(Clone)") z = 270;
-            
-           
-        
-        
-        return z;
-    }
+    
     
     // use the holder position for the sword
     void Holder()
     {
         holder.position = new Vector2(gm.temp.transform.position.x, gm.temp.transform.position.y);
     }
+    
+    // If a player dies that play this function that resets the scene
     public void PlayerDie()
     { 
         SceneManager.LoadScene(0);
     }
+    
+    // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);

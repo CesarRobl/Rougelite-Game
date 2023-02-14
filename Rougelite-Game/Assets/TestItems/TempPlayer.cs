@@ -26,6 +26,7 @@ public class TempPlayer : MonoBehaviour
         if(Input.GetMouseButtonDown(0) ) AttackCode();
     }
 
+    // when called this function plays the sword animation
     void AttackCode()
     {
         GMController.gm.ani.sword.SetTrigger("Swing");
@@ -64,6 +65,7 @@ public class TempPlayer : MonoBehaviour
         // rb.velocity = vel;
     }
 
+    // unused projectile function. Will proably scrap this function or recycle it for a future function
     void Shoot()
     {
         Vector3 rot;
@@ -101,6 +103,14 @@ public class TempPlayer : MonoBehaviour
         
     }
 
+    // this function lowers the player's hp and turns on the iframes function
+    public void Playerhurt()
+    {
+        GMController.gm.playerhealth--;
+        GMController.gm.playerhurt = true;
+    }
+
+    // changes the cam position and the player position to move to the room the player has entered
     IEnumerator EnterRoom()
     {
         entering = true;

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
-    </list>
+    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/dash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AniController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,7 +91,13 @@
       <workItem from="1676323427966" duration="1532000" />
       <workItem from="1676331892303" duration="6137000" />
       <workItem from="1676341117427" duration="1548000" />
+<<<<<<< HEAD
       <workItem from="1676347141747" duration="2652000" />
+=======
+      <workItem from="1676375529240" duration="2507000" />
+      <workItem from="1676401602625" duration="3663000" />
+      <workItem from="1676406595695" duration="1635000" />
+>>>>>>> 7c89c1956537b4e953a4d203bec2c493cb13f022
     </task>
     <servers />
   </component>

@@ -699,6 +699,7 @@ MonoBehaviour:
   doorwalls:
   - {fileID: 8170332512406522061}
   - {fileID: 6209901589901812368}
+  walls: []
   wendydoorsopen:
   - {fileID: 3158463747952185981}
   - {fileID: 3158463746426228840}
@@ -1093,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2987824128735698281, guid: 3f71395a16552be41b3c33618863b780, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1103,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1553,6 +1558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WendyStuff(Long)
       objectReference: {fileID: 0}
+    - target: {fileID: 7922406258540403537, guid: a5375ea1e649782468c3cc3973901104, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7922406258540403538, guid: a5375ea1e649782468c3cc3973901104, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1961,13 +1970,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 2987824128735698281, guid: 3f71395a16552be41b3c33618863b780, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.75
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2032,7 +2045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391359758579662551, guid: 43b48ce4a92fc634fbc7f7c6fa8689bc, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 886906649055444548, guid: 43b48ce4a92fc634fbc7f7c6fa8689bc, type: 3}
       propertyPath: m_Name
@@ -2040,7 +2053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 886906649055444548, guid: 43b48ce4a92fc634fbc7f7c6fa8689bc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5245575422661136710, guid: 43b48ce4a92fc634fbc7f7c6fa8689bc, type: 3}
       propertyPath: m_RootOrder

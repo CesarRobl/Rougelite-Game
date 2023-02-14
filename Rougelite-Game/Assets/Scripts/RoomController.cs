@@ -12,6 +12,7 @@ public class RoomController : MonoBehaviour
     [SerializeField] private bool hidedoor;
     [SerializeField] private List<DoorScript> doors;
     [SerializeField] private GameObject[] doorwalls;
+    [SerializeField] private GameObject[] walls;
     [SerializeField] private GameObject[] wendydoorsopen;
     [SerializeField] private GameObject[] wendydoorsclosed;
     [SerializeField] private GameObject[] mapwalls;
@@ -92,6 +93,23 @@ public class RoomController : MonoBehaviour
         {
             wendydoorsopen[i].SetActive(true);
             wendydoorsclosed[i].SetActive(false);
+        }
+    }
+
+    public void CheckDoor()
+    {
+        Vector3 rot = transform.eulerAngles;
+        for (int i = 0; i < doors.Count; i++)
+        {
+            if (!doors[i].doorinfront & !doors[i].bossdoor)
+            {
+                rot.z = 0;
+                if (doors[i].dir.y == 10) rot.z = 180;
+                else if (doors[i].dir.x == 10) rot.z = 90;
+                else if (doors[i].dir.x == -10) rot.z = 270;
+
+                Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+            }
         }
     }
     

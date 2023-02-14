@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,7 +29,7 @@ public class GMController : MonoBehaviour
     private Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
-    private bool spawnedboss;
+    [HideInInspector]public bool spawnedboss;
     
     void Start()
     {
@@ -91,7 +92,7 @@ public class GMController : MonoBehaviour
                 rc.Remove(rc[i]);
                 spawnedboss = true;
             }
-            
+            rc[i].Invoke("CheckDoor", .5f);
         }
            
     }

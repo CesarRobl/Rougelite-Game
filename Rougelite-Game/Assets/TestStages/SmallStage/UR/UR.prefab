@@ -588,6 +588,7 @@ MonoBehaviour:
   doorwalls:
   - {fileID: 955157299822786204}
   - {fileID: 1863137555963608972}
+  walls: []
   wendydoorsopen:
   - {fileID: 5550420512899066478}
   - {fileID: 5550420514694965371}
@@ -1239,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 2987824128735698281, guid: 3f71395a16552be41b3c33618863b780, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1249,7 +1254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1401,6 +1406,10 @@ PrefabInstance:
     - target: {fileID: 7922406258540403537, guid: a5375ea1e649782468c3cc3973901104, type: 3}
       propertyPath: m_Name
       value: WendyStuff(Long)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922406258540403537, guid: a5375ea1e649782468c3cc3973901104, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7922406258540403538, guid: a5375ea1e649782468c3cc3973901104, type: 3}
       propertyPath: m_RootOrder
@@ -1954,13 +1963,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2987824128735698281, guid: 3f71395a16552be41b3c33618863b780, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.75
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7635786907243599414, guid: 3f71395a16552be41b3c33618863b780, type: 3}
       propertyPath: m_LocalPosition.y

@@ -11,6 +11,8 @@ TagManager:
   - Walls
   - Enemy
   - Sword
+  - Entrance
+  - Exit
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class GMController : MonoBehaviour
     public GameObject arrow;
     [SerializeField] private Transform holder;
     [SerializeField] private Transform sword;
+    [HideInInspector]public RoomInfo info;
     
     public int roomint, roommax,playerhealth;
     private int maxhealth;
@@ -31,6 +32,7 @@ public class GMController : MonoBehaviour
     
     void Start()
     {
+        info = GetComponent<RoomInfo>();
         timer = hurtdelay;
         maxhealth = playerhealth;
         Cursor.visible = true;
@@ -81,16 +83,9 @@ public class GMController : MonoBehaviour
         for (int i = 0; i < rc.Count; i++)
         {
             if (i == rc.Count - 1 & !spawnedboss)
-            {
-                Vector3 rot = transform.rotation.eulerAngles;
-                string roomname = rc[i].gameObject.name;
-               
-                if (roomname == "U(Clone)") rot.z = 90;
-                else if (roomname == "L(Clone)") rot.z = 180;
-                else if (roomname == "D(Clone)") rot.z = 270;
-
-                Debug.Log(roomname + " " +rot.z);
-                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.Euler(rot));
+            { 
+                rc[i].gameObject.SetActive(false);
+                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
                
                 Destroy(rc[i].gameObject);
                 rc.Remove(rc[i]);

@@ -3,17 +3,26 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - StageSpawn
+  - TestPlayer
+  - Door
+  - HealthDrop
+  - Walls
+  - Enemy
+  - Sword
+  - Entrance
+  - Exit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Walls
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Pellet
+  - Player
+  - Room
   - 
   - 
   - 

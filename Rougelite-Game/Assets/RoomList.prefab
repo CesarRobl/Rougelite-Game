@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8526989571623810778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8526989571623810776}
+  - component: {fileID: 8526989571623810779}
+  m_Layer: 0
+  m_Name: RoomList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8526989571623810776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526989571623810778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.253662, y: 12.957525, z: 0.66983616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8526989571623810779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526989571623810778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7622f80cf70b314cb0b0df289826435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uprooms:
+  - {fileID: 2294741340220026423, guid: 59b81c7ed5cda3a48a77790849674105, type: 3}
+  - {fileID: 7401328309049642514, guid: dd058ad9dd8184445a34ab31b9655e9f, type: 3}
+  - {fileID: 5899432572082211497, guid: 220c15d96bcfe464ca45a0546cc97355, type: 3}
+  - {fileID: 5449008318981939520, guid: d147330583785454cbbbc9c3940147ae, type: 3}
+  bottomrooms:
+  - {fileID: 4181371201603249211, guid: 47302e84c7dd270499d7cde53aa49380, type: 3}
+  - {fileID: 7556552632482731149, guid: e9b5ddc92c0cb314d8d8b62fee36aded, type: 3}
+  - {fileID: 4802810462063385879, guid: ef33c4f40d2ca394995881173e459b0c, type: 3}
+  - {fileID: 7401328309049642514, guid: dd058ad9dd8184445a34ab31b9655e9f, type: 3}
+  leftrooms:
+  - {fileID: 425142747141476541, guid: 77936d3268e5ee04d823c6479e6f8cf9, type: 3}
+  - {fileID: 415053431066645061, guid: aa8b3974863f97f4eb96bce21dc25738, type: 3}
+  - {fileID: 5899432572082211497, guid: 220c15d96bcfe464ca45a0546cc97355, type: 3}
+  - {fileID: 7556552632482731149, guid: e9b5ddc92c0cb314d8d8b62fee36aded, type: 3}
+  rightrooms:
+  - {fileID: 1273971782310877465, guid: afb26209d34c2e842b3aacd7c07079e3, type: 3}
+  - {fileID: 5449008318981939520, guid: d147330583785454cbbbc9c3940147ae, type: 3}
+  - {fileID: 4802810462063385879, guid: ef33c4f40d2ca394995881173e459b0c, type: 3}
+  - {fileID: 415053431066645061, guid: aa8b3974863f97f4eb96bce21dc25738, type: 3}
+  cornerrooms:
+  - {fileID: 4181371201603249211, guid: 47302e84c7dd270499d7cde53aa49380, type: 3}
+  - {fileID: 425142747141476541, guid: 77936d3268e5ee04d823c6479e6f8cf9, type: 3}
+  - {fileID: 2294741340220026423, guid: 59b81c7ed5cda3a48a77790849674105, type: 3}
+  - {fileID: 1273971782310877465, guid: afb26209d34c2e842b3aacd7c07079e3, type: 3}
+  bossroom: {fileID: 2126707562155084597, guid: 2bdd57b3458bfa943bbd3fbddffef168, type: 3}

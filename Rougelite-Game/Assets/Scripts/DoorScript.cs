@@ -14,7 +14,7 @@ public class DoorScript : MonoBehaviour
    
    private void Update()
    {
-      if(!wallinfront || !doorinfront) CheckDoorAndWalls();
+      if(!wallinfront & !GMController.gm.spawnedboss|| !doorinfront & !GMController.gm.spawnedboss) CheckDoorAndWalls();
    }
 
    public void Open()

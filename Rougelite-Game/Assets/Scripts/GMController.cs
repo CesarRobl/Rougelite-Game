@@ -27,7 +27,7 @@ public class GMController : MonoBehaviour
     private int maxhealth;
     public float pelletspeed, hurtdelay, maxforce;
     private float timer;
-    private Vector3 pos;
+    [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;

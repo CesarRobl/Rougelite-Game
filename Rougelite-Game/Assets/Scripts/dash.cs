@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Vector2 = UnityEngine.Vector2;
 
 public class dash : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem dust;
+    [SerializeField] private GameObject Effects;
     private bool CanDash = true;
     private bool IsDashing;
     private float DashingPower = 24f;
@@ -15,20 +19,23 @@ public class dash : MonoBehaviour
 
 
     void Update()
-    { 
-        if (Input.GetMouseButtonDown(1) && CanDash)
+    {
+        Vector2 pos = GMController.gm.pos - GMController.gm.temp.transform.position;
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash)
         {
-            StartCoroutine(Dash());
+            StartCoroutine(Dash(pos));
         }
+        
     }
 
-    private IEnumerator Dash()
+    private IEnumerator Dash(Vector2 dir)
     {
         CanDash = false;
         IsDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * DashingPower, 0f);
+        rb.velocity = dir.normalized * DashingPower;
+        dust.Play();
         yield return new WaitForSeconds(DashingTime);
         rb.gravityScale = originalGravity;
         IsDashing = false;

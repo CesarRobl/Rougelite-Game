@@ -65,7 +65,7 @@ public class TestAI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            //HP--;
+            HP--;
             if (Stop == false)
             {
                 Stop = true;
@@ -77,7 +77,7 @@ public class TestAI : MonoBehaviour
     public void Knockback(float force)
     {
         Debug.Log("force");
-        RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Force);
+        RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
         Stop = false;
         
     }

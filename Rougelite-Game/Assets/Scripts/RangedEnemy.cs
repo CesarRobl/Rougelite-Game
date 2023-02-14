@@ -78,7 +78,7 @@ public class RangedEnemy : TestAI
     public void Knockback(float force)
     {
         Debug.Log("force");
-        rb.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Force);
+        rb.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
         stop = false;
         
     }

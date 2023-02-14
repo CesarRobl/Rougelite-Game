@@ -12,6 +12,9 @@ public class RoomController : MonoBehaviour
     [SerializeField] private bool hidedoor;
     [SerializeField] private List<DoorScript> doors;
     [SerializeField] private GameObject[] doorwalls;
+    [SerializeField] private GameObject[] wendydoorsopen;
+    [SerializeField] private GameObject[] wendydoorsclosed;
+    [SerializeField] private GameObject[] mapwalls;
     public Transform[] startingloc;
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
@@ -19,7 +22,10 @@ public class RoomController : MonoBehaviour
      private bool stop;
     private void Awake()
     {
+        
         Invoke("Addlist",.2f);
+        for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.clear;
+       
         for (int i = 0; i < doorwalls.Length; i++)
         {
             doorwalls[i].SetActive(false);
@@ -44,13 +50,12 @@ public class RoomController : MonoBehaviour
 
     void ChooseBossDoor()
     {
-        
-        
-        doors[doors.Count - 1].bossdoor = true;
-        doors[doors.Count - 1].GetComponent<SpriteRenderer>().color = Color.yellow;
-        GMController.gm.info.bossdoors.Add( doors[doors.Count - 1]);
-        GMController.gm.info.startingloc[1] = startingloc[doors.Count - 1];
-        doors.Remove(doors[doors.Count - 1]);
+        int n = doors.Count - 1;
+        doors[n].bossdoor = true;
+        doors[n].GetComponent<SpriteRenderer>().color = Color.yellow;
+        GMController.gm.info.bossdoors.Add( doors[n]);
+        GMController.gm.info.startingloc[1] = doors[n].startingpoint;
+        doors.Remove(doors[n]);
         
         // for (int i = 0; i < doors.Count; i++) SetWall(i);
             
@@ -81,6 +86,24 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    void OpenDoor()
+    {
+        for (int i = 0; i < wendydoorsopen.Length; i++)
+        {
+            wendydoorsopen[i].SetActive(true);
+            wendydoorsclosed[i].SetActive(false);
+        }
+    }
+    
+    void CloseDoor()
+    {
+        for (int i = 0; i < wendydoorsopen.Length; i++)
+        {
+            wendydoorsopen[i].SetActive(false);
+            wendydoorsclosed[i].SetActive(true);
+        }
+    }
+
     void SetWall(int n)
     {
         doorwalls[n].SetActive(true);
@@ -92,9 +115,11 @@ public class RoomController : MonoBehaviour
         {
             doorwalls[i].SetActive(false);
         }
+        OpenDoor();
     }
     void Setup()
     {
+        CloseDoor();
         for (int i = 0; i < doorwalls.Length; i++)
         {
             doorwalls[i].SetActive(true);
@@ -114,11 +139,17 @@ public class RoomController : MonoBehaviour
         {
            Setup();
         }
+        if(tp != null) for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.yellow;
+           
     }
     
     private void OnTriggerExit2D(Collider2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
-        if (tp != null) playerin = false;
+        if (tp != null)
+        {
+            for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.white;
+            playerin = false;
+        }
     }
 }

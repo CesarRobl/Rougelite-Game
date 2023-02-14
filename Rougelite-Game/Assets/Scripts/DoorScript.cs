@@ -10,13 +10,22 @@ public class DoorScript : MonoBehaviour
     public bool bossdoor;
    public bool stop, wallinfront, doorinfront;
    [SerializeField] private GameObject[] walls;
-
+   public Transform startingpoint;
+   
    private void Update()
    {
       if(!wallinfront || !doorinfront) CheckDoorAndWalls();
    }
 
-  
+   public void Open()
+   {
+      
+   }
+
+   public void Close()
+   {
+      
+   }
    private void CheckDoorAndWalls()
    {
       Vector3 dir2 = new Vector3(dir.x / 10, dir.y / 10,0);

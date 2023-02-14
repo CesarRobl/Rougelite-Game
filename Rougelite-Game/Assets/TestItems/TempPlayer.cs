@@ -12,7 +12,7 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private float speed,timer,shootdelay,movedelay;
     private Vector2 fast;
     public Vector3 dir,pos,dir2,pos2;
-    [HideInInspector] public bool entering;
+     public bool entering;
     void Start()
     {
         
@@ -106,22 +106,48 @@ public class TempPlayer : MonoBehaviour
         entering = true;
         
         yield return new WaitForSeconds(.1f);
-         pos = cam.transform.position + dir;
+        if(dir.y > 0 || dir.y < 0)  pos = cam.transform.position + dir;
+        else if(dir.y == 0) pos = cam.transform.position + (dir * 1.8f);
+        
          pos2 = transform.position + (dir2 / 5.5f);
-        cam.transform.position = Vector3.MoveTowards(cam.transform.position, pos, 10);
-        transform.position = Vector3.MoveTowards(transform.position, pos2, 10);
-        yield return new WaitUntil(Arrived);
+         cam.transform.position = new Vector3(pos.x,pos.y, -10);
+         transform.position = new Vector3(pos2.x, pos2.y, 0);
+        // yield return new WaitUntil(Arrived);
         entering = false;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        RoomController rc = col.gameObject.GetComponent<RoomController>();
+        DoorScript ds = col.gameObject.GetComponent<DoorScript>();
         if (col.gameObject.CompareTag("Door") & !entering)
         {
-            dir = col.gameObject.GetComponent<DoorScript>().dir;
-            dir2 = col.gameObject.GetComponent<DoorScript>().dir;
-            StartCoroutine(EnterRoom());
+            Debug.Log("I am touching door");
+            if (!ds.bossdoor)
+            { 
+                
+                dir = col.gameObject.GetComponent<DoorScript>().dir;
+                dir2 = col.gameObject.GetComponent<DoorScript>().dir;
+               StartCoroutine(EnterRoom());
+            }
+            else
+            {
+                Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                    .position;
+                transform.position = GMController.gm.info.startingloc[0].position;
+                cam.transform.position = new Vector3(loc.x, loc.y, -10);
+            }
         }
+
+        if (col.gameObject.CompareTag("Exit"))
+        {
+            Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
+                .position;
+            transform.position = GMController.gm.info.startingloc[1].position;
+
+            cam.transform.position = new Vector3(loc.x, loc.y, -10);
+        }
+        
         if((col.gameObject.CompareTag("HealthDrop")))
         {
             GMController.gm.playerhealth++;
@@ -129,17 +155,17 @@ public class TempPlayer : MonoBehaviour
         }
     }
 
-    public bool Arrived()
-    {
-        if (cam.transform.position != pos)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    // public bool Arrived()
+    // {
+    //     if (cam.transform.position != pos)
+    //     {
+    //         return false;
+    //     }
+    //     else
+    //     {
+    //         return true;
+    //     }
+    // }
     private void OnCollisionEnter2D(Collision2D col)
     {
        

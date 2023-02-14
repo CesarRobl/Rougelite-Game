@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,20 +18,25 @@ public class GMController : MonoBehaviour
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
-
+    [SerializeField] private Transform holder;
+    [SerializeField] private Transform sword;
+    [HideInInspector]public RoomInfo info;
+    
     public int roomint, roommax,playerhealth;
     private int maxhealth;
-    public float pelletspeed, hurtdelay;
+    public float pelletspeed, hurtdelay, maxforce;
     private float timer;
     private Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
-    private bool spawnedboss;
+    [HideInInspector]public bool spawnedboss;
+    
     void Start()
     {
+        info = GetComponent<RoomInfo>();
         timer = hurtdelay;
         maxhealth = playerhealth;
-        // Cursor.visible = false;
+        Cursor.visible = true;
         gm = this;
     }
 
@@ -38,10 +44,11 @@ public class GMController : MonoBehaviour
     void Update()
     {
        if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
-        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
         if(playerhealth <= 0) PlayerDie();
         if (playerhealth > maxhealth) playerhealth = maxhealth;
+        Holder();
         
     }
 
@@ -50,7 +57,7 @@ public class GMController : MonoBehaviour
         FollowCursor();
     }
 
-    // prevents the player from getting hurt from the samething multiple times in a single second
+    // prevents the player from getting hurt from the same thing multiple times in a single second
     void IFrames()
     {
         if (timer <= 0)
@@ -77,22 +84,15 @@ public class GMController : MonoBehaviour
         for (int i = 0; i < rc.Count; i++)
         {
             if (i == rc.Count - 1 & !spawnedboss)
-            {
-                Vector3 rot = transform.rotation.eulerAngles;
-                string roomname = rc[i].gameObject.name;
-               
-                if (roomname == "U(Clone)") rot.z = 90;
-                else if (roomname == "L(Clone)") rot.z = 180;
-                else if (roomname == "D(Clone)") rot.z = 270;
-
-                Debug.Log(roomname + " " +rot.z);
-                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.Euler(rot));
+            { 
+                rc[i].gameObject.SetActive(false);
+                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
                
                 Destroy(rc[i].gameObject);
                 rc.Remove(rc[i]);
                 spawnedboss = true;
             }
-            
+            rc[i].Invoke("CheckDoor", .5f);
         }
            
     }
@@ -108,7 +108,12 @@ public class GMController : MonoBehaviour
         
         return z;
     }
-
+    
+    // use the holder position for the sword
+    void Holder()
+    {
+        holder.position = new Vector2(gm.temp.transform.position.x, gm.temp.transform.position.y);
+    }
     public void PlayerDie()
     { 
         SceneManager.LoadScene(0);

@@ -7,10 +7,11 @@ using Random = UnityEngine.Random;
 public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
+    private RoomController rc;
     private bool stop;
     void Awake()
     {
-        Invoke("SpawnEnemy", 1.5f);
+      rc = GetComponentInParent<RoomController>();
     }
 
     private void Update()
@@ -24,7 +25,7 @@ public class SpawnController : MonoBehaviour
         
     }
 
-    void SpawnEnemy()
+   public void SpawnEnemy()
     {
         if (!stop)
         {
@@ -32,7 +33,9 @@ public class SpawnController : MonoBehaviour
             if (ran <= 60)
             {
                 int enemytype = Random.Range(0, GMController.gm.oc.elist.etype.Length );
-                Instantiate(GMController.gm.oc.elist.etype[enemytype], transform.position, Quaternion.Euler(0,0,0));
+               GameObject ec = Instantiate(GMController.gm.oc.elist.etype[enemytype], transform.position, Quaternion.Euler(0,0,0));
+               rc.enemycount.Add(ec);
+               ec = null;
             }
             stop = true;
         }

@@ -100,7 +100,12 @@ public class GMController : MonoBehaviour
            
     }
 
-    
+    // This function will play whenever the player hits the enemy.
+    // The function will show a feedback of the enemy turn white
+    void HurtEffect()
+    {
+        
+    }
     
     // use the holder position for the sword
     void Holder()

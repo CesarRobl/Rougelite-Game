@@ -8,10 +8,12 @@ public class RangedEnemy : TestAI
     [SerializeField] private float shootdelay;
     [SerializeField] private bool stop;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem ps;
     private Vector2 dir;
 
     void Awake()
     {
+        ps = GetComponentInChildren<ParticleSystem>();
         pastpos = transform.position;
     }
 
@@ -70,6 +72,7 @@ public class RangedEnemy : TestAI
             if (stop == false)
             {
                 stop = true;
+                StartCoroutine(EnemyHurt(ps));
                 Knockback(GMController.gm.maxforce);
             }
         }

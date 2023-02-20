@@ -457,6 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 493472918}
+  dust: {fileID: 0}
+  Effects: {fileID: 0}
 --- !u!1 &534681638
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,18 +21,20 @@ public class GMController : MonoBehaviour
     public GameObject arrow;
     [SerializeField] private Transform holder;
     [SerializeField] private Transform sword;
+    [HideInInspector]public RoomInfo info;
     
     public int roomint, roommax,playerhealth;
     private int maxhealth;
     public float pelletspeed, hurtdelay, maxforce;
     private float timer;
-    private Vector3 pos;
+    [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
-    private bool spawnedboss;
+    [HideInInspector]public bool spawnedboss;
     
     void Start()
     {
+        info = GetComponent<RoomInfo>();
         timer = hurtdelay;
         maxhealth = playerhealth;
         Cursor.visible = true;
@@ -65,6 +69,7 @@ public class GMController : MonoBehaviour
         else timer -= Time.deltaTime; 
     }
 
+    // Allows the holder to rotate towards where the cursor is
     void FollowCursor()
     {
          pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -76,41 +81,30 @@ public class GMController : MonoBehaviour
         arrow.transform.rotation = Quaternion.Slerp(arrow.transform.rotation, rotation, 10f * Time.deltaTime);
     }
     
+    // Spawn the room that leads to the boss also starts the function to cover up doors that lead outside of the level
     void SpawnBossRoom()
     {
         for (int i = 0; i < rc.Count; i++)
         {
             if (i == rc.Count - 1 & !spawnedboss)
-            {
-                Vector3 rot = transform.rotation.eulerAngles;
-                string roomname = rc[i].gameObject.name;
-               
-                if (roomname == "U(Clone)") rot.z = 90;
-                else if (roomname == "L(Clone)") rot.z = 180;
-                else if (roomname == "D(Clone)") rot.z = 270;
-
-                Debug.Log(roomname + " " +rot.z);
-                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.Euler(rot));
+            { 
+                rc[i].gameObject.SetActive(false);
+                Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
                
                 Destroy(rc[i].gameObject);
                 rc.Remove(rc[i]);
                 spawnedboss = true;
             }
-            
+            if(!rc[i].bossroom)rc[i].Invoke("CheckDoor", .5f);
         }
            
     }
 
-    float SetBossRot(float z ,string roomname)
+    // This function will play whenever the player hits the enemy.
+    // The function will show a feedback of the enemy turn white
+    void HurtEffect()
     {
-        if (roomname == "U(Clone)") z = 90;
-        else if (roomname == "L(Clone)") z = 180;
-        else if (roomname == "D(Clone)") z = 270;
-            
-           
         
-        
-        return z;
     }
     
     // use the holder position for the sword
@@ -118,10 +112,14 @@ public class GMController : MonoBehaviour
     {
         holder.position = new Vector2(gm.temp.transform.position.x, gm.temp.transform.position.y);
     }
+    
+    // If a player dies that play this function that resets the scene
     public void PlayerDie()
     { 
         SceneManager.LoadScene(0);
     }
+    
+    // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);

@@ -9,12 +9,22 @@ public class StageController : MonoBehaviour
     [Range(1,4)]
     public int NumDir;
 
+    private BoxCollider2D col;
+    [SerializeField] private int longorsmall;
     public bool spawned;
     private int ran,ran2,SaveDir;
     private bool touching,stop;
     void Awake()
     {
+        // col = GetComponent<BoxCollider2D>();
+        // longorsmall = Random.Range(0, 100);
         Invoke("SpawnRoom", .1f);
+        // else if (longorsmall <= 10 )
+        // {
+        //     CheckSpace();
+        //     Invoke("SpawnLongRoom", .1f);
+        // }
+        
         Invoke("SpawnCornerRoom", .2f);
         
     }
@@ -24,7 +34,29 @@ public class StageController : MonoBehaviour
         
     }
 
-    
+    void CheckSpace()
+    {
+        if (NumDir == 1)
+        {
+            transform.localScale += new Vector3(0, 9, 0);
+            transform.position += new Vector3(0, 3.7f, 0);
+        }
+        else if (NumDir == 2)
+        {
+            transform.localScale += new Vector3(9, 0, 0);
+            transform.position += new Vector3(10, 0, 0);
+        }
+        else if (NumDir == 3)
+        {
+            transform.localScale += new Vector3(0, 9, 0);
+            transform.position += new Vector3(0, -10, 0);
+        }
+        else if (NumDir == 4)
+        {
+            transform.localScale += new Vector3(9, 0, 0);
+            transform.position += new Vector3(-3.7f, 0, 0);
+        }
+    }
    
     void SpawnRoom()
     {
@@ -63,6 +95,31 @@ public class StageController : MonoBehaviour
             GMController.gm.roomint++;
         }
       
+    }
+
+    void SpawnLongRoom()
+    {
+        if (GMController.gm.roomint <= GMController.gm.roommax - 2)
+        {
+            if (!touching)
+            {
+
+                if (NumDir == 1 || NumDir == 3)
+                {
+                    ran = Random.Range(0, Roomlist.rl.longUD.Length - 1);
+                    Instantiate(Roomlist.rl.longUD[ran], transform.position, Quaternion.identity);
+                }
+
+                // Spawn any room with a left door
+                if (NumDir == 2 || NumDir == 4)
+                {
+                    ran = Random.Range(0, Roomlist.rl.longLR.Length - 1);
+                    Instantiate(Roomlist.rl.longLR[ran], transform.position, Quaternion.identity);
+                }
+                
+            }
+            GMController.gm.roomint++;
+        }
     }
 
     void SpawnCornerRoom()
@@ -106,12 +163,13 @@ public class StageController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
+       
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-       Debug.Log(gameObject.name + " " + col.gameObject.name);
+       
         StageController sc = col.gameObject.GetComponent<StageController>();
         if (col.gameObject.CompareTag("StageSpawn"))
         {

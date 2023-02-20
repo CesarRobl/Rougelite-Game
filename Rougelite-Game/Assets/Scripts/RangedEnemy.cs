@@ -6,12 +6,14 @@ public class RangedEnemy : TestAI
 {
 
     [SerializeField] private float shootdelay;
-    [SerializeField] private bool Stop;
-    [SerializeField] private Rigidbody2D RB;
+    [SerializeField] private bool stop;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem ps;
     private Vector2 dir;
 
     void Awake()
     {
+        ps = GetComponentInChildren<ParticleSystem>();
         pastpos = transform.position;
     }
 
@@ -66,10 +68,11 @@ public class RangedEnemy : TestAI
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            //HP--;
-            if (Stop == false)
+            HP--;
+            if (stop == false)
             {
-                Stop = true;
+                stop = true;
+                StartCoroutine(EnemyHurt(ps));
                 Knockback(GMController.gm.maxforce);
             }
         }
@@ -78,8 +81,8 @@ public class RangedEnemy : TestAI
     public void Knockback(float force)
     {
         Debug.Log("force");
-        RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Force);
-        Stop = false;
+        rb.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
+        stop = false;
         
     }
 

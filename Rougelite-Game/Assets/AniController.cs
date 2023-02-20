@@ -5,6 +5,7 @@ using UnityEngine;
 public class AniController : MonoBehaviour
 {
     public Animator sword;
+    public bool anidone;
     void Start()
     {
     }

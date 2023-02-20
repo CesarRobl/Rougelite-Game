@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="" />
+    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/EnemyPelletController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/EnemyPelletController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/PelletController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/PelletController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rougelite-Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rougelite-Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,13 +107,12 @@
       <workItem from="1676323427966" duration="1532000" />
       <workItem from="1676331892303" duration="6137000" />
       <workItem from="1676341117427" duration="1548000" />
-<<<<<<< HEAD
-      <workItem from="1676347141747" duration="2652000" />
-=======
       <workItem from="1676375529240" duration="2507000" />
       <workItem from="1676401602625" duration="3663000" />
       <workItem from="1676406595695" duration="1635000" />
->>>>>>> 7c89c1956537b4e953a4d203bec2c493cb13f022
+      <workItem from="1676421261809" duration="11000" />
+      <workItem from="1676575845340" duration="1871000" />
+      <workItem from="1676858539053" duration="1247000" />
     </task>
     <servers />
   </component>

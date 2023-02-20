@@ -23,8 +23,9 @@ public class GMController : MonoBehaviour
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
     
-    public int roomint, roommax,playerhealth;
-    private int maxhealth;
+    public int roomint, roommax;
+    private float maxhealth;
+    public float playerhealth;
     public float pelletspeed, hurtdelay, maxforce;
     private float timer;
     [HideInInspector]public Vector3 pos;
@@ -100,7 +101,12 @@ public class GMController : MonoBehaviour
            
     }
 
-    
+    // This function will play whenever the player hits the enemy.
+    // The function will show a feedback of the enemy turn white
+    void HurtEffect()
+    {
+        
+    }
     
     // use the holder position for the sword
     void Holder()
@@ -118,9 +124,13 @@ public class GMController : MonoBehaviour
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);
-        if (rand >= 50)
+        if (rand <= 25)
         {
             Instantiate(oc.Heathdrop,enemy.transform.position,Quaternion.identity);
+        }
+        else if (rand > 25 & rand <= 75) 
+        {
+            Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }
         Destroy(enemy);
     }

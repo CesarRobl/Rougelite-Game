@@ -10,5 +10,7 @@ public class ObjectController : MonoBehaviour
    public GameObject block;
    public GameObject enemypellet;
    public GameObject Heathdrop;
+   public GameObject HalfHealth;
    public GameObject doorwalls;
+   
 }

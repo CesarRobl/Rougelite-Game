@@ -163,6 +163,11 @@ public class TempPlayer : MonoBehaviour
             GMController.gm.playerhealth++;
             Destroy(col.gameObject);
         }
+        if((col.gameObject.CompareTag("HalfHealth")))
+        {
+            GMController.gm.playerhealth+=.5f;
+            Destroy(col.gameObject);
+        }
     }
 
     // public bool Arrived()

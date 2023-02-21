@@ -4,19 +4,11 @@
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GMController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/EnemyPelletController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/EnemyPelletController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/PelletController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/PelletController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TempPlayer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestItems/TestAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rougelite-Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rougelite-Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Isaias.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Isaias.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Healthbar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AniController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -113,6 +106,7 @@
       <workItem from="1676421261809" duration="11000" />
       <workItem from="1676575845340" duration="1871000" />
       <workItem from="1676858539053" duration="1247000" />
+      <workItem from="1676922376835" duration="3468000" />
     </task>
     <servers />
   </component>
@@ -122,6 +116,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

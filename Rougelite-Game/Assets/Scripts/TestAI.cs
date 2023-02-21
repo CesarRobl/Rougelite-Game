@@ -13,8 +13,10 @@ public class TestAI : MonoBehaviour
     private Vector2 dir;
     [SerializeField] private Rigidbody2D RB;
     [SerializeField] private bool Stop;
+    [SerializeField] private ParticleSystem ps;
     private void Awake()
     {
+        ps = GetComponentInChildren<ParticleSystem>();
         pastpos= transform.position;
     }
 
@@ -51,13 +53,13 @@ public class TestAI : MonoBehaviour
         }
     }
 
+    
     private void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
         if (tp != null & !GMController.gm.playerhurt)
         {
-            GMController.gm.playerhealth--;
-            GMController.gm.playerhurt = true;
+           GMController.gm.temp.Playerhurt();
         }
     }
 
@@ -69,14 +71,26 @@ public class TestAI : MonoBehaviour
             if (Stop == false)
             {
                 Stop = true;
+                StartCoroutine(EnemyHurt(ps));
                 Knockback(GMController.gm.maxforce);
             }
         }
     }
 
+    // This animation plays when the enemy gets whacked by a player with a sword
+    // If you are going to edit this code then please let me know - Cesar
+    public IEnumerator EnemyHurt(ParticleSystem hurt)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Color og = sr.color;
+        hurt.Play();
+        sr.color = Color.white;
+        yield return new WaitForSeconds(5f * Time.deltaTime);
+        sr.color = og;
+    }
     public void Knockback(float force)
     {
-        Debug.Log("force");
+        
         RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
         Stop = false;
         

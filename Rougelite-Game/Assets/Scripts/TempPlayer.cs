@@ -26,9 +26,11 @@ public class TempPlayer : MonoBehaviour
         if(Input.GetMouseButtonDown(0) ) AttackCode();
     }
 
+    // when called this function plays the sword animation
     void AttackCode()
     {
-        GMController.gm.ani.sword.SetTrigger("Swing");
+        StartCoroutine(GMController.gm.ani.SpatulaSwipe());
+
     }
     void TempMovement()
     {
@@ -64,6 +66,7 @@ public class TempPlayer : MonoBehaviour
         // rb.velocity = vel;
     }
 
+    // unused projectile function. Will proably scrap this function or recycle it for a future function
     void Shoot()
     {
         Vector3 rot;
@@ -101,6 +104,14 @@ public class TempPlayer : MonoBehaviour
         
     }
 
+    // this function lowers the player's hp and turns on the iframes function
+    public void Playerhurt()
+    {
+        GMController.gm.playerhealth--;
+        GMController.gm.playerhurt = true;
+    }
+
+    // changes the cam position and the player position to move to the room the player has entered
     IEnumerator EnterRoom()
     {
         entering = true;
@@ -109,8 +120,8 @@ public class TempPlayer : MonoBehaviour
         if(dir.y > 0 || dir.y < 0)  pos = cam.transform.position + dir;
         else if(dir.y == 0) pos = cam.transform.position + (dir * 1.8f);
         
-         pos2 = transform.position + (dir2 / 5.5f);
-         cam.transform.position = new Vector3(pos.x,pos.y, -10);
+         pos2 = transform.position + (dir2 / 1.5f);
+         // cam.transform.position = new Vector3(pos.x,pos.y, -10);
          transform.position = new Vector3(pos2.x, pos2.y, 0);
         // yield return new WaitUntil(Arrived);
         entering = false;
@@ -118,6 +129,7 @@ public class TempPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log(col.gameObject.name);
         RoomController rc = col.gameObject.GetComponent<RoomController>();
         DoorScript ds = col.gameObject.GetComponent<DoorScript>();
         if (col.gameObject.CompareTag("Door") & !entering)
@@ -139,18 +151,25 @@ public class TempPlayer : MonoBehaviour
             }
         }
 
+        if (col.gameObject.CompareTag("Room")) cam.transform.position = new Vector3(col.gameObject.transform.position.x,col.gameObject.transform.position.y, -10);
+        
         if (col.gameObject.CompareTag("Exit"))
         {
             Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
                 .position;
             transform.position = GMController.gm.info.startingloc[1].position;
-
+        
             cam.transform.position = new Vector3(loc.x, loc.y, -10);
         }
         
         if((col.gameObject.CompareTag("HealthDrop")))
         {
             GMController.gm.playerhealth++;
+            Destroy(col.gameObject);
+        }
+        if((col.gameObject.CompareTag("HalfHealth")))
+        {
+            GMController.gm.playerhealth+=.5f;
             Destroy(col.gameObject);
         }
     }

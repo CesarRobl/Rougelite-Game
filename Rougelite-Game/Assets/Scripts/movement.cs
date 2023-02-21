@@ -12,6 +12,8 @@ public class movement : MonoBehaviour
 
     public float runSpeed = 10.0f;
 
+    public SoundControl SC;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();        
@@ -25,7 +27,8 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);   
+        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        SC.PlaySteps();
     }
 }
 

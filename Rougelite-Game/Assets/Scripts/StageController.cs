@@ -25,7 +25,7 @@ public class StageController : MonoBehaviour
         //     Invoke("SpawnLongRoom", .1f);
         // }
         
-        Invoke("SpawnCornerRoom", .2f);
+        // Invoke("SpawnCornerRoom", .2f);
         
     }
 
@@ -170,16 +170,16 @@ public class StageController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
        
-        StageController sc = col.gameObject.GetComponent<StageController>();
-        if (col.gameObject.CompareTag("StageSpawn"))
-        {
-            
-            float time = NumDir;
-            touching = true;
-            if (GMController.gm.roomint <= GMController.gm.roommax - 2) Invoke("FixRoomSpawn", time / 10 );
-            // Invoke("SpawnBlock", .2f);
-
-        }
+        // StageController sc = col.gameObject.GetComponent<StageController>();
+        // if (col.gameObject.CompareTag("StageSpawn"))
+        // {
+        //     
+        //     float time = NumDir;
+        //     touching = true;
+        //     if (GMController.gm.roomint <= GMController.gm.roommax - 2) Invoke("FixRoomSpawn", time / 10 );
+        //     // Invoke("SpawnBlock", .2f);
+        //
+        // }
          Destroy(gameObject);
         
        

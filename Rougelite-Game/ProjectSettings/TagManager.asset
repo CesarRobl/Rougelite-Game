@@ -13,6 +13,8 @@ TagManager:
   - Sword
   - Entrance
   - Exit
+  - HalfHealth
+  - Room
   layers:
   - Default
   - TransparentFX

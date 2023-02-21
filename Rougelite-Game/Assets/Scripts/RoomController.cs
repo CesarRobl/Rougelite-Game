@@ -20,7 +20,7 @@ public class RoomController : MonoBehaviour
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
 
-     private bool stop;
+     private bool stop, stop2;
     private void Awake()
     {
         
@@ -40,28 +40,39 @@ public class RoomController : MonoBehaviour
     void Update()
     {
         if(playerin & !complete)CheckEnemy();
-        HideDoor();
+        // HideDoor();
         
     }
 
+    // adds this function to a list in the gamemanager
     void Addlist()
     {
         GMController.gm.rc.Add(this);
     }
 
+    // chooses the door that will lead to the bossroom
     void ChooseBossDoor()
     {
-        int n = doors.Count - 1;
-        doors[n].bossdoor = true;
-        doors[n].GetComponent<SpriteRenderer>().color = Color.yellow;
-        GMController.gm.info.bossdoors.Add( doors[n]);
-        GMController.gm.info.startingloc[1] = doors[n].startingpoint;
-        doors.Remove(doors[n]);
+        for (int n = 0; n < doors.Count; n++)
+        {
+            if (!doors[n].doorinfront & !doors[n].wallinfront & !stop2)
+            {
+                doors[n].bossdoor = true;
+                doors[n].GetComponent<SpriteRenderer>().color = Color.yellow;
+                GMController.gm.info.bossdoors.Add(doors[n]);
+                GMController.gm.info.startingloc[1] = doors[n].startingpoint;
+                doors.Remove(doors[n]);
+                stop2 = true;
+            }
+        }
+        Invoke("CheckDoor", .1f);
         
         // for (int i = 0; i < doors.Count; i++) SetWall(i);
             
         stop = true;
     }
+    // checks how many enemies are present in the player's current room. If the enemy count is zero then play the unblock function
+    
     void CheckEnemy()
     {
         for (int i = 0; i < enemycount.Count; i++) if (enemycount[i] == null) enemycount.Remove(enemycount[i].gameObject);
@@ -74,6 +85,7 @@ public class RoomController : MonoBehaviour
         
     }
 
+    
     void HideDoor()
     {
         for (int i = 0; i < doors.Count; i++) if (doors[i].doorinfront) doors.Remove(doors[i]);
@@ -87,6 +99,7 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    // changes the door sprite from open to closed when a player has cleared a room
     void OpenDoor()
     {
         for (int i = 0; i < wendydoorsopen.Length; i++)
@@ -96,12 +109,13 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    // if a door is hitting nothing or a wall then spawn a wall that will block and cover the door in question
     public void CheckDoor()
     {
         Vector3 rot = transform.eulerAngles;
         for (int i = 0; i < doors.Count; i++)
         {
-            if (!doors[i].doorinfront & !doors[i].bossdoor)
+            if (!doors[i].doorinfront || doors[i].wallinfront)
             {
                 rot.z = 0;
                 if (doors[i].dir.y == 10) rot.z = 180;
@@ -109,10 +123,12 @@ public class RoomController : MonoBehaviour
                 else if (doors[i].dir.x == -10) rot.z = 270;
 
                 Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+                doors.Remove(doors[i]);
             }
         }
     }
     
+    // changes the door sprite from open to close when a player has entered a room
     void CloseDoor()
     {
         for (int i = 0; i < wendydoorsopen.Length; i++)
@@ -121,7 +137,8 @@ public class RoomController : MonoBehaviour
             wendydoorsclosed[i].SetActive(true);
         }
     }
-
+    
+    
     void SetWall(int n)
     {
         doorwalls[n].SetActive(true);
@@ -135,6 +152,7 @@ public class RoomController : MonoBehaviour
         }
         OpenDoor();
     }
+    // once the player has entered the room then this function will play that will close the doors and spawn the enemies
     void Setup()
     {
         CloseDoor();

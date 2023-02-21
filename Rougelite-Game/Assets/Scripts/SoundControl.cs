@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundControl : MonoBehaviour
 {
+    public static SoundControl Soundcntrl;
 
     public List<AudioClip> Steps;
     public AudioClip Edamaged;
@@ -27,11 +28,6 @@ public class SoundControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i <= 6; i++)
-        {
-            PlaySteps();
-            Debug.Log(i);
-        }
         
     }
 

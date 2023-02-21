@@ -31,7 +31,7 @@ public class health : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TakeDamage(1);
+            TakeDamage(1);  //this is for testing
         }
     }
 }

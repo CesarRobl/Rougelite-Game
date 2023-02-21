@@ -38,8 +38,14 @@ public class GMController : MonoBehaviour
         info = GetComponent<RoomInfo>();
         timer = hurtdelay;
         maxhealth = playerhealth;
-        Cursor.visible = true;
+       Invoke("Setup", .5f);
         gm = this;
+    }
+
+    void Setup()
+    {
+        Cursor.visible = false;
+        temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     // Update is called once per frame

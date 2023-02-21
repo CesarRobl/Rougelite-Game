@@ -30,7 +30,7 @@ public class DoorScript : MonoBehaviour
    {
       Vector3 dir2 = new Vector3(dir.x / 10, dir.y / 10,0);
       Vector3 offset = new Vector3(transform.position.x + (dir.x / 60), transform.position.y + (dir.y / 60), 0);
-      RaycastHit2D hit = Physics2D.Raycast(offset, dir2, 1);
+      RaycastHit2D hit = Physics2D.Raycast(offset, dir2, 5);
       if ( hit.collider.gameObject.CompareTag("Walls"))
       {
          wallinfront = true;
@@ -47,6 +47,6 @@ public class DoorScript : MonoBehaviour
    private void OnDrawGizmos()
    {
       Gizmos.color = Color.green;
-      Gizmos.DrawRay(new Vector3(transform.position.x +(dir.x / 60), transform.position.y + (dir.y / 60), 0), new Vector3(dir.x / 10,dir.y / 10,0).normalized * 1);
+      Gizmos.DrawRay(new Vector3(transform.position.x +(dir.x / 60), transform.position.y + (dir.y / 60), 0), new Vector3(dir.x / 10,dir.y / 10,0).normalized * 5);
    }
 }

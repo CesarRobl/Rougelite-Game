@@ -29,7 +29,8 @@ public class TempPlayer : MonoBehaviour
     // when called this function plays the sword animation
     void AttackCode()
     {
-        GMController.gm.ani.sword.SetTrigger("Swing");
+        StartCoroutine(GMController.gm.ani.SpatulaSwipe());
+
     }
     void TempMovement()
     {
@@ -119,8 +120,8 @@ public class TempPlayer : MonoBehaviour
         if(dir.y > 0 || dir.y < 0)  pos = cam.transform.position + dir;
         else if(dir.y == 0) pos = cam.transform.position + (dir * 1.8f);
         
-         pos2 = transform.position + (dir2 / 5.5f);
-         cam.transform.position = new Vector3(pos.x,pos.y, -10);
+         pos2 = transform.position + (dir2 / 1.5f);
+         // cam.transform.position = new Vector3(pos.x,pos.y, -10);
          transform.position = new Vector3(pos2.x, pos2.y, 0);
         // yield return new WaitUntil(Arrived);
         entering = false;
@@ -128,6 +129,7 @@ public class TempPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log(col.gameObject.name);
         RoomController rc = col.gameObject.GetComponent<RoomController>();
         DoorScript ds = col.gameObject.GetComponent<DoorScript>();
         if (col.gameObject.CompareTag("Door") & !entering)
@@ -149,12 +151,14 @@ public class TempPlayer : MonoBehaviour
             }
         }
 
+        if (col.gameObject.CompareTag("Room")) cam.transform.position = new Vector3(col.gameObject.transform.position.x,col.gameObject.transform.position.y, -10);
+        
         if (col.gameObject.CompareTag("Exit"))
         {
             Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
                 .position;
             transform.position = GMController.gm.info.startingloc[1].position;
-
+        
             cam.transform.position = new Vector3(loc.x, loc.y, -10);
         }
         

@@ -23,7 +23,7 @@ public class TempPlayer : MonoBehaviour
     {
        TempMovement();
         Shoot();
-        if(Input.GetMouseButtonDown(0) ) AttackCode();
+        if(Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
     }
 
     // when called this function plays the sword animation
@@ -32,6 +32,7 @@ public class TempPlayer : MonoBehaviour
         StartCoroutine(GMController.gm.ani.SpatulaSwipe());
 
     }
+    
     void TempMovement()
     {
         Vector2 vel = rb.velocity;

@@ -19,7 +19,7 @@ public class GMController : MonoBehaviour
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
-    [SerializeField] private Transform holder;
+    [HideInInspector] public Transform holder;
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
     

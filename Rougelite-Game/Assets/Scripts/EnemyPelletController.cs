@@ -29,8 +29,7 @@ public class EnemyPelletController : MonoBehaviour
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
         if (tp != null & !GMController.gm.playerhurt)
         {
-            GMController.gm.playerhealth--;
-            GMController.gm.playerhurt = true;
+            GMController.gm.temp.Playerhurt();
             Destroy(gameObject);
         }
        

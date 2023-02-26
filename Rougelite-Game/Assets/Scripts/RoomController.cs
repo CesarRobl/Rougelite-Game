@@ -53,6 +53,7 @@ public class RoomController : MonoBehaviour
     // chooses the door that will lead to the bossroom
     void ChooseBossDoor()
     {
+        Debug.Log("I am boss Door");
         for (int n = 0; n < doors.Count; n++)
         {
             if (!doors[n].doorinfront & !doors[n].wallinfront & !stop2)
@@ -65,7 +66,8 @@ public class RoomController : MonoBehaviour
                 stop2 = true;
             }
         }
-        Invoke("CheckDoor", .1f);
+        
+        if(stop2)Invoke("CheckDoor", .1f);
         
         // for (int i = 0; i < doors.Count; i++) SetWall(i);
             

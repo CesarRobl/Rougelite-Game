@@ -108,7 +108,7 @@ public class TempPlayer : MonoBehaviour
     // this function lowers the player's hp and turns on the iframes function
     public void Playerhurt()
     {
-        GMController.gm.playerhealth--;
+        GMController.gm.ui.health.health--;
         GMController.gm.playerhurt = true;
     }
 
@@ -165,12 +165,12 @@ public class TempPlayer : MonoBehaviour
         
         if((col.gameObject.CompareTag("HealthDrop")))
         {
-            GMController.gm.playerhealth++;
+            GMController.gm.ui.health.health += 2;
             Destroy(col.gameObject);
         }
         if((col.gameObject.CompareTag("HalfHealth")))
         {
-            GMController.gm.playerhealth+=.5f;
+            GMController.gm.ui.health.health++;
             Destroy(col.gameObject);
         }
     }

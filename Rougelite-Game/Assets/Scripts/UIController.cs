@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI PlayerHP;
     public TextMeshProUGUI TestFrame;
     public Transform[] BlackBorder;
+    public Healthbar health;
     void Start()
     {
        

@@ -23,7 +23,7 @@ public class PlayerSprite : MonoBehaviour
     // changes the player sprite based on the direciton its looking at using its z rotation
     void ChangeSpriteDir()
     {
-        Debug.Log(GMController.gm.holder.eulerAngles.z );
+       
         if (GMController.gm.holder.eulerAngles.z >= 180 ) sr.sprite = chardir[0];
         else if (GMController.gm.holder.eulerAngles.z < 180 ) sr.sprite = chardir[1];
     }

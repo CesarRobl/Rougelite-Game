@@ -22,6 +22,7 @@ public class GMController : MonoBehaviour
     [HideInInspector] public Transform holder;
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
+    [HideInInspector] public UIController ui;
     
     public int roomint, roommax;
     private float maxhealth;
@@ -36,8 +37,9 @@ public class GMController : MonoBehaviour
     void Start()
     {
         info = GetComponent<RoomInfo>();
+        ui = GetComponent<UIController>();
         timer = hurtdelay;
-        maxhealth = playerhealth;
+        
        Invoke("Setup", .5f);
         gm = this;
     }
@@ -54,8 +56,8 @@ public class GMController : MonoBehaviour
        if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
-        if(playerhealth <= 0) PlayerDie();
-        if (playerhealth > maxhealth) playerhealth = maxhealth;
+        if(ui.health.health <= 0) PlayerDie();
+      
         Holder();
         
     }
@@ -123,7 +125,7 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     { 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not

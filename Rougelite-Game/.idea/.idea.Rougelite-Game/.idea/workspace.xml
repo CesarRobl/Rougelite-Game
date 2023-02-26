@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Isaias.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Isaias.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +101,7 @@
       <workItem from="1676575845340" duration="1871000" />
       <workItem from="1676858539053" duration="1247000" />
       <workItem from="1676922376835" duration="3544000" />
+      <workItem from="1677017264306" duration="1317000" />
     </task>
     <servers />
   </component>
@@ -126,6 +121,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

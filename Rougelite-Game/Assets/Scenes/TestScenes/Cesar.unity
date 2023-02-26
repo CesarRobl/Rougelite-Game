@@ -11901,8 +11901,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 493472917, guid: e712c53b2746d9c45b92688670d32654, type: 3}
+      propertyPath: m_Size.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 493472917, guid: e712c53b2746d9c45b92688670d32654, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 493472917, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 493472917, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_IsTrigger

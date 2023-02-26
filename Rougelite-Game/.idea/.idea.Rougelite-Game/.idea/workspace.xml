@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rougelite-Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rougelite-Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +105,7 @@
       <workItem from="1676858539053" duration="1247000" />
       <workItem from="1676922376835" duration="3544000" />
       <workItem from="1677017264306" duration="1317000" />
+      <workItem from="1677375155876" duration="1005000" />
     </task>
     <servers />
   </component>

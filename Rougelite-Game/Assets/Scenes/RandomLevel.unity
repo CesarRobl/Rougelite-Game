@@ -1978,11 +1978,11 @@ PrefabInstance:
       objectReference: {fileID: 901503541}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: bighealthpercent
-      value: 35
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: smallhealthpercent
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885737, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: m_Name

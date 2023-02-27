@@ -15176,6 +15176,14 @@ PrefabInstance:
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 2095143377}
+    - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: bighealthpercent
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: smallhealthpercent
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885737, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: m_Name
       value: GameManager

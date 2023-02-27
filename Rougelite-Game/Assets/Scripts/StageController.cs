@@ -14,12 +14,20 @@ public class StageController : MonoBehaviour
     public bool spawned;
     private int ran,ran2,SaveDir;
     private bool touching,stop;
+    [SerializeField] private bool startingroom;
     void Awake()
     {
         // col = GetComponent<BoxCollider2D>();
-        // longorsmall = Random.Range(0, 100);
-        Invoke("SpawnRoom", .1f);
-        // else if (longorsmall <= 10 )
+        if (!startingroom)
+        {
+            if (NumDir == 1) transform.localPosition += new Vector3(0, .5f, 0);
+            else if (NumDir == 2) transform.localPosition += new Vector3(.5f, 0, 0);
+            else if (NumDir == 3) transform.localPosition += new Vector3(0, -.5f, 0);
+            else if (NumDir == 4) transform.localPosition += new Vector3(-.5f, 0, 0);
+        }
+       Invoke("SpawnRoom", .1f);
+       
+        // else if (longorsmall <= 25 )
         // {
         //     CheckSpace();
         //     Invoke("SpawnLongRoom", .1f);
@@ -36,25 +44,26 @@ public class StageController : MonoBehaviour
 
     void CheckSpace()
     {
+        Vector3 pos = transform.localPosition;
         if (NumDir == 1)
         {
-            transform.localScale += new Vector3(0, 9, 0);
-            transform.position += new Vector3(0, 3.7f, 0);
+            transform.localScale += new Vector3(0, 12, 0);
+            transform.localPosition = new Vector3(pos.x, 29, 0);
         }
         else if (NumDir == 2)
         {
-            transform.localScale += new Vector3(9, 0, 0);
-            transform.position += new Vector3(10, 0, 0);
+            transform.localScale += new Vector3(12, 0, 0);
+            transform.position  = new Vector3(20f , pos.y, 0);
         }
         else if (NumDir == 3)
         {
-            transform.localScale += new Vector3(0, 9, 0);
-            transform.position += new Vector3(0, -10, 0);
+            transform.localScale += new Vector3(0, 12, 0);
+            transform.localPosition = new Vector3(pos.x, -29, 0);
         }
         else if (NumDir == 4)
         {
-            transform.localScale += new Vector3(9, 0, 0);
-            transform.position += new Vector3(-3.7f, 0, 0);
+            transform.localScale += new Vector3(12, 0, 0);
+            transform.position  = new Vector3(-20f , pos.y, 0);
         }
     }
    

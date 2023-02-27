@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerDirFinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSprite.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -114,6 +115,11 @@
       <workItem from="1677359973118" duration="541000" />
       <workItem from="1677360563365" duration="10918000" />
       <workItem from="1677384589196" duration="2148000" />
+      <workItem from="1677413368684" duration="3621000" />
+      <workItem from="1677424544354" duration="596000" />
+      <workItem from="1677432737264" duration="1417000" />
+      <workItem from="1677439838468" duration="1689000" />
+      <workItem from="1677446853033" duration="11053000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TempPlayer : MonoBehaviour
 {
@@ -108,6 +109,7 @@ public class TempPlayer : MonoBehaviour
     // this function lowers the player's hp and turns on the iframes function
     public void Playerhurt()
     {
+        SoundControl.Soundcntrl.CharaDamagePlay();
         GMController.gm.ui.health.health--;
         GMController.gm.playerhurt = true;
     }
@@ -145,10 +147,12 @@ public class TempPlayer : MonoBehaviour
             }
             else
             {
-                Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
-                    .position;
-                transform.position = GMController.gm.info.startingloc[0].position;
-                cam.transform.position = new Vector3(loc.x, loc.y, -10);
+                SceneManager.LoadScene("EndPlayTest");
+
+                // Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                //     .position;
+                // transform.position = GMController.gm.info.startingloc[0].position;
+                // cam.transform.position = new Vector3(loc.x, loc.y, -10);
             }
         }
 

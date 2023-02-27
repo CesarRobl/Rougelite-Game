@@ -19,6 +19,7 @@ public class RoomController : MonoBehaviour
     public Transform[] startingloc;
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
+     [SerializeField] private GameObject[] bossdoorsprite;
 
      private bool stop, stop2;
     private void Awake()
@@ -60,6 +61,7 @@ public class RoomController : MonoBehaviour
             {
                 doors[n].bossdoor = true;
                 doors[n].GetComponent<SpriteRenderer>().color = Color.yellow;
+                bossdoorsprite[n].SetActive(true);
                 GMController.gm.info.bossdoors.Add(doors[n]);
                 GMController.gm.info.startingloc[1] = doors[n].startingpoint;
                 doors.Remove(doors[n]);

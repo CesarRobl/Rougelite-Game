@@ -45,6 +45,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Scripts\RoomController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\BossRoomController.cs" />
      <Compile Include="Assets\SoundController.cs" />
      <Compile Include="Assets\Scripts\dash.cs" />
@@ -101,6 +102,7 @@
      <Compile Include="Assets\Scripts\PelletController.cs" />
      <Compile Include="Assets\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\PlayerDirFinder.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -119,6 +121,7 @@
      <Folder Include="Assets\TestStages\SmallStage" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\TestStages" />
+     <Folder Include="Assets\TestStages\LongStageReworked\LR" />
      <Folder Include="Assets\Art\Environment Art\BossTilesWalls" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <Folder Include="Assets\Prefabs\Wendy Tiles" />
@@ -132,6 +135,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\Scenes\TestScenes" />
+     <Folder Include="Assets\Music" />
      <Folder Include="Assets\TestStages\SmallStage\UR" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\TestStages\SmallStageRework\DL" />
@@ -140,6 +144,7 @@
      <Folder Include="Assets\Animations\Spatula" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\TestStages\SmallStageRework\U" />
+     <Folder Include="Assets\TestStages\LongStageReworked\UD" />
      <Folder Include="Assets\Sounds(Keyshawn)" />
      <Folder Include="Assets\Art\CharacterSprites\Enemies\NormalCharger" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
@@ -148,6 +153,7 @@
      <Folder Include="Assets\TestStages\SmallStageRework\R" />
      <Folder Include="Assets\TestStages\SmallStage\UL" />
      <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Art\Sprites\Pellets" />
      <Folder Include="Assets\Art\CharacterSprites\Enemies" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\Art\UI" />
@@ -161,6 +167,7 @@
      <Folder Include="Assets\Art" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\TestStages\LongStageReworked" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts" />
      <Folder Include="Assets\TestStages\SmallStage\LR" />
@@ -172,10 +179,11 @@
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\TestStages\SmallStageRework\UR" />
+     <Folder Include="Assets\Animations\MenuAni" />
      <Folder Include="Assets\Animations" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
-     <Folder Include="Assets\TestItems\New Folder" />
+     <Folder Include="Assets\TestItems\RenderTexture" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
      <Folder Include="Assets\Art\Sprites\TempSword" />
      <Folder Include="Assets\TestStages\SmallStageRework\D" />
@@ -190,11 +198,13 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Textures" />
+     <Folder Include="Assets\Art\Sprites\Collectible" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras" />
      <Folder Include="Assets\Art\Environment Art\BossDoor" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Fonts &amp; Materials" />
+     <Folder Include="Assets\Art\Sprites\Collectible\Health" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Color Gradient Presets" />
      <Folder Include="Assets\TestStages\SmallStage\UD" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />

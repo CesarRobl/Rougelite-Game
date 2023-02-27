@@ -12,6 +12,8 @@ public class GMController : MonoBehaviour
 {
    
     public static GMController gm;
+    [HideInInspector] public static bool showcrosshair;
+    public static float volume;
     public TempPlayer temp;
     public Transform player;
     public ObjectController oc;
@@ -36,6 +38,7 @@ public class GMController : MonoBehaviour
     
     void Start()
     {
+        crosshair.SetActive(showcrosshair);
         info = GetComponent<RoomInfo>();
         ui = GetComponent<UIController>();
         timer = hurtdelay;
@@ -53,7 +56,7 @@ public class GMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
+       if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
         if(ui.health.health <= 0) PlayerDie();

@@ -12,6 +12,8 @@ public class GMController : MonoBehaviour
 {
    
     public static GMController gm;
+    [HideInInspector] public static bool showcrosshair;
+    public static float volume;
     public TempPlayer temp;
     public Transform player;
     public ObjectController oc;
@@ -19,36 +21,47 @@ public class GMController : MonoBehaviour
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
-    [SerializeField] private Transform holder;
+    [HideInInspector] public Transform holder;
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
+    [HideInInspector] public UIController ui;
     
-    public int roomint, roommax,playerhealth;
-    private int maxhealth;
+    public int roomint, roommax;
+    private float maxhealth;
+    public float playerhealth;
     public float pelletspeed, hurtdelay, maxforce;
     private float timer;
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;
+    public float smallhealthpercent, bighealthpercent;
     
     void Start()
     {
+        crosshair.SetActive(showcrosshair);
         info = GetComponent<RoomInfo>();
+        ui = GetComponent<UIController>();
         timer = hurtdelay;
-        maxhealth = playerhealth;
-        Cursor.visible = true;
+        
+       Invoke("Setup", .5f);
         gm = this;
+    }
+
+    void Setup()
+    {
+        Cursor.visible = false;
+        temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
+       if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
-        if(playerhealth <= 0) PlayerDie();
-        if (playerhealth > maxhealth) playerhealth = maxhealth;
+        if(ui.health.health <= 0) PlayerDie();
+      
         Holder();
         
     }
@@ -100,7 +113,12 @@ public class GMController : MonoBehaviour
            
     }
 
-    
+    // This function will play whenever the player hits the enemy.
+    // The function will show a feedback of the enemy turn white
+    void HurtEffect()
+    {
+        
+    }
     
     // use the holder position for the sword
     void Holder()
@@ -111,16 +129,20 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     { 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);
-        if (rand >= 50)
+        if (rand <= smallhealthpercent)
         {
             Instantiate(oc.Heathdrop,enemy.transform.position,Quaternion.identity);
+        }
+        else if (rand > smallhealthpercent & rand <= (bighealthpercent + smallhealthpercent)) 
+        {
+            Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }
         Destroy(enemy);
     }

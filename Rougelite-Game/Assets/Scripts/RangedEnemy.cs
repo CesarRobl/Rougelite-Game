@@ -8,10 +8,13 @@ public class RangedEnemy : TestAI
     [SerializeField] private float shootdelay;
     [SerializeField] private bool stop;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem ps;
+    [SerializeField] private GameObject PlayerDir;
     private Vector2 dir;
 
     void Awake()
     {
+        ps = GetComponentInChildren<ParticleSystem>();
         pastpos = transform.position;
     }
 
@@ -21,7 +24,6 @@ public class RangedEnemy : TestAI
         dir = GMController.gm.temp.transform.position - transform.position;
         SeekPlayer();
         if (found) RangedAI();
-        else transform.position = pastpos;
         if (HP <= 0) GMController.gm.Die(gameObject);
     }
 
@@ -41,7 +43,7 @@ public class RangedEnemy : TestAI
     {
         if (shootdelay <= 0)
         {
-            Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.identity);
+            Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(PlayerDir.transform.eulerAngles));
             shootdelay = 2;
         }
         else shootdelay -= Time.deltaTime;
@@ -58,7 +60,7 @@ public class RangedEnemy : TestAI
             {
                 found = true;
             }
-            else found = false;
+            
         }
     }
 
@@ -70,6 +72,7 @@ public class RangedEnemy : TestAI
             if (stop == false)
             {
                 stop = true;
+                StartCoroutine(EnemyHurt(ps));
                 Knockback(GMController.gm.maxforce);
             }
         }

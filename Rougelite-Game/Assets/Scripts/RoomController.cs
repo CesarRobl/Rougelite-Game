@@ -19,6 +19,7 @@ public class RoomController : MonoBehaviour
     public Transform[] startingloc;
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
+     [SerializeField] private GameObject[] bossdoorsprite;
 
      private bool stop, stop2;
     private void Awake()
@@ -53,19 +54,22 @@ public class RoomController : MonoBehaviour
     // chooses the door that will lead to the bossroom
     void ChooseBossDoor()
     {
+        Debug.Log("I am boss Door");
         for (int n = 0; n < doors.Count; n++)
         {
             if (!doors[n].doorinfront & !doors[n].wallinfront & !stop2)
             {
                 doors[n].bossdoor = true;
                 doors[n].GetComponent<SpriteRenderer>().color = Color.yellow;
+                bossdoorsprite[n].SetActive(true);
                 GMController.gm.info.bossdoors.Add(doors[n]);
                 GMController.gm.info.startingloc[1] = doors[n].startingpoint;
                 doors.Remove(doors[n]);
                 stop2 = true;
             }
         }
-        Invoke("CheckDoor", .1f);
+        
+        if(stop2)Invoke("CheckDoor", .1f);
         
         // for (int i = 0; i < doors.Count; i++) SetWall(i);
             

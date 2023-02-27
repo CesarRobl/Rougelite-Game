@@ -17,18 +17,27 @@ public class SoundControl : MonoBehaviour
     public AudioSource CharAS;
     public AudioSource MusicAS;
     public AudioSource EnemyAS;
-
+    [SerializeField]private AudioSource[] MusicAndEffects;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Soundcntrl = this;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ChangeVolume();
+    }
+    // Changes the volume of the audiosources
+    void ChangeVolume()
+    {
+        for (int i = 0; i < MusicAndEffects.Length ; i++)
+        {
+            MusicAndEffects[i].volume = GMController.volume;
+        }
     }
 
     //run this every 3 seconds

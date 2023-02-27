@@ -35,6 +35,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;
+    public float smallhealthpercent, bighealthpercent;
     
     void Start()
     {
@@ -135,11 +136,11 @@ public class GMController : MonoBehaviour
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);
-        if (rand <= 25)
+        if (rand <= smallhealthpercent)
         {
             Instantiate(oc.Heathdrop,enemy.transform.position,Quaternion.identity);
         }
-        else if (rand > 25 & rand <= 75) 
+        else if (rand > smallhealthpercent & rand <= (bighealthpercent + smallhealthpercent)) 
         {
             Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }

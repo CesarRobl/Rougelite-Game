@@ -42,6 +42,7 @@ public class EnemyPelletController : MonoBehaviour
         {
             if(!GMController.gm.playerhurt)GMController.gm.temp.Playerhurt();
             Destroy(gameObject);
+            Debug.Log("hit");
         }
        
         else if (col.CompareTag("Walls") || col.CompareTag("Door") || col.CompareTag("Obstacle") ) Destroy(gameObject);

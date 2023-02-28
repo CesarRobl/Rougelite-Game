@@ -8,6 +8,7 @@ public class TestAI : MonoBehaviour
     public int HP;
     public bool found;
     public float drange;
+    public float speed = 2;
     
     [HideInInspector]public Vector3 pastpos;
     private Vector2 dir;
@@ -34,7 +35,7 @@ public class TestAI : MonoBehaviour
     void MoveToPlayer()
     {
         transform.position =
-            Vector3.MoveTowards(transform.position, GMController.gm.player.position, 2 * Time.deltaTime);
+            Vector3.MoveTowards(transform.position, GMController.gm.player.position, speed * Time.deltaTime);
     }
 
     void SeekPlayer()

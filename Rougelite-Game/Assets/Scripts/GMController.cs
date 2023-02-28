@@ -29,7 +29,7 @@ public class GMController : MonoBehaviour
     public int roomint, roommax;
     private float maxhealth;
     public float playerhealth;
-    public float pelletspeed, hurtdelay, maxforce;
+    public float pelletspeed, hurtdelay, maxforce, forcedelay;
     private float timer;
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;

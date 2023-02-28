@@ -6,7 +6,7 @@ public class RangedEnemy : TestAI
 {
 
     [SerializeField] private float shootdelay;
-    [SerializeField] private bool stop;
+    [SerializeField] private bool stop,stunned;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ParticleSystem ps;
     [SerializeField] private GameObject PlayerDir;
@@ -80,10 +80,17 @@ public class RangedEnemy : TestAI
 
     public void Knockback(float force)
     {
-        Debug.Log("force");
         rb.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
+        stunned = true;
+        StartCoroutine(Reset());
         stop = false;
-        
+    }
+    
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(GMController.gm.forcedelay);
+        rb.velocity = Vector2.zero;
+        stunned = false;
     }
 
 }

@@ -122,6 +122,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\TestStages" />
      <Folder Include="Assets\TestStages\LongStageReworked\LR" />
+     <Folder Include="Assets\Sounds\Unkown SOunds" />
      <Folder Include="Assets\Art\Environment Art\BossTilesWalls" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <Folder Include="Assets\Prefabs\Wendy Tiles" />

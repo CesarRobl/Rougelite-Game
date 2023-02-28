@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SoundControl : MonoBehaviour
 {
+
+    //DONT FUCKING TOUCH I WILL KILL U ISTG
+    
     public static SoundControl Soundcntrl;
 
     public List<AudioClip> Steps;

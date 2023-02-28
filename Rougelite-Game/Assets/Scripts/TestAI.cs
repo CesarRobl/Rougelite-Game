@@ -12,7 +12,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector]public Vector3 pastpos;
     private Vector2 dir;
     [SerializeField] private Rigidbody2D RB;
-    [SerializeField] private bool Stop;
+    [SerializeField] private bool Stop,stun;
     [SerializeField] private ParticleSystem ps;
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class TestAI : MonoBehaviour
     void Update()
     {
        
-        if (found) MoveToPlayer();
+        if (found & !stun) MoveToPlayer();
         
       SeekPlayer();
         if(HP <= 0) GMController.gm.Die(gameObject);
@@ -90,9 +90,17 @@ public class TestAI : MonoBehaviour
     }
     public void Knockback(float force)
     {
-        
         RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
+        stun = true;
+        StartCoroutine(Reset());
         Stop = false;
         
+    }
+
+     IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(GMController.gm.forcedelay);
+        RB.velocity = Vector2.zero;
+        stun = false;
     }
 }

@@ -8,6 +8,7 @@ public class TempSound : MonoBehaviour
 
     public AudioSource[] tempstorage;
     public AudioClip[] clipstorage;
+
     void Start()
     {
         soundtemp = this;

@@ -30,7 +30,7 @@ public class TempPlayer : MonoBehaviour
     void AttackCode()
     {
         StartCoroutine(GMController.gm.ani.SpatulaSwipe());
-
+        TempSound.soundtemp.tempstorage[3].PlayOneShot(TempSound.soundtemp.clipstorage[3]);
     }
     
     void TempMovement()

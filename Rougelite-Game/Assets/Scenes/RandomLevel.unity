@@ -1935,7 +1935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331856320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: -0.3199996, z: 0}
+  m_LocalPosition: {x: 5.22, y: -0.3199996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7699,6 +7699,14 @@ PrefabInstance:
       propertyPath: tempstorage.Array.data[3]
       value: 
       objectReference: {fileID: 1391039364}
+    - target: {fileID: 7237842263399967942, guid: d107593f51678e6468e35a3394a8ac13, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237842263399967942, guid: d107593f51678e6468e35a3394a8ac13, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d107593f51678e6468e35a3394a8ac13, type: 3}
 --- !u!1 &1391039358 stripped
@@ -8016,7 +8024,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45f23778d079c284c94a40112a9fee7f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.096
   m_Pitch: 1
   Loop: 0
   Mute: 0

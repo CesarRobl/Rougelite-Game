@@ -6,6 +6,7 @@ public class SoundControl : MonoBehaviour
 {
 
     //DONT FUCKING TOUCH I WILL KILL U ISTG
+    //DONT TELL ME WHAT TO DO
     
     public static SoundControl Soundcntrl;
 

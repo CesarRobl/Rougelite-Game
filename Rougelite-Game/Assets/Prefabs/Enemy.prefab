@@ -103,9 +103,11 @@ MonoBehaviour:
   HP: 3
   found: 0
   drange: 10
+  speed: 5
   pastpos: {x: 0, y: 0, z: 0}
   RB: {fileID: -7282737424170876775}
   Stop: 0
+  stun: 0
   ps: {fileID: 0}
 --- !u!61 &6165929809796948066
 BoxCollider2D:

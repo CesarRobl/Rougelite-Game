@@ -106,6 +106,7 @@ public class RoomController : MonoBehaviour
     // changes the door sprite from open to closed when a player has cleared a room
     void OpenDoor()
     {
+        TempSound.soundtemp.tempstorage[2].PlayOneShot(  TempSound.soundtemp.clipstorage[2]);
         for (int i = 0; i < wendydoorsopen.Length; i++)
         {
             wendydoorsopen[i].SetActive(true);
@@ -135,6 +136,7 @@ public class RoomController : MonoBehaviour
     // changes the door sprite from open to close when a player has entered a room
     void CloseDoor()
     {
+        TempSound.soundtemp.tempstorage[1].PlayOneShot(  TempSound.soundtemp.clipstorage[1]);
         for (int i = 0; i < wendydoorsopen.Length; i++)
         {
             wendydoorsopen[i].SetActive(false);

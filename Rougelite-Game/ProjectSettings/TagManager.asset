@@ -15,6 +15,7 @@ TagManager:
   - Exit
   - HalfHealth
   - Room
+  - Obstacle
   layers:
   - Default
   - TransparentFX

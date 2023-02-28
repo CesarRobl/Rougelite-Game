@@ -170,11 +170,13 @@ public class TempPlayer : MonoBehaviour
         if((col.gameObject.CompareTag("HealthDrop")))
         {
             GMController.gm.ui.health.health += 2;
+            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
             Destroy(col.gameObject);
         }
         if((col.gameObject.CompareTag("HalfHealth")))
         {
             GMController.gm.ui.health.health++;
+            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
             Destroy(col.gameObject);
         }
     }

@@ -38,12 +38,12 @@ public class EnemyPelletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
-        if (tp != null & !GMController.gm.playerhurt)
+        if (tp != null  )
         {
-            GMController.gm.temp.Playerhurt();
+            if(!GMController.gm.playerhurt)GMController.gm.temp.Playerhurt();
             Destroy(gameObject);
         }
        
-        else if (col.CompareTag("Walls") || col.CompareTag("Door") ) Destroy(gameObject);
+        else if (col.CompareTag("Walls") || col.CompareTag("Door") || col.CompareTag("Obstacle") ) Destroy(gameObject);
     }
 }

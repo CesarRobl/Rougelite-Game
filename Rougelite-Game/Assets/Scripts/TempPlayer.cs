@@ -23,7 +23,6 @@ public class TempPlayer : MonoBehaviour
     void Update()
     {
        TempMovement();
-        Shoot();
         if(Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
     }
 

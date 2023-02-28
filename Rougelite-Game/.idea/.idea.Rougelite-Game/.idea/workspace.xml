@@ -25,6 +25,7 @@
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -114,7 +115,7 @@
       <workItem from="1677467304299" duration="1769000" />
       <workItem from="1677557278516" duration="1559000" />
       <workItem from="1677583496661" duration="1238000" />
-      <workItem from="1677610480362" duration="791000" />
+      <workItem from="1677610480362" duration="4314000" />
     </task>
     <servers />
   </component>

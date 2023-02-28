@@ -50,7 +50,7 @@ public class TestAI : MonoBehaviour
             {
                 found = true;
             }
-            else found = false;
+            
         }
     }
 

@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5412795940425122071, guid: b9574b746c7980c4685686664152c02b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7934657891488033097, guid: b9574b746c7980c4685686664152c02b, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -824,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b834b3765157b44ebe57cb6e3129ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spatula: {fileID: 1098159915}
   chardir:
   - {fileID: 21300000, guid: 0c4b1f013a9e1b84dae32bd7ea404dfd, type: 3}
   - {fileID: 21300000, guid: b76e499994acc96488f5450a3f2b5db6, type: 3}
@@ -3216,6 +3221,10 @@ PrefabInstance:
     - target: {fileID: 4367886674983885737, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367886674983885737, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885739, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: m_RootOrder

@@ -41,7 +41,7 @@ public class DoorScript : MonoBehaviour
          doorinfront = true;
 
       }
-      
+      // Debug.Log( gameObject.name + " " + GetComponentInParent<RoomController>().gameObject.name + " Hit" + " " + hit.collider.gameObject.name + " " + hit.collider.GetComponentInParent<RoomController>().gameObject.name);
      
    }
    private void OnDrawGizmos()

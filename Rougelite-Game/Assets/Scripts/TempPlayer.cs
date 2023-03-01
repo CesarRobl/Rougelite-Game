@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TempPlayer : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class TempPlayer : MonoBehaviour
     void Update()
     {
        TempMovement();
-        Shoot();
         if(Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
     }
 
@@ -30,7 +30,7 @@ public class TempPlayer : MonoBehaviour
     void AttackCode()
     {
         StartCoroutine(GMController.gm.ani.SpatulaSwipe());
-
+        TempSound.soundtemp.tempstorage[3].PlayOneShot(TempSound.soundtemp.clipstorage[3]);
     }
     
     void TempMovement()
@@ -108,7 +108,8 @@ public class TempPlayer : MonoBehaviour
     // this function lowers the player's hp and turns on the iframes function
     public void Playerhurt()
     {
-        GMController.gm.playerhealth--;
+        SoundControl.Soundcntrl.CharaDamagePlay();
+        GMController.gm.ui.health.health--;
         GMController.gm.playerhurt = true;
     }
 
@@ -145,10 +146,12 @@ public class TempPlayer : MonoBehaviour
             }
             else
             {
-                Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
-                    .position;
-                transform.position = GMController.gm.info.startingloc[0].position;
-                cam.transform.position = new Vector3(loc.x, loc.y, -10);
+                SceneManager.LoadScene("EndPlayTest");
+
+                // Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                //     .position;
+                // transform.position = GMController.gm.info.startingloc[0].position;
+                // cam.transform.position = new Vector3(loc.x, loc.y, -10);
             }
         }
 
@@ -165,12 +168,14 @@ public class TempPlayer : MonoBehaviour
         
         if((col.gameObject.CompareTag("HealthDrop")))
         {
-            GMController.gm.playerhealth++;
+            GMController.gm.ui.health.health += 2;
+            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
             Destroy(col.gameObject);
         }
         if((col.gameObject.CompareTag("HalfHealth")))
         {
-            GMController.gm.playerhealth+=.5f;
+            GMController.gm.ui.health.health++;
+            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
             Destroy(col.gameObject);
         }
     }

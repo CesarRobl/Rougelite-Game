@@ -12,6 +12,8 @@ public class GMController : MonoBehaviour
 {
    
     public static GMController gm;
+    [HideInInspector] public static bool showcrosshair;
+    public static float volume;
     public TempPlayer temp;
     public Transform player;
     public ObjectController oc;
@@ -22,22 +24,26 @@ public class GMController : MonoBehaviour
     [HideInInspector] public Transform holder;
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
+    [HideInInspector] public UIController ui;
     
     public int roomint, roommax;
     private float maxhealth;
     public float playerhealth;
-    public float pelletspeed, hurtdelay, maxforce;
+    public float pelletspeed, hurtdelay, maxforce, forcedelay;
     private float timer;
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;
+    public float smallhealthpercent, bighealthpercent;
     
     void Start()
     {
+        crosshair.SetActive(showcrosshair);
         info = GetComponent<RoomInfo>();
+        ui = GetComponent<UIController>();
         timer = hurtdelay;
-        maxhealth = playerhealth;
+        
        Invoke("Setup", .5f);
         gm = this;
     }
@@ -51,11 +57,11 @@ public class GMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(!spawnedboss)Invoke("SpawnBossRoom", 1f);
+       if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
-        if(playerhealth <= 0) PlayerDie();
-        if (playerhealth > maxhealth) playerhealth = maxhealth;
+        if(ui.health.health <= 0) PlayerDie();
+      
         Holder();
         
     }
@@ -123,18 +129,20 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     { 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
+  
+
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy)
     {
         int rand = Random.Range(0, 100);
-        if (rand <= 25)
+        if (rand <= bighealthpercent)
         {
             Instantiate(oc.Heathdrop,enemy.transform.position,Quaternion.identity);
         }
-        else if (rand > 25 & rand <= 75) 
+        else if (rand > bighealthpercent & rand <= (bighealthpercent + smallhealthpercent)) 
         {
             Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }

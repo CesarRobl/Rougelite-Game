@@ -13,6 +13,7 @@ public class Healthbar : MonoBehaviour
     
     public Image[] Burgers;
     public Sprite FullBurger;
+    public Sprite HalfBurger;
     public Sprite EmptyBurger;
 
     private void Update()
@@ -24,10 +25,18 @@ public class Healthbar : MonoBehaviour
 
         for (int i = 0; i < Burgers.Length; i++)
         {
-            if (i < health)
+            Debug.Log((i  * 2) + 1);
+           
+             if ((i * 2) + 1 == health )
             {
-                Burgers[i].sprite = FullBurger;
+                Burgers[i].sprite = HalfBurger;
             }
+             
+             else if (i * 2 < health )
+             {
+                 Burgers[i].sprite = FullBurger;
+             }
+            
             else
             {
                 Burgers[i].sprite = EmptyBurger;

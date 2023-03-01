@@ -6,9 +6,10 @@ public class RangedEnemy : TestAI
 {
 
     [SerializeField] private float shootdelay;
-    [SerializeField] private bool stop;
+    [SerializeField] private bool stop,stunned;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ParticleSystem ps;
+    [SerializeField] private GameObject PlayerDir;
     private Vector2 dir;
 
     void Awake()
@@ -23,7 +24,6 @@ public class RangedEnemy : TestAI
         dir = GMController.gm.temp.transform.position - transform.position;
         SeekPlayer();
         if (found) RangedAI();
-        else transform.position = pastpos;
         if (HP <= 0) GMController.gm.Die(gameObject);
     }
 
@@ -43,7 +43,7 @@ public class RangedEnemy : TestAI
     {
         if (shootdelay <= 0)
         {
-            Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.identity);
+            Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(PlayerDir.transform.eulerAngles));
             shootdelay = 2;
         }
         else shootdelay -= Time.deltaTime;
@@ -60,7 +60,7 @@ public class RangedEnemy : TestAI
             {
                 found = true;
             }
-            else found = false;
+            
         }
     }
 
@@ -80,10 +80,17 @@ public class RangedEnemy : TestAI
 
     public void Knockback(float force)
     {
-        Debug.Log("force");
         rb.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
+        stunned = true;
+        StartCoroutine(Reset());
         stop = false;
-        
+    }
+    
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(GMController.gm.forcedelay);
+        rb.velocity = Vector2.zero;
+        stunned = false;
     }
 
 }

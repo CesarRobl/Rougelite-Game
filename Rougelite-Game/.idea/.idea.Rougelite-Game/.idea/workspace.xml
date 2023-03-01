@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rougelite-Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rougelite-Game.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
-=======
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="" />
->>>>>>> 03963327b34fa1d995bf42facb32b946d21f56d0
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSprite.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -30,20 +22,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\cesar\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\cesar\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\cesar\\AppData\\Local\\Symbols\\src&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.2.1f1\Editor\Unity.exe" />
@@ -115,19 +99,24 @@
       <workItem from="1676421261809" duration="11000" />
       <workItem from="1676575845340" duration="1871000" />
       <workItem from="1676858539053" duration="1247000" />
-<<<<<<< HEAD
-      <workItem from="1676922376835" duration="3544000" />
-      <workItem from="1677017264306" duration="1317000" />
-      <workItem from="1677375155876" duration="1005000" />
-=======
       <workItem from="1676923115801" duration="2150000" />
       <workItem from="1676931214282" duration="1462000" />
       <workItem from="1676998732583" duration="1197000" />
       <workItem from="1677010676974" duration="4515000" />
       <workItem from="1677339469662" duration="886000" />
       <workItem from="1677359973118" duration="541000" />
-      <workItem from="1677360563365" duration="8158000" />
->>>>>>> 03963327b34fa1d995bf42facb32b946d21f56d0
+      <workItem from="1677360563365" duration="10918000" />
+      <workItem from="1677384589196" duration="2148000" />
+      <workItem from="1677413368684" duration="3621000" />
+      <workItem from="1677424544354" duration="596000" />
+      <workItem from="1677432737264" duration="1417000" />
+      <workItem from="1677439838468" duration="1689000" />
+      <workItem from="1677446853033" duration="11053000" />
+      <workItem from="1677467304299" duration="1769000" />
+      <workItem from="1677557278516" duration="1559000" />
+      <workItem from="1677583496661" duration="1238000" />
+      <workItem from="1677610480362" duration="4314000" />
+      <workItem from="1677622717824" duration="1291000" />
     </task>
     <servers />
   </component>

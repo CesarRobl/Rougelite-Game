@@ -30,7 +30,7 @@ public class AniController : MonoBehaviour
          spatula[1].transform.eulerAngles =  spatula[3].transform.eulerAngles;
          Debug.Log(spatula[1].transform.eulerAngles);
         
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.35f);
         spatula[0].transform.localPosition = currentpos;
        
         attacking = false;

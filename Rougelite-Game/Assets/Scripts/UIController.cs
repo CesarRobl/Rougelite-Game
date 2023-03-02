@@ -35,16 +35,20 @@ public class UIController : MonoBehaviour
     }
      void ShowMenuTab()
     {
+       
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!showmenu)
             {
+                Time.timeScale = 0;
                 showmenu = true;
                 MenuTab.SetActive(showmenu);
                 return;
             }
             else
             {
+                Time.timeScale = 1;
                 Cursor.visible = false;
                 showmenu = false;
                 MenuTab.SetActive(showmenu);

@@ -15,6 +15,7 @@ public class MenuScript : MonoBehaviour
     private bool opensettings;
     void Start()
     {
+        Time.timeScale = 1;
         menu = this;
         if (GMController.volume != 0) volumeslider.value = GMController.volume;
         else volumeslider.value = 1;

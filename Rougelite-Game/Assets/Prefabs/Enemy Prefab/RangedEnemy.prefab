@@ -127,15 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29e5ed0183153f4aa80500d96b5146e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 2
   found: 0
   drange: 10
+  speed: 3
   pastpos: {x: 0, y: 0, z: 0}
   RB: {fileID: -9077085294572619035}
   Stop: 0
+  stun: 0
   ps: {fileID: 0}
   shootdelay: 0
   stop: 0
+  stunned: 0
   rb: {fileID: -9077085294572619035}
   ps: {fileID: 0}
   PlayerDir: {fileID: 3615754480450035698}

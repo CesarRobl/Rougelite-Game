@@ -57,6 +57,8 @@ public class RoomController : MonoBehaviour
         Debug.Log("I am boss Door");
         for (int n = 0; n < doors.Count; n++)
         {
+            // if(doors[n].doorinfront) doors.Remove(doors[n]);
+            
             if (!doors[n].doorinfront & !doors[n].wallinfront & !stop2)
             {
                 doors[n].bossdoor = true;
@@ -69,7 +71,7 @@ public class RoomController : MonoBehaviour
             }
         }
         
-        if(stop2)Invoke("CheckDoor", .1f);
+        if(stop2)Invoke("HideDoor", .1f);
         
         // for (int i = 0; i < doors.Count; i++) SetWall(i);
             
@@ -92,14 +94,19 @@ public class RoomController : MonoBehaviour
     
     void HideDoor()
     {
-        for (int i = 0; i < doors.Count; i++) if (doors[i].doorinfront) doors.Remove(doors[i]);
+        Vector3 rot = transform.eulerAngles;
         for (int i = 0; i < doors.Count; i++)
         {
-            if (doors[i].wallinfront)
+            if (!doors[i].doorinfront)
             {
-                if (bossroom) doors.Remove(doors[i]);
-                SetWall(i);
+                rot.z = 0;
+                if (doors[i].dir.y == 10) rot.z = 180;
+                else if (doors[i].dir.x == 10) rot.z = 90;
+                else if (doors[i].dir.x == -10) rot.z = 270;
+
+                Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
             }
+
         }
     }
 

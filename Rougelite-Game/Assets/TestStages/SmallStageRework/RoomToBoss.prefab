@@ -314,7 +314,15 @@ MonoBehaviour:
   walls: []
   wendydoorsopen: []
   wendydoorsclosed: []
-  mapwalls: []
+  mapwalls:
+  - {fileID: 4224698713524242526}
+  - {fileID: 3110957292897644961}
+  - {fileID: 5878702311229502716}
+  - {fileID: 5718820882797804740}
+  - {fileID: 4872179237443962107}
+  - {fileID: 3491048598747354599}
+  - {fileID: 2942576133955441373}
+  - {fileID: 5899020782805809676}
   startingloc:
   - {fileID: 1403905048594193607}
   - {fileID: 2667394547055953952}

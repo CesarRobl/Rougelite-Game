@@ -10,10 +10,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempSound.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSprite.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -118,6 +114,8 @@
       <workItem from="1677610480362" duration="4314000" />
       <workItem from="1677622717824" duration="1886000" />
       <workItem from="1677785709526" duration="2124000" />
+      <workItem from="1677873174039" duration="7534000" />
+      <workItem from="1677887343041" duration="545000" />
     </task>
     <servers />
   </component>

@@ -10,9 +10,11 @@ public class MenuScript : MonoBehaviour
     public static float lastvolumefloat;
     [SerializeField] private Button[] buttons;
     [SerializeField] private GameObject settings;
-    [SerializeField] private GameObject crosshairCheck;
+    [SerializeField] private GameObject crosshairCheck, loadscreen;
+    
      public Slider volumeslider;
     private bool opensettings;
+    public bool play;
     void Start()
     {
         Time.timeScale = 1;
@@ -27,13 +29,14 @@ public class MenuScript : MonoBehaviour
     {
         
         GMController.volume = volumeslider.value;
-        
+       
+        if(play)StartCoroutine(PlayGameScene());
     }
 
     
     public void PlayMainScene()
     {
-        SceneManager.LoadScene("RandomLevel");
+        play = true;
     }
 
     public void ShowSettings()
@@ -68,5 +71,16 @@ public class MenuScript : MonoBehaviour
             crosshairCheck.SetActive(GMController.showcrosshair);
             return;
         }
+    }
+
+     IEnumerator PlayGameScene()
+    {
+        
+        loadscreen.SetActive(true);
+       
+            loadscreen.GetComponent<RawImage>().color += new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         
+        yield return new WaitForSeconds(.85f);
+        SceneManager.LoadScene("RandomLevel");
     }
 }

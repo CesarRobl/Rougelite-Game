@@ -13,7 +13,7 @@ public class GMController : MonoBehaviour
    
     public static GMController gm;
     [HideInInspector] public static bool showcrosshair;
-    public static float volume;
+    public static float volume, fadespeed = 1.3f;
     public TempPlayer temp;
     public Transform player;
     public ObjectController oc;

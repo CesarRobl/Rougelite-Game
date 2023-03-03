@@ -12,9 +12,9 @@ public class UIController : MonoBehaviour
     public Transform[] BlackBorder;
     public Healthbar health;
     public GameObject MenuTab;
-    public GameObject[] Cameras;
+    public GameObject[] Cameras,loadscreen;
 
-    private bool showmenu;
+    private bool showmenu,stop;
     void Start()
     {
        Invoke("Camera",.1f);
@@ -23,9 +23,8 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // PlayerHP.text = "HP:" + " " + GMController.gm.playerhealth;
-        // TestFrame.text = "Playerhurt: " + GMController.gm.playerhurt;
 
+        if (!stop) StartCoroutine(FadeScreen());
         ShowMenuTab();
     }
 
@@ -61,5 +60,14 @@ public class UIController : MonoBehaviour
      {
         MenuScript.menu.volumeslider.value = MenuScript.lastvolumefloat;
          SceneManager.LoadScene("MainMenu");
+     }
+     
+     IEnumerator FadeScreen()
+     {
+         loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         
+         yield return new WaitForSeconds(.1f);
+        if(loadscreen[0].GetComponent<RawImage>().color.r >= 1)stop = true;
      }
 }

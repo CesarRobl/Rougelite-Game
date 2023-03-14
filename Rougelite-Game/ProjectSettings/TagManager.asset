@@ -14,6 +14,8 @@ TagManager:
   - Entrance
   - Exit
   - HalfHealth
+  - Room
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -24,8 +26,8 @@ TagManager:
   - Pellet
   - Player
   - Room
-  - 
-  - 
+  - Map
+  - Obstacle
   - 
   - 
   - 

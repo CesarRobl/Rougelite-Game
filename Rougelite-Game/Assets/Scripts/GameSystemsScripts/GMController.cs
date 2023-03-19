@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public bool playerhurt;
     [HideInInspector]public bool spawnedboss;
     public float smallhealthpercent, bighealthpercent;
-    [HideInInspector] public Path path;
+    [HideInInspector] public AstarPath path;
     
     void Start()
     {
@@ -54,6 +54,8 @@ public class GMController : MonoBehaviour
     {
         Cursor.visible = false;
         temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        path = GetComponentInChildren<AstarPath>();
+        
     }
 
     // Update is called once per frame
@@ -108,10 +110,17 @@ public class GMController : MonoBehaviour
                
                 Destroy(rc[i].gameObject);
                 rc.Remove(rc[i]);
+                
                 spawnedboss = true;
             }
-            if(!rc[i].bossroom)rc[i].Invoke("CheckDoor", .5f);
+
+            if (!rc[i].bossroom)
+            {
+                rc[i].Invoke("CheckDoor", .5f);
+               
+            }
         }
+        
            
     }
 

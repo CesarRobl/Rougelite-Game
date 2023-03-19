@@ -477,7 +477,7 @@
      <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-     <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+     <HintPath>C:\Users\danie\Documents\Source\Rougelite-Game\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
      <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>

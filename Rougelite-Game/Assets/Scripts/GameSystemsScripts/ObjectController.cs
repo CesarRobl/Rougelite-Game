@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectController : MonoBehaviour
@@ -12,5 +13,5 @@ public class ObjectController : MonoBehaviour
    public GameObject Heathdrop;
    public GameObject HalfHealth;
    public GameObject doorwalls;
-   
+   public GameObject gamenodes;
 }

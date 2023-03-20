@@ -1807,7 +1807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &442701945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,7 +1850,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -5730,11 +5762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3649771338837148825, guid: e712c53b2746d9c45b92688670d32654, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14593,7 +14625,7 @@ PrefabInstance:
       objectReference: {fileID: 1284950069}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: maxforce
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: crosshair

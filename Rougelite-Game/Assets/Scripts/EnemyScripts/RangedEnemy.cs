@@ -24,7 +24,7 @@ public class RangedEnemy : TestAI
         dir = GMController.gm.temp.transform.position - transform.position;
         SeekPlayer();
         if (found) RangedAI();
-        if (HP <= 0) GMController.gm.Die(gameObject);
+        if (HP <= 0) GMController.gm.Die(gameObject,GetComponent<LootSystem>());
     }
 
     void RangedAI()

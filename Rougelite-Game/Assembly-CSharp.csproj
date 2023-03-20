@@ -52,6 +52,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\NOT USED\ScrollingText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\StageController.cs" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\IntroCutscene.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\TempSound.cs" />
@@ -105,7 +107,9 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\IntroCutscene.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\LootSystem.cs" />
+     <Compile Include="Assets\Scripts\LootScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -153,6 +157,7 @@
      <Folder Include="Assets\Prefabs\Collectable Prefabs" />
      <Folder Include="Assets\Art\CharacterSprites" />
      <Folder Include="Assets\Animations\Spatula" />
+     <Folder Include="Assets\Art\Cutscenes\Intro" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\TestStages\SmallStageRework\U" />
      <Folder Include="Assets\TestStages\LongStageReworked\UD" />
@@ -166,6 +171,7 @@
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Art\Sprites\Pellets" />
      <Folder Include="Assets\Art\CharacterSprites\Enemies" />
+     <Folder Include="Assets\Prefabs\Collectable Prefabs\Powerups" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\Art\UI" />
      <Folder Include="Assets\TestStages\SmallStage\U" />
@@ -198,6 +204,7 @@
      <Folder Include="Assets\TestItems\RenderTexture" />
      <Folder Include="Assets\Prefabs\Enemy Prefab" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
+     <Folder Include="Assets\Art\Sprites\Collectible\PowerUp" />
      <Folder Include="Assets\Art\Sprites\TempSword" />
      <Folder Include="Assets\Scripts\EnemyScripts" />
      <Folder Include="Assets\TestStages\SmallStageRework\D" />
@@ -477,7 +484,7 @@
      <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-     <HintPath>C:\Users\danie\Documents\Source\Rougelite-Game\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+     <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
      <HintPath>C:\Users\cesar\Documents\RougeLite\Rougelite-Game\Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>

@@ -20,11 +20,13 @@ public class RoomController : MonoBehaviour
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
      [SerializeField] private GameObject[] bossdoorsprite;
+     private AstarPath path;
 
      private bool stop, stop2;
     private void Awake()
     {
-        
+
+        path = GetComponentInChildren<AstarPath>();
         Invoke("Addlist",.2f);
         for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.clear;
        
@@ -34,10 +36,10 @@ public class RoomController : MonoBehaviour
         }
         if (bossroom & !stop) Invoke("ChooseBossDoor", .5f);
     }
-    
-    
 
-    // Update is called once per frame
+   
+
+   // Update is called once per frame
     void Update()
     {
         if(playerin & !complete)CheckEnemy();

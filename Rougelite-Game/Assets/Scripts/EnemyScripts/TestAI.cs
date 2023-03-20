@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class TestAI : MonoBehaviour
@@ -15,6 +16,7 @@ public class TestAI : MonoBehaviour
     [SerializeField] private Rigidbody2D RB;
     [SerializeField] private bool Stop,stun;
     [SerializeField] private ParticleSystem ps;
+    [SerializeField] private AIPath ai;
     private void Awake()
     {
         ps = GetComponentInChildren<ParticleSystem>();
@@ -23,11 +25,12 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
-       
-        if (found & !stun) MoveToPlayer();
+       if (found & !stun)  ai.destination = GMController.gm.temp.transform.position;
         
+       
+       
       SeekPlayer();
-        if(HP <= 0) GMController.gm.Die(gameObject);
+        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
         
         
     }
@@ -82,6 +85,7 @@ public class TestAI : MonoBehaviour
     // If you are going to edit this code then please let me know - Cesar
     public IEnumerator EnemyHurt(ParticleSystem hurt)
     {
+        
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         Color og = sr.color;
         hurt.Play();
@@ -91,6 +95,8 @@ public class TestAI : MonoBehaviour
     }
     public void Knockback(float force)
     {
+        ai.destination = Vector3.zero;
+        
         RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
         stun = true;
         StartCoroutine(Reset());
@@ -99,7 +105,8 @@ public class TestAI : MonoBehaviour
     }
 
      IEnumerator Reset()
-    {
+     {
+         ai.maxSpeed = 2.5f;
         yield return new WaitForSeconds(GMController.gm.forcedelay);
         RB.velocity = Vector2.zero;
         stun = false;

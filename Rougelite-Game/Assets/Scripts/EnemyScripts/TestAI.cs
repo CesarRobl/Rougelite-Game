@@ -83,7 +83,7 @@ public class TestAI : MonoBehaviour
               pc = hit.collider.GetComponent<TempPlayer>();
               if (pc != null)
               {
-                  Debug.Log(hit.collider.gameObject.name);
+//                  Debug.Log(hit.collider.gameObject.name);
                   attack = true;
               }
               else attack = false;

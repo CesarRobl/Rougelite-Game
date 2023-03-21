@@ -26,7 +26,7 @@ public class RangedEnemy : TestAI
         // else if(found & !attack) MoveToPlayer();
         if (found)
         {
-           Debug.Log(ai.maxSpeed);
+//           Debug.Log(ai.maxSpeed);
             ai.maxSpeed = speed;
             ai.destination = GMController.gm.temp.transform.position;
         }

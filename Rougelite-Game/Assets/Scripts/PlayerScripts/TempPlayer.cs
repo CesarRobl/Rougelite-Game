@@ -10,7 +10,8 @@ public class TempPlayer : MonoBehaviour
 
     public GameObject cam;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed,timer,shootdelay,movedelay;
+    [SerializeField] private float timer,shootdelay,movedelay;
+    [HideInInspector] public float speed;
     private Vector2 fast;
     public Vector3 dir,pos,dir2,pos2;
      public bool entering;
@@ -18,7 +19,7 @@ public class TempPlayer : MonoBehaviour
     {
         
     }
-
+//REMINDER: Speed is 20.
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +44,7 @@ public class TempPlayer : MonoBehaviour
         
         if (Input.GetKey(KeyCode.W))
         {
-            Debug.Log("i am pressing");
+
             vel.y = fowardspeed.y;
         }
 

@@ -15,3 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: a3cb6c785388e2c459c35eb25858f972, type: 3}
   lootname: HotSauce
   dropchance: 30
+  idNum: 3

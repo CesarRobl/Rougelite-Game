@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LootScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [HideInInspector] public int powerInt;
     void Start()
     {
         
@@ -24,6 +24,10 @@ public class LootScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("TestPlayer")) Destroy(gameObject);
+        if (col.gameObject.CompareTag("TestPlayer"))
+        {
+            GMController.gm.id.PowerUp(powerInt);
+            Destroy(gameObject);
+        }
     }
 }

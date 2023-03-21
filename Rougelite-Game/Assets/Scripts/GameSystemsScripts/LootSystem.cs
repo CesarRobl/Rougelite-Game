@@ -34,6 +34,7 @@ public class LootSystem : MonoBehaviour
         if (droppedItem != null)
         {
             GameObject lootObject = Instantiate(droppedLoot, transform, Quaternion.identity);
+            lootObject.GetComponent<LootScript>().powerInt = droppedItem.idNum;
             lootObject.GetComponent<SpriteRenderer>().sprite = droppedItem.sprite;
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PotShotEnemy : TestAI
 {
-    private bool attacking;
+    
     private Vector2 currentpos,pos;
     [SerializeField] private Vector2 lastpos;
     private float dist,dist2;
@@ -61,7 +61,7 @@ public class PotShotEnemy : TestAI
         ai.destination = lastpos;
        
         yield return new WaitUntil(() => dist2 < .1f);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1);
         ai.speed = speed;
         attacking = false;
     }

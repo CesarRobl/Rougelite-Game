@@ -141,14 +141,11 @@ MonoBehaviour:
   RB: {fileID: -9077085294572619035}
   Stop: 0
   stun: 0
+  attacking: 0
   ps: {fileID: 0}
   ai: {fileID: 6916466758876227995}
-  shootdelay: 0
-  stop: 0
-  stunned: 0
-  rb: {fileID: -9077085294572619035}
-  ps: {fileID: 0}
-  PlayerDir: {fileID: 3615754480450035698}
+  shootDelay: 0
+  playerDir: {fileID: 4174617050041878789, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
 --- !u!50 &-9077085294572619035
 Rigidbody2D:
   serializedVersion: 4
@@ -314,11 +311,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
---- !u!1 &3615754480450035698 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4174617050041878789, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
-  m_PrefabInstance: {fileID: 847386586022237943}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3615754480450035697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4174617050041878790, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}

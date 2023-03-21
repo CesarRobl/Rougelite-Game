@@ -22,8 +22,10 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       TempMovement();
-        if(Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
+        
+            TempMovement();
+            if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
+        
     }
 
     // when called this function plays the sword animation
@@ -131,41 +133,47 @@ public class TempPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name);
+        
         RoomController rc = col.gameObject.GetComponent<RoomController>();
         DoorScript ds = col.gameObject.GetComponent<DoorScript>();
-        if (col.gameObject.CompareTag("Door") & !entering)
+
+        if (!GMController.gm.testscene)
         {
-            Debug.Log("I am touching door");
-            if (!ds.bossdoor)
-            { 
-                
-                dir = col.gameObject.GetComponent<DoorScript>().dir;
-                dir2 = col.gameObject.GetComponent<DoorScript>().dir;
-               StartCoroutine(EnterRoom());
-            }
-            else
+            if (col.gameObject.CompareTag("Door") & !entering)
             {
-                SceneManager.LoadScene("EndPlayTest");
+                Debug.Log("I am touching door");
+                if (!ds.bossdoor)
+                {
 
-                // Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
-                //     .position;
-                // transform.position = GMController.gm.info.startingloc[0].position;
-                // cam.transform.position = new Vector3(loc.x, loc.y, -10);
+                    dir = col.gameObject.GetComponent<DoorScript>().dir;
+                    dir2 = col.gameObject.GetComponent<DoorScript>().dir;
+                    StartCoroutine(EnterRoom());
+                }
+                else
+                {
+                    SceneManager.LoadScene("EndPlayTest");
+
+                    // Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                    //     .position;
+                    // transform.position = GMController.gm.info.startingloc[0].position;
+                    // cam.transform.position = new Vector3(loc.x, loc.y, -10);
+                }
+            }
+
+            if (col.gameObject.CompareTag("Room"))
+                cam.transform.position = new Vector3(col.gameObject.transform.position.x,
+                    col.gameObject.transform.position.y, -10);
+
+            if (col.gameObject.CompareTag("Exit"))
+            {
+                Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
+                    .position;
+                transform.position = GMController.gm.info.startingloc[1].position;
+
+                cam.transform.position = new Vector3(loc.x, loc.y, -10);
             }
         }
 
-        if (col.gameObject.CompareTag("Room")) cam.transform.position = new Vector3(col.gameObject.transform.position.x,col.gameObject.transform.position.y, -10);
-        
-        if (col.gameObject.CompareTag("Exit"))
-        {
-            Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
-                .position;
-            transform.position = GMController.gm.info.startingloc[1].position;
-        
-            cam.transform.position = new Vector3(loc.x, loc.y, -10);
-        }
-        
         if((col.gameObject.CompareTag("HealthDrop")))
         {
             GMController.gm.ui.health.health += 2;

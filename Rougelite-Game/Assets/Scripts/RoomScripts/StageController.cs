@@ -13,33 +13,44 @@ public class StageController : MonoBehaviour
     [SerializeField] private int longorsmall;
     public bool spawned;
     private int ran,ran2,SaveDir;
-    private bool touching,stop;
+    private bool touching,stop,stop2;
     [SerializeField] private bool startingroom;
+    [HideInInspector] public bool test;
     void Awake()
     {
-        // col = GetComponent<BoxCollider2D>();
-        if (!startingroom)
-        {
-            if (NumDir == 1) transform.localPosition += new Vector3(0, .5f, 0);
-            else if (NumDir == 2) transform.localPosition += new Vector3(.5f, 0, 0);
-            else if (NumDir == 3) transform.localPosition += new Vector3(0, -.5f, 0);
-            else if (NumDir == 4) transform.localPosition += new Vector3(-.5f, 0, 0);
-        }
-       Invoke("SpawnRoom", .1f);
-       
-        // else if (longorsmall <= 25 )
-        // {
-        //     CheckSpace();
-        //     Invoke("SpawnLongRoom", .1f);
-        // }
         
-        // Invoke("SpawnCornerRoom", .2f);
-        
-    }
+      
+      
+            if (!startingroom )
+            {
+                if (NumDir == 1) transform.localPosition += new Vector3(0, .5f, 0);
+                else if (NumDir == 2) transform.localPosition += new Vector3(.5f, 0, 0);
+                else if (NumDir == 3) transform.localPosition += new Vector3(0, -.5f, 0);
+                else if (NumDir == 4) transform.localPosition += new Vector3(-.5f, 0, 0);
+            }
 
+            if(!test)Invoke("SpawnRoom", .1f);
+        
+            
+
+    }
     private void Update()
     {
         
+        if (!stop2)
+        {
+            if (GMController.gm.testscene) test = true;
+            stop2 = true;
+        }
+    }
+
+    void CheckTest()
+    {
+        if (!stop2)
+        {
+            if (GMController.gm.testscene) test = true;
+            stop = true;
+        }
     }
 
     void CheckSpace()
@@ -69,7 +80,7 @@ public class StageController : MonoBehaviour
    
     void SpawnRoom()
     {
-        if (GMController.gm.roomint <= GMController.gm.roommax - 2)
+        if (GMController.gm.roomint <= GMController.gm.roommax - 2 & !test)
         {
             if (!touching)
             {

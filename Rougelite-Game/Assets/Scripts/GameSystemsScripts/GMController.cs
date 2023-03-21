@@ -34,9 +34,9 @@ public class GMController : MonoBehaviour
     private float timer;
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
-    public bool playerhurt;
+    public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector]public bool spawnedboss, testscene;
+    [HideInInspector] public bool spawnedboss;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -104,7 +104,7 @@ public class GMController : MonoBehaviour
     {
         for (int i = 0; i < rc.Count; i++)
         {
-            if (i == rc.Count - 1 & !spawnedboss)
+            if (i == rc.Count - 1 & !spawnedboss & !testscene)
             { 
                 rc[i].gameObject.SetActive(false);
                 Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
@@ -115,7 +115,7 @@ public class GMController : MonoBehaviour
                 spawnedboss = true;
             }
 
-            if (!rc[i].bossroom)
+            if (!rc[i].bossroom & !testscene)
             {
                 rc[i].Invoke("CheckDoor", .5f);
                

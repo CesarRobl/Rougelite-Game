@@ -47,6 +47,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\BossRoomController.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Charger.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\SoundController.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\dash.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -55,16 +56,19 @@
      <Compile Include="Assets\NOT USED\ScrollingText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\StageButtonScript.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\StageController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\PlayerDirFinder.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Healthbar.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\LootSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomInfo.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\LootScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerSprite.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -78,6 +82,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\GMController.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\RangedEnemy.cs" />
      <Compile Include="Assets\Scripts\health.cs" />
@@ -85,9 +90,11 @@
      <Compile Include="Assets\Scripts\RoomScripts\DoorHit.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\TurretScript.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\Roomlist.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\TestAI.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\PotShotEnemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\UIController.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\DoorScript.cs" />
@@ -107,9 +114,6 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\LootSystem.cs" />
-     <Compile Include="Assets\Scripts\LootScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

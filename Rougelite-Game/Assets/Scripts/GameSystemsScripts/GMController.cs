@@ -26,6 +26,7 @@ public class GMController : MonoBehaviour
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
     [HideInInspector] public UIController ui;
+    [HideInInspector] public IdSystem id;
     
     public int roomint, roommax;
     private float maxhealth;
@@ -43,8 +44,10 @@ public class GMController : MonoBehaviour
     void Start()
     {
         crosshair.SetActive(showcrosshair);
+        if (testscene) crosshair.SetActive(true);
         info = GetComponent<RoomInfo>();
         ui = GetComponent<UIController>();
+        id = GetComponent<IdSystem>();
         timer = hurtdelay;
         
        Invoke("Setup", .5f);

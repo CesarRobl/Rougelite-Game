@@ -16,7 +16,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector]public Vector3 pastpos;
     public Vector2 dir;
     [SerializeField] public Rigidbody2D RB;
-    [SerializeField] public bool Stop,stun;
+    [SerializeField] public bool Stop,stun,attacking;
     [SerializeField] public ParticleSystem ps;
     [SerializeField] public AIPath ai;
     private TempPlayer pc;
@@ -32,10 +32,7 @@ public class TestAI : MonoBehaviour
         {
           MoveToPlayer();
         }
-        
-       
-       
-      SeekPlayer();
+        SeekPlayer();
         if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
         
         
@@ -119,7 +116,7 @@ public class TestAI : MonoBehaviour
             {
                 Stop = true;
                 StartCoroutine(EnemyHurt(ps));
-                Knockback(GMController.gm.maxforce);
+                if(!attacking)Knockback(GMController.gm.maxforce);
             }
         }
     }
@@ -149,8 +146,9 @@ public class TestAI : MonoBehaviour
 
      IEnumerator Reset()
      {
-         ai.maxSpeed = 2.5f;
+         ai.maxSpeed = speed;
         yield return new WaitForSeconds(GMController.gm.forcedelay);
+        ai.destination = GMController.gm.temp.transform.position;
         RB.velocity = Vector2.zero;
         stun = false;
     }

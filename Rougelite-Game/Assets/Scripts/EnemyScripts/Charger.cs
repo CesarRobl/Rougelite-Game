@@ -19,14 +19,14 @@ public class Charger : TestAI
     void Update()
     {
         
-        if (found & !stun & !attack & !buffer)
+        if (found & !stun & !attack & !attacking)
         {
             ai.maxSpeed = speed;
             ai.destination = GMController.gm.temp.transform.position;
             stopai = false;
         }
         
-        if (attack & !buffer)
+        if (attack & !attacking)
         {
             if (!stopai)
             {
@@ -42,7 +42,7 @@ public class Charger : TestAI
 
     public override void Attack()
     {
-        buffer = true;
+        attacking = true;
         StartCoroutine(Charge());
         
     }
@@ -52,8 +52,8 @@ public class Charger : TestAI
         yield return new WaitForSeconds(.2f);
         ai.speed = chargePower;
         ai.destination = GMController.gm.temp.transform.position;
-            yield return new WaitForSeconds(1f);
-            buffer = false;
+        yield return new WaitForSeconds(1f);
+            attacking = false;
     }
 
     

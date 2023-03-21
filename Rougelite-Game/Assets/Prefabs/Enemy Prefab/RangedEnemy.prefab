@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 4943919189498352001}
   - component: {fileID: 4943919189498352126}
   - component: {fileID: -9077085294572619035}
+  - component: {fileID: 6397273503978415169}
+  - component: {fileID: -764549332089131525}
+  - component: {fileID: 6916466758876227995}
   m_Layer: 2
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -131,11 +134,15 @@ MonoBehaviour:
   found: 0
   drange: 10
   speed: 3
+  attackrange: 0
+  attack: 0
   pastpos: {x: 0, y: 0, z: 0}
+  dir: {x: 0, y: 0}
   RB: {fileID: -9077085294572619035}
   Stop: 0
   stun: 0
   ps: {fileID: 0}
+  ai: {fileID: 6916466758876227995}
   shootdelay: 0
   stop: 0
   stunned: 0
@@ -163,6 +170,93 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6397273503978415169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943919189498352127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fadb7cbb440304d832968a3bb2c464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedLoot: {fileID: 459570330273930869, guid: 9fa00926aa2f0054481d4ccb93b7ddaa, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 93e47a3bb8ef77c4d81987f33b1eaa85, type: 2}
+  - {fileID: 11400000, guid: e7050044eb8b74348b296bdf8c84927b, type: 2}
+  - {fileID: 11400000, guid: a7c5e4452bf74cd40931117be58da3aa, type: 2}
+--- !u!114 &-764549332089131525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943919189498352127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &6916466758876227995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943919189498352127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+  radius: 0.5
+  height: 2
+  canMove: 1
+  maxSpeed: 1
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
+  orientation: 0
+  enableRotation: 1
+  autoRepath:
+    mode: 2
+    interval: 0.5
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
 --- !u!1001 &847386586022237943
 PrefabInstance:
   m_ObjectHideFlags: 0

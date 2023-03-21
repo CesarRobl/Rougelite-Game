@@ -14,6 +14,7 @@ public class RangedEnemy : TestAI
 
     void Awake()
     {
+        
         ps = GetComponentInChildren<ParticleSystem>();
         pastpos = transform.position;
     }
@@ -23,24 +24,26 @@ public class RangedEnemy : TestAI
     {
         dir = GMController.gm.temp.transform.position - transform.position;
         SeekPlayer();
+        AttackRange();
         if (found) RangedAI();
-        if (HP <= 0) GMController.gm.Die(gameObject);
+        if (HP <= 0) GMController.gm.Die(gameObject,GetComponent<LootSystem>());
     }
 
-    void RangedAI()
+    public void RangedAI()
     {
-        MoveToPlayer();
-        ShootPlayer();
+        if(!attack)MoveToPlayer();
+        else ShootPlayer();
     }
 
     void MoveToPlayer()
     {
-        transform.position =
-            Vector3.MoveTowards(transform.position, GMController.gm.player.position, .5f * Time.deltaTime);
+        ai.maxSpeed = speed;
+        ai.destination = GMController.gm.temp.transform.position;
     }
 
-    void ShootPlayer()
-    {
+   public void ShootPlayer()
+   {
+       ai.destination = transform.position;
         if (shootdelay <= 0)
         {
             Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(PlayerDir.transform.eulerAngles));

@@ -34,8 +34,9 @@ public class GMController : MonoBehaviour
     private float timer;
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
-    public bool playerhurt;
-    [HideInInspector]public bool spawnedboss;
+    public bool playerhurt, testscene;
+    private bool navdone;
+    [HideInInspector] public bool spawnedboss;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -103,7 +104,7 @@ public class GMController : MonoBehaviour
     {
         for (int i = 0; i < rc.Count; i++)
         {
-            if (i == rc.Count - 1 & !spawnedboss)
+            if (i == rc.Count - 1 & !spawnedboss & !testscene)
             { 
                 rc[i].gameObject.SetActive(false);
                 Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
@@ -114,14 +115,21 @@ public class GMController : MonoBehaviour
                 spawnedboss = true;
             }
 
-            if (!rc[i].bossroom)
+            if (!rc[i].bossroom & !testscene)
             {
                 rc[i].Invoke("CheckDoor", .5f);
                
             }
         }
-        
+        if(!navdone) CreateNav();
            
+    }
+
+    //creates the nav for the ai
+    void CreateNav()
+    {
+        path.Scan();
+        navdone = true;
     }
 
     // This function will play whenever the player hits the enemy.
@@ -146,8 +154,9 @@ public class GMController : MonoBehaviour
   
 
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
-    public void Die(GameObject enemy)
+    public void Die(GameObject enemy, LootSystem system)
     {
+        system.SpawnLoot(enemy.transform.position);
         int rand = Random.Range(0, 100);
         if (rand <= bighealthpercent)
         {

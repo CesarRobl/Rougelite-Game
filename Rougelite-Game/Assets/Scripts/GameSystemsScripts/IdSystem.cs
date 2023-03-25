@@ -9,7 +9,7 @@ public class IdSystem : MonoBehaviour
     
     void Update()
     {
-        PowerUp(1);
+        
     }
 
    public void PowerUp(int powerInt)

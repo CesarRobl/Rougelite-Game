@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\RoomScripts\DoorScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyPelletController.cs" />
@@ -115,7 +116,7 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Shooter.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

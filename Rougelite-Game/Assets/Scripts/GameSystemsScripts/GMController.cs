@@ -171,4 +171,11 @@ public class GMController : MonoBehaviour
         }
         Destroy(enemy);
     }
+
+    // Use this function when the boss health reaches 0
+    public void BossDeath(GameObject boss)
+    {
+        ui.BossBar.SetActive(false);
+        Destroy(boss);
+    }
 }

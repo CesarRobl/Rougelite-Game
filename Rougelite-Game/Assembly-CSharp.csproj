@@ -116,6 +116,7 @@
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\PhaserScript.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\TutorialScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

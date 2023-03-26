@@ -18,6 +18,7 @@ public class TurretScript : TestAI
         SeekPlayer();
         AttackRange();
          if(attack)Attack();
+         if(HP <= 0)GMController.gm.Die(gameObject, GetComponent<LootSystem>());
     }
 
     public override void Attack()

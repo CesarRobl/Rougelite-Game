@@ -19,20 +19,13 @@ public class Charger : TestAI
     void Update()
     {
         
-        if (found & !stun & !attack & !buffer)
+        if (found & !stun & !anim)
         {
-            ai.maxSpeed = speed;
-            ai.destination = GMController.gm.temp.transform.position;
-            stopai = false;
+           MoveToPlayer();
         }
         
-        if (attack & !buffer)
+        if (attack & !attacking & !anim)
         {
-            if (!stopai)
-            {
-                ai.destination = transform.position;
-                stopai = true;
-            }
             Attack();
         }
         AttackRange();
@@ -42,18 +35,22 @@ public class Charger : TestAI
 
     public override void Attack()
     {
-        buffer = true;
+        ai.destination = transform.position;
+        attacking = true;
         StartCoroutine(Charge());
         
     }
 
     IEnumerator Charge()
     {
+        anim = true;
         yield return new WaitForSeconds(.2f);
         ai.speed = chargePower;
         ai.destination = GMController.gm.temp.transform.position;
-            yield return new WaitForSeconds(1f);
-            buffer = false;
+        yield return new WaitForSeconds(.1f);
+            attacking = false;
+        yield return new WaitForSeconds(2f);
+        anim = false;
     }
 
     

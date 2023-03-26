@@ -15,3 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: e9d235add55666847a8d15a65f1b56a2, type: 3}
   lootname: Soda
   dropchance: 50
+  idNum: 1

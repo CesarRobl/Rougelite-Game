@@ -12,13 +12,13 @@ public class TestAI : MonoBehaviour
     public float speed = 2;
     public float attackrange;
     public bool attack;
-    
+    public float forceResistance;
     [HideInInspector]public Vector3 pastpos;
     public Vector2 dir;
-    [SerializeField] public Rigidbody2D RB;
-    [SerializeField] public bool Stop,stun;
-    [SerializeField] public ParticleSystem ps;
-    [SerializeField] public AIPath ai;
+    [HideInInspector] public Rigidbody2D RB;
+    [HideInInspector] public bool Stop,stun,attacking,anim;
+    [HideInInspector] public ParticleSystem ps;
+    [HideInInspector] public AIPath ai;
     private TempPlayer pc;
     
     private void Awake()
@@ -32,10 +32,7 @@ public class TestAI : MonoBehaviour
         {
           MoveToPlayer();
         }
-        
-       
-       
-      SeekPlayer();
+        SeekPlayer();
         if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
         
         
@@ -56,8 +53,11 @@ public class TestAI : MonoBehaviour
 
     public void MoveToPlayer()
     {
-        ai.maxSpeed = speed;
-        ai.destination = GMController.gm.temp.transform.position;
+        if (!stun)
+        {
+            ai.maxSpeed = speed;
+            ai.destination = GMController.gm.temp.transform.position;
+        }
     }
 
       public void SeekPlayer()
@@ -86,7 +86,6 @@ public class TestAI : MonoBehaviour
               pc = hit.collider.GetComponent<TempPlayer>();
               if (pc != null)
               {
-                  Debug.Log(hit.collider.gameObject.name);
                   attack = true;
               }
               else attack = false;
@@ -119,7 +118,8 @@ public class TestAI : MonoBehaviour
             {
                 Stop = true;
                 StartCoroutine(EnemyHurt(ps));
-                Knockback(GMController.gm.maxforce);
+                if(!attacking)Knockback(GMController.gm.maxforce);
+                
             }
         }
     }
@@ -138,9 +138,10 @@ public class TestAI : MonoBehaviour
     }
     public void Knockback(float force)
     {
-        ai.destination = Vector3.zero;
+        ai.destination = transform.position;
+        ai.enabled = false;
         
-        RB.AddForce(-dir.normalized * GMController.gm.maxforce, ForceMode2D.Impulse);
+        RB.AddForce(-dir.normalized * (GMController.gm.maxforce - forceResistance), ForceMode2D.Impulse);
         stun = true;
         StartCoroutine(Reset());
         Stop = false;
@@ -149,8 +150,9 @@ public class TestAI : MonoBehaviour
 
      IEnumerator Reset()
      {
-         ai.maxSpeed = 2.5f;
+         ai.maxSpeed = speed;
         yield return new WaitForSeconds(GMController.gm.forcedelay);
+        ai.enabled = true;
         RB.velocity = Vector2.zero;
         stun = false;
     }

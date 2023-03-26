@@ -201,12 +201,12 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 2
   pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 1
+  whenCloseToDestination: 0
   constrainInsideGraph: 0
 --- !u!114 &7407682034758856995
 MonoBehaviour:
@@ -248,10 +248,10 @@ MonoBehaviour:
   RB: {fileID: 3706129479662953859}
   Stop: 0
   stun: 0
+  attacking: 0
   ps: {fileID: 3681131804359819995}
   ai: {fileID: 5097061919919715393}
   chargePower: 35
-  chargeNum: 0
 --- !u!1001 &4908761722108747076
 PrefabInstance:
   m_ObjectHideFlags: 0

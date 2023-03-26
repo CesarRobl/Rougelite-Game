@@ -44,7 +44,9 @@
      <Compile Include="Assets\Scripts\GameSystemsScripts\SoundControl.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomController.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\PhaserScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\Scripts\RoomScripts\ObstacleList.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\BossRoomController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Charger.cs" />
@@ -100,8 +102,10 @@
      <Compile Include="Assets\Scripts\RoomScripts\DoorScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\Scripts\RoomScripts\ObstacleScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyPelletController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -109,6 +113,7 @@
      <Compile Include="Assets\Scripts\GameSystemsScripts\IntroCutscene.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Shooter.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\TempSound.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PelletController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
@@ -153,6 +158,7 @@
      <Folder Include="Assets\Scripts\GameSystemsScripts" />
      <Folder Include="Assets\Music" />
      <Folder Include="Assets\TestStages\SmallStage\UR" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles\DestroyedObstacles" />
      <Folder Include="Assets\Scripts\RoomScripts" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\TestStages\SmallStageRework\DL" />
@@ -166,6 +172,7 @@
      <Folder Include="Assets\TestStages\SmallStageRework\U" />
      <Folder Include="Assets\TestStages\LongStageReworked\UD" />
      <Folder Include="Assets\Sounds(Keyshawn)" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles\DestroyedObstacles\Chair" />
      <Folder Include="Assets\Art\CharacterSprites\Enemies\NormalCharger" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
@@ -187,9 +194,12 @@
      <Folder Include="Assets\TestStages\SmallStageRework" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Art" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles\Tables+Chairs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles\DestroyedObstacles\Table" />
      <Folder Include="Assets\TestStages\LongStageReworked" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles\PlaceHolder" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts" />
      <Folder Include="Assets\TestStages\SmallStage\LR" />
@@ -208,6 +218,8 @@
      <Folder Include="Assets\TestItems\RenderTexture" />
      <Folder Include="Assets\Prefabs\Enemy Prefab" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
+     <Folder Include="Assets\Art\Environment Art\Obstacles" />
+     <Folder Include="Assets\Prefabs\RoomGameObjects\Obstacles" />
      <Folder Include="Assets\Art\Sprites\Collectible\PowerUp" />
      <Folder Include="Assets\Art\Sprites\TempSword" />
      <Folder Include="Assets\Scripts\EnemyScripts" />

@@ -15,3 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: bffcae23ecdf121418db9c4e25748c6e, type: 3}
   lootname: Peanut
   dropchance: 40
+  idNum: 2

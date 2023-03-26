@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\RoomScripts\Roomlist.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\TestAI.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Witch.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\PotShotEnemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\UIController.cs" />
@@ -112,6 +113,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\IntroCutscene.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TempPortalScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Shooter.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\TempSound.cs" />
@@ -119,8 +121,6 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\Witch.cs" />
-     <Compile Include="Assets\TempPortalScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

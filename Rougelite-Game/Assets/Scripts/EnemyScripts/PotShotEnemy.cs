@@ -49,7 +49,7 @@ public class PotShotEnemy : TestAI
          pos = GMController.gm.temp.transform.position;
         lastpos = transform.position;
         ai.destination = pos;
-        ai.speed = 25;
+        ai.maxSpeed= 25;
        
 
         yield return new WaitUntil(() => dist < .1f);

@@ -44,11 +44,13 @@
      <Compile Include="Assets\Scripts\GameSystemsScripts\SoundControl.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomController.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\PhaserScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\BossRoomController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Charger.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\SoundController.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\TutorialScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\dash.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -100,6 +102,7 @@
      <Compile Include="Assets\Scripts\RoomScripts\DoorScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyPelletController.cs" />
@@ -114,9 +117,6 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\PhaserScript.cs" />
-     <Compile Include="Assets\Scripts\GameSystemsScripts\TutorialScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

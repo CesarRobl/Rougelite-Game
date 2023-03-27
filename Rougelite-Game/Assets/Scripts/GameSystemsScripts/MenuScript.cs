@@ -81,6 +81,6 @@ public class MenuScript : MonoBehaviour
             loadscreen.GetComponent<RawImage>().color += new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          
         yield return new WaitForSeconds(.85f);
-        SceneManager.LoadScene("RandomLevel");
+        SceneManager.LoadScene("TutScene");
     }
 }

@@ -31,15 +31,19 @@ public class DoorScript : MonoBehaviour
       Vector3 dir2 = new Vector3(dir.x / 10, dir.y / 10,0);
       Vector3 offset = new Vector3(transform.position.x + (dir.x / 60), transform.position.y + (dir.y / 60), 0);
       RaycastHit2D hit = Physics2D.Raycast(offset, dir2, 5);
-      if ( hit.collider.gameObject.CompareTag("Walls"))
+      if (hit.collider != null)
       {
-         wallinfront = true;
+         if (hit.collider.gameObject.CompareTag("Walls"))
+         {
+            wallinfront = true;
 
-      }
-      if ( hit.collider.gameObject.CompareTag("Door"))
-      {
-         doorinfront = true;
+         }
 
+         if (hit.collider.gameObject.CompareTag("Door"))
+         {
+            doorinfront = true;
+
+         }
       }
       // Debug.Log( gameObject.name + " " + GetComponentInParent<RoomController>().gameObject.name + " Hit" + " " + hit.collider.gameObject.name + " " + hit.collider.GetComponentInParent<RoomController>().gameObject.name);
      

@@ -9,7 +9,6 @@ public class IdSystem : MonoBehaviour
     
     void Update()
     {
-//        Debug.Log(GMController.gm.temp.speed);
         
     }
 
@@ -19,7 +18,7 @@ public class IdSystem : MonoBehaviour
         {
             case 1:
             {
-               // StartCoroutine(DrinkPower());
+                StartCoroutine(DrinkPower());
                 break;
             }
 
@@ -28,21 +27,19 @@ public class IdSystem : MonoBehaviour
                 break;
             }
 
-            case 3:
+            case 3: 
             {
                 break;
             }
         }
     }
 
-   // IEnumerator DrinkPower()
-  // {
-   //     GMController.gm.temp.speed = 30f;
-    //    yield return new WaitForSeconds(1.2f);
-    //    GMController.gm.temp.speed = 20f;
-    //}
-
-
-
-
+    IEnumerator DrinkPower()
+    {
+        GMController.gm.temp.speed = 30;
+        yield return new WaitForSeconds(1.4f);
+        GMController.gm.temp.speed = 20;
+    }
+    
+    
 }

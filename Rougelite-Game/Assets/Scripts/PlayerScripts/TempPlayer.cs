@@ -142,7 +142,7 @@ public class TempPlayer : MonoBehaviour
         {
             if (col.gameObject.CompareTag("Door") & !entering)
             {
-                Debug.Log("I am touching door");
+                
                 if (!ds.bossdoor)
                 {
 
@@ -152,12 +152,13 @@ public class TempPlayer : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("EndPlayTest");
+                    // SceneManager.LoadScene("EndPlayTest");
 
-                    // Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
-                    //     .position;
-                    // transform.position = GMController.gm.info.startingloc[0].position;
-                    // cam.transform.position = new Vector3(loc.x, loc.y, -10);
+                    Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                        .position;
+                    transform.position = GMController.gm.info.startingloc[0].position;
+                    cam.transform.SetParent(transform);
+                    cam.transform.localPosition = new Vector3(0, 0, -10);
                 }
             }
 
@@ -170,7 +171,7 @@ public class TempPlayer : MonoBehaviour
                 Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
                     .position;
                 transform.position = GMController.gm.info.startingloc[1].position;
-
+                cam.transform.SetParent(null);
                 cam.transform.position = new Vector3(loc.x, loc.y, -10);
             }
         }

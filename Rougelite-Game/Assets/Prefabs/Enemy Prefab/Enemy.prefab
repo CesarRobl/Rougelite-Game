@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3396212763013356528}
   - component: {fileID: 8015337556194349403}
   - component: {fileID: 5714234866215408697}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,10 +107,14 @@ MonoBehaviour:
   found: 0
   drange: 10
   speed: 5
+  attackrange: 0
+  attack: 0
   pastpos: {x: 0, y: 0, z: 0}
+  dir: {x: 0, y: 0}
   RB: {fileID: -7282737424170876775}
   Stop: 0
   stun: 0
+  attacking: 0
   ps: {fileID: 0}
   ai: {fileID: 8015337556194349403}
 --- !u!61 &6165929809796948066

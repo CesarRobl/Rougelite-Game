@@ -20,7 +20,7 @@ public class PotShotEnemy : TestAI
         currentpos = transform.position;
         SeekPlayer();
         AttackRange();
-        if (found & !stun & !attack & !attacking)
+        if (found & !stun & !anim)
         {
             MoveToPlayer();
         }
@@ -31,13 +31,14 @@ public class PotShotEnemy : TestAI
             dist2 = Vector2.Distance(transform.position, lastpos);
         }
         
-        if(attack & !attacking)Attack();
+        if(attack & !anim)Attack();
         
         if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
     }
 
     public override void Attack()
     {
+        anim = true;
         attacking = true;
         StartCoroutine(Rush());
     }
@@ -48,7 +49,7 @@ public class PotShotEnemy : TestAI
          pos = GMController.gm.temp.transform.position;
         lastpos = transform.position;
         ai.destination = pos;
-        ai.speed = 25;
+        ai.maxSpeed= 25;
        
 
         yield return new WaitUntil(() => dist < .1f);
@@ -61,9 +62,11 @@ public class PotShotEnemy : TestAI
         ai.destination = lastpos;
        
         yield return new WaitUntil(() => dist2 < .1f);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.1f);
         ai.speed = speed;
         attacking = false;
+        yield return new WaitForSeconds(1.5f);
+        anim = false;
     }
     private void OnDrawGizmos()
     {

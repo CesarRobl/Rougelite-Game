@@ -2,10 +2,142 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8043eb0-8684-40b5-b646-16629612eb8b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloor3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloor3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloor5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloor5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloorMoldy3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloorMoldy3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloorMoldy4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/FloorTiles/Wendy'sFloorMoldy4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesblue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesblue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesblue2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesblue2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesred.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesred.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesred2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Chair/chairrubblesred2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/blue table2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/blue table2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/red table2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/red table2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/tablerubblesblue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/tablerubblesblue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/tablerubblesred.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/DestroyedObstacles/Table/tablerubblesred.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/blue table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/blue table.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/chair#2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/chair#2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/chair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/chair.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/red table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/Tables+Chairs/red table.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/Bosses.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/Bosses/WendyWitch.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/Bosses/WendyWitch/Wendy witch 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/Bosses/WendyWitch/Wendy witch 3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 0.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 1.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TempArt/Portal 2.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Bar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Portal 0.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Portal 0.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Bosses.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Bosses/Witch.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Bosses/Witch.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/ShooterEnemy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/ShooterEnemy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Room Prefabs/PrefabWalls.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Room Prefabs/PrefabWalls.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Obstacles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Obstacles/RedChair.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Obstacles/RedChair.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Obstacles/RedTable.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Obstacles/RedTable.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/PortalTemp.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/PortalTemp.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/BossBar.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/BossBar.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Shooter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Shooter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Witch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Witch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleList.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleList.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TempPortal.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TempPortal.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TempPortalScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TempPortalScript.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rougelite-Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalCharger.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalCharger.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalCharger/enemy-Front.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalCharger/enemy-Front.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalCharger/enemy-Front.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalCharger/enemy-Front.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalRanged.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalRanged.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalRanged/enemyWithHat-Front.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalRanged/enemyWithHat-Front.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/Enemies/NormalRanged/enemyWithHat-Front.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/Enemies/NormalRanged/enemyWithHat-Front.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/My ver Five Guys 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/My ver Five Guys 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/My ver Five Guys 4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/My ver Five Guys 4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/five guys_back.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/five guys_back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/CharacterSprites/five guys_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/CharacterSprites/five guys_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/073a1bfeb068a4c.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/073a1bfeb068a4c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/073a1bfeb068a4c.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/073a1bfeb068a4c.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/7afadf771c0b932.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/7afadf771c0b932.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/7afadf771c0b932.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/7afadf771c0b932.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/da268f06e621b21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/da268f06e621b21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment Art/da268f06e621b21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment Art/Obstacles/PlaceHolder/da268f06e621b21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/RangedEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NOT USED/RangedEnemy(Broken).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/RangedEnemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NOT USED/RangedEnemy(Broken).prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Turret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Prefab/Turret.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomGameObjects/Rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Aidan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Aidan.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Cesar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Cesar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/TestArea.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Charger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Charger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/PotShotEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/PotShotEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TestAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TestAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TurretScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TurretScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/GMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/GMController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/IdSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/IdSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/SpawnController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/TutorialScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/TutorialScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Healthbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Healthbar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/TempPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/TempPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/BossRoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/BossRoomController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/DoorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoomScripts/DoorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestStages/BossRooms/BossRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestStages/BossRooms/BossRoom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestStages/SmallStageRework/DL/DLVar3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestStages/SmallStageRework/DL/DLVar3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestStages/SmallStageRework/DR/DRVar2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestStages/SmallStageRework/DR/DRVar2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/AstarPathfindingProject.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/AstarPathfindingProject.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PackageToolsEditor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PackageToolsEditor.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +157,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/PotShotEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/TutorialScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/StageButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TurretScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LootScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/IdSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Charger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/IdSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,8 +173,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -151,7 +280,15 @@
       <workItem from="1679414861400" duration="2476000" />
       <workItem from="1679421875374" duration="4326000" />
       <workItem from="1679434967501" duration="1864000" />
-      <workItem from="1679437314017" duration="3754000" />
+      <workItem from="1679438584109" duration="1648000" />
+      <workItem from="1679772637939" duration="2126000" />
+      <workItem from="1679776459924" duration="1205000" />
+      <workItem from="1679789292180" duration="2119000" />
+      <workItem from="1679822980794" duration="2079000" />
+      <workItem from="1679833064770" duration="3003000" />
+      <workItem from="1679848396140" duration="3222000" />
+      <workItem from="1679866669199" duration="3200000" />
+      <workItem from="1679871857972" duration="3697000" />
     </task>
     <servers />
   </component>
@@ -161,17 +298,6 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

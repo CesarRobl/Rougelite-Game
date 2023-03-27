@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
+    [SerializeField] private GameObject boss;
     private RoomController rc;
     private bool stop;
     void Awake()
@@ -16,11 +17,16 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
-
+        
        
     }
 
     void CheckPlayer()
+    {
+        
+    }
+
+    public void SpawnBoss()
     {
         
     }

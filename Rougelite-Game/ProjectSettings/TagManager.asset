@@ -15,6 +15,8 @@ TagManager:
   - Exit
   - HalfHealth
   - Room
+  - Obstacle
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -26,8 +28,8 @@ TagManager:
   - Player
   - Room
   - Map
-  - 
-  - 
+  - Obstacle
+  - Boss
   - 
   - 
   - 

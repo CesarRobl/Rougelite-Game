@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5893915977048244031}
   - component: {fileID: 1903561270873469452}
+  - component: {fileID: 6280795265948936687}
   - component: {fileID: 7237842263399967942}
   - component: {fileID: 5230668286379730855}
   m_Layer: 0
@@ -53,7 +54,19 @@ MonoBehaviour:
   CharAS: {fileID: 7237842263399967942}
   MusicAS: {fileID: 0}
   EnemyAS: {fileID: 0}
-  SoundEffects: []
+  MusicAndEffects: []
+--- !u!114 &6280795265948936687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726553250067035097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e55675be1edda4d92e8f8ab8cb9f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &7237842263399967942
 AudioSource:
   m_ObjectHideFlags: 0

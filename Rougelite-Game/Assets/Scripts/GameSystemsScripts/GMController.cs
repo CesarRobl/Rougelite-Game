@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector] public bool spawnedboss, loading;
+    [HideInInspector] public bool spawnedboss, loading, tutdone;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -56,8 +56,6 @@ public class GMController : MonoBehaviour
 
     void Setup()
     {
-        Cursor.visible = false;
-        temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         path = GetComponentInChildren<AstarPath>();
         
     }

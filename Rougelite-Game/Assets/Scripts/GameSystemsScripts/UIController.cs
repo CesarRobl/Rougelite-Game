@@ -14,6 +14,8 @@ public class UIController : MonoBehaviour
     public GameObject MenuTab;
     public GameObject[] Cameras,loadscreen;
     public GameObject BossBar;
+    [SerializeField] private GameObject tut;
+    [SerializeField] private GameObject map;
     
 
     private bool showmenu,stop;
@@ -69,13 +71,30 @@ public class UIController : MonoBehaviour
         MenuScript.menu.volumeslider.value = MenuScript.lastvolumefloat;
          SceneManager.LoadScene("MainMenu");
      }
-     
+
+     public void RemoveTut()
+     {
+         if (GMController.gm.loading)
+         {
+             tut.SetActive(false);
+             map.SetActive(true);
+             Cursor.visible = false;
+             GMController.gm.temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+             GMController.gm.tutdone = true;
+             
+         }
+     }
      IEnumerator FadeScreen()
      {
          loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
-         loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         // loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          yield return new WaitForSeconds(.1f);
-        if(loadscreen[0].GetComponent<RawImage>().color.r >= 1)stop = true;
+         if (loadscreen[0].GetComponent<RawImage>().color.a <= 0)
+         {
+             loadscreen[0].SetActive(false);
+             loadscreen[1].SetActive(false);
+             stop = true;
+         }
      }
 }

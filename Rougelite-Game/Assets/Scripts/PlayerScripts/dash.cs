@@ -13,7 +13,7 @@ public class dash : MonoBehaviour
     [SerializeField] private GameObject Effects;
     private bool CanDash = true;
     private bool IsDashing;
-    private float DashingPower = 24f;
+    private float DashingPower = 35f;
     private float DashingTime = 0.2f;
     private float DashingCoolDown = 1f;
 
@@ -23,7 +23,7 @@ public class dash : MonoBehaviour
         Vector2 pos = GMController.gm.pos - GMController.gm.temp.transform.position;
         if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash)
         {
-            StartCoroutine(Dash(pos));
+            StartCoroutine(Dash(GMController.gm.temp.walkingDir));
         }
         
     }

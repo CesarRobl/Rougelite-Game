@@ -25,7 +25,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GMController.gm.loading)
+        if (GMController.gm.tutdone)
         {
             TempMovement();
             if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();

@@ -13,11 +13,14 @@ public class UIController : MonoBehaviour
     public Healthbar health;
     public GameObject MenuTab;
     public GameObject[] Cameras,loadscreen;
+    public GameObject BossBar;
+    
 
     private bool showmenu,stop;
     void Start()
     {
        Invoke("Camera",.1f);
+       
     }
 
     // Update is called once per frame
@@ -55,6 +58,11 @@ public class UIController : MonoBehaviour
             }
         }
     }
+
+     public void ShowBossBar(bool bar)
+     {
+         BossBar.SetActive(bar);
+     }
 
      public void QuitToMenu()
      {

@@ -25,7 +25,7 @@ public class Healthbar : MonoBehaviour
 
         for (int i = 0; i < Burgers.Length; i++)
         {
-            Debug.Log((i  * 2) + 1);
+            
            
              if ((i * 2) + 1 == health )
             {

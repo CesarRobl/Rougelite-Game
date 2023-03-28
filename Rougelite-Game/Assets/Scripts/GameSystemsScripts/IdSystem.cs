@@ -18,7 +18,7 @@ public class IdSystem : MonoBehaviour
         {
             case 1:
             {
-                DrinkPower();
+                StartCoroutine(DrinkPower());
                 break;
             }
 
@@ -27,16 +27,18 @@ public class IdSystem : MonoBehaviour
                 break;
             }
 
-            case 3:
+            case 3: 
             {
                 break;
             }
         }
     }
 
-    void DrinkPower()
+    IEnumerator DrinkPower()
     {
-        Debug.Log("drink power up");
+        GMController.gm.temp.speed = 30;
+        yield return new WaitForSeconds(1.4f);
+        GMController.gm.temp.speed = 20;
     }
     
     

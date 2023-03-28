@@ -11,11 +11,13 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] private GameObject wall;
     [SerializeField]private Sprite[] opened;
     [SerializeField] private GameObject boss;
+    [HideInInspector] private TempPortalScript portal;
     private SpawnController spawner;
     private bool stop,done,open;
     void Awake()
     {
         spawner = GetComponentInChildren<SpawnController>();
+        portal = GetComponentInChildren<TempPortalScript>();
         for (int i = 0; i < doors.Length; i++)
         {
               opened[i] = doors[i].sprite;
@@ -26,6 +28,7 @@ public class BossRoomController : MonoBehaviour
     void Update()
     {
         if(done) CheckBoss();
+        if (open & !portal.done) StartCoroutine(portal.PortalGrow());
     }
 
     void CheckBoss()

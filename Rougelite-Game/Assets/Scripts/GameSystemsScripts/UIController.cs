@@ -27,7 +27,7 @@ public class UIController : MonoBehaviour
     void Update()
     {
 
-        if (!stop) StartCoroutine(FadeScreen());
+        if (GMController.gm.loading & !stop) StartCoroutine(FadeScreen());
         ShowMenuTab();
     }
 
@@ -74,7 +74,7 @@ public class UIController : MonoBehaviour
      {
          loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
-         
+         loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          yield return new WaitForSeconds(.1f);
         if(loadscreen[0].GetComponent<RawImage>().color.r >= 1)stop = true;
      }

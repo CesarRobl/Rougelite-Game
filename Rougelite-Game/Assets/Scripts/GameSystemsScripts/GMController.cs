@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector] public bool spawnedboss;
+    [HideInInspector] public bool spawnedboss, loading;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -132,7 +132,8 @@ public class GMController : MonoBehaviour
     void CreateNav()
     {
         path.Scan();
-        navdone = true;
+        navdone = true; 
+        loading = true;
     }
 
     // This function will play whenever the player hits the enemy.

@@ -160,7 +160,7 @@ public class GMController : MonoBehaviour
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy, LootSystem system)
     {
-        system.SpawnLoot(enemy.transform.position);
+        
         int rand = Random.Range(0, 100);
         if (rand <= bighealthpercent)
         {

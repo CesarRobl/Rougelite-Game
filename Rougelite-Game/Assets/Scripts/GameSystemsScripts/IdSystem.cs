@@ -38,6 +38,7 @@ public class IdSystem : MonoBehaviour
     {
         GMController.gm.temp.speed = 30;
         yield return new WaitForSeconds(1.4f);
+        Debug.Log("Stop Running");
         GMController.gm.temp.speed = 20;
     }
     

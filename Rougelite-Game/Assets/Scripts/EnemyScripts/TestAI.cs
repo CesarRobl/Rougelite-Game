@@ -19,6 +19,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public bool Stop,stun,attacking,anim;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
+    [HideInInspector] public HurtFunction ow;
     private TempPlayer pc;
     
     private void Awake()
@@ -33,9 +34,7 @@ public class TestAI : MonoBehaviour
           MoveToPlayer();
         }
         SeekPlayer();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
-        
-        
+        Enemyhit();
     }
 
     public void Setup()
@@ -43,6 +42,7 @@ public class TestAI : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
+        ow = GetComponent<HurtFunction>();
         pastpos= transform.position;
     }
 
@@ -63,10 +63,10 @@ public class TestAI : MonoBehaviour
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~LayerMask.NameToLayer("Pellet"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
         if (hit.collider != null)
         {
-            
+            Debug.Log(hit.collider.gameObject.name);
             TempPlayer pc = hit.collider.GetComponent<TempPlayer>();
             if (pc != null)
             {
@@ -79,7 +79,7 @@ public class TestAI : MonoBehaviour
       public void AttackRange()
       {
           
-          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,~LayerMask.NameToLayer("Pellet"));
+          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,~(1<<0 | 1<< 2));
           if (hit.collider != null)
           {
 
@@ -111,16 +111,38 @@ public class TestAI : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Sword"))
+        // if (other.gameObject.CompareTag("Sword"))
+        // {
+        //     HP--;
+        //     if (Stop == false)
+        //     {
+        //         Stop = true;
+        //         StartCoroutine(EnemyHurt(ps));
+        //         if(!attacking)Knockback(GMController.gm.maxforce);
+        //     }
+        // }
+    }
+
+    public void Enemyhit()
+    {
+        if (ow.hurt)
         {
-            HP--;
-            if (Stop == false)
-            {
-                Stop = true;
-                StartCoroutine(EnemyHurt(ps));
-                if(!attacking)Knockback(GMController.gm.maxforce);
+            Hurt();
+            ow.hurt = false;
+        }
+        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+       
+    }
+
+    void Hurt()
+    {
+        HP--;
+        if (Stop == false)
+        {
+            Stop = true;
+            StartCoroutine(EnemyHurt(ps));
+            if(!attacking)Knockback(GMController.gm.maxforce);
                 
-            }
         }
     }
 

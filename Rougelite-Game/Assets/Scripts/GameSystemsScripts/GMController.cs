@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector] public bool spawnedboss;
+    [HideInInspector] public bool spawnedboss, loading, tutdone;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -56,8 +56,6 @@ public class GMController : MonoBehaviour
 
     void Setup()
     {
-        Cursor.visible = false;
-        temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         path = GetComponentInChildren<AstarPath>();
         
     }
@@ -132,7 +130,8 @@ public class GMController : MonoBehaviour
     void CreateNav()
     {
         path.Scan();
-        navdone = true;
+        navdone = true; 
+        loading = true;
     }
 
     // This function will play whenever the player hits the enemy.
@@ -159,7 +158,7 @@ public class GMController : MonoBehaviour
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy, LootSystem system)
     {
-        system.SpawnLoot(enemy.transform.position);
+        
         int rand = Random.Range(0, 100);
         if (rand <= bighealthpercent)
         {

@@ -47,6 +47,7 @@ public class RangedEnemy : TestAI
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, dir.normalized * attackrange);
+        
     }
    
 

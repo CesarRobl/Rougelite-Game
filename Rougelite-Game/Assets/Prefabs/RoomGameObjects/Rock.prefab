@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1619327577874717845}
   - component: {fileID: 7556025295878079901}
   - component: {fileID: 8744043814561274715}
+  - component: {fileID: 8449010106541040254}
   m_Layer: 10
   m_Name: Rock
   m_TagString: Obstacle
@@ -146,3 +147,15 @@ MonoBehaviour:
   obs:
   - {fileID: 11400000, guid: 6655b258d0ed86a49942b78e34586840, type: 2}
   - {fileID: 11400000, guid: 0608bf870a2932f4493a7c66e175a8b8, type: 2}
+--- !u!114 &8449010106541040254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110002228848988612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

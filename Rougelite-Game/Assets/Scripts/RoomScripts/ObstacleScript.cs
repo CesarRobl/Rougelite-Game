@@ -13,16 +13,23 @@ public class ObstacleScript : MonoBehaviour
     private float tableChance;
     public List<ObstacleList> obs  = new List<ObstacleList>();
     private bool stop,playerhit;
+    private HurtFunction ow;
     void Awake()
     {
         cc = GetComponent<CircleCollider2D>();
         _sprite = GetComponent<SpriteRenderer>();
+        ow = GetComponent<HurtFunction>();
         ChangeSprite();
     }
 
     
     void Update()
     {
+        if (ow.hurt)
+        {
+            HP--;
+            ow.hurt = false;
+        }
        if(HP <= 0 & !stop) DestroyedSprite();
        
     }
@@ -96,26 +103,26 @@ public class ObstacleScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(col.gameObject.name);
-        if (col.gameObject.CompareTag("Sword"))
-        {
-           
-            CheckCollision();
-            if (playerhit)
-            {
-                HP--;
-                playerhit = false;
-            }
-        }
+        // Debug.Log(col.gameObject.name);
+        // if (col.gameObject.CompareTag("Sword"))
+        // {
+        //    Debug.Log("Collision");
+        //     CheckCollision();
+        //     if (playerhit)
+        //     {
+        //         HP--;
+        //         playerhit = false;
+        //     }
+        // }
     }
  
      void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
-        if (other.gameObject.CompareTag("Sword"))
-        {
-            HP--;
-           
-        }
+       
+        // if (other.gameObject.CompareTag("Sword"))
+        // {
+        //     Debug.Log("Trigger");
+        //     HP--;
+        // }
     }
 }

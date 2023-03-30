@@ -33,7 +33,7 @@ public class PotShotEnemy : TestAI
         
         if(attack & !anim)Attack();
         
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+      Enemyhit();
     }
 
     public override void Attack()

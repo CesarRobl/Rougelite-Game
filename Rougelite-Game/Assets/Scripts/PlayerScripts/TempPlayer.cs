@@ -12,9 +12,11 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float timer,shootdelay,movedelay;
     [HideInInspector] public float speed;
+    [HideInInspector] public Vector2 vel, walkingDir;
+   
     private Vector2 fast;
     public Vector3 dir,pos,dir2,pos2;
-     public bool entering;
+    public bool entering;
     void Start()
     {
         
@@ -23,10 +25,11 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GMController.gm.tutdone)
+        {
             TempMovement();
             if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
-        
+        }
     }
 
     // when called this function plays the sword animation
@@ -38,33 +41,44 @@ public class TempPlayer : MonoBehaviour
     
     void TempMovement()
     {
-        Vector2 vel = rb.velocity;
+        vel = rb.velocity;
         Vector2 sidespeed = transform.right * speed;
         Vector2 fowardspeed = new Vector2(0,1) * speed;
         
         if (Input.GetKey(KeyCode.W))
         {
-
+            walkingDir.y = 10;
             vel.y = fowardspeed.y;
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
+            walkingDir.y = -10;
             vel.y = -fowardspeed.y;
         }
 
-        else vel.y = 0;
+        else
+        {
+            walkingDir.y = 0;
+            vel.y = 0;
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
+            walkingDir.x = -10;
             vel.x = -sidespeed.x;
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
+            walkingDir.x = 10;
             vel.x = sidespeed.x;
         }
-        else vel.x = 0;
+        else
+        {
+            walkingDir.x = 0;
+            vel.x = 0;
+        }
         
         rb.velocity = Vector2.Lerp(rb.velocity, vel, movedelay * Time.deltaTime);
         // rb.velocity = vel;
@@ -176,13 +190,14 @@ public class TempPlayer : MonoBehaviour
             }
         }
 
-        if((col.gameObject.CompareTag("HealthDrop")))
+        if((col.gameObject.CompareTag("HealthDrop")&GMController.gm.ui.health.health<6))
         {
+            
             GMController.gm.ui.health.health += 2;
             TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
             Destroy(col.gameObject);
         }
-        if((col.gameObject.CompareTag("HalfHealth")))
+        if((col.gameObject.CompareTag("HalfHealth")&GMController.gm.ui.health.health<6))
         {
             GMController.gm.ui.health.health++;
             TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);

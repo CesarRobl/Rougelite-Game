@@ -19,6 +19,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public bool Stop,stun,attacking,anim;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
+    [HideInInspector] public HurtFunction ow;
     private TempPlayer pc;
     
     private void Awake()
@@ -33,9 +34,7 @@ public class TestAI : MonoBehaviour
           MoveToPlayer();
         }
         SeekPlayer();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
-        
-        
+        Enemyhit();
     }
 
     public void Setup()
@@ -43,6 +42,7 @@ public class TestAI : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
+        ow = GetComponent<HurtFunction>();
         pastpos= transform.position;
     }
 
@@ -119,8 +119,26 @@ public class TestAI : MonoBehaviour
                 Stop = true;
                 StartCoroutine(EnemyHurt(ps));
                 if(!attacking)Knockback(GMController.gm.maxforce);
-                
             }
+        }
+    }
+
+    public void Enemyhit()
+    {
+        Hurt();
+        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+       
+    }
+
+    void Hurt()
+    {
+        HP--;
+        if (Stop == false)
+        {
+            Stop = true;
+            StartCoroutine(EnemyHurt(ps));
+            if(!attacking)Knockback(GMController.gm.maxforce);
+                
         }
     }
 

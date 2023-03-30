@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3396212763013356528}
   - component: {fileID: 8015337556194349403}
   - component: {fileID: 5714234866215408697}
+  - component: {fileID: -5841964497302464324}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -109,14 +110,17 @@ MonoBehaviour:
   speed: 5
   attackrange: 0
   attack: 0
+  forceResistance: 0
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
   RB: {fileID: -7282737424170876775}
   Stop: 0
   stun: 0
   attacking: 0
+  anim: 0
   ps: {fileID: 0}
   ai: {fileID: 8015337556194349403}
+  ow: {fileID: 0}
 --- !u!61 &6165929809796948066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,6 +255,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93e47a3bb8ef77c4d81987f33b1eaa85, type: 2}
   - {fileID: 11400000, guid: e7050044eb8b74348b296bdf8c84927b, type: 2}
   - {fileID: 11400000, guid: a7c5e4452bf74cd40931117be58da3aa, type: 2}
+--- !u!114 &-5841964497302464324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165929809796948070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: 0
 --- !u!1001 &7899094954538989662
 PrefabInstance:
   m_ObjectHideFlags: 0

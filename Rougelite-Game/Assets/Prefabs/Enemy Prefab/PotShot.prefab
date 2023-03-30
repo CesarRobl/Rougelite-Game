@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8111865315254811688}
   - component: {fileID: 5828251487561005386}
   - component: {fileID: 2283062832756747633}
+  - component: {fileID: 3038038455002688565}
   m_Layer: 2
   m_Name: PotShot
   m_TagString: Enemy
@@ -243,15 +244,31 @@ MonoBehaviour:
   speed: 2
   attackrange: 5
   attack: 0
+  forceResistance: 0
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
   RB: {fileID: 0}
   Stop: 0
   stun: 0
   attacking: 0
+  anim: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
+  ow: {fileID: 0}
   lastpos: {x: 0, y: 0}
+--- !u!114 &3038038455002688565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5349953043128159509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: 0
 --- !u!1001 &8228121111003174189
 PrefabInstance:
   m_ObjectHideFlags: 0

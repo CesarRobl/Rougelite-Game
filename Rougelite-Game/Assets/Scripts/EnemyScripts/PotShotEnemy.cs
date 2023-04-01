@@ -63,7 +63,7 @@ public class PotShotEnemy : TestAI
        
         yield return new WaitUntil(() => dist2 < .1f);
         yield return new WaitForSeconds(.1f);
-        ai.speed = speed;
+        ai.maxSpeed = speed;
         attacking = false;
         yield return new WaitForSeconds(1.5f);
         anim = false;

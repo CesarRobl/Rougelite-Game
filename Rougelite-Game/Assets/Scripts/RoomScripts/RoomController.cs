@@ -16,10 +16,12 @@ public class RoomController : MonoBehaviour
     [SerializeField] private GameObject[] wendydoorsopen;
     [SerializeField] private GameObject[] wendydoorsclosed;
     [SerializeField] private GameObject[] mapwalls;
+    private List<GameObject> colorwall;
     public Transform[] startingloc;
     public List<GameObject> enemycount;
      public SpawnController[] spawner;
      [SerializeField] private GameObject[] bossdoorsprite;
+     
      private AstarPath path;
 
      private bool stop, stop2;
@@ -28,7 +30,7 @@ public class RoomController : MonoBehaviour
 
         path = GetComponentInChildren<AstarPath>();
         Invoke("Addlist",.2f);
-        for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.clear;
+        for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.grey;
        
         for (int i = 0; i < doorwalls.Length; i++)
         {
@@ -106,7 +108,9 @@ public class RoomController : MonoBehaviour
                 else if (doors[i].dir.x == 10) rot.z = 90;
                 else if (doors[i].dir.x == -10) rot.z = 270;
 
-                Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+                GameObject wall = Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+                wall.GetComponent<SpriteRenderer>().color = Color.grey;
+               
             }
 
         }
@@ -136,7 +140,8 @@ public class RoomController : MonoBehaviour
                 else if (doors[i].dir.x == 10) rot.z = 90;
                 else if (doors[i].dir.x == -10) rot.z = 270;
 
-                Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+                GameObject wall = Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
+                wall.GetComponent<SpriteRenderer>().color = Color.grey;
                 doors.Remove(doors[i]);
             }
         }
@@ -190,7 +195,12 @@ public class RoomController : MonoBehaviour
         {
            Setup();
         }
-        if(tp != null) for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.yellow;
+
+        if (tp != null)
+        {
+            for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.yellow;
+            // for(int o = 0; o < colorwall.Count; o++) colorwall[o].color = Color.yellow;
+        }
            
     }
     
@@ -200,6 +210,7 @@ public class RoomController : MonoBehaviour
         if (tp != null)
         {
             for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.white;
+            // for(int o = 0; o < colorwall.Count; o++) colorwall[o].color = Color.white;
             playerin = false;
         }
     }

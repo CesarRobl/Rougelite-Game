@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector] public bool spawnedboss, loading, tutdone;
+    [HideInInspector] public bool spawnedboss, loading, tutdone,playerDead;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -103,22 +103,23 @@ public class GMController : MonoBehaviour
     // Spawn the room that leads to the boss also starts the function to cover up doors that lead outside of the level
     void SpawnBossRoom()
     {
-        for (int i = 0; i < rc.Count; i++)
+        RoomController[] roomarray = rc.ToArray();
+        for (int i = 0; i < roomarray.Length; i++)
         {
-            if (i == rc.Count - 1 & !spawnedboss & !testscene)
+            if (i == roomarray.Length - 1 & !spawnedboss & !testscene)
             { 
                 rc[i].gameObject.SetActive(false);
                 Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
                
-                Destroy(rc[i].gameObject);
-                rc.Remove(rc[i]);
+                Destroy(roomarray[i].gameObject);
+                rc.Remove(roomarray[i]);
                 
                 spawnedboss = true;
             }
 
-            if (!rc[i].bossroom & !testscene)
+            if (!roomarray[i].bossroom & !testscene)
             {
-                rc[i].Invoke("CheckDoor", .5f);
+                roomarray[i].Invoke("CheckDoor", .5f);
                
             }
         }
@@ -149,8 +150,8 @@ public class GMController : MonoBehaviour
     
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
-    { 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    {
+        if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }
 
   

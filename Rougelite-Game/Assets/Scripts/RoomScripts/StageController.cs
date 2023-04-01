@@ -13,7 +13,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private int longorsmall;
     public bool spawned;
     private int ran,ran2,SaveDir;
-    private bool touching,stop,stop2;
+    private bool touching,stop2;
     [SerializeField] private bool startingroom;
     [HideInInspector] public bool test;
     void Awake()
@@ -49,7 +49,7 @@ public class StageController : MonoBehaviour
         if (!stop2)
         {
             if (GMController.gm.testscene) test = true;
-            stop = true;
+            
         }
     }
 

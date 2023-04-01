@@ -7,8 +7,7 @@ public class RangedEnemy : TestAI
 
     [SerializeField] private float shootDelay;
     [SerializeField] private GameObject playerDir;
-    private Vector2 dir;
-
+  
     
 
     // Update is called once per frame

@@ -19,7 +19,7 @@ public class Witch :TestAI
         SeekPlayer();
         AttackRange();
         if(attack) Attack();
-        if(HP <= 0) GMController.gm.BossDeath(gameObject);
+       Enemyhit();
     }
 
     public override void Attack()

@@ -66,7 +66,7 @@ public class TestAI : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject.name);
+          
             TempPlayer pc = hit.collider.GetComponent<TempPlayer>();
             if (pc != null)
             {

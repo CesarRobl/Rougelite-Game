@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public Image[] deathButton;
     public TextMeshProUGUI PlayerHP;
     public TextMeshProUGUI TestFrame;
     public Transform[] BlackBorder;
@@ -16,6 +17,8 @@ public class UIController : MonoBehaviour
     public GameObject BossBar;
     [SerializeField] private GameObject tut;
     [SerializeField] private GameObject map;
+    private bool buttonPressed,stopAni,changeScene;
+    private int sceneNum;
     
 
     private bool showmenu,stop;
@@ -31,6 +34,8 @@ public class UIController : MonoBehaviour
 
         if (GMController.gm.loading & !stop) StartCoroutine(FadeScreen());
         ShowMenuTab();
+        if(buttonPressed & !stopAni)PlayButtonFade();
+        else if(stopAni) SwitchScene();
     }
 
     void Camera()
@@ -68,7 +73,7 @@ public class UIController : MonoBehaviour
 
      public void QuitToMenu()
      {
-        MenuScript.menu.volumeslider.value = MenuScript.lastvolumefloat;
+        // MenuScript.menu.volumeslider.value = MenuScript.lastvolumefloat;
          SceneManager.LoadScene("MainMenu");
      }
 
@@ -84,6 +89,30 @@ public class UIController : MonoBehaviour
              
          }
      }
+
+     public void Restart()
+     {
+         if (!buttonPressed)
+         {
+             sceneNum = 0;
+             buttonPressed = true;
+         }
+     }
+
+     public void Quit()
+     {
+         if (!buttonPressed)
+         {
+             sceneNum = 1;
+             buttonPressed = true;
+         }
+          
+     }
+
+     void PlayButtonFade()
+     {
+         StartCoroutine(FadeDeathButton(sceneNum));
+     }
      IEnumerator FadeScreen()
      {
          loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
@@ -97,4 +126,36 @@ public class UIController : MonoBehaviour
              stop = true;
          }
      }
+
+     public IEnumerator FadeDeathButton(int over)
+     {
+         for (int i = 0; i < deathButton.Length; i++)
+         {
+             
+             deathButton[i].color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         }
+         yield return new WaitUntil(() => deathButton[0].color.a <= 0);
+         stopAni = true;
+
+     }
+
+     void SwitchScene()
+     {
+         switch (sceneNum)
+         {
+             case 0:
+             {
+                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                 break;
+             }
+             case 1:
+             {
+                 // Only use the quit option when entering the game through the main menu
+                 QuitToMenu();
+                 break;
+             }
+         }
+         
+     }
+     
 }

@@ -89,7 +89,6 @@
      <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\RangedEnemy.cs" />
-     <Compile Include="Assets\Scripts\health.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\SpawnController.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\DoorHit.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -107,7 +106,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
-     <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\ObstacleScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyPelletController.cs" />
@@ -160,6 +158,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Art\Sprites" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <Folder Include="Assets\Prefabs\PlayerPrefabs" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\Scenes\TestScenes" />
      <Folder Include="Assets\Scripts\GameSystemsScripts" />

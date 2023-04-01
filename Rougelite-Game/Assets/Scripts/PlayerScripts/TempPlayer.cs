@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
 
 public class TempPlayer : MonoBehaviour
 {
-    public GameObject sword;
+    
 
     public GameObject cam;
-    [SerializeField] private Rigidbody2D rb;
+     public Rigidbody2D rb;
     [SerializeField] private float timer,shootdelay,movedelay;
     [HideInInspector] public float speed;
     [HideInInspector] public Vector2 vel, walkingDir;
@@ -25,7 +27,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GMController.gm.tutdone)
+        if (GMController.gm.tutdone & !GMController.gm.playerDead)
         {
             TempMovement();
             if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
@@ -36,7 +38,8 @@ public class TempPlayer : MonoBehaviour
     void AttackCode()
     {
         StartCoroutine(GMController.gm.ani.SpatulaSwipe());
-        TempSound.soundtemp.tempstorage[3].PlayOneShot(TempSound.soundtemp.clipstorage[3]);
+        int ran = Random.Range(0, TempSound.soundtemp.swordclips.Length);
+        TempSound.soundtemp.tempstorage[3].PlayOneShot(TempSound.soundtemp.swordclips[ran]);
     }
     
     void TempMovement()
@@ -87,7 +90,7 @@ public class TempPlayer : MonoBehaviour
     // unused projectile function. Will proably scrap this function or recycle it for a future function
     void Shoot()
     {
-        Vector3 rot;
+        
         timer -= shootdelay * Time.deltaTime;
         if (timer <= 0)
         {

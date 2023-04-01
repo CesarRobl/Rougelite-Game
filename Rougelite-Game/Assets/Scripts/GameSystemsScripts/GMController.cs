@@ -37,7 +37,7 @@ public class GMController : MonoBehaviour
     public Vector2 dir;
     public bool playerhurt, testscene;
     private bool navdone;
-    [HideInInspector] public bool spawnedboss, loading, tutdone,playerDead;
+    [HideInInspector] public bool spawnedboss, loading, tutdone,playerDead,dialogue;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     

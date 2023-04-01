@@ -25,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/TurretScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/IdSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/StageButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSystemsScripts/Why.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LootScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomScripts/ObstacleScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -173,6 +174,8 @@
       <workItem from="1680306489318" duration="1983000" />
       <workItem from="1680353258510" duration="5038000" />
       <workItem from="1680368544742" duration="3639000" />
+      <workItem from="1680375968098" duration="11000" />
+      <workItem from="1680375986720" duration="4998000" />
     </task>
     <servers />
   </component>

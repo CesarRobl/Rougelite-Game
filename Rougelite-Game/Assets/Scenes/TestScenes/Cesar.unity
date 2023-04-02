@@ -1692,7 +1692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &217445056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9741,6 +9741,10 @@ PrefabInstance:
       value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: talksystem
+      value: 
+      objectReference: {fileID: 881586093}
+    - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: bighealthpercent
       value: 3
       objectReference: {fileID: 0}
@@ -10782,7 +10786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &881586090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10856,15 +10860,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866856dd09d5dc141a7a49cd56670d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lines:
-  - On average, 100 people choke to death on ballpoint pens every year.
-  - AHHHHH
+  lines: []
   dialogueText: {fileID: 1740051769}
   typingSpeed: 0.05
-  playerIndex: 
-  otherIndex: 
-  icon: {fileID: 0}
+  maxLines: 
   icons: []
+  icon: {fileID: 61470669}
+  talk: {fileID: 11400000, guid: e17bc7a8c4034ca4cb24baa7474ce1f3, type: 2}
 --- !u!114 &881586094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13262,7 +13264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1304004770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14643,6 +14645,10 @@ PrefabInstance:
       propertyPath: wall
       value: 
       objectReference: {fileID: 1534515483}
+    - target: {fileID: 490975752309139688, guid: 2bdd57b3458bfa943bbd3fbddffef168, type: 3}
+      propertyPath: bossTalk
+      value: 
+      objectReference: {fileID: 11400000, guid: e430675f668c4a94992137eb83c4400e, type: 2}
     - target: {fileID: 490975752309139688, guid: 2bdd57b3458bfa943bbd3fbddffef168, type: 3}
       propertyPath: opened.Array.size
       value: 2
@@ -17489,8 +17495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32.86299, y: -1.5760002}
-  m_SizeDelta: {x: -84.725, y: -9.499}
+  m_AnchoredPosition: {x: 29.380997, y: -1.5760002}
+  m_SizeDelta: {x: -91.688, y: -9.499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740051769
 MonoBehaviour:
@@ -17512,7 +17518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: On average, 100 people choke to death on ballpoint pens every year.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

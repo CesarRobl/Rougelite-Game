@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Witch :TestAI
 {
     [HideInInspector] public Slider health;
+    private bool stop;
     void Awake()
     {
         Setup();
@@ -14,7 +15,7 @@ public class Witch :TestAI
     
     void Update()
     {
-        if(!Stop) SpawnBar();
+        if(!stop) SpawnBar();
         MatchSliderValue();
         SeekPlayer();
         AttackRange();
@@ -33,7 +34,7 @@ public class Witch :TestAI
         health = GMController.gm.ui.BossBar.GetComponent<Slider>();
         health.maxValue = HP;
         health.value = HP;
-        Stop = true;
+        stop = true;
     }
 
     void MatchSliderValue()

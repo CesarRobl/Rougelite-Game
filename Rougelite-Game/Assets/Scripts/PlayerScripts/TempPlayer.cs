@@ -27,11 +27,13 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GMController.gm.tutdone & !GMController.gm.playerDead)
+        if (GMController.gm.tutdone & !GMController.gm.playerDead & !GMController.gm.dialogue)
         {
             TempMovement();
             if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
         }
+
+        if (GMController.gm.dialogue) rb.velocity = Vector2.zero;
     }
 
     // when called this function plays the sword animation

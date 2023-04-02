@@ -19,6 +19,7 @@ public class GMController : MonoBehaviour
     public Transform player;
     public ObjectController oc;
     public AniController ani;
+    public DialogueSystem talksystem;
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
@@ -28,6 +29,7 @@ public class GMController : MonoBehaviour
     [HideInInspector] public UIController ui;
     [HideInInspector] public IdSystem id;
     
+    
     public int roomint, roommax;
     private float maxhealth;
     public float playerhealth;
@@ -36,7 +38,7 @@ public class GMController : MonoBehaviour
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt, testscene;
-    private bool navdone;
+    private bool navdone,stop;
     [HideInInspector] public bool spawnedboss, loading, tutdone,playerDead,dialogue;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
@@ -63,6 +65,11 @@ public class GMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (tutdone & !stop)
+        {
+            talksystem.gameObject.SetActive(true);
+            stop = true;
+        }
        if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
@@ -170,6 +177,15 @@ public class GMController : MonoBehaviour
             Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }
         Destroy(enemy);
+    }
+
+    public void ShowDialogue(DialogueList talks)
+    {
+        if (!dialogue)
+        {
+            talksystem.gameObject.SetActive(true);
+            talksystem.StartDialogue(talks);
+        }
     }
 
     // Use this function when the boss health reaches 0

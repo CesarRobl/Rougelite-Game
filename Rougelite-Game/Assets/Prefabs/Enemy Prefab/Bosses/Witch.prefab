@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5600380358620980050}
   - component: {fileID: 7911053353231689264}
   - component: {fileID: 2487323218112683066}
+  - component: {fileID: -7771246802295038354}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Boss
@@ -120,6 +121,7 @@ MonoBehaviour:
   anim: 0
   ps: {fileID: 0}
   ai: {fileID: 5600380358620980050}
+  ow: {fileID: 0}
 --- !u!61 &8580895745338643051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,7 +284,21 @@ MonoBehaviour:
   anim: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
+  ow: {fileID: 0}
   health: {fileID: 0}
+--- !u!114 &-7771246802295038354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580895745338643055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: 0
 --- !u!1001 &5700297411541469783
 PrefabInstance:
   m_ObjectHideFlags: 0

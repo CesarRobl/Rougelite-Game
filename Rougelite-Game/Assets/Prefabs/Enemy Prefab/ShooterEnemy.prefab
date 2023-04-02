@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4062422567160462308}
   - component: {fileID: 1734350480580361862}
   - component: {fileID: 6295096351042626534}
+  - component: {fileID: 6095802092706364833}
   m_Layer: 0
   m_Name: ShooterEnemy
   m_TagString: Enemy
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.5
+  radius: 1
   height: 2
   canMove: 1
   maxSpeed: 2.5
@@ -244,16 +245,32 @@ MonoBehaviour:
   speed: 2
   attackrange: 20
   attack: 0
+  forceResistance: 0
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
   RB: {fileID: 0}
   Stop: 0
   stun: 0
   attacking: 0
+  anim: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
+  ow: {fileID: 0}
   shootDelay: 1
   playerDir: {fileID: 7976882992700758383}
+--- !u!114 &6095802092706364833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201928304068823769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: 0
 --- !u!1001 &4234392751632716513
 PrefabInstance:
   m_ObjectHideFlags: 0

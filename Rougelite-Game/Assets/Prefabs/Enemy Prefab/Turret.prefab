@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 381373332869944394}
   - component: {fileID: 3446686065871081514}
   - component: {fileID: 8082043132014082495}
-  m_Layer: 2
+  - component: {fileID: -8978924365888076701}
+  m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,8 +255,22 @@ MonoBehaviour:
   anim: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
+  ow: {fileID: 0}
   shootDelay: 0.5
   playerDir: {fileID: 4757088608141567555}
+--- !u!114 &-8978924365888076701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798077269924964430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b02deb583546845b0cb12e8d7f1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: 0
 --- !u!1001 &2125623436770483777
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class Shooter : TestAI
         AttackRange();
         if(found & !attack)MoveToPlayer();
         else if(attack) Attack();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        Enemyhit();
     }
 
 

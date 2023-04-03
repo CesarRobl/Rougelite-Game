@@ -245,7 +245,7 @@ MonoBehaviour:
   speed: 0
   attackrange: 20
   attack: 0
-  forceResistance: 100
+  forceResistance: 20
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
   RB: {fileID: 0}

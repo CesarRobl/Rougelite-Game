@@ -54,7 +54,7 @@ public class TestAI : MonoBehaviour
     public void MoveToPlayer()
     {
         if (!stun)
-        {
+        { 
             ai.maxSpeed = speed;
             ai.destination = GMController.gm.temp.transform.position;
         }

@@ -35,5 +35,7 @@ public class PlayerSprite : MonoBehaviour
             sr.sprite = chardir[1];
             //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, 0);
         }
+        
+        
     }
 }

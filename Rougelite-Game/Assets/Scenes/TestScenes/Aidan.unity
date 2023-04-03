@@ -8665,7 +8665,7 @@ PrefabInstance:
       objectReference: {fileID: 841170421}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: hurtdelay
-      value: 0.15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4367886674983885736, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: testscene

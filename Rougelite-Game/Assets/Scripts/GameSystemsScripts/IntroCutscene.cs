@@ -6,8 +6,10 @@ using UnityEngine;
 public class IntroCutscene : MonoBehaviour
 {
     public TextMeshProUGUI[] text;
+    public float imageMoveSpeed;
     [SerializeField] private int scene;
     [SerializeField] private GameObject scenes;
+
     void Start()
     {
         StartCoroutine(Cutscene());
@@ -18,7 +20,7 @@ public class IntroCutscene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) scene++;
        
-       scenes.transform.position -= new Vector3(3f * Time.deltaTime, 0, 0);
+       scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
     }
 
     IEnumerator Cutscene()

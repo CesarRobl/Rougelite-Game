@@ -61,6 +61,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\StageButtonScript.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\VideoLists.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\StageController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\PlayerDirFinder.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />

@@ -9675,6 +9675,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1280529103}
     - target: {fileID: 4367886674557529396, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: deathAni
+      value: 
+      objectReference: {fileID: 217445055}
+    - target: {fileID: 4367886674557529396, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 2031875523}
@@ -11017,7 +11021,7 @@ RectTransform:
   - {fileID: 1740051768}
   - {fileID: 61470668}
   m_Father: {fileID: 1716577913}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17325,6 +17329,7 @@ RectTransform:
   - {fileID: 2124316847}
   - {fileID: 1304004772}
   - {fileID: 217445058}
+  - {fileID: 2031875524}
   - {fileID: 2111733195}
   - {fileID: 881586090}
   m_Father: {fileID: 0}
@@ -18766,8 +18771,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1898415280}
   - component: {fileID: 1898415279}
+  - component: {fileID: 1898415281}
   m_Layer: 0
-  m_Name: LoadingPlayer
+  m_Name: VideoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18816,13 +18822,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898415278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.010468, y: 10.772874, z: -64.619}
+  m_LocalPosition: {x: -28.168499, y: 8.784954, z: -64.49928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1710924579}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898415281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898415278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c65bcefbd636e4881ca8025c24095c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  video: {fileID: 0}
+  clips:
+  - {fileID: 32900000, guid: 8a20dc9719cb2814cb5ef4748e05d7b6, type: 3}
+  - {fileID: 32900000, guid: 888d87037cb6a1f4ea81eda9b6699743, type: 3}
 --- !u!1001 &1907618786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19325,8 +19347,8 @@ RectTransform:
   m_Children:
   - {fileID: 1667372752}
   - {fileID: 1705964628}
-  m_Father: {fileID: 2111733195}
-  m_RootOrder: 1
+  m_Father: {fileID: 1716577913}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19353,7 +19375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 0ea1ad60058cab84e9f8ee89edc42ee0, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -19617,9 +19639,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1071288391}
-  - {fileID: 2031875524}
   m_Father: {fileID: 1716577913}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

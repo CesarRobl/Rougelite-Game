@@ -94,6 +94,7 @@ public class UIController : MonoBehaviour
      {
          if (!buttonPressed)
          {
+             StartCoroutine(GMController.gm.ani.BurgerRetry());
              sceneNum = 0;
              buttonPressed = true;
          }

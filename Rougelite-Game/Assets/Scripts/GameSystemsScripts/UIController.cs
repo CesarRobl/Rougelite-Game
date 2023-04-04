@@ -116,6 +116,7 @@ public class UIController : MonoBehaviour
      }
      IEnumerator FadeScreen()
      {
+         yield return new WaitForSeconds(2f);
          loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          // loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);

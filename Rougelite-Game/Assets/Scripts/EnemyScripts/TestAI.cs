@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Pathfinding;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
-        SpriteDir();
+        SpriteDir(GMController.gm.oc.normalEnemy);
         if (found & !stun)
         {
           MoveToPlayer();
@@ -111,11 +112,15 @@ public class TestAI : MonoBehaviour
       //     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
       //     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10f * Time.deltaTime);
       // }
-      public void SpriteDir()
+    public void SpriteDir(Sprite[] sprites)
       {
-          float z = movementDir.Dir(ai.steeringTarget);
-          Debug.Log("My rot is at " + z);
+         movementDir.ChangeSprite(movementDir.Dir(ai.steeringTarget), sprites, GetComponent<SpriteRenderer>());
       }
+
+    public void AttackDir(Sprite[] sprites)
+    {
+        movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
+    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();

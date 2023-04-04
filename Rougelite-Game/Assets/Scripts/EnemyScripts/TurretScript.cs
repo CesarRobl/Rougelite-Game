@@ -18,7 +18,11 @@ public class TurretScript : TestAI
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
         AttackRange();
-         if(attack)Attack();
+        if (attack)
+        {
+            Attack();
+            AttackDir(GMController.gm.oc.shooter);
+        }
          Enemyhit();
     }
 

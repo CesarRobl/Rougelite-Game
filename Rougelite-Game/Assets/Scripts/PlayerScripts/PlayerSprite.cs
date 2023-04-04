@@ -30,12 +30,14 @@ public class PlayerSprite : MonoBehaviour
             sr.sprite = chardir[0];
             //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, -.5f);
         }
-        else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
-        {
-            Debug.Log("FaceRight");
-        }
-        else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
-            Debug.Log("FaceLeft");
+        
+        // else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
+        // {
+        //     Debug.Log("FaceRight");
+        // }
+        // else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
+        //     Debug.Log("FaceLeft");
+        
         else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
         {
             sr.sprite = chardir[1];

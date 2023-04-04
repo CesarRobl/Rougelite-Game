@@ -7,12 +7,13 @@ using Random = UnityEngine.Random;
 public class ObstacleScript : MonoBehaviour
 {
     public int HP;
+    [SerializeField] private BoxCollider2D box;
     private CircleCollider2D cc;
     private SpriteRenderer _sprite;
     public Sprite destroyed;
     private float tableChance;
     public List<ObstacleList> obs  = new List<ObstacleList>();
-    private bool stop,playerhit;
+    private bool stop;
     private HurtFunction ow;
     void Awake()
     {
@@ -24,8 +25,13 @@ public class ObstacleScript : MonoBehaviour
 
     
     void Update()
-    { 
-        if (ow.hurt) HP--;
+    {
+        if (ow.hurt)
+        {
+            HP--;
+            StartCoroutine(HitParticle());
+            ow.hurt = false;
+        }
        if(HP <= 0 & !stop) DestroyedSprite();
        
     }
@@ -79,22 +85,17 @@ public class ObstacleScript : MonoBehaviour
         _sprite.sprite = destroyed;
         stop = true;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
+        box.enabled = false;
         circle.enabled = false;
     }
 
-    void CheckCollision()
-    {
-        Vector2 dir = GMController.gm.temp.transform.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir);
-        if (hit.collider != null)
-        {
-            if (hit.collider.gameObject.CompareTag("TestPlayer")) playerhit = true;
-        }
-    }
+   
 
-    IEnumerator HitDelay()
+    IEnumerator HitParticle()
     {
-        yield return new WaitForSeconds(1f);
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();
+        yield return new WaitForSeconds(.1f);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -16,11 +16,12 @@ public class Shooter : TestAI
     
     void Update()
     {
+        playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
         AttackRange();
         if(found & !attack)MoveToPlayer();
         else if(attack) Attack();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        Enemyhit();
     }
 
 

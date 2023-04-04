@@ -13,6 +13,7 @@ public class TestAI : MonoBehaviour
     public float attackrange;
     public bool attack;
     public float forceResistance;
+    public PlayerDirFinder movementDir;
     [HideInInspector]public Vector3 pastpos;
     public Vector2 dir;
     [HideInInspector] public Rigidbody2D RB;
@@ -21,6 +22,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public AIPath ai;
     [HideInInspector] public HurtFunction ow;
     private TempPlayer pc;
+   
     
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
+        SpriteDir();
         if (found & !stun)
         {
           MoveToPlayer();
@@ -39,6 +42,7 @@ public class TestAI : MonoBehaviour
 
     public void Setup()
     {
+        movementDir = GetComponentInChildren<PlayerDirFinder>();
         RB = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
@@ -54,19 +58,19 @@ public class TestAI : MonoBehaviour
     public void MoveToPlayer()
     {
         if (!stun)
-        {
+        { 
             ai.maxSpeed = speed;
             ai.destination = GMController.gm.temp.transform.position;
         }
     }
-
+      
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~LayerMask.NameToLayer("Pellet"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
         if (hit.collider != null)
         {
-            
+          
             TempPlayer pc = hit.collider.GetComponent<TempPlayer>();
             if (pc != null)
             {
@@ -79,7 +83,7 @@ public class TestAI : MonoBehaviour
       public void AttackRange()
       {
           
-          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,~LayerMask.NameToLayer("Pellet"));
+          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,~(1<<0 | 1<< 2));
           if (hit.collider != null)
           {
 
@@ -99,7 +103,19 @@ public class TestAI : MonoBehaviour
 
       }
 
-    
+      // void DirFinder()
+      // {
+      //     Vector3 pos = new Vector3(ai.steeringTarget.x, ai.steeringTarget.y,ai.steeringTarget.z);
+      //     Vector2 dir = pos - transform.position;
+      //     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+      //     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+      //     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10f * Time.deltaTime);
+      // }
+      public void SpriteDir()
+      {
+          float z = movementDir.Dir(ai.steeringTarget);
+          Debug.Log("My rot is at " + z);
+      }
     private void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
@@ -111,21 +127,25 @@ public class TestAI : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Sword"))
-        {
-            HP--;
-            if (Stop == false)
-            {
-                Stop = true;
-                StartCoroutine(EnemyHurt(ps));
-                if(!attacking)Knockback(GMController.gm.maxforce);
-            }
-        }
+        // if (other.gameObject.CompareTag("Sword"))
+        // {
+        //     HP--;
+        //     if (Stop == false)
+        //     {
+        //         Stop = true;
+        //         StartCoroutine(EnemyHurt(ps));
+        //         if(!attacking)Knockback(GMController.gm.maxforce);
+        //     }
+        // }
     }
 
     public void Enemyhit()
     {
-        Hurt();
+        if (ow.hurt)
+        {
+            Hurt();
+            ow.hurt = false;
+        }
         if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
        
     }

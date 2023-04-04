@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 3446686065871081514}
   - component: {fileID: 8082043132014082495}
   - component: {fileID: -8978924365888076701}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   speed: 0
   attackrange: 20
   attack: 0
-  forceResistance: 100
+  forceResistance: 20
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
   RB: {fileID: 0}

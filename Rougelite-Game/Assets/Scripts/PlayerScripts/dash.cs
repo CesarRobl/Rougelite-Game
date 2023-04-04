@@ -21,7 +21,7 @@ public class dash : MonoBehaviour
     void Update()
     {
         Vector2 pos = GMController.gm.pos - GMController.gm.temp.transform.position;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash)
+        if (Input.GetMouseButtonDown(1) && CanDash)
         {
             StartCoroutine(Dash(GMController.gm.temp.walkingDir));
         }

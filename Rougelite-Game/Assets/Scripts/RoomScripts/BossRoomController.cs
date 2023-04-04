@@ -11,9 +11,11 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] private GameObject wall;
     [SerializeField]private Sprite[] opened;
     [SerializeField] private GameObject boss;
+    [SerializeField] private DialogueList bossTalk;
     [HideInInspector] private TempPortalScript portal;
     private SpawnController spawner;
     private bool stop,done,open;
+    private int num;
     void Awake()
     {
         spawner = GetComponentInChildren<SpawnController>();
@@ -45,24 +47,32 @@ public class BossRoomController : MonoBehaviour
     }
     void Setup()
     {
+        
         boss.SetActive(true);
         wall.SetActive(true);
         for (int i = 0; i < doors.Length; i++)
         {
             doors[i].sprite = closed[i];
         }
-
+        
         done = true;
     }
 
+    IEnumerator TalkFirst()
+    {
+        GMController.gm.ShowDialogue(bossTalk);
+        if (!GMController.gm.dialogue) num = 1;
+       yield return new  WaitForSeconds(.1f);
+       stop = true;
+        Setup();
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         
         if (col.gameObject.CompareTag("TestPlayer") & !stop)
         {
             Debug.Log("Spawn the boss");
-            Setup();
-            stop = true;
+            StartCoroutine(TalkFirst());
         }
     }
 }

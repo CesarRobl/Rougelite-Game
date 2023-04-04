@@ -30,7 +30,7 @@ public class Charger : TestAI
         }
         AttackRange();
         SeekPlayer();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        Enemyhit();
     }
 
     public override void Attack()
@@ -45,7 +45,7 @@ public class Charger : TestAI
     {
         anim = true;
         yield return new WaitForSeconds(.2f);
-        ai.speed = chargePower;
+        ai.maxSpeed = chargePower;
         ai.destination = GMController.gm.temp.transform.position;
         yield return new WaitForSeconds(.1f);
             attacking = false;

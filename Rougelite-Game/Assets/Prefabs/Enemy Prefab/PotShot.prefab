@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5828251487561005386}
   - component: {fileID: 2283062832756747633}
   - component: {fileID: 3038038455002688565}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: PotShot
   m_TagString: Enemy
   m_Icon: {fileID: 0}

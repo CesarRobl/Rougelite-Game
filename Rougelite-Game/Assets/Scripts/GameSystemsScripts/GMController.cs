@@ -19,6 +19,7 @@ public class GMController : MonoBehaviour
     public Transform player;
     public ObjectController oc;
     public AniController ani;
+    public DialogueSystem talksystem;
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
@@ -28,6 +29,7 @@ public class GMController : MonoBehaviour
     [HideInInspector] public UIController ui;
     [HideInInspector] public IdSystem id;
     
+    
     public int roomint, roommax;
     private float maxhealth;
     public float playerhealth;
@@ -36,8 +38,8 @@ public class GMController : MonoBehaviour
     [HideInInspector]public Vector3 pos;
     public Vector2 dir;
     public bool playerhurt, testscene;
-    private bool navdone;
-    [HideInInspector] public bool spawnedboss, loading, tutdone;
+    private bool navdone,stop;
+    [HideInInspector] public bool spawnedboss, loading, tutdone,playerDead,dialogue;
     public float smallhealthpercent, bighealthpercent;
     [HideInInspector] public AstarPath path;
     
@@ -63,6 +65,11 @@ public class GMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (tutdone & !stop)
+        {
+            talksystem.gameObject.SetActive(true);
+            stop = true;
+        }
        if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(playerhurt) IFrames();
@@ -103,22 +110,23 @@ public class GMController : MonoBehaviour
     // Spawn the room that leads to the boss also starts the function to cover up doors that lead outside of the level
     void SpawnBossRoom()
     {
-        for (int i = 0; i < rc.Count; i++)
+        RoomController[] roomarray = rc.ToArray();
+        for (int i = 0; i < roomarray.Length; i++)
         {
-            if (i == rc.Count - 1 & !spawnedboss & !testscene)
+            if (i == roomarray.Length - 1 & !spawnedboss & !testscene)
             { 
                 rc[i].gameObject.SetActive(false);
                 Instantiate(Roomlist.rl.bossroom, rc[i].transform.position, Quaternion.identity);
                
-                Destroy(rc[i].gameObject);
-                rc.Remove(rc[i]);
+                Destroy(roomarray[i].gameObject);
+                rc.Remove(roomarray[i]);
                 
                 spawnedboss = true;
             }
 
-            if (!rc[i].bossroom & !testscene)
+            if (!roomarray[i].bossroom & !testscene)
             {
-                rc[i].Invoke("CheckDoor", .5f);
+                roomarray[i].Invoke("CheckDoor", .5f);
                
             }
         }
@@ -149,8 +157,8 @@ public class GMController : MonoBehaviour
     
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
-    { 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    {
+        if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }
 
   
@@ -169,6 +177,15 @@ public class GMController : MonoBehaviour
             Instantiate(oc.HalfHealth,enemy.transform.position,Quaternion.identity);
         }
         Destroy(enemy);
+    }
+
+    public void ShowDialogue(DialogueList talks)
+    {
+        if (!dialogue)
+        {
+            talksystem.gameObject.SetActive(true);
+            talksystem.StartDialogue(talks);
+        }
     }
 
     // Use this function when the boss health reaches 0

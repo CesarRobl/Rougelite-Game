@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroCutscene : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class IntroCutscene : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) scene++;
-       
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainMenu");
        scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
     }
 

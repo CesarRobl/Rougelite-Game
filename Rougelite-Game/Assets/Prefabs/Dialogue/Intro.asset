@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   lines:
-  - On average, 100 people choke to death on ballpoint pens every year.
-  - You go to college to pay for college.
-  - Cats, dogs, and other similar animals can't see directly below their faces.
-  - Because their snout gets in the way.
+  - You have a February face, so full of frost, of storm and cloudiness
+  - I am sick when I do look on thee
+  - Out of my sight
   - End
   maxLines: 04000000
   icons:

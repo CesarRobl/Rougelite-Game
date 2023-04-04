@@ -12,7 +12,7 @@ public class IntroCutscene : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Cutscene());
+       
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class IntroCutscene : MonoBehaviour
        scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
     }
 
+    // Delete this if I have not deleted it already - Cesar
     IEnumerator Cutscene()
     {
         yield return new WaitForSeconds(6);

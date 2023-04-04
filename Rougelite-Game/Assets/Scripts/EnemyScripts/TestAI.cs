@@ -13,6 +13,7 @@ public class TestAI : MonoBehaviour
     public float attackrange;
     public bool attack;
     public float forceResistance;
+    public PlayerDirFinder movementDir;
     [HideInInspector]public Vector3 pastpos;
     public Vector2 dir;
     [HideInInspector] public Rigidbody2D RB;
@@ -21,6 +22,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public AIPath ai;
     [HideInInspector] public HurtFunction ow;
     private TempPlayer pc;
+   
     
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
+        SpriteDir();
         if (found & !stun)
         {
           MoveToPlayer();
@@ -39,6 +42,7 @@ public class TestAI : MonoBehaviour
 
     public void Setup()
     {
+        movementDir = GetComponentInChildren<PlayerDirFinder>();
         RB = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
@@ -59,7 +63,7 @@ public class TestAI : MonoBehaviour
             ai.destination = GMController.gm.temp.transform.position;
         }
     }
-
+      
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
@@ -99,7 +103,19 @@ public class TestAI : MonoBehaviour
 
       }
 
-    
+      // void DirFinder()
+      // {
+      //     Vector3 pos = new Vector3(ai.steeringTarget.x, ai.steeringTarget.y,ai.steeringTarget.z);
+      //     Vector2 dir = pos - transform.position;
+      //     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+      //     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+      //     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10f * Time.deltaTime);
+      // }
+      public void SpriteDir()
+      {
+          float z = movementDir.Dir(ai.steeringTarget);
+          Debug.Log("My rot is at " + z);
+      }
     private void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();

@@ -16,6 +16,7 @@ public class Shooter : TestAI
     
     void Update()
     {
+        playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
         AttackRange();
         if(found & !attack)MoveToPlayer();

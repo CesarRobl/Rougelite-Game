@@ -15,6 +15,7 @@ public class TurretScript : TestAI
     // Update is called once per frame
     void Update()
     {
+        playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
         AttackRange();
          if(attack)Attack();
@@ -23,6 +24,7 @@ public class TurretScript : TestAI
 
     public override void Attack()
     {
+        
         if (shootDelay <= 0)
         {
             Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));

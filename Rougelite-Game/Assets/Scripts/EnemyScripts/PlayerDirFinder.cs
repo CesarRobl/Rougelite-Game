@@ -4,19 +4,54 @@ using UnityEngine;
 
 public class PlayerDirFinder : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private SpriteRenderer enemySprite;
+    [SerializeField] private Sprite[] sprites;
     void Start()
     {
-        
+        enemySprite = GetComponentInParent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+   
     void Update()
+    {
+       
+    }
+
+    public void ChangeSprite(float z)
+    {
+        if (GMController.gm.holder.eulerAngles.z >225 && GMController.gm.holder.eulerAngles.z<=315)
+        {
+            enemySprite.sprite = sprites[0];
+            //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, -.5f);
+        }
+        else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
+        {
+            Debug.Log("FaceRight");
+        }
+        else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
+            Debug.Log("FaceLeft");
+        else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
+        {
+            enemySprite.sprite = sprites[1];
+        }
+    }
+
+    public void PlayerDir()
     {
         Vector3 pos = GMController.gm.temp.transform.position;
         Vector2 dir = pos - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10f * Time.deltaTime);
+    }
+
+    public float Dir(Vector3 pos)
+    {
+      
+        Vector2 dir = pos - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp( transform.rotation, rotation, 10f * Time.deltaTime);
+        return  transform.eulerAngles.z;
     }
 }

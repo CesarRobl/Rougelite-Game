@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,72 +53,93 @@
     <UnityVersion>2021.2.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SoundControl.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\SoundControl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-    <Compile Include="Assets\Scripts\RoomController.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\RoomController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\PhaserScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scripts\MenuScript.cs" />
-    <Compile Include="Assets\Scripts\BossRoomController.cs" />
-    <Compile Include="Assets\SoundController.cs" />
-    <Compile Include="Assets\Scripts\dash.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\ObstacleList.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\MenuScript.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\BossRoomController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Charger.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\SoundController.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\TutorialScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\dash.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\SlashRay.cs" />
+    <Compile Include="Assets\NOT USED\ScrollingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-    <Compile Include="Assets\Scripts\StageController.cs" />
-    <Compile Include="Assets\Scripts\PlayerDirFinder.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\StageButtonScript.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\StageController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\PlayerDirFinder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\Scripts\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\DialogueStorage.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Healthbar.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\LootSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-    <Compile Include="Assets\Scripts\RoomInfo.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\RoomInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\PlayerSprite.cs" />
+    <Compile Include="Assets\Scripts\LootScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerSprite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-    <Compile Include="Assets\Scripts\TempPlayer.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\TempPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\Scripts\ObjectController.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\ObjectController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\AniController.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\AniController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Scripts\GMController.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\GMController.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\Scripts\RangedEnemy.cs" />
-    <Compile Include="Assets\Scripts\health.cs" />
-    <Compile Include="Assets\Scripts\SpawnController.cs" />
-    <Compile Include="Assets\DoorHit.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\RangedEnemy.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\DoorHit.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\DialogueList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-    <Compile Include="Assets\Scripts\Roomlist.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\TurretScript.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\Roomlist.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\Scripts\TestAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\TestAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Witch.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\PotShotEnemy.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\HurtFunction.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
-    <Compile Include="Assets\Scripts\UIController.cs" />
-    <Compile Include="Assets\Scripts\DoorScript.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\DoorScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\DialogueSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\Scripts\movement.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\IdSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\Scripts\EnemyPelletController.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\ObstacleScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyPelletController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\IntroCutscene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TempPortalScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\Scripts\TempSound.cs" />
-    <Compile Include="Assets\Scripts\PelletController.cs" />
-    <Compile Include="Assets\EnemyList.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Shooter.cs" />
+    <Compile Include="Assets\Scripts\GameSystemsScripts\TempSound.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PelletController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -395,6 +416,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.0\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
@@ -899,6 +923,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{B74B6B08-E322-F2A1-B78A-BF4050523764}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{7FE3B6AD-D849-DC40-333B-C48D9BAB5CD8}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{90EFD825-80AD-6998-C026-3F7138B97141}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -3,3 +3,14 @@ Rougelite-Game/Logs/
 Rougelite-Game/Temp/
 Rougelite-Game/UserSettings/Layouts/default-2021.dwlt
  
+Shooter/
+Rougelite-Game/AstarPathfindingProject.csproj
+Rougelite-Game/AstarPathfindingProjectEditor.csproj
+Rougelite-Game/PackageToolsEditor.csproj
+Rougelite-Game/Rougelite-Game.sln
+Rougelite-Game/.vs/Rougelite-Game/v16/.suo
+Rougelite-Game/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+Rougelite-Game/obj/Debug/AstarPathfindingProject.csproj.AssemblyReference.cache
+Rougelite-Game/obj/Debug/AstarPathfindingProjectEditor.csproj.AssemblyReference.cache
+Rougelite-Game/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Rougelite-Game/obj/Debug/PackageToolsEditor.csproj.AssemblyReference.cache

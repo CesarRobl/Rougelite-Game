@@ -44,25 +44,27 @@ public class AniController : MonoBehaviour
          if(!dying)playerDeath.Play();
          dying = true;
          yield return new WaitForSeconds(1f);
-         StartCoroutine(BurgerDeath());
+       
          gameOver.SetActive(true);
          Cursor.visible = true;
          for (int i = 0; i < GMController.gm.ui.deathButton.Length; i++)
          {
              GMController.gm.ui.deathButton[i].color += new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          }
-         yield return new WaitUntil(() => GMController.gm.ui.deathButton[1].color.a >= 1);
-         stopAni = true;
+         StartCoroutine(BurgerDeath());
+         
     }
 
     IEnumerator BurgerDeath()
     {
         video.video.clip = video.clips[0];
-        deathAni.GetComponent<RawImage>().color += new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+        deathAni.GetComponent<RawImage>().color += Color.white;
+        video.video.playbackSpeed = 1;
         yield return new WaitUntil(() =>   deathAni.GetComponent<RawImage>().color. a >= 1);
         deathAni.SetActive(true);
         video.video.isLooping = false;
         yield return new WaitForSeconds(.1f);
+        stopAni = true;
     }
 
     public IEnumerator BurgerRetry()

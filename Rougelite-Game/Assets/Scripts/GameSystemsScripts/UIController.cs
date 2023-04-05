@@ -95,8 +95,7 @@ public class UIController : MonoBehaviour
          if (!buttonPressed)
          {
              StartCoroutine(GMController.gm.ani.BurgerRetry());
-             sceneNum = 0;
-             buttonPressed = true;
+             StartCoroutine(Retry());
          }
      }
 
@@ -108,6 +107,13 @@ public class UIController : MonoBehaviour
              buttonPressed = true;
          }
           
+     }
+
+     IEnumerator Retry()
+     {
+         yield return new WaitForSeconds(1);
+         sceneNum = 0;
+         buttonPressed = true;
      }
 
      void PlayButtonFade()

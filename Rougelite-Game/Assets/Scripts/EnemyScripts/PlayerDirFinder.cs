@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDirFinder : MonoBehaviour
 {
     private SpriteRenderer enemySprite;
-    [SerializeField] private Sprite[] sprites;
+    
     void Start()
     {
         enemySprite = GetComponentInParent<SpriteRenderer>();
@@ -17,32 +17,36 @@ public class PlayerDirFinder : MonoBehaviour
        
     }
 
-    public void ChangeSprite(float z)
+    public void ChangeSprite(float z, Sprite[] sprites, SpriteRenderer esprite)
     {
-        if (GMController.gm.holder.eulerAngles.z >225 && GMController.gm.holder.eulerAngles.z<=315)
+        // Debug.Log("My rotation is at " + z );
+        if ( z > 225 && z <= 315)
         {
-            enemySprite.sprite = sprites[0];
-            //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, -.5f);
+            Debug.Log("Facing foward");
+            esprite.sprite = sprites[1];
         }
-        else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
+        // else if (z <= 45 || z > 315)
+        // {
+        //     Debug.Log("FaceRight");
+        // }
+        // else if( z > 135 && z<=225)
+        //     Debug.Log("FaceLeft");
+        else if ( z >45 && z<=135)
         {
-            Debug.Log("FaceRight");
-        }
-        else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
-            Debug.Log("FaceLeft");
-        else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
-        {
-            enemySprite.sprite = sprites[1];
+            Debug.Log("Facing back");
+            esprite.sprite = sprites[0];
         }
     }
 
-    public void PlayerDir()
+    public float PlayerDir()
     {
         Vector3 pos = GMController.gm.temp.transform.position;
         Vector2 dir = pos - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10f * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp( transform.rotation, rotation, 10f * Time.deltaTime);
+        float z = transform.eulerAngles.z;
+        return z;
     }
 
     public float Dir(Vector3 pos)

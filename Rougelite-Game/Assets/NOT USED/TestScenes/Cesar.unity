@@ -254,7 +254,7 @@ Camera:
   far clip plane: 1000
   field of view: 127
   orthographic: 1
-  orthographic size: 50
+  orthographic size: 90
   m_Depth: 5.5
   m_CullingMask:
     serializedVersion: 2
@@ -10023,9 +10023,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5873077496001638573, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: etype.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873077496001638573, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: etype.Array.data[0]
       value: 
       objectReference: {fileID: 201928304068823769, guid: bae291e016af9ae4d88640a482a9b50e, type: 3}
+    - target: {fileID: 5873077496001638573, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: etype.Array.data[2]
+      value: 
+      objectReference: {fileID: 8940100164337763708, guid: 4789fa85b4960c24481b69a368685d93, type: 3}
+    - target: {fileID: 5873077496001638573, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: etype.Array.data[3]
+      value: 
+      objectReference: {fileID: 3798077269924964430, guid: 1da93b2e5d59ae847a3794029be635ff, type: 3}
     - target: {fileID: 6027045623305431958, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: m_Volume
       value: 1
@@ -10050,6 +10062,30 @@ PrefabInstance:
       propertyPath: HalfHealth
       value: 
       objectReference: {fileID: 4200439418167187967, guid: a7a7c3fc167c1c1459a006553489be43, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: shooter.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: shooter.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c5201bc8857531489e556495831548d, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: shooter.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e79ecf8cfa6b2d4eb269be2facd0b39, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: normalEnemy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: normalEnemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ef6ef102f3a58d042a72b7d09898e451, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: normalEnemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21a870ada9e9f254bafd8a80e1851bf4, type: 3}
     m_RemovedComponents:
     - {fileID: 6739603098967906580, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
     - {fileID: 6027045623305431958, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
@@ -18798,7 +18834,7 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 3
   m_DataSource: 0
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 2.3
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}

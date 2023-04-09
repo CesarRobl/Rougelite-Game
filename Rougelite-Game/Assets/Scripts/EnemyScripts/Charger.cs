@@ -22,15 +22,19 @@ public class Charger : TestAI
         if (found & !stun & !anim)
         {
            MoveToPlayer();
+           SpriteDir(GMController.gm.oc.normalEnemy);
         }
         
         if (attack & !attacking & !anim)
         {
+           
             Attack();
         }
+        
+        
         AttackRange();
         SeekPlayer();
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        Enemyhit();
     }
 
     public override void Attack()
@@ -44,7 +48,8 @@ public class Charger : TestAI
     IEnumerator Charge()
     {
         anim = true;
-        yield return new WaitForSeconds(.2f);
+        SpriteDir(GMController.gm.oc.normalEnemy);
+        yield return new WaitForSeconds(.65f);
         ai.maxSpeed = chargePower;
         ai.destination = GMController.gm.temp.transform.position;
         yield return new WaitForSeconds(.1f);

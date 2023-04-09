@@ -9,26 +9,55 @@ public class DialogueSystem : MonoBehaviour
    
     [SerializeField] private string[] lines;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private float typingSpeed;
+    [SerializeField] private float typingSpeed, typeTimer;
     [SerializeField] private int[] maxLines;
     [SerializeField] private Sprite[] icons;
     [SerializeField] private Image icon;
     [SerializeField] private DialogueList talk;
+    [SerializeField] private bool introScene;
     private DialogueStorage ds;
+    private float pastTimer;
     private int index,iconIndex,lineIndex,talkIndex;
     
     void Awake()
     {
-      
-        StartDialogue(talk);
+
+        if (!introScene) StartDialogue(talk);
+        else
+        {
+            lines = talk.lines;
+            pastTimer = typeTimer;
+            StartCoroutine(DisplayLine());
+        }
     }
 
    
     void Update()
     {
+       if(!introScene) ButtonIncrements();
+       else
+       {
+           if (dialogueText.text == lines[index])
+           {
+               typeTimer -= Time.deltaTime; 
+               if (typeTimer <= 0)
+               {
+                   typeTimer = pastTimer;
+                   NextLineIntro();
+               }
+           }
+       }
        
-       
-        if (Input.anyKeyDown)
+    }
+
+    void IntroCutscene()
+    {
+        
+    }
+
+    void ButtonIncrements()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dialogueText.text == lines[index])
             {
@@ -45,10 +74,8 @@ public class DialogueSystem : MonoBehaviour
             }
         }
     }
-
    public void StartDialogue(DialogueList chat)
     {
-       
         GMController.gm.dialogue = true;
         talk = chat;
         index = 0;
@@ -71,6 +98,19 @@ public class DialogueSystem : MonoBehaviour
          {
              GMController.gm.dialogue = false;
             index = 0;
+            gameObject.SetActive(false);
+        }
+    }
+
+    void NextLineIntro()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            StartCoroutine(DisplayLine());
+        }
+        if(index >= lines.Length - 1)
+        {
             gameObject.SetActive(false);
         }
     }

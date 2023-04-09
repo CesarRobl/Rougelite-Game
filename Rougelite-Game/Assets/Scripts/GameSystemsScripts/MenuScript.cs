@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour
 {
     public static MenuScript menu;
     public static float lastvolumefloat;
-    [SerializeField] private Button[] buttons;
+    [SerializeField] private GameObject buttons;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject crosshairCheck, loadscreen;
     
@@ -44,6 +44,7 @@ public class MenuScript : MonoBehaviour
         if (!opensettings)
         {
             opensettings = true;
+            buttons.SetActive(false);
             settings.SetActive(opensettings);
             return;
         }
@@ -51,6 +52,7 @@ public class MenuScript : MonoBehaviour
         else
         {
             opensettings = false;
+            buttons.SetActive(true);
             settings.SetActive(opensettings);
             return;
         }

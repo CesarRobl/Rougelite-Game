@@ -8,6 +8,7 @@ public class PotShotEnemy : TestAI
     private Vector2 currentpos,pos;
     [SerializeField] private Vector2 lastpos;
     private float dist,dist2;
+    [SerializeField] private GameObject[] slashes;
     void Awake()
     {
         Setup();
@@ -16,24 +17,26 @@ public class PotShotEnemy : TestAI
     // Update is called once per frame
     void Update()
     {
-        
-        currentpos = transform.position;
-        SeekPlayer();
-        AttackRange();
-        if (found & !stun & !anim)
+        if (!GMController.gm.dialogue)
         {
-            MoveToPlayer();
-        }
-
-        if (attacking)
-        {
-            dist = Vector2.Distance(currentpos, pos);
-            dist2 = Vector2.Distance(transform.position, lastpos);
+            currentpos = transform.position;
+            SeekPlayer();
+            AttackRange();
+            if (found & !stun & !anim)
+            {
+                MoveToPlayer();
+            }
+            SpriteDir(GMController.gm.oc.normalEnemy);
+            // if (attacking)
+            // {
+            //     dist = Vector2.Distance(currentpos, pos);
+            //     dist2 = Vector2.Distance(transform.position, lastpos);
+            // }
+            //
+            // if (attack & !anim) Attack();
+            // Enemyhit();
         }
         
-        if(attack & !anim)Attack();
-        
-      Enemyhit();
     }
 
     public override void Attack()
@@ -49,7 +52,7 @@ public class PotShotEnemy : TestAI
          pos = GMController.gm.temp.transform.position;
         lastpos = transform.position;
         ai.destination = pos;
-        ai.maxSpeed= 25;
+        ai.maxSpeed= 10;
        
 
         yield return new WaitUntil(() => dist < .1f);

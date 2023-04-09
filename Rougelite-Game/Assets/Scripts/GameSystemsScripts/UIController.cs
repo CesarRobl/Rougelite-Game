@@ -94,8 +94,8 @@ public class UIController : MonoBehaviour
      {
          if (!buttonPressed)
          {
-             sceneNum = 0;
-             buttonPressed = true;
+             StartCoroutine(GMController.gm.ani.BurgerRetry());
+             StartCoroutine(Retry());
          }
      }
 
@@ -109,12 +109,20 @@ public class UIController : MonoBehaviour
           
      }
 
+     IEnumerator Retry()
+     {
+         yield return new WaitForSeconds(1);
+         sceneNum = 0;
+         buttonPressed = true;
+     }
+
      void PlayButtonFade()
      {
          StartCoroutine(FadeDeathButton(sceneNum));
      }
      IEnumerator FadeScreen()
      {
+         yield return new WaitForSeconds(2f);
          loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          // loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);

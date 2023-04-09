@@ -2,25 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroCutscene : MonoBehaviour
 {
     public TextMeshProUGUI[] text;
+    public float imageMoveSpeed;
     [SerializeField] private int scene;
     [SerializeField] private GameObject scenes;
+
     void Start()
     {
-        StartCoroutine(Cutscene());
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) scene++;
-       
-       scenes.transform.position -= new Vector3(3f * Time.deltaTime, 0, 0);
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainMenu");
+       scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
     }
 
+    // Delete this if I have not deleted it already - Cesar
     IEnumerator Cutscene()
     {
         yield return new WaitForSeconds(6);

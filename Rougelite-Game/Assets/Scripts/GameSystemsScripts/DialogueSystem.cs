@@ -57,7 +57,7 @@ public class DialogueSystem : MonoBehaviour
 
     void ButtonIncrements()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dialogueText.text == lines[index])
             {

@@ -9,6 +9,8 @@ public class PlayerSprite : MonoBehaviour
     public GameObject spatula;
 
     [SerializeField] private Sprite[] chardir;
+    [SerializeField] private Sprite[] attackDir;
+    private int num;
     void Start()
     {
         sr = GetComponentInParent<SpriteRenderer>();
@@ -18,7 +20,8 @@ public class PlayerSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeSpriteDir();
+        if(!GMController.gm.ani.attacking)ChangeSpriteDir();
+        else Debug.Log("Choose attack sprite " + num);
     }
     
     // changes the player sprite based on the direciton its looking at using its z rotation
@@ -27,8 +30,7 @@ public class PlayerSprite : MonoBehaviour
 
         if (GMController.gm.holder.eulerAngles.z >225 && GMController.gm.holder.eulerAngles.z<=315)
         {
-            sr.sprite = chardir[0];
-            //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, -.5f);
+            num = 0;
         }
         
         // else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
@@ -40,9 +42,11 @@ public class PlayerSprite : MonoBehaviour
         
         else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
         {
-            sr.sprite = chardir[1];
+            num = 1;
         }
         
-        
+        sr.sprite = chardir[num];
     }
+
+    
 }

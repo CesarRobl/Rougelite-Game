@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDirFinder : MonoBehaviour
 {
     private SpriteRenderer enemySprite;
-    
+    [HideInInspector] public int spriteNum;
     void Start()
     {
         enemySprite = GetComponentInParent<SpriteRenderer>();
@@ -17,13 +17,18 @@ public class PlayerDirFinder : MonoBehaviour
        
     }
 
+    public void SpriteStateChange(Sprite sprite, SpriteRenderer esprite)
+    {
+        esprite.sprite = sprite;
+    }
     public void ChangeSprite(float z, Sprite[] sprites, SpriteRenderer esprite)
     {
         // Debug.Log("My rotation is at " + z );
         if ( z > 225 && z <= 315)
         {
-            Debug.Log("Facing foward");
-            esprite.sprite = sprites[1];
+            
+            spriteNum = 1;
+            esprite.sprite = sprites[spriteNum];
         }
         // else if (z <= 45 || z > 315)
         // {
@@ -33,8 +38,9 @@ public class PlayerDirFinder : MonoBehaviour
         //     Debug.Log("FaceLeft");
         else if ( z >45 && z<=135)
         {
-            Debug.Log("Facing back");
-            esprite.sprite = sprites[0];
+           
+            spriteNum = 0;
+            esprite.sprite = sprites[spriteNum];
         }
     }
 

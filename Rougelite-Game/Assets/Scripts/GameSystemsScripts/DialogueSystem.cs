@@ -137,6 +137,7 @@ public class DialogueSystem : MonoBehaviour
         foreach (char letter in lines[index])
         {
             dialogueText.text += letter;
+            if(!TempSound.soundtemp.tempstorage[0].isPlaying)TempSound.soundtemp.tempstorage[0].PlayOneShot(TempSound.soundtemp.clipstorage[4]);
             yield return new WaitForSeconds(typingSpeed);
         }
     }

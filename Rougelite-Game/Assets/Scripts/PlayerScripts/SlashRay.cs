@@ -2,24 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SlashRay : MonoBehaviour
 {
    [SerializeField]private List<GameObject> things;
    public bool stop;
+   [SerializeField] private bool enemySlash;
 
    private void OnTriggerEnter2D(Collider2D col)
    {
-     
-      HurtFunction ow = col.gameObject.GetComponent<HurtFunction>();
-      if (ow != null & !stop)
+      if (enemySlash)
       {
-       
-         things.Add(col.gameObject);
-         HitCheck();
-         stop = true;
-         if (stop) stop = false;
+         if (col.gameObject.CompareTag("TestPlayer") & !GMController.gm.playerhurt) GMController.gm.temp.Playerhurt();
+      }
+      else
+      {
+         HurtFunction ow = col.gameObject.GetComponent<HurtFunction>();
+         if (ow != null & !stop)
+         {
+
+            things.Add(col.gameObject);
+            HitCheck();
+            stop = true;
+            if (stop) stop = false;
+         }
       }
    }
 

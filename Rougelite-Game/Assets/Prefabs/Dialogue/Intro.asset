@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   lines:
-  - You have a February face, so full of frost, of storm and cloudiness
-  - I am sick when I do look on thee
-  - Out of my sight
+  - Woah! Where am I? This looks like some nightmare restaurant!
+  - "I bet this is where they took my brothers\u2026or at least one of them."
+  - Alright so now lets save them
   - End
-  maxLines: 04000000
+  maxLines: 000000000100000004000000
   icons:
-  - {fileID: 21300000, guid: 7bc0a8ec21edb164ea21b4594dab597f, type: 3}
+  - {fileID: 21300000, guid: 1533c782a10199347924d5e1b92e7ef9, type: 3}
+  - {fileID: 21300000, guid: e7be7000f099f5142a703c639e08dc8d, type: 3}
+  - {fileID: 21300000, guid: a46539e65c5b0e049a292ddf91d6d151, type: 3}

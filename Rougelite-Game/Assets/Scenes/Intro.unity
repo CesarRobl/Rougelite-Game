@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines: []
   dialogueText: {fileID: 1250689943}
-  typingSpeed: 0.02
+  typingSpeed: 0.04
   typeTimer: 12
   maxLines: 
   icons: []

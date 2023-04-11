@@ -32,7 +32,7 @@ public class Charger : TestAI
         }
         
         
-        AttackRange();
+        AttackRange(~(1<<0 | 1<< 2));
         SeekPlayer();
         Enemyhit();
     }

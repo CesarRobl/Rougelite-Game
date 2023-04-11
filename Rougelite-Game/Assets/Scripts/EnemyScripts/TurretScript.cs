@@ -17,7 +17,7 @@ public class TurretScript : TestAI
     {
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
-        AttackRange();
+        AttackRange(~(1<<0 | 1<< 2));
         if (attack)
         {
             Attack();

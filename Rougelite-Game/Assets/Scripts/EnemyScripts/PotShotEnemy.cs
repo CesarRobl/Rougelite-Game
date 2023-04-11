@@ -5,8 +5,8 @@ using UnityEngine;
 public class PotShotEnemy : TestAI
 {
     private Animator slash;
-    private Vector2 currentpos,pos;
-    [SerializeField] private Vector2 lastpos;
+    private Vector3 currentpos,pos;
+    [SerializeField] private Vector3 lastpos;
     private float dist,dist2;
     [SerializeField] private GameObject[] slashes;
     private BoxCollider2D collide;
@@ -21,24 +21,20 @@ public class PotShotEnemy : TestAI
     // Update is called once per frame
     void Update()
     {
-        
-       
-            currentpos = transform.position;
+        currentpos = transform.position;
+            AttackDir(GMController.gm.oc.phantom);
             SeekPlayer();
-            AttackRange();
+            AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
             Enemyhit();
             if (found & !stun & !anim)
             {
-                
                 MoveToPlayer();
-                SpriteDir(GMController.gm.oc.phantom);
             }
            
             if (attacking)
             {
                 dist = Vector2.Distance(currentpos, pos);
                 dist2 = Vector2.Distance(transform.position, lastpos);
-                StartCoroutine(Rush());
             }
             
             if (attack & !anim) Attack();
@@ -59,11 +55,16 @@ public class PotShotEnemy : TestAI
     IEnumerator Rush()
     {
         ai.destination = transform.position;
+        ai.enabled = false;
+        pos = GMController.gm.player.position;
         collide.isTrigger = true;
+        
+        Vector2 posDir = pos - transform.position;
+        RB.velocity = posDir.normalized * 9.5f;
         GetComponent<SpriteRenderer>().color = Color.gray;
-        transform.position = Vector3.MoveTowards(transform.position, pos, 6 * Time.deltaTime);
-        yield return new WaitUntil(() => dist < .3f);
-        pos = transform.position;
+        
+        yield return new WaitUntil(() => dist < .4f);
+        RB.velocity = Vector2.zero;
         StartCoroutine(SlashAttack());
     }
 
@@ -80,15 +81,18 @@ public class PotShotEnemy : TestAI
     }
 
     IEnumerator GoBack()
-    {
-        
-        transform.position = Vector3.MoveTowards(transform.position, lastpos, 10 * Time.deltaTime);
-       
-        yield return new WaitUntil(() => dist2 < .1f);
+    { 
+        collide.isTrigger = true;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+        Vector2 posDir = lastpos - transform.position;
+        RB.velocity = posDir.normalized * 8;
+        yield return new WaitUntil(() => dist2 < .4f);
+        RB.velocity = Vector2.zero;
+        GetComponent<SpriteRenderer>().color = Color.white;
         yield return new WaitForSeconds(.1f);
         ai.enabled = true;
         attacking = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         anim = false;
     }
     private void OnDrawGizmos()

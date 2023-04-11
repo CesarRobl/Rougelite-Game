@@ -1727,7 +1727,7 @@ MonoBehaviour:
   lines: []
   dialogueText: {fileID: 1250689943}
   typingSpeed: 0.02
-  typeTimer: 8
+  typeTimer: 12
   maxLines: 
   icons: []
   icon: {fileID: 1360634060}

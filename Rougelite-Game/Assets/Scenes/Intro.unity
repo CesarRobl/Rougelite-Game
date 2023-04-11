@@ -2260,8 +2260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.6940002, y: 1.5867004}
-  m_SizeDelta: {x: -29.538, y: -3.1735}
+  m_AnchoredPosition: {x: 7.300003, y: 1.5869999}
+  m_SizeDelta: {x: -209.495, y: -3.174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250689943
 MonoBehaviour:
@@ -2283,10 +2283,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: onfapiefnipwaeufiuponfapiefnipwaeufiuponfapiefnipwaeufiuponfapiefnipwaeufiuponfapiefnipwaeufiuponfapiefnipwaeufiuponfapiefnipwaeufiup
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f81a5acd992d4f44895e88c2ea8f0638, type: 2}
+  m_sharedMaterial: {fileID: 7554999300125372355, guid: f81a5acd992d4f44895e88c2ea8f0638, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2317,12 +2317,12 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 1
+  m_lineSpacing: 52.84
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

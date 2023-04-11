@@ -24,7 +24,7 @@ public class PlayerSprite : MonoBehaviour
         else sr.sprite = attackDir[num];
     }
     
-    // changes the player sprite based on the direciton its looking at using its z rotation
+    // changes the player sprite based on the direction its looking at using its z rotation
     void ChangeSpriteDir()
     {
 

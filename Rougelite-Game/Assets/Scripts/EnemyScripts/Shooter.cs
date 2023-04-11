@@ -16,10 +16,20 @@ public class Shooter : TestAI
     
     void Update()
     {
+        
+       
         SeekPlayer();
         AttackRange();
-        if(found & !attack)MoveToPlayer();
-        else if(attack) Attack();
+        if (found & !attack)
+        {
+            MoveToPlayer();
+           SpriteDir(GMController.gm.oc.shooter);
+        }
+        else if (attack)
+        {
+            Attack();
+            AttackDir(GMController.gm.oc.shooter);
+        }
         Enemyhit();
     }
 

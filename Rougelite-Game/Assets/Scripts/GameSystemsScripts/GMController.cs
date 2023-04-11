@@ -161,7 +161,7 @@ public class GMController : MonoBehaviour
         if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }
 
-  
+   
 
     // If an enemy's hp reaches zero then play this code that destroys the game object and determines if it drops an item or not
     public void Die(GameObject enemy, LootSystem system)

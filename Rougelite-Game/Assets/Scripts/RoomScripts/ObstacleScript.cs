@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class ObstacleScript : MonoBehaviour
 {
     public int HP;
+    [SerializeField] private BoxCollider2D box;
     private CircleCollider2D cc;
     private SpriteRenderer _sprite;
     public Sprite destroyed;
@@ -84,6 +85,7 @@ public class ObstacleScript : MonoBehaviour
         _sprite.sprite = destroyed;
         stop = true;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
+        box.enabled = false;
         circle.enabled = false;
     }
 

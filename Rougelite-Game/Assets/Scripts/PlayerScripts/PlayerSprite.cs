@@ -9,6 +9,8 @@ public class PlayerSprite : MonoBehaviour
     public GameObject spatula;
 
     [SerializeField] private Sprite[] chardir;
+    [SerializeField] private Sprite[] attackDir;
+    private int num;
     void Start()
     {
         sr = GetComponentInParent<SpriteRenderer>();
@@ -18,7 +20,8 @@ public class PlayerSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeSpriteDir();
+        if(!GMController.gm.ani.attacking)ChangeSpriteDir();
+        else sr.sprite = attackDir[num];
     }
     
     // changes the player sprite based on the direciton its looking at using its z rotation
@@ -27,18 +30,27 @@ public class PlayerSprite : MonoBehaviour
 
         if (GMController.gm.holder.eulerAngles.z >225 && GMController.gm.holder.eulerAngles.z<=315)
         {
-            sr.sprite = chardir[0];
-            //spatula.transform.position = new Vector3(spatula.transform.position.x, spatula.transform.position.y, -.5f);
+            num = 0;
         }
+        
+        else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
+        {
+            num = 1;
+        }
+        
         else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
         {
             Debug.Log("FaceRight");
+            num = 2;
         }
-        else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
-            Debug.Log("FaceLeft");
-        else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
+        else if (GMController.gm.holder.eulerAngles.z > 135 && GMController.gm.holder.eulerAngles.z <= 225)
         {
-            sr.sprite = chardir[1];
+            Debug.Log("FaceLeft");
+            num = 3;
         }
+
+        sr.sprite = chardir[num];
     }
+
+    
 }

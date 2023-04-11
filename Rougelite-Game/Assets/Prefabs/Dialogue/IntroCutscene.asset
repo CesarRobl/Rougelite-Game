@@ -13,21 +13,25 @@ MonoBehaviour:
   m_Name: IntroCutscene
   m_EditorClassIdentifier: 
   lines:
-  - Thou sodden-witted lord! Thou hast no more brain than I have in mine elbows!
-  - Your brain is as dry as the remainder biscuit after voyage
-  - If you spend word for word with me, I shall make your wit bankrupt
-  - He has not so much brain as ear-wax
-  - Away, you mouldy rogue, away
-  - I do desire that we may be better strangers
-  - You are as a candle, the better burnt out
-  - Drunkenness is his best virtue, for he will be swine drunk, and in his sleep
-    he does little harm, save to his bedclothes about him
-  - "You are now sailed into the north of my lady\u2019s opinion, where you will
-    hang like an icicle on a Dutchman\u2019s beard"
-  - "Foul spoken coward, that thund\u2019rest with thy tongue, and with thy weapon
-    nothing dares perform"
-  - "There\u2019s small choice in rotten apples"
-  - Saucy lackey!
+  - "Working together every day, the five brothers Jim, Matt, Chad, Ben, and the
+    youngest, Tyler, do their best to serve up their world famous burgers cooked
+    in peanut oil, to all their hungry customers. Everyone from all over the world
+    comes to one of their restaurants for a quality burger cooked to perfection,
+    and great service with a smile! Because of the hard work of the brothers, the
+    Five Guy\u2019s restaurants became world famous! "
+  - 'Not all the attention was good, though. Owners of other restaurants became jealous
+    of the success that the Five Guys restaurants earned. Wanting the success that
+    the Five Guys restaurants had for themselves, these corrupt crooked cooks burst
+    into the Five Guys after hours using dark magic! '
+  - "The quartet of criminal cooks kidnapped the four older brothers. \u201CNow we
+    will have you cook for us!\u201D they said as they decided to each take one brother.
+    They planned to keep the brothers in their restaurants  and  make them give up
+    the recipes that Five Guys became famous for. "
+  - "Not wanting his brothers to be taken, Tyler heroically jumped into the portal
+    after the evil cooks. Taking only a spatula as a form of defense, he steels himself
+    to fight against the forces of the four failed fry cooks. \u201CDon\u2019t worry
+    guys! I\u2019m going to save you!\u201D He shouts as he jumps through the portal!\t"
+  - End
   maxLines: 0b000000
   icons:
   - {fileID: 21300000, guid: 6afdcd9ebe64ab94db6906f036a4ce5c, type: 3}

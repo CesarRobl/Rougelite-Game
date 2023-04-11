@@ -9,4 +9,5 @@ public class DialogueList : ScriptableObject
      public string[] lines;
      public int[] maxLines;
      public Sprite[] icons;
+     public float[] pitch;
 }

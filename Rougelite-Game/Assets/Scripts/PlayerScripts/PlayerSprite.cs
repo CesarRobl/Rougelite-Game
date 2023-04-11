@@ -21,7 +21,7 @@ public class PlayerSprite : MonoBehaviour
     void Update()
     {
         if(!GMController.gm.ani.attacking)ChangeSpriteDir();
-        else Debug.Log("Choose attack sprite " + num);
+        else sr.sprite = attackDir[num];
     }
     
     // changes the player sprite based on the direciton its looking at using its z rotation
@@ -33,18 +33,22 @@ public class PlayerSprite : MonoBehaviour
             num = 0;
         }
         
-        // else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
-        // {
-        //     Debug.Log("FaceRight");
-        // }
-        // else if(GMController.gm.holder.eulerAngles.z>135&&GMController.gm.holder.eulerAngles.z<=225)
-        //     Debug.Log("FaceLeft");
-        
         else if (GMController.gm.holder.eulerAngles.z >45&&GMController.gm.holder.eulerAngles.z<=135)
         {
             num = 1;
         }
         
+        else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
+        {
+            Debug.Log("FaceRight");
+            num = 2;
+        }
+        else if (GMController.gm.holder.eulerAngles.z > 135 && GMController.gm.holder.eulerAngles.z <= 225)
+        {
+            Debug.Log("FaceLeft");
+            num = 3;
+        }
+
         sr.sprite = chardir[num];
     }
 

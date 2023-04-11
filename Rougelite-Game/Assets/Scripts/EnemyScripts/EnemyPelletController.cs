@@ -6,16 +6,16 @@ using UnityEngine;
 public class EnemyPelletController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField]
+    [SerializeField] private Transform loc;
     void Awake()
     {
-        Invoke("ShootPellet", .1f);
-        Invoke("FacePlayer", .1f);
+       ShootPellet();
+        // Invoke("FacePlayer", .1f);
     }
 
     void ShootPellet()
     {
-        Vector2 dir = GMController.gm.player.position - transform.position;
+        Vector2 dir = loc.position - transform.position;
         rb.velocity = dir.normalized * GMController.gm.pelletspeed;
     }
 

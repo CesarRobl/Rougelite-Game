@@ -121,7 +121,7 @@ public class TestAI : MonoBehaviour
     {
         movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
     }
-    private void OnCollisionEnter2D(Collision2D col)
+    public void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
         if (tp != null & !GMController.gm.playerhurt)

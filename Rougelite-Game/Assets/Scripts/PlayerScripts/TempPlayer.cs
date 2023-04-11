@@ -41,6 +41,7 @@ public class TempPlayer : MonoBehaviour
     {
         StartCoroutine(GMController.gm.ani.SpatulaSwipe());
         int ran = Random.Range(0, TempSound.soundtemp.swordclips.Length);
+        
         TempSound.soundtemp.tempstorage[3].PlayOneShot(TempSound.soundtemp.swordclips[ran]);
     }
     

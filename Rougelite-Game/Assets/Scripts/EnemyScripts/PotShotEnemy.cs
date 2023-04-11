@@ -4,71 +4,95 @@ using UnityEngine;
 
 public class PotShotEnemy : TestAI
 {
-    
-    private Vector2 currentpos,pos;
-    [SerializeField] private Vector2 lastpos;
+    private Animator slash;
+    private Vector3 currentpos,pos;
+    [SerializeField] private Vector3 lastpos;
     private float dist,dist2;
     [SerializeField] private GameObject[] slashes;
+    private BoxCollider2D collide;
+    
     void Awake()
     {
         Setup();
+        collide = GetComponent<BoxCollider2D>();
+        slash = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GMController.gm.dialogue)
-        {
-            currentpos = transform.position;
+        currentpos = transform.position;
+            AttackDir(GMController.gm.oc.phantom);
             SeekPlayer();
-            AttackRange();
+            AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
+            Enemyhit();
             if (found & !stun & !anim)
             {
                 MoveToPlayer();
             }
-            SpriteDir(GMController.gm.oc.normalEnemy);
-            // if (attacking)
-            // {
-            //     dist = Vector2.Distance(currentpos, pos);
-            //     dist2 = Vector2.Distance(transform.position, lastpos);
-            // }
-            //
-            // if (attack & !anim) Attack();
-            // Enemyhit();
-        }
+           
+            if (attacking)
+            {
+                dist = Vector2.Distance(currentpos, pos);
+                dist2 = Vector2.Distance(transform.position, lastpos);
+            }
+            
+            if (attack & !anim) Attack();
+            
         
-    }
+
+}
 
     public override void Attack()
     {
         anim = true;
         attacking = true;
+        pos = GMController.gm.temp.transform.position;
+        lastpos = transform.position;
         StartCoroutine(Rush());
     }
 
     IEnumerator Rush()
     {
+        ai.destination = transform.position;
+        ai.enabled = false;
+        pos = GMController.gm.player.position;
+        collide.isTrigger = true;
         
-         pos = GMController.gm.temp.transform.position;
-        lastpos = transform.position;
-        ai.destination = pos;
-        ai.maxSpeed= 10;
-       
+        Vector2 posDir = pos - transform.position;
+        RB.velocity = posDir.normalized * 9.5f;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+        
+        yield return new WaitUntil(() => dist < .4f);
+        RB.velocity = Vector2.zero;
+        StartCoroutine(SlashAttack());
+    }
 
-        yield return new WaitUntil(() => dist < .1f);
+    IEnumerator SlashAttack()
+    {
+        collide.isTrigger = false;
+        GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(.1f);
+        slash.SetTrigger("Slash");
+        yield return new WaitForSeconds(1f);
+        slash.SetTrigger("Slash");
+        yield return new WaitForSeconds(1f);
         StartCoroutine(GoBack());
     }
 
     IEnumerator GoBack()
-    {
-        
-        ai.destination = lastpos;
-       
-        yield return new WaitUntil(() => dist2 < .1f);
+    { 
+        collide.isTrigger = true;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+        Vector2 posDir = lastpos - transform.position;
+        RB.velocity = posDir.normalized * 8;
+        yield return new WaitUntil(() => dist2 < .4f);
+        RB.velocity = Vector2.zero;
+        GetComponent<SpriteRenderer>().color = Color.white;
         yield return new WaitForSeconds(.1f);
-        ai.maxSpeed = speed;
+        ai.enabled = true;
         attacking = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         anim = false;
     }
     private void OnDrawGizmos()

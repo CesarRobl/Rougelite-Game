@@ -17,9 +17,9 @@ public class Shooter : TestAI
     void Update()
     {
         
-        Debug.Log("My z is at " + movementDir.PlayerDir());
+       
         SeekPlayer();
-        AttackRange();
+        AttackRange(~(1<<0 | 1<< 2));
         if (found & !attack)
         {
             MoveToPlayer();

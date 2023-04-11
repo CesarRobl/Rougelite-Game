@@ -10,18 +10,35 @@ public class IntroCutscene : MonoBehaviour
     public float imageMoveSpeed;
     [SerializeField] private int scene;
     [SerializeField] private GameObject scenes;
+    private AudioSource audio;
+    [SerializeField] private AudioClip[] clips;
 
     void Start()
     {
-       
+        audio = GetComponent<AudioSource>();
+        StartCoroutine(ChangeMusic());
+        StartCoroutine(StartCountDown());
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) scene++;
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainMenu");
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("RandomLevel");
        scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
+    }
+
+    IEnumerator ChangeMusic()
+    {
+        yield return new WaitForSeconds(23f);
+        audio.Stop();
+        audio.PlayOneShot(clips[1]);
+    }
+
+    IEnumerator StartCountDown()
+    {
+        yield return new WaitForSeconds(105f);
+        SceneManager.LoadScene("RandomLevel");
     }
 
     // Delete this if I have not deleted it already - Cesar

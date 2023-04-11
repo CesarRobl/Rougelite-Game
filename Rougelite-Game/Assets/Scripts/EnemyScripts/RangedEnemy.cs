@@ -20,7 +20,7 @@ public class RangedEnemy : TestAI
     void Update()
     {
         SeekPlayer();
-        AttackRange();
+       
         // if(attack)Attack();
         // else if(found & !attack) MoveToPlayer();
         if (found)

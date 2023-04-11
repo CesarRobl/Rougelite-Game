@@ -58,6 +58,7 @@ public class TestAI : MonoBehaviour
 
     public void MoveToPlayer()
     {
+        if (GMController.gm.playerDead) gameObject.SetActive(false);
         if (!stun)
         { 
             ai.maxSpeed = speed;
@@ -81,13 +82,13 @@ public class TestAI : MonoBehaviour
         }
     }
 
-      public void AttackRange()
+      public void AttackRange(LayerMask mask)
       {
           
-          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,~(1<<0 | 1<< 2));
+          RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,mask);
           if (hit.collider != null)
           {
-
+              Debug.Log("I am hitting " + hit.collider.gameObject.name);
               pc = hit.collider.GetComponent<TempPlayer>();
               if (pc != null)
               {
@@ -121,7 +122,7 @@ public class TestAI : MonoBehaviour
     {
         movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
     }
-    private void OnCollisionEnter2D(Collision2D col)
+    public void OnCollisionEnter2D(Collision2D col)
     {
         TempPlayer tp = col.gameObject.GetComponent<TempPlayer>();
         if (tp != null & !GMController.gm.playerhurt)

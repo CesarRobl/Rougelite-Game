@@ -131,17 +131,21 @@ public class DialogueSystem : MonoBehaviour
         
     }
 
+    void PlaySound()
+    {
+        if ( !TempSound.soundtemp.tempstorage[0].isPlaying & index < lines.Length - 1)
+        {
+            TempSound.soundtemp.ChangePitch( TempSound.soundtemp.tempstorage[0],talk.pitch, iconIndex);
+            TempSound.soundtemp.tempstorage[0].PlayOneShot(TempSound.soundtemp.clipstorage[4]);
+        }
+    }
     IEnumerator DisplayLine()
     {
         dialogueText.text = "";
         foreach (char letter in lines[index])
         {
             dialogueText.text += letter;
-            if (!TempSound.soundtemp.tempstorage[0].isPlaying & index < lines.Length - 1)
-            {
-                TempSound.soundtemp.ChangePitch( TempSound.soundtemp.tempstorage[0],talk.pitch, iconIndex);
-                TempSound.soundtemp.tempstorage[0].PlayOneShot(TempSound.soundtemp.clipstorage[4]);
-            }
+            if(!introScene) PlaySound();
             yield return new WaitForSeconds(typingSpeed);
         }
     }

@@ -61,7 +61,7 @@ public class PotShotEnemy : TestAI
         
         Vector2 posDir = pos - transform.position;
         RB.velocity = posDir.normalized * 9.5f;
-        GetComponent<SpriteRenderer>().color = Color.gray;
+        GetComponent<SpriteRenderer>().color = new Color(256,256,256, .5f);
         
         yield return new WaitUntil(() => dist < .4f);
         RB.velocity = Vector2.zero;

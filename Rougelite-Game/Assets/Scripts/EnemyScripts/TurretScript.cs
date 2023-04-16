@@ -17,21 +17,24 @@ public class TurretScript : TestAI
     {
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
-        AttackRange();
-        if (attack)
+       AttackRange(~(1<<0 | 1<< 2));
+       
+        if (attack & cooldownInt > 0 )
         {
             Attack();
             AttackDir(GMController.gm.oc.shooter);
         }
-         Enemyhit();
+        if (cooldownInt <= 0) StartCoroutine(DownTime(GetComponent<SpriteRenderer>()));
+        
+        Enemyhit();
     }
 
     public override void Attack()
     {
-        
         if (shootDelay <= 0)
         {
             Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
+            cooldownInt--;
             shootDelay = .5f;
         }
         else shootDelay -= Time.deltaTime;

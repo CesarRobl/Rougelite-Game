@@ -6,9 +6,11 @@ public class TurretScript : TestAI
 {
     [SerializeField] private float shootDelay;
     [SerializeField] private GameObject playerDir;
+    private Color _turretColor;
 
     void Awake()
     {
+        _turretColor = GetComponent<SpriteRenderer>().color;
         Setup();
     }
 
@@ -17,14 +19,14 @@ public class TurretScript : TestAI
     {
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
-       AttackRange(~(1<<0 | 1<< 2));
+       if(!attack & cooldownInt > 0)AttackRange(~(1<<0 | 1<< 2));
        
         if (attack & cooldownInt > 0 )
         {
             Attack();
             AttackDir(GMController.gm.oc.shooter);
         }
-        if (cooldownInt <= 0) StartCoroutine(DownTime(GetComponent<SpriteRenderer>()));
+        if (cooldownInt <= 0) StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), _turretColor));
         
         Enemyhit();
     }

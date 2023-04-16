@@ -95,6 +95,7 @@ public class TestAI : MonoBehaviour
               if (pc != null)
               {
                   if(!attack)StartCoroutine(ShowAttackSign());
+                  return;
               }
               else attack = false;
 
@@ -211,13 +212,12 @@ public class TestAI : MonoBehaviour
          if(!attack)attack = true;
      }
      
-     public IEnumerator DownTime(SpriteRenderer spriteColor)
+     public IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
      {
          attack = false;
-         Color og = spriteColor.color;
          spriteColor.color = Color.grey;
          yield return new WaitForSeconds(cooldownRate);
-         spriteColor.color = og;
+         spriteColor.color = ogColor;
          cooldownInt = pastCool;
          cooldown = false;
      }

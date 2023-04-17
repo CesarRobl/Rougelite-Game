@@ -19,7 +19,7 @@ public class Shooter : TestAI
         
        
         SeekPlayer();
-        AttackRange();
+        AttackRange(~(1<<0 | 1<< 2));
         if (found & !attack)
         {
             MoveToPlayer();

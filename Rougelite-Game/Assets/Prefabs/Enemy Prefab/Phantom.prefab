@@ -240,24 +240,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
+  cooldownInt: 0
   found: 0
   drange: 10
+  cooldownRate: 0
+  attackDelay: 0
   speed: 2
-  attackrange: 5
+  attackrange: 7.5
   attack: 0
   forceResistance: 0
+  attackSign: {fileID: 4860527461086978062, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
   movementDir: {fileID: 0}
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
+  pastCool: 0
   RB: {fileID: 0}
   Stop: 0
   stun: 0
   attacking: 0
   anim: 0
+  cooldown: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
   ow: {fileID: 0}
-  lastpos: {x: 0, y: 0}
+  lastpos: {x: 0, y: 0, z: 0}
   slashes: []
 --- !u!114 &3038038455002688565
 MonoBehaviour:
@@ -388,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7a4320205f5265c47a7dec28416afdc6, type: 3}
+    - target: {fileID: 4174617049467498445, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4174617050041878789, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
       propertyPath: m_Name
       value: LookToPlayer

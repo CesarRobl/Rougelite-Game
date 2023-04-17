@@ -27,9 +27,15 @@ public class TempSound : MonoBehaviour
     /// </summary>
     /// <param name="source"></param>
     /// <param name="ran"></param>
-    public void ChangePitch(AudioSource source,float[] ran)
+    public void RandomChangePitch(AudioSource source,float[] ran)
     {
         int pitch = Random.Range(0, ran.Length);
+        source.pitch = ran[pitch];
+    }
+    
+    public void ChangePitch(AudioSource source,float[] ran, int pitch)
+    {
+        
         source.pitch = ran[pitch];
     }
 }

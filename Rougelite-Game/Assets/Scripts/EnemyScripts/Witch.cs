@@ -28,7 +28,7 @@ public class Witch :TestAI
             if (!stop) SpawnBar();
             MatchSliderValue();
             SeekPlayer();
-            AttackRange();
+            AttackRange(~(1<<0 | 1<< 2));
             if(found & !attack) MoveToPlayer();
             if (attack & !attacking) Attack();
             Enemyhit();

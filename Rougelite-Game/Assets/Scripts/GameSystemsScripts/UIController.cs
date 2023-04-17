@@ -17,6 +17,8 @@ public class UIController : MonoBehaviour
     public GameObject BossBar;
     [SerializeField] private GameObject tut;
     [SerializeField] private GameObject map;
+    [SerializeField] private GameObject settings;
+    [SerializeField] private GameObject crosshair;
     private bool buttonPressed,stopAni,changeScene;
     private int sceneNum;
     
@@ -25,6 +27,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
        Invoke("Camera",.1f);
+       settings.GetComponentInChildren<Slider>().value = GMController.volume;
        
     }
 
@@ -33,6 +36,11 @@ public class UIController : MonoBehaviour
     {
 
         if (GMController.gm.loading & !stop) StartCoroutine(FadeScreen());
+        if (settings.activeSelf)
+        {
+            GMController.volume = settings.GetComponentInChildren<Slider>().value;
+            GMController.gm.crosshair.SetActive(GMController.showcrosshair);
+        }
         ShowMenuTab();
         if(buttonPressed & !stopAni)PlayButtonFade();
         else if(stopAni) SwitchScene();
@@ -44,8 +52,6 @@ public class UIController : MonoBehaviour
     }
      void ShowMenuTab()
     {
-       
-        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!showmenu)
@@ -66,6 +72,26 @@ public class UIController : MonoBehaviour
         }
     }
 
+     public void ResumeButton()
+     {
+        
+         if (!showmenu)
+         {
+             Time.timeScale = 0;
+             showmenu = true;
+             MenuTab.SetActive(showmenu);
+             return;
+         }
+         else
+         {
+             Time.timeScale = 1;
+             Cursor.visible = false;
+             showmenu = false;
+             MenuTab.SetActive(showmenu);
+             return;
+         }
+     }
+
      public void ShowBossBar(bool bar)
      {
          BossBar.SetActive(bar);
@@ -83,10 +109,44 @@ public class UIController : MonoBehaviour
          {
              tut.SetActive(false);
              map.SetActive(true);
-             Cursor.visible = false;
+             if(!GMController.gm.tutdone)Cursor.visible = false;
              GMController.gm.temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
              GMController.gm.tutdone = true;
              
+         }
+     }
+
+     public void ShowTut()
+     {
+       
+         tut.SetActive(true);
+     }
+
+     public void ShowSettings()
+     {
+         crosshair.SetActive(GMController.showcrosshair);
+         settings.SetActive(true);
+     }
+
+     public void ExitSettings()
+     {
+         settings.SetActive(false);
+     }
+
+     public void Crosshair()
+     {
+         if (!GMController.showcrosshair)
+         {
+             GMController.showcrosshair = true;
+             crosshair.SetActive(GMController.showcrosshair);
+             return;
+         }
+
+         else
+         {
+             GMController.showcrosshair = false;
+             crosshair.SetActive(GMController.showcrosshair);
+             return;
          }
      }
 

@@ -13,21 +13,19 @@ MonoBehaviour:
   m_Name: IntroCutscene
   m_EditorClassIdentifier: 
   lines:
-  - Thou sodden-witted lord! Thou hast no more brain than I have in mine elbows!
-  - Your brain is as dry as the remainder biscuit after voyage
-  - If you spend word for word with me, I shall make your wit bankrupt
-  - He has not so much brain as ear-wax
-  - Away, you mouldy rogue, away
-  - I do desire that we may be better strangers
-  - You are as a candle, the better burnt out
-  - Drunkenness is his best virtue, for he will be swine drunk, and in his sleep
-    he does little harm, save to his bedclothes about him
-  - "You are now sailed into the north of my lady\u2019s opinion, where you will
-    hang like an icicle on a Dutchman\u2019s beard"
-  - "Foul spoken coward, that thund\u2019rest with thy tongue, and with thy weapon
-    nothing dares perform"
-  - "There\u2019s small choice in rotten apples"
-  - Saucy lackey!
+  - 'The five brothers Jim, Matt, Chad, Ben, and the youngest, Tyler, do their best
+    to serve up their world famous burgers. Everyone from all over the world comes
+    to one of their restaurants for a quality burger cooked to perfection, and great
+    service with a smile!  '
+  - 'Owners of other restaurants became jealous of Five Guys. Wanting success for
+    themselves, these corrupt, crooked cooks burst into the Five Guys! '
+  - "They kidnapped the four older brothers. \u201CNow we will have you cook for
+    us!\u201D they said as they each took one brother."
+  - Taking only a spatula as a form of defense, Tyler heroically jumped into the
+    portal after the evil cooks.
+  - End
   maxLines: 0b000000
   icons:
   - {fileID: 21300000, guid: 6afdcd9ebe64ab94db6906f036a4ce5c, type: 3}
+  pitch:
+  - 0.8

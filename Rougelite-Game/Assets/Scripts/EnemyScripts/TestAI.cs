@@ -212,7 +212,7 @@ public class TestAI : MonoBehaviour
          if(!attack)attack = true;
      }
      
-     public IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
+     public virtual IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
      {
          attack = false;
          spriteColor.color = Color.grey;

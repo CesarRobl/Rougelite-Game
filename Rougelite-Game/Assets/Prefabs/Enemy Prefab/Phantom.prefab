@@ -38,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 4113365423101234199}
   - {fileID: 7377589481008188086}
+  - {fileID: 1846621918521762292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -240,20 +241,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
+  cooldownInt: 0
   found: 0
   drange: 10
+  cooldownRate: 0
+  attackDelay: 0
   speed: 2
   attackrange: 7.5
   attack: 0
   forceResistance: 0
+  attackSign: {fileID: 5630752358969075713}
   movementDir: {fileID: 0}
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
+  pastCool: 0
   RB: {fileID: 0}
   Stop: 0
   stun: 0
   attacking: 0
   anim: 0
+  cooldown: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
   ow: {fileID: 0}
@@ -333,6 +340,77 @@ MonoBehaviour:
   things: []
   stop: 0
   enemySlash: 1
+--- !u!1001 &959403707497547791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5349953043128159504}
+    m_Modifications:
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.08207707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860527461086978062, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_Name
+      value: AttackAlert
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860527461086978062, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+--- !u!1 &5630752358969075713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4860527461086978062, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+  m_PrefabInstance: {fileID: 959403707497547791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1846621918521762292 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1508978895006018043, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
+  m_PrefabInstance: {fileID: 959403707497547791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6885245844743766960
 PrefabInstance:
   m_ObjectHideFlags: 0

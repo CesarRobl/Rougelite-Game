@@ -240,20 +240,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 2
+  cooldownInt: 0
   found: 0
   drange: 10
+  cooldownRate: 0
+  attackDelay: 0
   speed: 2
   attackrange: 20
   attack: 0
   forceResistance: 0
+  attackSign: {fileID: 4860527461086978062, guid: c33bd92741cfdfc48aed8a0eb7687943, type: 3}
   movementDir: {fileID: 0}
   pastpos: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0}
+  pastCool: 0
   RB: {fileID: 0}
   Stop: 0
   stun: 0
   attacking: 0
   anim: 0
+  cooldown: 0
   ps: {fileID: 0}
   ai: {fileID: 0}
   ow: {fileID: 0}

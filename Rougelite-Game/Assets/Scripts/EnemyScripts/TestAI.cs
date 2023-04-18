@@ -7,18 +7,20 @@ using UnityEngine;
 
 public class TestAI : MonoBehaviour
 {
-    public int HP;
+    public int HP, cooldownInt;
     public bool found;
-    public float drange;
+    public float drange,cooldownRate,attackDelay;
     public float speed = 2;
     public float attackrange;
     public bool attack;
     public float forceResistance;
+    public GameObject attackSign;
     public PlayerDirFinder movementDir;
     [HideInInspector]public Vector3 pastpos;
     public Vector2 dir;
+    [HideInInspector] public int pastCool;
     [HideInInspector] public Rigidbody2D RB;
-    [HideInInspector] public bool Stop,stun,attacking,anim;
+    [HideInInspector] public bool Stop,stun,attacking,anim,cooldown;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
     [HideInInspector] public HurtFunction ow;
@@ -49,6 +51,7 @@ public class TestAI : MonoBehaviour
         ai = GetComponent<AIPath>();
         ow = GetComponent<HurtFunction>();
         pastpos= transform.position;
+        pastCool = cooldownInt;
     }
 
     virtual public void Attack()
@@ -88,11 +91,11 @@ public class TestAI : MonoBehaviour
           RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, attackrange,mask);
           if (hit.collider != null)
           {
-              Debug.Log("I am hitting " + hit.collider.gameObject.name);
               pc = hit.collider.GetComponent<TempPlayer>();
               if (pc != null)
               {
-                  attack = true;
+                  if(!attack)StartCoroutine(ShowAttackSign());
+                  return;
               }
               else attack = false;
 
@@ -200,4 +203,22 @@ public class TestAI : MonoBehaviour
         RB.velocity = Vector2.zero;
         stun = false;
     }
+
+     public IEnumerator ShowAttackSign()
+     {
+         attackSign.SetActive(true);
+         yield return new WaitForSeconds(attackDelay);
+         attackSign.SetActive(false);
+         if(!attack)attack = true;
+     }
+     
+     public virtual IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
+     {
+         attack = false;
+         spriteColor.color = Color.grey;
+         yield return new WaitForSeconds(cooldownRate);
+         spriteColor.color = ogColor;
+         cooldownInt = pastCool;
+         cooldown = false;
+     }
 }

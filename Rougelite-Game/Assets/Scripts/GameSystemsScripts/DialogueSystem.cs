@@ -9,7 +9,7 @@ public class DialogueSystem : MonoBehaviour
    
     [SerializeField] private string[] lines;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private float typingSpeed, typeTimer;
+    [SerializeField] public float typingSpeed, typeTimer;
     [SerializeField] private int[] maxLines;
     [SerializeField] private Sprite[] icons;
     [SerializeField] private Image icon;

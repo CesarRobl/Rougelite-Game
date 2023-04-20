@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
+    [SerializeField] public GameObject enemy;
     [SerializeField] private GameObject boss;
     private RoomController rc;
     private bool stop;
@@ -21,14 +22,14 @@ public class SpawnController : MonoBehaviour
        
     }
 
-    void CheckPlayer()
+    public void SpawnSingleEnemy()
     {
-        
-    }
-
-    public void SpawnBoss()
-    {
-        
+        if (!stop)
+        {
+            GameObject ec = Instantiate(enemy, transform.position, Quaternion.Euler(0,0,0));
+            rc.enemycount.Add(ec);
+            stop = true;
+        }
     }
 
    public void SpawnEnemy()

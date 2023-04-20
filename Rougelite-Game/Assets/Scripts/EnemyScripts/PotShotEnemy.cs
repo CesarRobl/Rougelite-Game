@@ -8,7 +8,8 @@ public class PotShotEnemy : TestAI
     private Vector3 currentpos,pos;
     [SerializeField] private Vector3 lastpos;
     private float dist,dist2;
-    [SerializeField] private GameObject[] slashes;
+    [SerializeField] private GameObject slashes;
+    private Vector3[] rot = new[] {new Vector3(0, 0, 0), new Vector3(0,0,90), new Vector3(0,0,180), new Vector3(0,0,270)}; 
     private BoxCollider2D collide;
     
     void Awake()
@@ -22,7 +23,7 @@ public class PotShotEnemy : TestAI
     void Update()
     {
         currentpos = transform.position;
-            AttackDir(GMController.gm.oc.phantom);
+           AttackDir(GMController.gm.oc.phantom);
             SeekPlayer();
             if(!attacking)AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
             Enemyhit();
@@ -48,11 +49,14 @@ public class PotShotEnemy : TestAI
       
         anim = true;
         attacking = true;
-        pos = GMController.gm.temp.transform.position;
         lastpos = transform.position;
         StartCoroutine(Rush());
     }
 
+    private void ChangeAttackDir()
+    {
+        
+    }
     IEnumerator Rush()
     {
         // ai.destination = transform.position;
@@ -78,7 +82,7 @@ public class PotShotEnemy : TestAI
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(false);
         slash.SetTrigger("Slash");
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.5f);
         attackSign.SetActive(true);
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(false);

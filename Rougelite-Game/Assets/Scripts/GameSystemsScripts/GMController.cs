@@ -72,7 +72,16 @@ public class GMController : MonoBehaviour
         }
        if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        if(playerhurt) IFrames();
+        if (playerhurt)
+        {
+            IFrames();
+            StartCoroutine(ani.IframeEffect(temp.gameObject.GetComponent<SpriteRenderer>()));
+        }
+        else
+        {
+            StopCoroutine(ani.IframeEffect(temp.gameObject.GetComponent<SpriteRenderer>()));
+            temp.gameObject.GetComponent<SpriteRenderer>().color = new Color(256,256,256,256);
+        }
         if(ui.health.health <= 0) PlayerDie();
       
         Holder();
@@ -82,17 +91,23 @@ public class GMController : MonoBehaviour
     private void FixedUpdate()
     {
         FollowCursor();
+        Debug.Log("IFrames timer " + timer);
     }
 
     // prevents the player from getting hurt from the same thing multiple times in a single second
     void IFrames()
     {
+      
         if (timer <= 0)
         {
             timer = hurtdelay;
             playerhurt = false;
         }
-        else timer -= Time.deltaTime; 
+        else
+        {
+          
+            timer -= Time.deltaTime;
+        } 
     }
 
     // Allows the holder to rotate towards where the cursor is
@@ -142,13 +157,7 @@ public class GMController : MonoBehaviour
         loading = true;
     }
 
-    // This function will play whenever the player hits the enemy.
-    // The function will show a feedback of the enemy turn white
-    void HurtEffect()
-    {
-        
-    }
-    
+   
     // use the holder position for the sword
     void Holder()
     {
@@ -194,4 +203,6 @@ public class GMController : MonoBehaviour
         ui.BossBar.SetActive(false);
         Destroy(boss);
     }
+    
+    
 }

@@ -4377,7 +4377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &549453239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7115,7 +7115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &905869607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17323,7 +17323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1612257847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21976,11 +21976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: shooter.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: witch.Array.data[0]
@@ -21999,6 +21999,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: phantom.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: phantom.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: shooter.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 5c5201bc8857531489e556495831548d, type: 3}
@@ -22007,8 +22015,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7e79ecf8cfa6b2d4eb269be2facd0b39, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: shooter.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e79ecf8cfa6b2d4eb269be2facd0b39, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: shooter.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e79ecf8cfa6b2d4eb269be2facd0b39, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: normalEnemy.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: normalEnemy.Array.data[0]
@@ -22016,6 +22032,14 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ef6ef102f3a58d042a72b7d09898e451, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: normalEnemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21a870ada9e9f254bafd8a80e1851bf4, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: normalEnemy.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21a870ada9e9f254bafd8a80e1851bf4, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: normalEnemy.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: 21a870ada9e9f254bafd8a80e1851bf4, type: 3}
     m_RemovedComponents:

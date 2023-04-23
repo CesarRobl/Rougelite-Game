@@ -16,10 +16,11 @@ public class RoomController : MonoBehaviour
     [SerializeField] private GameObject[] wendydoorsopen;
     [SerializeField] private GameObject[] wendydoorsclosed;
     [SerializeField] private GameObject[] mapwalls;
+    public List<GameObject> maps;
     private List<GameObject> colorwall;
     private GameObject[] hiddenWall;
     public Transform[] startingloc;
-    public List<GameObject> enemycount;
+    [HideInInspector]public List<GameObject> enemycount;
      public SpawnController[] spawner;
      [SerializeField] private GameObject[] bossdoorsprite;
      
@@ -45,7 +46,7 @@ public class RoomController : MonoBehaviour
    // Update is called once per frame
     void Update()
     {
-        // Debug.Log("My hidden wall count is " + hiddenWall.Length);
+       // Debug.Log(gameObject.name +" Amount of hidden walls is " + maps.Count);
         if(playerin & !complete)CheckEnemy();
         // HideDoor();
         
@@ -145,8 +146,8 @@ public class RoomController : MonoBehaviour
                 GameObject wall = Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
                 if (wall != null)
                 {
+                    maps.Add(wall);
                     wall.GetComponent<SpriteRenderer>().color = Color.grey;
-                   
                 }
 
                 doors.Remove(doors[i]);
@@ -208,13 +209,13 @@ public class RoomController : MonoBehaviour
         {
           
             for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.yellow;
-            // if (hiddenWall.Count > 0)
-            // {
-            //     for (int i = 0; i < hiddenWall.Count; i++)
-            //     {
-            //         hiddenWall[i].GetComponent<SpriteRenderer>().color = Color.yellow;
-            //     }
-            // }
+            if (maps.Count > 0)
+            {
+                for (int i = 0; i < maps.Count; i++)
+                {
+                    maps[i].GetComponent<SpriteRenderer>().color = Color.yellow;
+                }
+            }
         }
            
     }
@@ -226,14 +227,13 @@ public class RoomController : MonoBehaviour
         {
             
             for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.white;
-            // if (hiddenWall.Count > 0)
-            // {
-            //     for (int i = 0; i < hiddenWall.Count; i++)
-            //     {
-            //         hiddenWall[i].GetComponent<SpriteRenderer>().color = Color.white;
-            //     }
-            // }
-
+            if (maps.Count > 0)
+            {
+                for (int i = 0; i < maps.Count; i++)
+                {
+                    maps[i].GetComponent<SpriteRenderer>().color = Color.white;
+                }
+            }
             playerin = false;
         }
     }

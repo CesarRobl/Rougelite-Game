@@ -8383,7 +8383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: shooter.Array.size
@@ -8403,6 +8403,14 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: phantom.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: phantom.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}

@@ -164,10 +164,10 @@ public class TestAI : MonoBehaviour
         HP--;
         if (Stop == false)
         {
-            Stop = true;
+            
             StartCoroutine(EnemyHurt(ps));
             if(!attacking)Knockback(GMController.gm.maxforce);
-                
+            Stop = true;    
         }
     }
 

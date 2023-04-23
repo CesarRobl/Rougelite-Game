@@ -20,10 +20,12 @@ public class AniController : MonoBehaviour
     public GameObject deathAni;
     [HideInInspector] public bool attacking,dying,stopAni;
     private bool stop;
+    private float spriteTimer = .03f, setTimer;
   
     void Start()
     {
         video = GetComponentInChildren<VideoLists>();
+        setTimer = spriteTimer;
     }
 
     // Update is called once per frame
@@ -32,6 +34,10 @@ public class AniController : MonoBehaviour
         
     }
 
+    public void IFrameEffect()
+    {
+        
+    }
     public IEnumerator PlayerDeath()
     {
         GMController.gm.playerDead = true;
@@ -86,6 +92,24 @@ public class AniController : MonoBehaviour
         yield return new WaitForSeconds(.35f);
         spatula[0].transform.localPosition = currentpos;
         attacking = false;
+    }
+
+    public IEnumerator IframeEffect(SpriteRenderer sprite)
+    {
+
+        float delay = .6f;
+            sprite.color = new Color(.5f, .5f, .5f, .3f);
+            yield return new WaitForSeconds(delay);
+            sprite.color = new Color(1f, 1f, 1f, .3f);  
+            yield return new WaitForSeconds(delay);
+            sprite.color = new Color(.5f, .5f, .5f, .3f);
+            yield return new WaitForSeconds(delay);
+            sprite.color = new Color(1f, 1f, 1f, .3f);  
+            yield return new WaitForSeconds(delay);
+            sprite.color = new Color(.5f, .5f, .5f, .3f);
+            yield return new WaitForSeconds(delay);
+            sprite.color = new Color(1f, 1f, 1f, .3f);  
+            yield return new WaitForSeconds(delay);
     }
     
 }

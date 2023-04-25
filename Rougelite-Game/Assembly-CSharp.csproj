@@ -121,13 +121,14 @@
      <Compile Include="Assets\Scripts\TempPortalScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Shooter.cs" />
+     <Compile Include="Assets\Prefabs\Collectable Prefabs\dawdwf.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\TempSound.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PelletController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\AfterImage.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
-     <Compile Include="Assets\Prefabs\Collectable Prefabs\dawdwf.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\stop.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

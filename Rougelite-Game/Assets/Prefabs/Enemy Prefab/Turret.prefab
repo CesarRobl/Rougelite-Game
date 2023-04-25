@@ -241,10 +241,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 3
   cooldownInt: 4
+  cooldownMax: 0
   found: 0
   drange: 10
-  cooldownRate: 1.5
-  attackDelay: 0.5
+  cooldownRate: 2
+  attackDelay: 1
   speed: 0
   attackrange: 20
   attack: 0

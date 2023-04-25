@@ -17,6 +17,8 @@ public class ObjectController : MonoBehaviour
    public Sprite[] normalEnemy;
    public Sprite[] shooter;
    public Sprite[] phantom;
+   public Sprite[] charger;
    public Sprite[] witch;
+   public GameObject afterImage;
 
 }

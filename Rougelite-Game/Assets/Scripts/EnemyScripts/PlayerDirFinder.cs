@@ -26,21 +26,28 @@ public class PlayerDirFinder : MonoBehaviour
         // Debug.Log("My rotation is at " + z );
         if ( z > 225 && z <= 315)
         {
-            
+            //face down
             spriteNum = 1;
-            esprite.sprite = sprites[spriteNum];
+           
         }
-        // else if (z <= 45 || z > 315)
-        // {
-        //     Debug.Log("FaceRight");
-        // }
-        // else if( z > 135 && z<=225)
-        //     Debug.Log("FaceLeft");
+        else if (z <= 45 || z > 315)
+        {
+            // face right
+            spriteNum = 3;
+            
+        }
+        else if (z > 135 && z <= 225)
+        {
+            // face left
+            spriteNum = 2;
+            
+        }
+            
         else if ( z >45 && z<=135)
         {
-           
+           // face up
             spriteNum = 0;
-            esprite.sprite = sprites[spriteNum];
+            
         }
     }
 

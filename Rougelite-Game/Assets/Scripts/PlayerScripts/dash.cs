@@ -4,6 +4,7 @@ using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 
 public class dash : MonoBehaviour
@@ -15,7 +16,7 @@ public class dash : MonoBehaviour
     private bool IsDashing;
     private float DashingPower = 35f;
     private float DashingTime = 0.2f;
-    private float DashingCoolDown = 1f;
+    private float DashingCoolDown = 1f, _imageRate = .005f ;
 
 
     void Update()
@@ -25,6 +26,7 @@ public class dash : MonoBehaviour
         {
             StartCoroutine(Dash(GMController.gm.temp.walkingDir));
         }
+
         
     }
 
@@ -32,6 +34,7 @@ public class dash : MonoBehaviour
     {
         CanDash = false;
         IsDashing = true;
+        StartCoroutine(SpawnAfterImage());
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = dir.normalized * DashingPower;
@@ -41,5 +44,21 @@ public class dash : MonoBehaviour
         IsDashing = false;
         yield return new WaitForSeconds(DashingCoolDown);
         CanDash = true;
+    }
+
+    IEnumerator SpawnAfterImage()
+    {
+        yield return new WaitForSeconds(_imageRate);
+        GameObject image = Instantiate(GMController.gm.oc.afterImage, gameObject.transform.position, Quaternion.identity);
+        image.transform.localScale = gameObject.transform.localScale;
+        image.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
+        
+        if (IsDashing) StartCoroutine(ResetImage());
+    }
+
+    IEnumerator ResetImage()
+    {
+        yield return new WaitForSeconds(.1f);
+        StartCoroutine(SpawnAfterImage());
     }
 }

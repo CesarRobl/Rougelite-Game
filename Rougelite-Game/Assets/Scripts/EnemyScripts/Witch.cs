@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -8,13 +9,18 @@ using Random = UnityEngine.Random;
 public class Witch :TestAI
 {
     [HideInInspector] public Slider health;
+    [HideInInspector] public ParticleSystem[] teleport, explode;
+    [SerializeField] private ParticleSystem shield, tele;
+    [HideInInspector] public GameObject[] minions;
     [SerializeField] public float shootDelay;
     private float pastDelay;
     private int rushLimit,hellLimit;
-    private bool stop,rushing;
+    private bool stop,rushing, _startPhase,_phaseDone;
+    private Vector3 _firstPos;
     void Awake()
     {
-        
+        cooldownMax = Random.Range(2, 3);
+        _firstPos = transform.position;
         Setup();
     }
 
@@ -27,10 +33,33 @@ public class Witch :TestAI
         {
             if (!stop) SpawnBar();
             MatchSliderValue();
-            SeekPlayer();
-            AttackRange(~(1<<0 | 1<< 2));
-            if(found & !attack) MoveToPlayer();
-            if (attack & !attacking) Attack();
+            if (cooldownInt > cooldownMax)
+            {
+                ResetValues();
+                StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), Color.white));
+            }
+        
+            if (!cooldown)
+            {
+                if (HP <= 10 & !_phaseDone)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(SecondPhase());
+                    _phaseDone = true;
+                }
+                SeekPlayer();
+                AttackRange(~(1 << 0 | 1 << 2));
+                Debug.Log("Start phase is " + _startPhase);
+                if (!_startPhase)
+                {
+                    Debug.Log("I am attacking ");
+                    if (found & !attack) MoveToPlayer();
+                    if (attack & !attacking) Attack();
+                }
+            }
+
+           
+
             Enemyhit();
             
                
@@ -48,12 +77,24 @@ public class Witch :TestAI
 
     public override void Attack()
     {
+        ai.enabled = true;
         attacking = true;
         int ran = Random.Range(1, 4);
-        SwitchAttacks(ran);
-        
+        cooldownInt++;
+        if(cooldownInt <= cooldownMax) SwitchAttacks(ran);
+
     }
 
+    void ResetValues()
+    {
+        ai.enabled = false;
+        attackSign.SetActive(false);
+        cooldownMax = Random.Range(2, 3);
+        cooldownInt = 0;
+        cooldown = true;
+        RB.velocity = Vector3.zero;
+        attacking = false;
+    }
     void SpawnBar()
     {
         GMController.gm.ui.ShowBossBar(true);
@@ -94,9 +135,12 @@ public class Witch :TestAI
 
     IEnumerator Rush()
     {
+        attackSign.SetActive(true);
+        yield return new WaitForSeconds(attackDelay);
+        attackSign.SetActive(false);
         ai.enabled = false;
-        yield return new WaitForSeconds(.3f);
-        RB.velocity = (dir.normalized * (GMController.gm.maxforce - 10));
+        yield return new WaitForSeconds(.1f);
+        RB.velocity = (dir.normalized * (GMController.gm.maxforce));
         yield return new WaitForSeconds(.1f);
         // StartCoroutine(RepeatRush());
     }
@@ -113,9 +157,9 @@ public class Witch :TestAI
     {
         attacking = true;
         StartCoroutine(ConePellets());
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.3f);
         StartCoroutine(ConePellets());
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.3f);
         StartCoroutine(ConePellets());
         yield return new WaitForSeconds(1.5f);
         attacking = false;
@@ -123,7 +167,9 @@ public class Witch :TestAI
     
     IEnumerator ConePellets()
     {
-        
+        attackSign.SetActive(true);
+        yield return new WaitForSeconds(attackDelay);
+        attackSign.SetActive(false);
         Quaternion rot = quaternion.identity;
         rot.eulerAngles = movementDir.gameObject.transform.eulerAngles;
         rot.eulerAngles -=new Vector3(0,0,45);
@@ -139,7 +185,9 @@ public class Witch :TestAI
     
     IEnumerator BulletHell(Quaternion rot)
     {
-       
+        attackSign.SetActive(true);
+        yield return new WaitForSeconds(attackDelay - .5f);
+        attackSign.SetActive(false);
         rot.eulerAngles = movementDir.gameObject.transform.eulerAngles;
         rot.eulerAngles -=new Vector3(0,0,45);
         for (int i = 0; i < 17; i++)
@@ -169,8 +217,37 @@ public class Witch :TestAI
         StopAllCoroutines();
     }
 
+    IEnumerator SecondPhase()
+    {
+        tele.Play();
+        yield return new WaitForSeconds(.1f);
+        _startPhase = true;
+        shield.gameObject.SetActive(true);
+        shield.Play();
+        transform.position = _firstPos;
+        RB.constraints = RigidbodyConstraints2D.FreezeAll;
+       ResetValues();
+       cooldown = false;
+        GetComponent<SpriteRenderer>().color = Color.white;
+        for (int i = 0; i < teleport.Length; i++) teleport[i].Play();
+        
+
+        yield return new WaitForSeconds(3.5f);
+        for (int i = 0; i < minions.Length; i++)
+        {
+            teleport[i].Stop();
+            explode[i].Play();
+            minions[i].SetActive(true);
+        }
+        RB.constraints = RigidbodyConstraints2D.FreezeRotation;
+        shield.gameObject.SetActive(false);
+        ai.enabled = true;
+        _startPhase = false;
+
+    }
+
     public new void OnCollisionEnter2D(Collision2D col)
     {
-        if(rushing)StartCoroutine(RepeatRush());
+        if(rushing & !col.gameObject.CompareTag("Enemy"))StartCoroutine(RepeatRush());
     }
 }

@@ -9,10 +9,16 @@ public class IntroCutscene : MonoBehaviour
     public TextMeshProUGUI[] text;
     public float imageMoveSpeed;
     [SerializeField] private int scene;
-    [SerializeField] private GameObject scenes;
+    [SerializeField] private GameObject [] scenes;
     private AudioSource audio;
     [SerializeField] private AudioClip[] clips;
-
+    public DialogueSystem talk;
+    private int SceneInt;
+    private bool startFade, fadeStop;
+    private float FadeSpeed = .75f;
+    
+    
+    
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -25,7 +31,15 @@ public class IntroCutscene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) scene++;
         if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("RandomLevel");
-       scenes.transform.position -= new Vector3(imageMoveSpeed * Time.deltaTime, 0, 0);
+        if (startFade == false)
+        {
+            FadeIn();
+            StartFade();
+            
+        }
+        else FadeTransition();
+       
+       
     }
 
     IEnumerator ChangeMusic()
@@ -41,49 +55,40 @@ public class IntroCutscene : MonoBehaviour
         SceneManager.LoadScene("RandomLevel");
     }
 
-    // Delete this if I have not deleted it already - Cesar
-    IEnumerator Cutscene()
+    void FadeTransition()
     {
-        yield return new WaitForSeconds(6);
-        while(text[0].color.a > 0)text[0].color -= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(1f);
-        Debug.Log("Stop");
-        while(text[1].color.a < 1)text[1].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[1].color.a > 0)text[1].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[2].color.a < 1)text[2].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[2].color.a > 0)text[2].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[3].color.a < 1)text[3].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[3].color.a > 0)text[3].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[4].color.a < 1)text[4].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[4].color.a > 0)text[4].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[5].color.a < 1)text[5].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[5].color.a > 0)text[5].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[6].color.a < 1)text[6].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[6].color.a > 0)text[6].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[7].color.a < 1)text[7].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[7].color.a > 0)text[7].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[8].color.a < 1)text[8].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[8].color.a > 0)text[8].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-        while(text[9].color.a < 1)text[9].color+= new Color(0, 0, 0, .05f * Time.deltaTime);
-        yield return new WaitForSeconds(4f);
-        while(text[9].color.a > 0)text[9].color -= new Color(0, 0, 0, .05f);
-        yield return new WaitForSeconds(.5f);
-       
+        Debug.Log("My scene int is" + SceneInt);
+        scenes[SceneInt].GetComponent<SpriteRenderer>().color -= new Color(0, 0,0 ,.3f * Time.deltaTime);
+            if (scenes[SceneInt].GetComponent<SpriteRenderer>().color.a <= 0)
+            {
+                if (SceneInt < 3)
+                {
+                    SceneInt++;
+                    startFade = false;
+                }
+                
+               
+            }
+        
     }
-}
+
+    void FadeIn()
+    {
+       
+        if (scenes[SceneInt].GetComponent<SpriteRenderer>().color.a <= 1)
+        {
+            scenes[SceneInt].GetComponent<SpriteRenderer>().color += new Color(0, 0,0 ,.3f * Time.deltaTime);
+           
+        }   
+    }
+    void StartFade()
+    {
+        if (talk.typeTimer <= 2)
+        {
+          
+            startFade = true;
+        }
+    }
+    
+    }
+

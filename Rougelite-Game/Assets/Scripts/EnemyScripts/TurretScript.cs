@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TurretScript : TestAI
@@ -7,6 +8,7 @@ public class TurretScript : TestAI
     [SerializeField] private float shootDelay;
     [SerializeField] private GameObject playerDir;
     private Color _turretColor;
+    private bool _delay;
 
     void Awake()
     {
@@ -19,29 +21,51 @@ public class TurretScript : TestAI
     {
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
-       if(!attack & cooldownInt > 0)AttackRange(~(1<<0 | 1<< 2));
-       
-        if (attack & cooldownInt > 0 )
+        if (!attack & cooldownInt > 0)
         {
-            Attack();
+            AttackRange(~(1<<0 | 1<< 2));
+        }
+       
+        if (attack & cooldownInt > 0)
+        {
+            
             AttackDir(GMController.gm.oc.shooter);
+            if(!attacking)StartCoroutine(ShootPellets());
+              
+            
         }
         if (cooldownInt <= 0) StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), _turretColor));
         
         Enemyhit();
     }
+    
+    
+    
 
     public override void Attack()
     {
-        if (shootDelay <= 0)
-        {
-            Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
-            cooldownInt--;
-            shootDelay = .5f;
-        }
-        else shootDelay -= Time.deltaTime;
+        Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
+        shootDelay = .5f;
+
     }
-    
+
+    IEnumerator ShootPellets()
+    {
+        attacking = true;
+        attackSign.SetActive(true);
+        yield return new WaitForSeconds(attackDelay);
+        attackSign.SetActive(false);
+        Attack();
+        yield return new WaitForSeconds(shootDelay);
+        Attack();
+        yield return new WaitForSeconds(shootDelay);
+        Attack();
+        yield return new WaitForSeconds(shootDelay);
+        Attack();
+        yield return new WaitForSeconds(shootDelay);
+        cooldownInt = 0;
+        attacking = false;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

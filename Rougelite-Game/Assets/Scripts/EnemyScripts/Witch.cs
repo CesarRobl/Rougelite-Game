@@ -10,6 +10,7 @@ public class Witch :TestAI
 {
     [HideInInspector] public Slider health;
     [HideInInspector] public ParticleSystem[] teleport, explode;
+    [SerializeField] private ParticleSystem shield, tele;
     [HideInInspector] public GameObject[] minions;
     [SerializeField] public float shootDelay;
     private float pastDelay;
@@ -218,8 +219,13 @@ public class Witch :TestAI
 
     IEnumerator SecondPhase()
     {
+        tele.Play();
+        yield return new WaitForSeconds(.1f);
         _startPhase = true;
+        shield.gameObject.SetActive(true);
+        shield.Play();
         transform.position = _firstPos;
+        RB.constraints = RigidbodyConstraints2D.FreezeAll;
        ResetValues();
        cooldown = false;
         GetComponent<SpriteRenderer>().color = Color.white;
@@ -233,6 +239,8 @@ public class Witch :TestAI
             explode[i].Play();
             minions[i].SetActive(true);
         }
+        RB.constraints = RigidbodyConstraints2D.FreezeRotation;
+        shield.gameObject.SetActive(false);
         ai.enabled = true;
         _startPhase = false;
 

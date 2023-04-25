@@ -91,7 +91,7 @@ public class GMController : MonoBehaviour
     private void FixedUpdate()
     {
         FollowCursor();
-        Debug.Log("IFrames timer " + timer);
+        
     }
 
     // prevents the player from getting hurt from the same thing multiple times in a single second

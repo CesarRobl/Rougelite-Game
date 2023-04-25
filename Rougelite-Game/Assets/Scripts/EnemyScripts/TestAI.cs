@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class TestAI : MonoBehaviour
 {
-    public int HP, cooldownInt;
+    public int HP, cooldownInt,cooldownMax;
     public bool found;
     public float drange,cooldownRate,attackDelay;
     public float speed = 2;
@@ -23,7 +23,7 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public bool Stop,stun,attacking,anim,cooldown;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
-    [HideInInspector] public HurtFunction ow;
+     public HurtFunction ow;
     private TempPlayer pc;
    
     
@@ -94,7 +94,7 @@ public class TestAI : MonoBehaviour
               pc = hit.collider.GetComponent<TempPlayer>();
               if (pc != null)
               {
-                  if(!attack)StartCoroutine(ShowAttackSign());
+                  attack = true;
                   return;
               }
               else attack = false;
@@ -124,6 +124,11 @@ public class TestAI : MonoBehaviour
     public void AttackDir(Sprite[] sprites)
     {
         movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
+    }
+
+    public void ChangeSprite(Sprite[] sprites, SpriteRenderer render)
+    {
+        movementDir.SpriteStateChange(sprites[movementDir.spriteNum], render);
     }
     public void OnCollisionEnter2D(Collision2D col)
     {
@@ -162,13 +167,11 @@ public class TestAI : MonoBehaviour
     void Hurt()
     {
         HP--;
-        if (Stop == false)
-        {
-            
-            StartCoroutine(EnemyHurt(ps));
-            if(!attacking)Knockback(GMController.gm.maxforce);
-            Stop = true;    
-        }
+        
+             StartCoroutine(EnemyHurt(ps));
+            if(!attacking & !cooldown)Knockback(GMController.gm.maxforce);
+           
+       
     }
 
     // This animation plays when the enemy gets whacked by a player with a sword
@@ -181,7 +184,7 @@ public class TestAI : MonoBehaviour
         hurt.Play();
         sr.color = Color.red;
         yield return new WaitForSeconds(5f * Time.deltaTime);
-        sr.color = og;
+        if(!cooldown)sr.color = og;
     }
     public void Knockback(float force)
     {
@@ -203,14 +206,24 @@ public class TestAI : MonoBehaviour
         RB.velocity = Vector2.zero;
         stun = false;
     }
-
-     public IEnumerator ShowAttackSign()
+     
+    public IEnumerator SpawnAfterImage(float imageRate, SpriteRenderer sprite)
      {
-         attackSign.SetActive(true);
-         yield return new WaitForSeconds(attackDelay);
-         attackSign.SetActive(false);
-         if(!attack)attack = true;
+         yield return new WaitForSeconds(imageRate);
+         GameObject image = Instantiate(GMController.gm.oc.afterImage, gameObject.transform.position, Quaternion.identity);
+         image.transform.localScale = sprite.transform.localScale;
+         image.GetComponent<SpriteRenderer>().sprite = sprite.sprite;
+        
+         if (attacking) StartCoroutine(ResetImage(imageRate,sprite));
      }
+
+     IEnumerator ResetImage(float imageRate, SpriteRenderer sprite)
+     {
+         yield return new WaitForSeconds(.1f);
+         StartCoroutine(SpawnAfterImage(imageRate,sprite));
+     }
+
+    
      
      public virtual IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
      {

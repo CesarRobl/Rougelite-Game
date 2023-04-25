@@ -2251,11 +2251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8580895745338643050, guid: 6a52c70a4e1059e40a6cb16f6452b777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -7.49
       objectReference: {fileID: 0}
     - target: {fileID: 8580895745338643050, guid: 6a52c70a4e1059e40a6cb16f6452b777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 8580895745338643050, guid: 6a52c70a4e1059e40a6cb16f6452b777, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21971,8 +21971,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4200439418167187967, guid: a7a7c3fc167c1c1459a006553489be43, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: afterImage
+      value: 
+      objectReference: {fileID: 5815684550703296897, guid: b1e89923b52b30846acc6bd38ee9f89d, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: witch.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: charger.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.size
@@ -21991,21 +21999,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 28d85ff5b47fca84088fff54887a5559, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: charger.Array.data[0]
+      value: 
+      objectReference: {fileID: 690640928, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: charger.Array.data[1]
+      value: 
+      objectReference: {fileID: 690640928, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: charger.Array.data[2]
+      value: 
+      objectReference: {fileID: 690640928, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
+      propertyPath: charger.Array.data[3]
+      value: 
+      objectReference: {fileID: 690640928, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
+    - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+      objectReference: {fileID: -1913912409, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+      objectReference: {fileID: -1913912409, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+      objectReference: {fileID: -1913912409, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: phantom.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+      objectReference: {fileID: -1913912409, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
     - target: {fileID: 7397520239286390597, guid: 9a20afdb4fb33a042bcf8070d29fa2c6, type: 3}
       propertyPath: shooter.Array.data[0]
       value: 

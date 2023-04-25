@@ -19,15 +19,23 @@ public class LootScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        // if(col.gameObject.CompareTag("TestPlayer")) Destroy(gameObject);
-    }
+      
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("TestPlayer"))
+        if (powerInt != 4 || powerInt != 5)
+        {
+             if (GMController.gm.ui.health.health < 6 & col.gameObject.CompareTag("TestPlayer"))
+            {
+                GMController.gm.id.PowerUp(powerInt);
+                Destroy(gameObject);
+            }
+        }
+        
+        else if (col.gameObject.CompareTag("TestPlayer"))
         {
             GMController.gm.id.PowerUp(powerInt);
             Destroy(gameObject);
         }
     }
+
+    
 }

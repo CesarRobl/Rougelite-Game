@@ -9,8 +9,9 @@ public class PotShotEnemy : TestAI
     [SerializeField] private Vector3 lastpos;
     private float dist,dist2;
     [SerializeField] private GameObject slashes;
-    private Vector3[] rot = new[] {new Vector3(0, 0, 0), new Vector3(0,0,90), new Vector3(0,0,180), new Vector3(0,0,270)}; 
+    private Vector3[] _rot =  {new Vector3(0, 0, 90), new Vector3(0,0,270), new Vector3(0,0,180), new Vector3(0,0,0)}; 
     private BoxCollider2D collide;
+    [SerializeField]private Sprite[] attackSprites;
     
     void Awake()
     {
@@ -23,7 +24,9 @@ public class PotShotEnemy : TestAI
     void Update()
     {
         currentpos = transform.position;
-           AttackDir(GMController.gm.oc.phantom);
+        if(!attacking)ChangeSprite(GMController.gm.oc.phantom, GetComponent<SpriteRenderer>());
+        AttackDir(GMController.gm.oc.phantom);
+       
             SeekPlayer();
             if(!attacking)AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
             Enemyhit();
@@ -31,26 +34,31 @@ public class PotShotEnemy : TestAI
             {
                 MoveToPlayer();
             }
-           
-            if (attacking)
-            {
-                dist = Vector2.Distance(currentpos, pos);
-                dist2 = Vector2.Distance(transform.position, lastpos);
-            }
-            
+
             if (attack & !anim) Attack();
             
-            Debug.Log("Player pos is " + pos + " My last pos is " + lastpos);
+            dist = Vector2.Distance(currentpos, pos);
+            dist2 = Vector2.Distance(transform.position, lastpos);
 
 }
 
     public override void Attack()
     {
-      
-        anim = true;
-        attacking = true;
-        lastpos = transform.position;
-        StartCoroutine(Rush());
+            anim = true;
+            attacking = true;
+            lastpos = transform.position;
+            pos = GMController.gm.player.position;
+            if (pos != Vector3.zero)
+            {
+                // Debug.Log(pos);
+                StartCoroutine(Rush());
+            }
+            else
+            {
+                attack = false;
+                attacking = false;
+                anim = false;
+            }
     }
 
     private void ChangeAttackDir()
@@ -61,10 +69,10 @@ public class PotShotEnemy : TestAI
     {
         // ai.destination = transform.position;
         ai.enabled = false;
-        pos = GMController.gm.player.position;
         collide.isTrigger = true;
         
         Vector2 posDir = pos - transform.position;
+        
         RB.velocity = posDir.normalized * 9.5f;
         GetComponent<SpriteRenderer>().color = new Color(256,256,256, .5f);
         
@@ -77,15 +85,24 @@ public class PotShotEnemy : TestAI
     {
         collide.isTrigger = false;
         GetComponent<SpriteRenderer>().color = Color.white;
+        attackSign.SetActive(false);
         yield return new WaitForSeconds(.5f);
         attackSign.SetActive(true);
+        GetComponent<SpriteRenderer>().sprite = attackSprites[0];
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(false);
+        GetComponent<SpriteRenderer>().sprite = attackSprites[1];
+        slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
+        Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
         yield return new WaitForSeconds(.5f);
         attackSign.SetActive(true);
+        GetComponent<SpriteRenderer>().sprite = attackSprites[0];
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(false);
+        GetComponent<SpriteRenderer>().sprite = attackSprites[1];
+        slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
+        Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
         yield return new WaitForSeconds(.1f);
         StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), new Color(256, 256, 256, .5f)));
@@ -94,7 +111,7 @@ public class PotShotEnemy : TestAI
     IEnumerator GoBack()
     { 
         collide.isTrigger = true;
-       
+        GetComponent<SpriteRenderer>().sprite = GMController.gm.oc.phantom[movementDir.spriteNum];
         Vector2 posDir = lastpos - transform.position;
         RB.velocity = posDir.normalized * 8;
         yield return new WaitUntil(() => dist2 < .4f);

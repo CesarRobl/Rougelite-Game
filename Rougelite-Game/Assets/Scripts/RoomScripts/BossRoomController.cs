@@ -12,6 +12,8 @@ public class BossRoomController : MonoBehaviour
     [SerializeField]private Sprite[] opened;
     [SerializeField] private GameObject boss;
     [SerializeField] private DialogueList bossTalk;
+    [SerializeField] private ParticleSystem[] teleport, explode;
+    [SerializeField] private GameObject[] minions;
     [HideInInspector] private TempPortalScript portal;
     private SpawnController spawner;
     private bool stop,done,open;
@@ -47,8 +49,8 @@ public class BossRoomController : MonoBehaviour
     }
     void Setup()
     {
-        
-        boss.SetActive(true);
+
+        BossSetup();
         wall.SetActive(true);
         for (int i = 0; i < doors.Length; i++)
         {
@@ -56,6 +58,14 @@ public class BossRoomController : MonoBehaviour
         }
         
         done = true;
+    }
+
+    void BossSetup()
+    {
+        boss.GetComponent<Witch>().teleport = teleport;
+        boss.GetComponent<Witch>().explode = explode;
+        boss.GetComponent<Witch>().minions = minions;
+        boss.SetActive(true);
     }
 
     IEnumerator TalkFirst()

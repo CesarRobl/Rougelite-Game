@@ -31,6 +31,18 @@ public class IdSystem : MonoBehaviour
             {
                 break;
             }
+
+            case 4:
+            {
+               BigHealth();
+                break;
+            }
+            
+            case 5:
+            {
+                SmallHealth();
+                break;
+            }
         }
     }
 
@@ -40,6 +52,16 @@ public class IdSystem : MonoBehaviour
         yield return new WaitForSeconds(1.4f);
         Debug.Log("Stop Running");
         GMController.gm.temp.speed = 20;
+    }
+
+    void SmallHealth()
+    {
+        GMController.gm.ui.health.health++;
+    }
+
+    void BigHealth()
+    {
+        GMController.gm.ui.health.health += 2;
     }
     
     

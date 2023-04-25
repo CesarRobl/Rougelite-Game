@@ -8,11 +8,14 @@ public class Charger : TestAI
 {
     private bool buffer,stopai;
     [SerializeField] private float chargePower;
+    [SerializeField] public Sprite[] prepareCharge;
+    [SerializeField] public Sprite[] charge;
     private int chargeNum;
-    
-    void Start()
+    private float _dist = 10;
+    [SerializeField]private SpriteRenderer _sprite;
+    void Awake()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -31,15 +34,18 @@ public class Charger : TestAI
             Attack();
         }
         
-        
         AttackRange(~(1<<0 | 1<< 2));
         SeekPlayer();
         Enemyhit();
+
+        
+
     }
 
     public override void Attack()
     {
         ai.destination = transform.position;
+        ai.enabled = false;
         attacking = true;
         StartCoroutine(Charge());
         
@@ -48,20 +54,49 @@ public class Charger : TestAI
     IEnumerator Charge()
     {
         anim = true;
-        SpriteDir(GMController.gm.oc.normalEnemy);
-        yield return new WaitForSeconds(.65f);
-        ai.maxSpeed = chargePower;
-        ai.destination = GMController.gm.temp.transform.position;
-        yield return new WaitForSeconds(.1f);
-            attacking = false;
-        yield return new WaitForSeconds(2f);
+        attackSign.SetActive(true);
+        _sprite.sprite = prepareCharge[movementDir.spriteNum];
+        yield return new WaitForSeconds(attackDelay);
+        Vector3 posDir = GMController.gm.temp.transform.position - transform.position;
+        _sprite.sprite = charge[movementDir.spriteNum];
+        attackSign.SetActive(false);
+        RB.velocity = posDir.normalized * chargePower;
+        StartCoroutine(SpawnAfterImage(.1f, _sprite));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(DownTime(_sprite, Color.white));
+    }
+
+    public override IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
+    {
+        spriteColor.color = Color.gray;
+        RB.velocity = Vector3.zero;
+        attacking = false;
+        yield return new WaitForSeconds(cooldownRate);
+       
+        ai.enabled = true;
+        spriteColor.color = ogColor;
         anim = false;
     }
 
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, dir.normalized * attackrange);
+    }
+    
+    public new void OnCollisionEnter2D(Collision2D col)
+    {
+        if (attacking & !col.gameObject.CompareTag("Enemy"))
+        { 
+            StopAllCoroutines();
+            Debug.Log("I hit " + col.gameObject.name);
+            if (col.gameObject.CompareTag("TestPlayer"))
+            {
+                GMController.gm.temp.Playerhurt();
+            }
+            RB.velocity = Vector3.zero;
+            StartCoroutine(DownTime(_sprite, Color.white));
+        }
     }
 }

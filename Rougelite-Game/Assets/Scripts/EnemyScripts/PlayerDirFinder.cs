@@ -28,26 +28,26 @@ public class PlayerDirFinder : MonoBehaviour
         {
             //face down
             spriteNum = 1;
-            esprite.sprite = sprites[spriteNum];
+           
         }
         else if (z <= 45 || z > 315)
         {
             // face right
             spriteNum = 3;
-            esprite.sprite = sprites[spriteNum];
+            
         }
         else if (z > 135 && z <= 225)
         {
             // face left
             spriteNum = 2;
-            esprite.sprite = sprites[spriteNum];
+            
         }
             
         else if ( z >45 && z<=135)
         {
            // face up
             spriteNum = 0;
-            esprite.sprite = sprites[spriteNum];
+            
         }
     }
 

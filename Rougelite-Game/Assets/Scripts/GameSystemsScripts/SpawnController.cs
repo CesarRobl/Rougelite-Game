@@ -8,11 +8,13 @@ public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
     [SerializeField] public GameObject enemy;
+    [SerializeField] private ETypeList enemyType;
     [SerializeField] private GameObject boss;
     private RoomController rc;
     private bool stop;
     void Awake()
     {
+        if (enemyType != null) enemy = enemyType.enemy;
       rc = GetComponentInParent<RoomController>();
     }
 
@@ -21,8 +23,7 @@ public class SpawnController : MonoBehaviour
         
        
     }
-
-    public void SpawnSingleEnemy()
+    void SpawnSingleEnemy()
     {
         if (!stop)
         {
@@ -32,7 +33,7 @@ public class SpawnController : MonoBehaviour
         }
     }
 
-   public void SpawnEnemy()
+    void SpawnRandomEnemy()
     {
         if (!stop)
         {
@@ -40,11 +41,18 @@ public class SpawnController : MonoBehaviour
             if (ran <= 60)
             {
                 int enemytype = Random.Range(0, GMController.gm.oc.elist.etype.Length );
-               GameObject ec = Instantiate(GMController.gm.oc.elist.etype[enemytype], transform.position, Quaternion.Euler(0,0,0));
-               rc.enemycount.Add(ec);
-               ec = null;
+                GameObject ec = Instantiate(GMController.gm.oc.elist.etype[enemytype], transform.position, Quaternion.Euler(0,0,0));
+                rc.enemycount.Add(ec);
+                ec = null;
             }
             stop = true;
         }
+    }
+    
+
+   public void SpawnEnemy()
+    {
+        if(enemy != null) SpawnSingleEnemy();
+        else SpawnRandomEnemy();
     }
 }

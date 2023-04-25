@@ -145,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34f051b6b50ec1e459fb5e13cab6ef94, type: 3}
+  m_Sprite: {fileID: -1913912409, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,7 +173,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.76, y: 5.76}
+    oldSize: {x: 3.04, y: 1.84}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -287,9 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppedLoot: {fileID: 459570330273930869, guid: 9fa00926aa2f0054481d4ccb93b7ddaa, type: 3}
   lootList:
-  - {fileID: 11400000, guid: 93e47a3bb8ef77c4d81987f33b1eaa85, type: 2}
-  - {fileID: 11400000, guid: e7050044eb8b74348b296bdf8c84927b, type: 2}
-  - {fileID: 11400000, guid: a7c5e4452bf74cd40931117be58da3aa, type: 2}
+  - {fileID: 11400000, guid: 8cf199706e1739e4a97bafe95b95b743, type: 2}
+  - {fileID: 11400000, guid: b361a373f1065ca419cd64ca6db599bc, type: 2}
 --- !u!114 &2283062832756747633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,8 +305,8 @@ MonoBehaviour:
   cooldownInt: 0
   found: 0
   drange: 10
-  cooldownRate: 0
-  attackDelay: 0
+  cooldownRate: 2.3
+  attackDelay: 1
   speed: 2
   attackrange: 7.5
   attack: 0
@@ -328,6 +327,9 @@ MonoBehaviour:
   ow: {fileID: 0}
   lastpos: {x: 0, y: 0, z: 0}
   slashes: {fileID: 719136278587179882}
+  attackSprites:
+  - {fileID: 692389931, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
+  - {fileID: -302513827, guid: df2c6d861764aac4d8374c952a9acf3e, type: 3}
 --- !u!114 &3038038455002688565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +531,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7a4320205f5265c47a7dec28416afdc6, type: 3}
     - target: {fileID: 4174617049467498445, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174617050041878788, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 347059a2446e1e645bbe048d68f6acd5, type: 3}
   spriteAlt: {fileID: 21300000, guid: 13afc62b40002ce478d4b0089c829d9e, type: 3}
   objectName: Blue Table
-  chance: 30
+  chance: 100

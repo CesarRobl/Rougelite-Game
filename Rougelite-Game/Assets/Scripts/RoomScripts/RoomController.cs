@@ -190,8 +190,7 @@ public class RoomController : MonoBehaviour
         }
         for (int i = 0; i < spawner.Length; i++)
         {
-            if(spawner[i].enemy != null) spawner[i].SpawnSingleEnemy();
-            else spawner[i].SpawnEnemy();
+             spawner[i].SpawnEnemy();
         }
         
         playerin = true;

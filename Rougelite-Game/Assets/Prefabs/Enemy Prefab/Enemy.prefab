@@ -260,9 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppedLoot: {fileID: 459570330273930869, guid: 9fa00926aa2f0054481d4ccb93b7ddaa, type: 3}
   lootList:
-  - {fileID: 11400000, guid: 93e47a3bb8ef77c4d81987f33b1eaa85, type: 2}
-  - {fileID: 11400000, guid: e7050044eb8b74348b296bdf8c84927b, type: 2}
-  - {fileID: 11400000, guid: a7c5e4452bf74cd40931117be58da3aa, type: 2}
+  - {fileID: 11400000, guid: 8cf199706e1739e4a97bafe95b95b743, type: 2}
+  - {fileID: 11400000, guid: b361a373f1065ca419cd64ca6db599bc, type: 2}
 --- !u!114 &-5841964497302464324
 MonoBehaviour:
   m_ObjectHideFlags: 0

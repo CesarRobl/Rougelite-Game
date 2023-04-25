@@ -6,9 +6,11 @@ using UnityEngine;
 public class LootScript : MonoBehaviour
 {
     [HideInInspector] public int powerInt;
-    void Start()
+    [SerializeField] private LootList item;
+    [SerializeField] private bool itemSelect;
+    void Awake()
     {
-        
+        if(itemSelect) SelectItem();
     }
 
     // Update is called once per frame
@@ -17,17 +19,31 @@ public class LootScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void SelectItem()
     {
-        // if(col.gameObject.CompareTag("TestPlayer")) Destroy(gameObject);
+        powerInt = item.idNum;
+        GetComponent<SpriteRenderer>().sprite = item.sprite;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("TestPlayer"))
+      
+
+        if (powerInt != 4 || powerInt != 5)
+        {
+             if (GMController.gm.ui.health.health < 6 & col.gameObject.CompareTag("TestPlayer"))
+            {
+                GMController.gm.id.PowerUp(powerInt);
+                Destroy(gameObject);
+            }
+        }
+        
+        else if (col.gameObject.CompareTag("TestPlayer"))
         {
             GMController.gm.id.PowerUp(powerInt);
             Destroy(gameObject);
         }
     }
+
+    
 }

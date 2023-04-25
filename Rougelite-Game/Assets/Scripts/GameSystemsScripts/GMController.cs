@@ -167,6 +167,7 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     {
+        
         if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }
 

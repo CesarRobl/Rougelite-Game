@@ -19,6 +19,11 @@ public class TurretScript : TestAI
     // Update is called once per frame
     void Update()
     {
+        if(!GMController.gm.playerDead)AI();
+    }
+
+    void AI()
+    {
         playerDir.GetComponent<PlayerDirFinder>().PlayerDir();
         SeekPlayer();
         if (!attack & cooldownInt > 0)
@@ -38,8 +43,6 @@ public class TurretScript : TestAI
         
         Enemyhit();
     }
-    
-    
     
 
     public override void Attack()

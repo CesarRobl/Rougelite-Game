@@ -17,13 +17,17 @@ public class Shooter : TestAI
     void Update()
     {
         
-       
+        if(!GMController.gm.playerDead) AI();
+    }
+
+    void AI()
+    {
         SeekPlayer();
         AttackRange(~(1<<0 | 1<< 2));
         if (found & !attack)
         {
             MoveToPlayer();
-           SpriteDir(GMController.gm.oc.shooter);
+            SpriteDir(GMController.gm.oc.shooter);
         }
         else if (attack)
         {
@@ -32,8 +36,6 @@ public class Shooter : TestAI
         }
         Enemyhit();
     }
-
-
     public override void Attack()
     {
         ai.destination = transform.position;

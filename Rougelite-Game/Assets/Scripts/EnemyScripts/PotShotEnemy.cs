@@ -23,25 +23,29 @@ public class PotShotEnemy : TestAI
     // Update is called once per frame
     void Update()
     {
+        if (!GMController.gm.playerDead) AI();
+
+    }
+
+    void AI()
+    {
         currentpos = transform.position;
         if(!attacking)ChangeSprite(GMController.gm.oc.phantom, GetComponent<SpriteRenderer>());
         AttackDir(GMController.gm.oc.phantom);
        
-            SeekPlayer();
-            if(!attacking)AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
-            Enemyhit();
-            if (found & !stun & !anim)
-            {
-                MoveToPlayer();
-            }
+        SeekPlayer();
+        if(!attacking)AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
+        Enemyhit();
+        if (found & !stun & !anim)
+        {
+            MoveToPlayer();
+        }
 
-            if (attack & !anim) Attack();
+        if (attack & !anim) Attack();
             
-            dist = Vector2.Distance(currentpos, pos);
-            dist2 = Vector2.Distance(transform.position, lastpos);
-
-}
-
+        dist = Vector2.Distance(currentpos, pos);
+        dist2 = Vector2.Distance(transform.position, lastpos);
+    }
     public override void Attack()
     {
             anim = true;

@@ -34,10 +34,15 @@ public class TestAI : MonoBehaviour
 
     void Update()
     {
+        if(!GMController.gm.playerDead)AI();
+    }
+
+    void AI()
+    {
         SpriteDir(GMController.gm.oc.normalEnemy);
         if (found & !stun)
         {
-          MoveToPlayer();
+            MoveToPlayer();
         }
         SeekPlayer();
         Enemyhit();

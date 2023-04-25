@@ -6,15 +6,23 @@ using UnityEngine;
 public class LootScript : MonoBehaviour
 {
     [HideInInspector] public int powerInt;
-    void Start()
+    [SerializeField] private LootList item;
+    [SerializeField] private bool itemSelect;
+    void Awake()
     {
-        
+        if(itemSelect) SelectItem();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void SelectItem()
+    {
+        powerInt = item.idNum;
+        GetComponent<SpriteRenderer>().sprite = item.sprite;
     }
 
     private void OnCollisionEnter2D(Collision2D col)

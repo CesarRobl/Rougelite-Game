@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8744043814561274715}
   - component: {fileID: 8449010106541040254}
   m_Layer: 10
-  m_Name: Rock
+  m_Name: Table
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f40b6f4f473a0e24abdad9f72393b30a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 347059a2446e1e645bbe048d68f6acd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,8 +164,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.50114787, y: 0.4758953}
-    oldSize: {x: 1.152, y: 1.152}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.44, y: 1.44}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -206,7 +206,6 @@ MonoBehaviour:
   box: {fileID: 7316593358808705438}
   destroyed: {fileID: 0}
   obs:
-  - {fileID: 11400000, guid: 6655b258d0ed86a49942b78e34586840, type: 2}
   - {fileID: 11400000, guid: 0608bf870a2932f4493a7c66e175a8b8, type: 2}
 --- !u!114 &8449010106541040254
 MonoBehaviour:

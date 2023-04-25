@@ -85,6 +85,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\AniController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\Scripts\GameSystemsScripts\ETypeList.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\GMController.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\LootList.cs" />
@@ -126,6 +127,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\GameSystemsScripts\AfterImage.cs" />
      <Compile Include="Assets\Scripts\RoomScripts\RoomToBossScript.cs" />
+     <Compile Include="Assets\Prefabs\Collectable Prefabs\dawdwf.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\TestStages\SmallStageRework\DR" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -187,6 +189,7 @@
      <Folder Include="Assets\TestStages\LongStageReworked\UD" />
      <Folder Include="Assets\Art\Environment Art\Obstacles\DestroyedObstacles\Chair" />
      <Folder Include="Assets\Art\Sprites\CharacterSprites\Enemies\NormalCharger" />
+     <Folder Include="Assets\Prefabs\Enemy Prefab\EnemyList" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
      <Folder Include="Assets\Art\Environment Art\FloorTiles" />

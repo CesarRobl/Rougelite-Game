@@ -19,6 +19,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Collectable Prefabs/dawdwf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Charger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/PotShotEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Shooter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -201,6 +202,8 @@
       <workItem from="1682334730873" duration="4613000" />
       <workItem from="1682358360959" duration="13104000" />
       <workItem from="1682417638207" duration="1247000" />
+      <workItem from="1682419050873" duration="1323000" />
+      <workItem from="1682421883845" duration="608000" />
     </task>
     <servers />
   </component>

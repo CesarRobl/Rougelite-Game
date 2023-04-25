@@ -8,12 +8,13 @@ public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
     [SerializeField] public GameObject enemy;
-    
+    [SerializeField] private ETypeList enemyType;
     [SerializeField] private GameObject boss;
     private RoomController rc;
     private bool stop;
     void Awake()
     {
+        if (enemyType != null) enemy = enemyType.enemy;
       rc = GetComponentInParent<RoomController>();
     }
 

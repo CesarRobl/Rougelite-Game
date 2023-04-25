@@ -21,11 +21,16 @@ public class Charger : TestAI
     // Update is called once per frame
     void Update()
     {
-        
+        if(!GMController.gm.playerDead) AI();
+
+    }
+
+    void AI()
+    {
         if (found & !stun & !anim)
         {
-           MoveToPlayer();
-           SpriteDir(GMController.gm.oc.normalEnemy);
+            MoveToPlayer();
+            SpriteDir(GMController.gm.oc.normalEnemy);
         }
         
         if (attack & !attacking & !anim)
@@ -37,8 +42,6 @@ public class Charger : TestAI
         AttackRange(~(1<<0 | 1<< 2));
         SeekPlayer();
         Enemyhit();
-
-        
 
     }
 

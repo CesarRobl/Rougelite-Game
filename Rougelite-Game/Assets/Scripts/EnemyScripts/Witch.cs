@@ -27,8 +27,14 @@ public class Witch :TestAI
     
     void Update()
     {
-        AttackDir(GMController.gm.oc.witch);   
-      
+        if (!GMController.gm.playerDead) AI();
+        
+    }
+
+    void AI()
+    {
+        AttackDir(GMController.gm.oc.witch);
+
         if (!GMController.gm.dialogue)
         {
             if (!stop) SpawnBar();
@@ -38,7 +44,7 @@ public class Witch :TestAI
                 ResetValues();
                 StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), Color.white));
             }
-        
+
             if (!cooldown)
             {
                 if (HP <= 10 & !_phaseDone)
@@ -47,6 +53,7 @@ public class Witch :TestAI
                     StartCoroutine(SecondPhase());
                     _phaseDone = true;
                 }
+
                 SeekPlayer();
                 AttackRange(~(1 << 0 | 1 << 2));
                 Debug.Log("Start phase is " + _startPhase);
@@ -58,20 +65,19 @@ public class Witch :TestAI
                 }
             }
 
-           
+
 
             Enemyhit();
-            
-               
+
+
             if (rushLimit > 2)
-                {
-                    StopAllCoroutines();
-                    rushLimit = 0;
-                    ai.enabled = true;
-                    attacking = false;
-                    rushing = false;
-                }
-            
+            {
+                StopAllCoroutines();
+                rushLimit = 0;
+                ai.enabled = true;
+                attacking = false;
+                rushing = false;
+            }
         }
     }
 

@@ -13,14 +13,14 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private GameObject crosshairCheck, loadscreen;
     
      public Slider volumeslider;
+     public Slider musicSlider;
     private bool opensettings;
     public bool play;
     void Start()
     {
         Time.timeScale = 1;
         menu = this;
-        if (GMController.volume != 0) volumeslider.value = GMController.volume;
-        else volumeslider.value = 1;
+        VolumeSliders();
         crosshairCheck.SetActive(GMController.showcrosshair);
     }
 
@@ -29,11 +29,17 @@ public class MenuScript : MonoBehaviour
     {
         
         GMController.volume = volumeslider.value;
-       
+        GMController.MusicVolume = musicSlider.value;
         if(play)StartCoroutine(PlayGameScene());
     }
 
-    
+    void VolumeSliders()
+    {
+        if (GMController.volume != 0) volumeslider.value = GMController.volume;
+        else volumeslider.value = 1;
+        if (GMController.MusicVolume != 0) musicSlider.value = GMController.MusicVolume;
+        else musicSlider.value = 1;
+    }
     public void PlayMainScene()
     {
         play = true;

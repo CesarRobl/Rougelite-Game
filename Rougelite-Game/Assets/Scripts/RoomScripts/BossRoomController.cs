@@ -15,6 +15,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] private ParticleSystem[] teleport, explode;
     [SerializeField] private GameObject[] minions;
     [HideInInspector] private TempPortalScript portal;
+    public PolygonCollider2D polyCollider;
     private SpawnController spawner;
     private bool stop,done,open;
     private int num;

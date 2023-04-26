@@ -46,7 +46,7 @@ public class SlashRay : MonoBehaviour
    bool RayCheck(Transform pos, string name)
    {
       Vector3 dir = pos.position - GMController.gm.temp.transform.position;
-      RaycastHit2D hit = Physics2D.Raycast(GMController.gm.temp.transform.position, dir, 100, ~(1 << 7 | 1<< 2 | 1 << 8));
+      RaycastHit2D hit = Physics2D.Raycast(GMController.gm.temp.transform.position, dir, 100, ~(1 << 7 | 1<< 2 | 1 << 8 | 1 << 6));
       if (hit.collider != null)
       {
          

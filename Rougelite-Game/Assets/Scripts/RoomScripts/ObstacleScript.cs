@@ -29,6 +29,7 @@ public class ObstacleScript : MonoBehaviour
         if (ow.hurt)
         {
             HP--;
+            if(HP > 0) SoundControl.Soundcntrl.EffectAS.PlayOneShot(TempSound.soundtemp.tableChairs[1]);
             StartCoroutine(HitParticle());
             ow.hurt = false;
         }
@@ -82,6 +83,7 @@ public class ObstacleScript : MonoBehaviour
 
     void DestroyedSprite()
     {
+        if(GMController.gm.loading)SoundControl.Soundcntrl.EffectAS.PlayOneShot(TempSound.soundtemp.tableChairs[0]);
         _sprite.sprite = destroyed;
         stop = true;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
@@ -91,7 +93,7 @@ public class ObstacleScript : MonoBehaviour
 
    
 
-    IEnumerator HitParticle()
+    public IEnumerator HitParticle()
     {
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
         ps.Play();

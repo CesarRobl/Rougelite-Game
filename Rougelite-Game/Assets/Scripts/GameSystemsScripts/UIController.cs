@@ -19,16 +19,19 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject map;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject crosshair;
-    private bool buttonPressed,stopAni,changeScene;
+    [SerializeField] private Slider[] sliders;
+    [SerializeField] private Transform mapRender;
+    [SerializeField] private GameObject[] ui;
+    private bool buttonPressed,stopAni,changeScene, _stopMenu;
     private int sceneNum;
-    
 
-    private bool showmenu,stop;
+    [HideInInspector] public bool showmenu;
+    private bool stop, _stop2;
     void Start()
     {
        Invoke("Camera",.1f);
-       settings.GetComponentInChildren<Slider>().value = GMController.volume;
-       
+       sliders[0].value = GMController.volume;
+       sliders[1].value = GMController.MusicVolume;
     }
 
     // Update is called once per frame
@@ -38,25 +41,29 @@ public class UIController : MonoBehaviour
         if (GMController.gm.loading & !stop) StartCoroutine(FadeScreen());
         if (settings.activeSelf)
         {
-            GMController.volume = settings.GetComponentInChildren<Slider>().value;
+            GMController.volume = sliders[0].value;
+            GMController.MusicVolume = sliders[1].value;
             GMController.gm.crosshair.SetActive(GMController.showcrosshair);
         }
-        ShowMenuTab();
+        if(!_stopMenu)ShowMenuTab();
         if(buttonPressed & !stopAni)PlayButtonFade();
         else if(stopAni) SwitchScene();
+        
     }
 
     void Camera()
     {
         Cameras[1].transform.SetParent(Cameras[0].transform);
+        Cameras[1].transform.localPosition =  new Vector3(mapRender.localPosition.x, mapRender.localPosition.y, 0);
     }
      void ShowMenuTab()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) & GMController.gm.loading & !GMController.gm.playerDead)
         {
             if (!showmenu)
             {
                 Time.timeScale = 0;
+                Cursor.visible = true;
                 showmenu = true;
                 MenuTab.SetActive(showmenu);
                 return;
@@ -74,21 +81,24 @@ public class UIController : MonoBehaviour
 
      public void ResumeButton()
      {
-        
-         if (!showmenu)
+         if (!_stopMenu)
          {
-             Time.timeScale = 0;
-             showmenu = true;
-             MenuTab.SetActive(showmenu);
-             return;
-         }
-         else
-         {
-             Time.timeScale = 1;
-             Cursor.visible = false;
-             showmenu = false;
-             MenuTab.SetActive(showmenu);
-             return;
+             if (!showmenu)
+             {
+                 Time.timeScale = 0;
+                 Cursor.visible = true;
+                 showmenu = true;
+                 MenuTab.SetActive(showmenu);
+                 return;
+             }
+             else
+             {
+                 Time.timeScale = 1;
+                 Cursor.visible = false;
+                 showmenu = false;
+                 MenuTab.SetActive(showmenu);
+                 return;
+             }
          }
      }
 
@@ -109,10 +119,12 @@ public class UIController : MonoBehaviour
          {
              tut.SetActive(false);
              map.SetActive(true);
+           
              if(!GMController.gm.tutdone)Cursor.visible = false;
              GMController.gm.temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
              GMController.gm.tutdone = true;
-             
+             if (showmenu) _stopMenu = false;
+
          }
      }
 
@@ -120,17 +132,20 @@ public class UIController : MonoBehaviour
      {
        
          tut.SetActive(true);
+         _stopMenu = true;
      }
 
      public void ShowSettings()
      {
          crosshair.SetActive(GMController.showcrosshair);
          settings.SetActive(true);
+         _stopMenu = true;
      }
 
      public void ExitSettings()
      {
          settings.SetActive(false);
+         _stopMenu = false;
      }
 
      public void Crosshair()
@@ -180,17 +195,20 @@ public class UIController : MonoBehaviour
      {
          StartCoroutine(FadeDeathButton(sceneNum));
      }
+
      IEnumerator FadeScreen()
      {
          yield return new WaitForSeconds(2f);
-         loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         loadscreen[0].GetComponent<Image>().color -=
+             new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          // loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
-         loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+
          yield return new WaitForSeconds(.1f);
-         if (loadscreen[0].GetComponent<RawImage>().color.a <= 0)
+         
+     if (loadscreen[0].GetComponent<Image>().color.a <= 0)
          {
+             
              loadscreen[0].SetActive(false);
-             loadscreen[1].SetActive(false);
              stop = true;
          }
      }

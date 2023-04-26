@@ -15,6 +15,8 @@ public class PotShotEnemy : TestAI
     
     void Awake()
     {
+        cooldown = true;
+        StartCoroutine(Wait());
         Setup();
         collide = GetComponent<BoxCollider2D>();
         slash = GetComponentInChildren<Animator>();
@@ -29,22 +31,29 @@ public class PotShotEnemy : TestAI
 
     void AI()
     {
+        
         currentpos = transform.position;
         if(!attacking)ChangeSprite(GMController.gm.oc.phantom, GetComponent<SpriteRenderer>());
         AttackDir(GMController.gm.oc.phantom);
+        
+        dist = Vector2.Distance(currentpos, pos);
+        dist2 = Vector2.Distance(transform.position, lastpos);
        
         SeekPlayer();
         if(!attacking)AttackRange(~(1<<0 | 1<< 2 | 1 << 10 | 1 << 8));
         Enemyhit();
-        if (found & !stun & !anim)
+
+        if (!cooldown)
         {
-            MoveToPlayer();
+            if (found & !stun & !anim)
+            {
+                MoveToPlayer();
+            }
+
+            if (attack & !anim) Attack();
         }
 
-        if (attack & !anim) Attack();
-            
-        dist = Vector2.Distance(currentpos, pos);
-        dist2 = Vector2.Distance(transform.position, lastpos);
+       
     }
     public override void Attack()
     {
@@ -75,9 +84,13 @@ public class PotShotEnemy : TestAI
         ai.enabled = false;
         collide.isTrigger = true;
         
+       
+        attackSign.SetActive(true);
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.phantomNoise);
+        yield return new WaitForSeconds(attackDelay + .5f);
         Vector2 posDir = pos - transform.position;
-        
-        RB.velocity = posDir.normalized * 9.5f;
+        attackSign.SetActive(false);
+        RB.velocity = posDir.normalized * 15.5f;
         GetComponent<SpriteRenderer>().color = new Color(256,256,256, .5f);
         
         yield return new WaitUntil(() => dist < .4f);
@@ -90,7 +103,7 @@ public class PotShotEnemy : TestAI
         collide.isTrigger = false;
         GetComponent<SpriteRenderer>().color = Color.white;
         attackSign.SetActive(false);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(true);
         GetComponent<SpriteRenderer>().sprite = attackSprites[0];
         yield return new WaitForSeconds(attackDelay);
@@ -99,15 +112,17 @@ public class PotShotEnemy : TestAI
         slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
         Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
         yield return new WaitForSeconds(.5f);
         attackSign.SetActive(true);
         GetComponent<SpriteRenderer>().sprite = attackSprites[0];
-        yield return new WaitForSeconds(attackDelay);
+        yield return new WaitForSeconds(attackDelay * .5f);
         attackSign.SetActive(false);
         GetComponent<SpriteRenderer>().sprite = attackSprites[1];
         slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
         Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
         yield return new WaitForSeconds(.1f);
         StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), new Color(256, 256, 256, .5f)));
     }
@@ -137,6 +152,12 @@ public class PotShotEnemy : TestAI
         cooldownInt = pastCool;
         cooldown = false;
         StartCoroutine(GoBack());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(.3f);
+        cooldown = false;
     }
 
     private void OnDrawGizmos()

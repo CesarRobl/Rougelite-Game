@@ -20,7 +20,7 @@ public class TestAI : MonoBehaviour
     public Vector2 dir;
     [HideInInspector] public int pastCool;
     [HideInInspector] public Rigidbody2D RB;
-    [HideInInspector] public bool Stop,stun,attacking,anim,cooldown;
+    [HideInInspector] public bool Stop,stun,attacking,anim,cooldown,soundDelay;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
      public HurtFunction ow;
@@ -77,7 +77,7 @@ public class TestAI : MonoBehaviour
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2 | 1 << 6));
         if (hit.collider != null)
         {
           
@@ -172,7 +172,7 @@ public class TestAI : MonoBehaviour
     void Hurt()
     {
         HP--;
-        
+        if(!soundDelay)StartCoroutine(PlayHurtSound());
              StartCoroutine(EnemyHurt(ps));
             if(!attacking & !cooldown)Knockback(GMController.gm.maxforce);
            
@@ -191,6 +191,15 @@ public class TestAI : MonoBehaviour
         yield return new WaitForSeconds(5f * Time.deltaTime);
         if(!cooldown)sr.color = og;
     }
+
+    public IEnumerator PlayHurtSound()
+    {
+        soundDelay = true;
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(SoundControl.Soundcntrl.Edamaged);
+        yield return new WaitForSeconds(1.5f);
+        soundDelay = false;
+    }
+    
     public void Knockback(float force)
     {
         ai.destination = transform.position;

@@ -47,6 +47,7 @@ public class TurretScript : TestAI
 
     public override void Attack()
     {
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.pelletSound);
         Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
         shootDelay = .5f;
 

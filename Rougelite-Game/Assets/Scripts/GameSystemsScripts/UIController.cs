@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject crosshair;
     [SerializeField] private Slider[] sliders;
+    [SerializeField] private Transform mapRender;
     private bool buttonPressed,stopAni,changeScene, _stopMenu;
     private int sceneNum;
 
@@ -46,11 +47,13 @@ public class UIController : MonoBehaviour
         if(!_stopMenu)ShowMenuTab();
         if(buttonPressed & !stopAni)PlayButtonFade();
         else if(stopAni) SwitchScene();
+        
     }
 
     void Camera()
     {
         Cameras[1].transform.SetParent(Cameras[0].transform);
+        Cameras[1].transform.localPosition =  new Vector3(mapRender.localPosition.x, mapRender.localPosition.y, 0);
     }
      void ShowMenuTab()
     {
@@ -115,6 +118,7 @@ public class UIController : MonoBehaviour
          {
              tut.SetActive(false);
              map.SetActive(true);
+           
              if(!GMController.gm.tutdone)Cursor.visible = false;
              GMController.gm.temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
              GMController.gm.tutdone = true;

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Charger : TestAI
 {
-    private bool buffer,stopai;
+    private bool buffer,stopai,_charging;
     [SerializeField] private float chargePower;
     [SerializeField] public Sprite[] prepareCharge;
     [SerializeField] public Sprite[] charge;
@@ -69,6 +69,7 @@ public class Charger : TestAI
         _sprite.sprite = prepareCharge[movementDir.spriteNum];
         PlayScream();
         yield return new WaitForSeconds(attackDelay);
+        _charging = true;
         chargeField.SetActive(true);
         Vector3 posDir = GMController.gm.temp.transform.position - transform.position;
         _sprite.sprite = charge[movementDir.spriteNum];
@@ -81,6 +82,7 @@ public class Charger : TestAI
 
     public override IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
     {
+        _charging = false;
         chargeField.SetActive(false);
         spriteColor.color = Color.gray;
         RB.velocity = Vector3.zero;
@@ -101,7 +103,7 @@ public class Charger : TestAI
     
     public new void OnCollisionEnter2D(Collision2D col)
     {
-        if (attacking & !col.gameObject.CompareTag("Enemy"))
+        if (_charging & !col.gameObject.CompareTag("Enemy"))
         { 
             StopAllCoroutines();
             Debug.Log("I hit " + col.gameObject.name);

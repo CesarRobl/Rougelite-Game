@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   lines:
-  - Woah! Where am I? This looks like some nightmare restaurant!
+  - "Woah! Where am I? This looks like some nightmare restaurant! It\u2019s all dirty.
+    We'd never let our Five Guys restaurants get like this\u2026"
   - "I bet this is where they took my brothers\u2026or at least one of them."
-  - Alright so now lets save them
+  - Alright so now let's save them!
   - End
   maxLines: 000000000100000004000000
   icons:

@@ -531,6 +531,7 @@ MonoBehaviour:
   - {fileID: 7581890481529475733}
   - {fileID: 5314072637792205900}
   bossdoorsprite: []
+  hiddenColor: []
 --- !u!1 &4862757457122842647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,7 +2483,7 @@ PrefabInstance:
     - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
       propertyPath: enemyType
       value: 
-      objectReference: {fileID: 11400000, guid: a8f5aefbd10310540a7a6b3dfc560431, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!4 &6543668345540531496 stripped

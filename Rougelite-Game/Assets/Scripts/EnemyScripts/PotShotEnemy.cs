@@ -84,8 +84,12 @@ public class PotShotEnemy : TestAI
         ai.enabled = false;
         collide.isTrigger = true;
         
+       
+        attackSign.SetActive(true);
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.phantomNoise);
+        yield return new WaitForSeconds(attackDelay + .5f);
         Vector2 posDir = pos - transform.position;
-        
+        attackSign.SetActive(false);
         RB.velocity = posDir.normalized * 15.5f;
         GetComponent<SpriteRenderer>().color = new Color(256,256,256, .5f);
         
@@ -99,7 +103,7 @@ public class PotShotEnemy : TestAI
         collide.isTrigger = false;
         GetComponent<SpriteRenderer>().color = Color.white;
         attackSign.SetActive(false);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(true);
         GetComponent<SpriteRenderer>().sprite = attackSprites[0];
         yield return new WaitForSeconds(attackDelay);
@@ -108,15 +112,17 @@ public class PotShotEnemy : TestAI
         slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
         Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
         yield return new WaitForSeconds(.5f);
         attackSign.SetActive(true);
         GetComponent<SpriteRenderer>().sprite = attackSprites[0];
-        yield return new WaitForSeconds(attackDelay / .5f);
+        yield return new WaitForSeconds(attackDelay * .5f);
         attackSign.SetActive(false);
         GetComponent<SpriteRenderer>().sprite = attackSprites[1];
         slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
         Debug.Log(movementDir.spriteNum);
         slash.SetTrigger("Slash");
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
         yield return new WaitForSeconds(.1f);
         StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), new Color(256, 256, 256, .5f)));
     }

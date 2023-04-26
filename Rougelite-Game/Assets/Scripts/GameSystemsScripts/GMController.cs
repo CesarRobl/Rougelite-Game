@@ -91,7 +91,7 @@ public class GMController : MonoBehaviour
     private void FixedUpdate()
     {
         FollowCursor();
-        Debug.Log("IFrames timer " + timer);
+        
     }
 
     // prevents the player from getting hurt from the same thing multiple times in a single second
@@ -167,6 +167,7 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     {
+        
         if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }
 

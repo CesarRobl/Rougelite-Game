@@ -10,6 +10,7 @@ public class Witch :TestAI
 {
     [HideInInspector] public Slider health;
     [HideInInspector] public ParticleSystem[] teleport, explode;
+    [SerializeField] private ParticleSystem shield, tele;
     [HideInInspector] public GameObject[] minions;
     [SerializeField] public float shootDelay;
     private float pastDelay;
@@ -26,8 +27,14 @@ public class Witch :TestAI
     
     void Update()
     {
-        AttackDir(GMController.gm.oc.witch);   
-      
+        if (!GMController.gm.playerDead) AI();
+        
+    }
+
+    void AI()
+    {
+        AttackDir(GMController.gm.oc.witch);
+
         if (!GMController.gm.dialogue)
         {
             if (!stop) SpawnBar();
@@ -37,7 +44,7 @@ public class Witch :TestAI
                 ResetValues();
                 StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), Color.white));
             }
-        
+
             if (!cooldown)
             {
                 if (HP <= 10 & !_phaseDone)
@@ -46,6 +53,7 @@ public class Witch :TestAI
                     StartCoroutine(SecondPhase());
                     _phaseDone = true;
                 }
+
                 SeekPlayer();
                 AttackRange(~(1 << 0 | 1 << 2));
                 Debug.Log("Start phase is " + _startPhase);
@@ -57,20 +65,19 @@ public class Witch :TestAI
                 }
             }
 
-           
+
 
             Enemyhit();
-            
-               
+
+
             if (rushLimit > 2)
-                {
-                    StopAllCoroutines();
-                    rushLimit = 0;
-                    ai.enabled = true;
-                    attacking = false;
-                    rushing = false;
-                }
-            
+            {
+                StopAllCoroutines();
+                rushLimit = 0;
+                ai.enabled = true;
+                attacking = false;
+                rushing = false;
+            }
         }
     }
 
@@ -218,8 +225,13 @@ public class Witch :TestAI
 
     IEnumerator SecondPhase()
     {
+        tele.Play();
+        yield return new WaitForSeconds(.1f);
         _startPhase = true;
+        shield.gameObject.SetActive(true);
+        shield.Play();
         transform.position = _firstPos;
+        RB.constraints = RigidbodyConstraints2D.FreezeAll;
        ResetValues();
        cooldown = false;
         GetComponent<SpriteRenderer>().color = Color.white;
@@ -233,6 +245,8 @@ public class Witch :TestAI
             explode[i].Play();
             minions[i].SetActive(true);
         }
+        RB.constraints = RigidbodyConstraints2D.FreezeRotation;
+        shield.gameObject.SetActive(false);
         ai.enabled = true;
         _startPhase = false;
 

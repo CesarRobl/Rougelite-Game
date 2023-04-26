@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject map;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject crosshair;
+    [SerializeField] private Slider[] sliders;
     private bool buttonPressed,stopAni,changeScene, _stopMenu;
     private int sceneNum;
 
@@ -27,8 +28,8 @@ public class UIController : MonoBehaviour
     void Start()
     {
        Invoke("Camera",.1f);
-       settings.GetComponentInChildren<Slider>().value = GMController.volume;
-       
+       sliders[0].value = GMController.volume;
+       sliders[1].value = GMController.MusicVolume;
     }
 
     // Update is called once per frame
@@ -38,7 +39,8 @@ public class UIController : MonoBehaviour
         if (GMController.gm.loading & !stop) StartCoroutine(FadeScreen());
         if (settings.activeSelf)
         {
-            GMController.volume = settings.GetComponentInChildren<Slider>().value;
+            GMController.volume = sliders[0].value;
+            GMController.MusicVolume = sliders[1].value;
             GMController.gm.crosshair.SetActive(GMController.showcrosshair);
         }
         if(!_stopMenu)ShowMenuTab();

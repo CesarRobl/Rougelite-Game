@@ -22,6 +22,7 @@ public class IntroCutscene : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        audio.volume = GMController.MusicVolume;
         StartCoroutine(ChangeMusic());
         StartCoroutine(StartCountDown());
     }

@@ -12,6 +12,7 @@ public class TempSound : MonoBehaviour
     public AudioClip pelletSound;
     public AudioClip monsterScream;
     public AudioClip[] tableChairs;
+    public AudioClip healthUp;
     public AudioSource talkingsound;
 
     void Start()

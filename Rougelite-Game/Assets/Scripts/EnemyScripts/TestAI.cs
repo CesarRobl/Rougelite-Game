@@ -77,7 +77,7 @@ public class TestAI : MonoBehaviour
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2 | 1 << 6));
         if (hit.collider != null)
         {
           

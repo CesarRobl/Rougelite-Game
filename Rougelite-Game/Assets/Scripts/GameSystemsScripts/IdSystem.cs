@@ -56,11 +56,13 @@ public class IdSystem : MonoBehaviour
 
     void SmallHealth()
     {
+        SoundControl.Soundcntrl.CharAS.PlayOneShot(TempSound.soundtemp.healthUp);
         GMController.gm.ui.health.health++;
     }
 
     void BigHealth()
     {
+        SoundControl.Soundcntrl.CharAS.PlayOneShot(TempSound.soundtemp.healthUp);
         GMController.gm.ui.health.health += 2;
     }
     

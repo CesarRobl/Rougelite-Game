@@ -55,7 +55,7 @@ public class Witch :TestAI
                 }
 
                 SeekPlayer();
-                AttackRange(~(1 << 0 | 1 << 2));
+                AttackRange(~(1 << 0 | 1 << 2 | 1 << 6));
                 Debug.Log("Start phase is " + _startPhase);
                 if (!_startPhase)
                 {

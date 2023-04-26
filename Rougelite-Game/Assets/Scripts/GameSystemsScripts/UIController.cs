@@ -19,11 +19,11 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject map;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject crosshair;
-    private bool buttonPressed,stopAni,changeScene;
+    private bool buttonPressed,stopAni,changeScene, _stopMenu;
     private int sceneNum;
-    
 
-    private bool showmenu,stop;
+    [HideInInspector] public bool showmenu;
+    private bool stop;
     void Start()
     {
        Invoke("Camera",.1f);
@@ -41,7 +41,7 @@ public class UIController : MonoBehaviour
             GMController.volume = settings.GetComponentInChildren<Slider>().value;
             GMController.gm.crosshair.SetActive(GMController.showcrosshair);
         }
-        ShowMenuTab();
+        if(!_stopMenu)ShowMenuTab();
         if(buttonPressed & !stopAni)PlayButtonFade();
         else if(stopAni) SwitchScene();
     }
@@ -52,11 +52,12 @@ public class UIController : MonoBehaviour
     }
      void ShowMenuTab()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) & GMController.gm.loading)
         {
             if (!showmenu)
             {
                 Time.timeScale = 0;
+                Cursor.visible = true;
                 showmenu = true;
                 MenuTab.SetActive(showmenu);
                 return;
@@ -74,21 +75,24 @@ public class UIController : MonoBehaviour
 
      public void ResumeButton()
      {
-        
-         if (!showmenu)
+         if (!_stopMenu)
          {
-             Time.timeScale = 0;
-             showmenu = true;
-             MenuTab.SetActive(showmenu);
-             return;
-         }
-         else
-         {
-             Time.timeScale = 1;
-             Cursor.visible = false;
-             showmenu = false;
-             MenuTab.SetActive(showmenu);
-             return;
+             if (!showmenu)
+             {
+                 Time.timeScale = 0;
+                 Cursor.visible = true;
+                 showmenu = true;
+                 MenuTab.SetActive(showmenu);
+                 return;
+             }
+             else
+             {
+                 Time.timeScale = 1;
+                 Cursor.visible = false;
+                 showmenu = false;
+                 MenuTab.SetActive(showmenu);
+                 return;
+             }
          }
      }
 
@@ -112,7 +116,8 @@ public class UIController : MonoBehaviour
              if(!GMController.gm.tutdone)Cursor.visible = false;
              GMController.gm.temp.gameObject.GetComponent<BoxCollider2D>().enabled = true;
              GMController.gm.tutdone = true;
-             
+             if (showmenu) _stopMenu = false;
+
          }
      }
 
@@ -120,17 +125,20 @@ public class UIController : MonoBehaviour
      {
        
          tut.SetActive(true);
+         _stopMenu = true;
      }
 
      public void ShowSettings()
      {
          crosshair.SetActive(GMController.showcrosshair);
          settings.SetActive(true);
+         _stopMenu = true;
      }
 
      public void ExitSettings()
      {
          settings.SetActive(false);
+         _stopMenu = false;
      }
 
      public void Crosshair()

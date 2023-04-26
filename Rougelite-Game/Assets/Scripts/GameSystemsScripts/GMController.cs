@@ -70,6 +70,10 @@ public class GMController : MonoBehaviour
             talksystem.gameObject.SetActive(true);
             stop = true;
         }
+        
+        if(loading & !SoundControl.Soundcntrl.MusicAS.isPlaying)SoundControl.Soundcntrl.MusicAS.Play();
+
+        
        if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if (playerhurt)
@@ -167,6 +171,9 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     {
+         
+        if (playerDead & SoundControl.Soundcntrl.MusicAS.isPlaying)
+            SoundControl.Soundcntrl.MusicAS.Stop();
         
         if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }

@@ -41,6 +41,7 @@ public class Shooter : TestAI
         ai.destination = transform.position;
         if (shootDelay <= 0)
         {
+            SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.pelletSound);
             Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
             shootDelay = pastDelay;
         }

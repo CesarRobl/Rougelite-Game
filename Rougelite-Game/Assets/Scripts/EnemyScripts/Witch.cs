@@ -28,7 +28,7 @@ public class Witch :TestAI
     void Update()
     {
         if (!GMController.gm.playerDead) AI();
-        
+        else gameObject.SetActive(false);
     }
 
     void AI()

@@ -13,6 +13,7 @@ public class Charger : TestAI
     private int chargeNum;
     private float _dist = 10;
     [SerializeField]private SpriteRenderer _sprite;
+    [SerializeField] private GameObject chargeField;
     void Awake()
     {
        
@@ -54,12 +55,21 @@ public class Charger : TestAI
         
     }
 
+    void PlayScream()
+    {
+        TempSound.soundtemp.ChangePitch(SoundControl.Soundcntrl.EnemyAS, new []{.75f, .65f}, 1);
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.monsterScream);
+        SoundControl.Soundcntrl.EnemyAS.pitch = 1;
+    }
+
     IEnumerator Charge()
     {
         anim = true;
         attackSign.SetActive(true);
         _sprite.sprite = prepareCharge[movementDir.spriteNum];
+        PlayScream();
         yield return new WaitForSeconds(attackDelay);
+        chargeField.SetActive(true);
         Vector3 posDir = GMController.gm.temp.transform.position - transform.position;
         _sprite.sprite = charge[movementDir.spriteNum];
         attackSign.SetActive(false);
@@ -71,6 +81,7 @@ public class Charger : TestAI
 
     public override IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
     {
+        chargeField.SetActive(false);
         spriteColor.color = Color.gray;
         RB.velocity = Vector3.zero;
         attacking = false;
@@ -100,6 +111,16 @@ public class Charger : TestAI
             }
             RB.velocity = Vector3.zero;
             StartCoroutine(DownTime(_sprite, Color.white));
+        }
+    }
+
+    public new void OnTriggerEnter2D(Collider2D col)
+    {
+        ObstacleScript os = col.GetComponent<ObstacleScript>();
+        if (os != null)
+        {
+            StartCoroutine(os.HitParticle());
+            os.HP = 0;
         }
     }
 }

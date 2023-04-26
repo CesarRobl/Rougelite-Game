@@ -9,6 +9,9 @@ public class TempSound : MonoBehaviour
     public AudioSource[] tempstorage;
     public AudioClip[] clipstorage;
     public AudioClip[] swordclips;
+    public AudioClip pelletSound;
+    public AudioClip monsterScream;
+    public AudioClip[] tableChairs;
     public AudioSource talkingsound;
 
     void Start()
@@ -19,7 +22,7 @@ public class TempSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     /// <summary>

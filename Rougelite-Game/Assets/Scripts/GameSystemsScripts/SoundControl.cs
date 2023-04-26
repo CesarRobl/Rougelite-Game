@@ -21,6 +21,7 @@ public class SoundControl : MonoBehaviour
     public AudioSource CharAS;
     public AudioSource MusicAS;
     public AudioSource EnemyAS;
+    public AudioSource EffectAS;
     [SerializeField]private AudioSource[] MusicAndEffects;
 
     // Start is called before the first frame update

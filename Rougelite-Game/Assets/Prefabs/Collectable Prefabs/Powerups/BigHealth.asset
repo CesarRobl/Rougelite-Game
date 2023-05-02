@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6748de991fb1998439e86f3f592d83a0, type: 3}
   m_Name: BigHealth
   m_EditorClassIdentifier: 
-  sprite: {fileID: -647988735, guid: 98b694dca0df5f4439333a9e48e558bf, type: 3}
+  sprite: {fileID: 21300000, guid: eda3c014023c791408541c5dceb9b80d, type: 3}
   lootname: Burger
   dropchance: 15
   idNum: 4

@@ -6,5 +6,6 @@ using UnityEngine;
 public class ETypeList : ScriptableObject
 {
    public GameObject enemy;
+   public int spawnChance;
 
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cinemachine;
 using Pathfinding;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -13,8 +14,8 @@ public class GMController : MonoBehaviour
 {
    
     public static GMController gm;
-    [HideInInspector] public static bool showcrosshair;
-    public static float volume, fadespeed = 1.3f;
+    [HideInInspector] public static bool showcrosshair = true;
+    public static float volume, MusicVolume, fadespeed = 1.3f;
     public TempPlayer temp;
     public Transform player;
     public ObjectController oc;
@@ -23,6 +24,7 @@ public class GMController : MonoBehaviour
     public List<RoomController> rc;
     public GameObject crosshair;
     public GameObject arrow;
+    public CinemachineVirtualCamera virtualCam;
     [HideInInspector] public Transform holder;
     [SerializeField] private Transform sword;
     [HideInInspector]public RoomInfo info;
@@ -70,18 +72,13 @@ public class GMController : MonoBehaviour
             talksystem.gameObject.SetActive(true);
             stop = true;
         }
+        
+        if(loading & !SoundControl.Soundcntrl.MusicAS.isPlaying)SoundControl.Soundcntrl.MusicAS.Play();
+
+        
        if(!spawnedboss )Invoke("SpawnBossRoom", 2.5f);
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        if (playerhurt)
-        {
-            IFrames();
-            StartCoroutine(ani.IframeEffect(temp.gameObject.GetComponent<SpriteRenderer>()));
-        }
-        else
-        {
-            StopCoroutine(ani.IframeEffect(temp.gameObject.GetComponent<SpriteRenderer>()));
-            temp.gameObject.GetComponent<SpriteRenderer>().color = new Color(256,256,256,256);
-        }
+       
         if(ui.health.health <= 0) PlayerDie();
       
         Holder();
@@ -94,20 +91,31 @@ public class GMController : MonoBehaviour
         
     }
 
-    // prevents the player from getting hurt from the same thing multiple times in a single second
-    void IFrames()
+    public void MoveCamera()
     {
-      
-        if (timer <= 0)
+        
+    }
+
+    public void UpAndDownBounds()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(temp.cam.transform.position, Vector2.up, 10, LayerMask.NameToLayer("Water"));
+        if (hit.collider != null)
         {
+            
+        }
+
+    }
+
+    // prevents the player from getting hurt from the same thing multiple times in a single second
+    public IEnumerator IFrames()
+    {
+        
+        temp.shield.Play();
+        yield return new WaitForSeconds(hurtdelay);
+        temp.shield.Stop();
             timer = hurtdelay;
             playerhurt = false;
-        }
-        else
-        {
-          
-            timer -= Time.deltaTime;
-        } 
+      
     }
 
     // Allows the holder to rotate towards where the cursor is
@@ -167,6 +175,9 @@ public class GMController : MonoBehaviour
     // If a player dies that play this function that resets the scene
     public void PlayerDie()
     {
+         
+        if (playerDead & SoundControl.Soundcntrl.MusicAS.isPlaying)
+            SoundControl.Soundcntrl.MusicAS.Stop();
         
         if(!ani.stopAni)StartCoroutine(ani.PlayerDeath());
     }

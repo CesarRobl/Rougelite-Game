@@ -98,3 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ran: 0
+  enemy: {fileID: 0}
+  enemyType: {fileID: 0}
+  eList:
+  - {fileID: 11400000, guid: efabf1fdb1a7c2745a1e543567d40d29, type: 2}
+  - {fileID: 11400000, guid: e3cd1b0091f8825489fc286226405339, type: 2}
+  - {fileID: 11400000, guid: f7688671fe8dc664db2cb606e47ed19d, type: 2}
+  - {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
+  boss: {fileID: 0}

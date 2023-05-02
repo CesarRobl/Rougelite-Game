@@ -41,9 +41,21 @@ public class Shooter : TestAI
         ai.destination = transform.position;
         if (shootDelay <= 0)
         {
+            
+            SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.pelletSound);
             Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
             shootDelay = pastDelay;
         }
         else shootDelay -= Time.deltaTime;
+    }
+
+    IEnumerator ShootPellet()
+    {
+        attackSign.SetActive(true);
+        yield return new WaitForSeconds(attackDelay);
+        attackSign.SetActive(false);
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.pelletSound);
+        Instantiate(GMController.gm.oc.enemypellet, transform.position, Quaternion.Euler(playerDir.transform.eulerAngles));
+        shootDelay = pastDelay;
     }
 }

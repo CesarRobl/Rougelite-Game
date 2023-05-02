@@ -230,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 627361007356688943, guid: 83316b312653f584eb944c1c796572df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3538672968099612019, guid: 83316b312653f584eb944c1c796572df, type: 3}
       propertyPath: m_Name
       value: EnemyParticleSystem
@@ -278,6 +278,14 @@ PrefabInstance:
     - target: {fileID: 5414932594694183226, guid: 83316b312653f584eb944c1c796572df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577506915940114335, guid: 83316b312653f584eb944c1c796572df, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577506915940114335, guid: 83316b312653f584eb944c1c796572df, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 96.78
       objectReference: {fileID: 0}
     - target: {fileID: 8577506915940114335, guid: 83316b312653f584eb944c1c796572df, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

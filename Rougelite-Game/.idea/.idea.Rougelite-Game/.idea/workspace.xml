@@ -42,6 +42,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build\New Unity Project.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\cesar\Documents\BuildMac" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.2.1f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\cesar\Documents\RougeLite\Rougelite-Game -debugCodeOptimization" />
@@ -198,6 +206,15 @@
       <workItem from="1682441960052" duration="751000" />
       <workItem from="1682453574854" duration="1408000" />
       <workItem from="1682459028106" duration="1686000" />
+      <workItem from="1682474350538" duration="7104000" />
+      <workItem from="1682491727717" duration="15028000" />
+      <workItem from="1682515430936" duration="7322000" />
+      <workItem from="1682529977992" duration="46000" />
+      <workItem from="1682966455226" duration="7499000" />
+      <workItem from="1682986405484" duration="7496000" />
+      <workItem from="1683018413926" duration="4238000" />
+      <workItem from="1683031832892" duration="2638000" />
+      <workItem from="1683053891604" duration="1024000" />
     </task>
     <servers />
   </component>

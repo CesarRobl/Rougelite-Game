@@ -20,9 +20,12 @@ public class TestAI : MonoBehaviour
     public Vector2 dir;
     [HideInInspector] public int pastCool;
     [HideInInspector] public Rigidbody2D RB;
-    [HideInInspector] public bool Stop,stun,attacking,anim,cooldown;
+    [HideInInspector] public bool Stop,stun,attacking,anim,cooldown,soundDelay;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
+     public EnemyAnimations enemyAni;
+    [HideInInspector] public string[] animDir = new[] { "Back", "Front", "Left", "Right","Nothing" }, walk= new[] { "WalkBack", "WalkFront", "WalkLeft", "WalkRight" }, stand = new[] { "StandBack", "StandFront", "StandLeft", "StandRight" };
+   public Animator ani;
      public HurtFunction ow;
     private TempPlayer pc;
    
@@ -55,10 +58,13 @@ public class TestAI : MonoBehaviour
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
         ow = GetComponent<HurtFunction>();
+        enemyAni = GetComponentInChildren<EnemyAnimations>();
         pastpos= transform.position;
         pastCool = cooldownInt;
     }
 
+    
+    
     virtual public void Attack()
     {
         
@@ -77,7 +83,7 @@ public class TestAI : MonoBehaviour
       public void SeekPlayer()
     {
          dir = GMController.gm.player.position - transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, drange, ~(1<<0 | 1<< 2 | 1 << 6));
         if (hit.collider != null)
         {
           
@@ -123,12 +129,12 @@ public class TestAI : MonoBehaviour
       // }
     public void SpriteDir(Sprite[] sprites)
       {
-         movementDir.ChangeSprite(movementDir.Dir(ai.steeringTarget), sprites, GetComponent<SpriteRenderer>());
+         movementDir.ChangeSprite(movementDir.Dir(ai.steeringTarget));
       }
 
     public void AttackDir(Sprite[] sprites)
     {
-        movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
+        movementDir.ChangeSprite(movementDir.PlayerDir());
     }
 
     public void ChangeSprite(Sprite[] sprites, SpriteRenderer render)
@@ -165,14 +171,19 @@ public class TestAI : MonoBehaviour
             Hurt();
             ow.hurt = false;
         }
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+
+        if (HP <= 0)
+        {
+           
+            GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        }
        
     }
 
     void Hurt()
     {
         HP--;
-        
+        if(!soundDelay)StartCoroutine(PlayHurtSound());
              StartCoroutine(EnemyHurt(ps));
             if(!attacking & !cooldown)Knockback(GMController.gm.maxforce);
            
@@ -191,6 +202,15 @@ public class TestAI : MonoBehaviour
         yield return new WaitForSeconds(5f * Time.deltaTime);
         if(!cooldown)sr.color = og;
     }
+
+    public IEnumerator PlayHurtSound()
+    {
+        soundDelay = true;
+        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(SoundControl.Soundcntrl.Edamaged);
+        yield return new WaitForSeconds(1.5f);
+        soundDelay = false;
+    }
+    
     public void Knockback(float force)
     {
         ai.destination = transform.position;

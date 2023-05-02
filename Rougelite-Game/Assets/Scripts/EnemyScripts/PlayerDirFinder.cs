@@ -21,7 +21,7 @@ public class PlayerDirFinder : MonoBehaviour
     {
         esprite.sprite = sprite;
     }
-    public void ChangeSprite(float z, Sprite[] sprites, SpriteRenderer esprite)
+    public void ChangeSprite(float z)
     {
         // Debug.Log("My rotation is at " + z );
         if ( z > 225 && z <= 315)
@@ -49,6 +49,11 @@ public class PlayerDirFinder : MonoBehaviour
             spriteNum = 0;
             
         }
+    }
+
+    public void GetSpriteNum()
+    {
+        ChangeSprite(PlayerDir());
     }
 
     public float PlayerDir()

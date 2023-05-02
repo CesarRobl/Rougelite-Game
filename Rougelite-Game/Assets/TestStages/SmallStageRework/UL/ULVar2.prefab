@@ -486,6 +486,7 @@ MonoBehaviour:
   - {fileID: 4652403100436449338}
   - {fileID: 3878984088376420793}
   bossdoorsprite: []
+  hiddenColor: []
 --- !u!61 &5550436352281017146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2544,6 +2545,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!4 &3794854134014572942 stripped

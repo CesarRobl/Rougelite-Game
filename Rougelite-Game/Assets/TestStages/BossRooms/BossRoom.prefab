@@ -10992,6 +10992,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: WendyStuffRework
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1676571364687954832, guid: 919828b83a1b9ad438c140aac82b86c5, type: 3}
       propertyPath: m_Size.x
       value: 0.8008008
@@ -10999,6 +11000,11 @@ PrefabInstance:
     - target: {fileID: 1676571364687954832, guid: 919828b83a1b9ad438c140aac82b86c5, type: 3}
       propertyPath: m_Size.y
       value: 0.8008008
+=======
+    - target: {fileID: 1652335707923342983, guid: 919828b83a1b9ad438c140aac82b86c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+>>>>>>> 06b9ffc2144af5ad5b329d36e4910edcd79823cd
       objectReference: {fileID: 0}
     - target: {fileID: 1717638634844912839, guid: 919828b83a1b9ad438c140aac82b86c5, type: 3}
       propertyPath: m_Sprite
@@ -12258,7 +12264,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 945552520519917601, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1001396794269392682, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_LocalScale.x
@@ -12286,7 +12292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114897331147888362, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1114897331147888362, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_IsActive
@@ -12294,11 +12300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1885418791915877324, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2409260391754992464, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3364524517413925212, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_LocalScale.x
@@ -12310,11 +12316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624387697293603766, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5256425930642846736, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Name
       value: PrefabWalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256425930642846736, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5506347606732376472, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_LocalScale.x
@@ -12326,7 +12336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5865363754221365752, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5865363754221365752, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_IsActive
@@ -12334,7 +12344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6328153121135223792, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6328153121135223792, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_IsActive
@@ -12398,7 +12408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8598146684104559362, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8598146684104559362, guid: 15decf1febcb33b4490823f4be9d7f24, type: 3}
       propertyPath: m_IsActive

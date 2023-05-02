@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -15,6 +16,7 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private float timer,shootdelay,movedelay;
     [HideInInspector] public float speed;
     [HideInInspector] public Vector2 vel, walkingDir;
+    public ParticleSystem shield;
    
     private Vector2 fast;
     public Vector3 dir,pos,dir2,pos2;
@@ -27,7 +29,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GMController.gm.tutdone & !GMController.gm.playerDead & !GMController.gm.dialogue)
+        if (GMController.gm.tutdone & !GMController.gm.playerDead & !GMController.gm.dialogue & !GMController.gm.ui.showmenu)
         {
             TempMovement();
             if (Input.GetMouseButtonDown(0) & !GMController.gm.ani.attacking) AttackCode();
@@ -131,9 +133,51 @@ public class TempPlayer : MonoBehaviour
     // this function lowers the player's hp and turns on the iframes function
     public void Playerhurt()
     {
-        SoundControl.Soundcntrl.CharaDamagePlay();
-        GMController.gm.ui.health.health--;
-        GMController.gm.playerhurt = true;
+        if (!GMController.gm.playerDead)
+        {
+            SoundControl.Soundcntrl.CharaDamagePlay();
+            GMController.gm.ui.health.health--;
+            GMController.gm.playerhurt = true;
+            StartCoroutine(GMController.gm.IFrames());
+        }
+    }
+
+    void MoveToRoom(Collider2D col, DoorScript ds)
+    {
+        if (col.gameObject.CompareTag("Door") & !entering)
+        {
+                
+            if (!ds.bossdoor)
+            {
+
+                dir = col.gameObject.GetComponent<DoorScript>().dir;
+                dir2 = col.gameObject.GetComponent<DoorScript>().dir;
+                StartCoroutine(EnterRoom());
+            }
+            else
+            {
+                // SceneManager.LoadScene("EndPlayTest");
+
+                Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
+                    .position;
+                transform.position = GMController.gm.info.startingloc[0].position;
+                // cam.transform.SetParent(transform);
+                // cam.transform.localPosition = new Vector3(0, 0, -10);
+            }
+        }
+
+        if (col.gameObject.CompareTag("Room"))
+            cam.transform.position = new Vector3(col.gameObject.transform.position.x,
+                col.gameObject.transform.position.y, -10);
+
+        if (col.gameObject.CompareTag("Exit"))
+        {
+            Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
+                .position;
+            transform.position = GMController.gm.info.startingloc[1].position;
+            cam.transform.SetParent(null);
+            cam.transform.position = new Vector3(loc.x, loc.y, -10);
+        }
     }
 
     // changes the cam position and the player position to move to the room the player has entered
@@ -142,6 +186,7 @@ public class TempPlayer : MonoBehaviour
         entering = true;
         
         yield return new WaitForSeconds(.1f);
+        
         if(dir.y > 0 || dir.y < 0)  pos = cam.transform.position + dir;
         else if(dir.y == 0) pos = cam.transform.position + (dir * 1.8f);
         
@@ -151,63 +196,42 @@ public class TempPlayer : MonoBehaviour
         // yield return new WaitUntil(Arrived);
         entering = false;
     }
-
+    
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         
         RoomController rc = col.gameObject.GetComponent<RoomController>();
         DoorScript ds = col.gameObject.GetComponent<DoorScript>();
+        BossRoomController br = col.gameObject.GetComponent<BossRoomController>();
 
         if (!GMController.gm.testscene)
         {
-            if (col.gameObject.CompareTag("Door") & !entering)
-            {
-                
-                if (!ds.bossdoor)
-                {
-
-                    dir = col.gameObject.GetComponent<DoorScript>().dir;
-                    dir2 = col.gameObject.GetComponent<DoorScript>().dir;
-                    StartCoroutine(EnterRoom());
-                }
-                else
-                {
-                    // SceneManager.LoadScene("EndPlayTest");
-
-                    Vector3 loc = GMController.gm.info.bossdoors[0].GetComponentInParent<BossRoomController>().transform
-                        .position;
-                    transform.position = GMController.gm.info.startingloc[0].position;
-                    cam.transform.SetParent(transform);
-                    cam.transform.localPosition = new Vector3(0, 0, -10);
-                }
-            }
-
-            if (col.gameObject.CompareTag("Room"))
-                cam.transform.position = new Vector3(col.gameObject.transform.position.x,
-                    col.gameObject.transform.position.y, -10);
-
-            if (col.gameObject.CompareTag("Exit"))
-            {
-                Vector3 loc = GMController.gm.info.bossdoors[1].GetComponentInParent<RoomController>().transform
-                    .position;
-                transform.position = GMController.gm.info.startingloc[1].position;
-                cam.transform.SetParent(null);
-                cam.transform.position = new Vector3(loc.x, loc.y, -10);
-            }
+            MoveToRoom(col,ds);
         }
 
-        if((col.gameObject.CompareTag("HealthDrop")&GMController.gm.ui.health.health<6))
+
+        if (col.gameObject.CompareTag("Room"))
         {
-            
-            GMController.gm.ui.health.health += 2;
-            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
-            Destroy(col.gameObject);
+            GMController.gm.virtualCam.Follow = col.gameObject.transform;
         }
-        if((col.gameObject.CompareTag("HalfHealth")&GMController.gm.ui.health.health<6))
+
+        if (br != null)
         {
-            GMController.gm.ui.health.health++;
-            TempSound.soundtemp.tempstorage[0].PlayOneShot(  TempSound.soundtemp.clipstorage[0]);
-            Destroy(col.gameObject);
+            GMController.gm.virtualCam.GetComponent<CinemachineConfiner>().m_BoundingShape2D = br.polyCollider;
+            GMController.gm.virtualCam.Follow = transform;
+        }
+
+
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        BossRoomController br = col.gameObject.GetComponent<BossRoomController>();
+        if (br != null)
+        {
+            GMController.gm.virtualCam.GetComponent<CinemachineConfiner>().m_BoundingShape2D = null;
+
         }
     }
 

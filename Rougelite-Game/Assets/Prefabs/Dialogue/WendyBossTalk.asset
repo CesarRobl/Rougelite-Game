@@ -15,9 +15,10 @@ MonoBehaviour:
   lines:
   - "Wow you\u2019ve finally arrived, waaay too late though. All the other guys took
     your other brothers back to their restaurants."
-  - 'It doesn''t matter. I will defeat you then save my brothers! '
-  - "What a hero! Too bad this isn\u2019t a deli. This is my restaurant! And after
-    I defeat you both you and your brother will be serving up burgers for me! Hahaha! "
+  - "It doesn't matter. I\u2019ll defeat you then save my brothers!"
+  - "What a hero! Too bad this isn\u2019t a deli. "
+  - This is my restaurant! And after I defeat you both you and your brother will
+    be serving up burgers for me! Hahaha!
   - End
   maxLines: 000000000100000003000000
   icons:

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   enemy: {fileID: 6165929809796948070, guid: 7c98d0f8293994a51b91bb99bef2f78c, type: 3}
+  spawnChance: 70

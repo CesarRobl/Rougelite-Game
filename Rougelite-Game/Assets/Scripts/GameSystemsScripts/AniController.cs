@@ -17,7 +17,7 @@ public class AniController : MonoBehaviour
     [SerializeField] private GameObject gameOver;
     [SerializeField] private GameObject[] hideItems, deathButton;
     private VideoLists video;
-    public GameObject deathAni;
+    public GameObject deathAni,retryAni;
     [HideInInspector] public bool attacking,dying,stopAni;
     private bool stop;
     private float spriteTimer = .03f, setTimer;
@@ -51,10 +51,12 @@ public class AniController : MonoBehaviour
          dying = true;
          yield return new WaitForSeconds(1f);
        
-         gameOver.SetActive(true);
+         
          Cursor.visible = true;
+        
          for (int i = 0; i < GMController.gm.ui.deathButton.Length; i++)
          {
+             GMController.gm.ui.deathButton[i].gameObject.SetActive(true);
              GMController.gm.ui.deathButton[i].color += new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          }
          StartCoroutine(BurgerDeath());
@@ -63,19 +65,16 @@ public class AniController : MonoBehaviour
 
     IEnumerator BurgerDeath()
     {
-        video.video.clip = video.clips[0];
-        deathAni.GetComponent<RawImage>().color += Color.white;
-        video.video.playbackSpeed = 1;
-        yield return new WaitUntil(() =>   deathAni.GetComponent<RawImage>().color. a >= 1);
+        
         deathAni.SetActive(true);
-        video.video.isLooping = false;
         yield return new WaitForSeconds(.1f);
         stopAni = true;
     }
 
     public IEnumerator BurgerRetry()
     {
-        video.video.clip = video.clips[1];
+        deathAni.SetActive(false);
+        retryAni.SetActive(true);
         yield return new WaitForSeconds(.1f);
     }
     public IEnumerator SpatulaSwipe()

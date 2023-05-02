@@ -14,6 +14,7 @@ public class TurretScript : TestAI
     {
         _turretColor = GetComponent<SpriteRenderer>().color;
         Setup();
+        StartCoroutine(enemyAni.Idle());
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class TurretScript : TestAI
         SeekPlayer();
         if (!attack & cooldownInt > 0)
         {
+            
             AttackRange(~(1<<0 | 1<< 2));
         }
        
@@ -39,7 +41,12 @@ public class TurretScript : TestAI
               
             
         }
-        if (cooldownInt <= 0) StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), _turretColor));
+
+        if (cooldownInt <= 0)
+        {
+            enemyAni.StopAttack();
+            StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), _turretColor));
+        }
         
         Enemyhit();
     }
@@ -57,6 +64,9 @@ public class TurretScript : TestAI
     {
         attacking = true;
         attackSign.SetActive(true);
+        enemyAni.idleStop = true;
+        enemyAni.attackStop = false;
+        StartCoroutine(enemyAni.AttackAni());
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(false);
         Attack();

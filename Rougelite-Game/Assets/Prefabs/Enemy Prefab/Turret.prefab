@@ -417,13 +417,81 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4757088608141567553}
     - target: {fileID: 52948114868200592, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: delay
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 52948114868200592, guid: 36fa8ae181286454cbc277b189985531, type: 3}
       propertyPath: sprite
       value: 
       objectReference: {fileID: 3798077269924964402}
+    - target: {fileID: 52948114868200592, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackDelay
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7222679487461871696, guid: 36fa8ae181286454cbc277b189985531, type: 3}
       propertyPath: m_Name
       value: EnemyAnimations
       objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackBack.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackLeft.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackFront.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackBack.Array.data[0]
+      value: 
+      objectReference: {fileID: -900288004, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackLeft.Array.data[0]
+      value: 
+      objectReference: {fileID: 497571290, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: -1108446130, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.data[1]
+      value: 
+      objectReference: {fileID: -569146233, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: -1419590173, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.data[3]
+      value: 
+      objectReference: {fileID: -1827404539, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: idleSprite.Array.data[4]
+      value: 
+      objectReference: {fileID: -1244904379, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackFront.Array.data[0]
+      value: 
+      objectReference: {fileID: 1826185363, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackFront.Array.data[1]
+      value: 
+      objectReference: {fileID: 1826185363, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
+    - target: {fileID: 8903613625619776369, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: attackRight.Array.data[0]
+      value: 
+      objectReference: {fileID: -236082255, guid: a04b2c2bd90968a4fb11dcad32766199, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36fa8ae181286454cbc277b189985531, type: 3}
 --- !u!4 &2339516401951117218 stripped

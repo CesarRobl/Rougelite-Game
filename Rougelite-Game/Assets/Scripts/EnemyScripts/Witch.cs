@@ -12,13 +12,16 @@ public class Witch :TestAI
     [HideInInspector] public ParticleSystem[] teleport, explode;
     [SerializeField] private ParticleSystem shield, tele;
     [HideInInspector] public GameObject[] minions;
+    public Sprite[] wendyBrooms;
     [SerializeField] public float shootDelay;
     private float pastDelay;
     private int rushLimit,hellLimit;
     private bool stop,rushing, _startPhase,_phaseDone;
     private Vector3 _firstPos;
+    private SpriteRenderer sprite;
     void Awake()
     {
+        sprite = GetComponent<SpriteRenderer>();
         cooldownMax = Random.Range(2, 3);
         _firstPos = transform.position;
         Setup();
@@ -41,6 +44,7 @@ public class Witch :TestAI
             MatchSliderValue();
             if (cooldownInt > cooldownMax)
             {
+                sprite.sprite = wendyBrooms[0];
                 ResetValues();
                 StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), Color.white));
             }
@@ -56,22 +60,28 @@ public class Witch :TestAI
 
                 SeekPlayer();
                 AttackRange(~(1 << 0 | 1 << 2 | 1 << 6));
-                Debug.Log("Start phase is " + _startPhase);
+                
                 if (!_startPhase)
                 {
-                    Debug.Log("I am attacking ");
-                    if (found & !attack) MoveToPlayer();
+
+                    if (found & !attack)
+                    {
+                        sprite.sprite = wendyBrooms[5];
+                        MoveToPlayer();
+                    }
                     if (attack & !attacking) Attack();
                 }
             }
 
 
-
+           
             Enemyhit();
+            
             
 
             if (rushLimit > 2)
             {
+                
                 StopAllCoroutines();
                 rushLimit = 0;
                 ai.enabled = true;
@@ -142,7 +152,9 @@ public class Witch :TestAI
     IEnumerator Rush()
     {
         attackSign.SetActive(true);
+        sprite.sprite = wendyBrooms[1];
         yield return new WaitForSeconds(attackDelay);
+        sprite.sprite = wendyBrooms[2];
         attackSign.SetActive(false);
         ai.enabled = false;
         yield return new WaitForSeconds(.1f);
@@ -162,6 +174,7 @@ public class Witch :TestAI
     IEnumerator ConeAttack()
     {
         attacking = true;
+        sprite.sprite = wendyBrooms[3];
         StartCoroutine(ConePellets());
         yield return new WaitForSeconds(.3f);
         StartCoroutine(ConePellets());
@@ -192,6 +205,7 @@ public class Witch :TestAI
     IEnumerator BulletHell(Quaternion rot)
     {
         attackSign.SetActive(true);
+        sprite.sprite = wendyBrooms[3];
         yield return new WaitForSeconds(attackDelay - .5f);
         attackSign.SetActive(false);
         rot.eulerAngles = movementDir.gameObject.transform.eulerAngles;

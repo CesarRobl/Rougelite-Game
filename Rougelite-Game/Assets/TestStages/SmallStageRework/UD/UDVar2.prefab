@@ -909,6 +909,7 @@ MonoBehaviour:
   - {fileID: 6328764668503284855}
   - {fileID: 7955574447053711481}
   - {fileID: 3116708159175332064}
+  maps: []
   startingloc: []
   enemycount: []
   spawner:
@@ -917,6 +918,7 @@ MonoBehaviour:
   - {fileID: 6644434281872189633}
   - {fileID: 119346250001483350}
   bossdoorsprite: []
+  hiddenColor: []
 --- !u!1 &7955574447053711481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!114 &119346250001483350 stripped
@@ -2147,6 +2157,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!114 &4102156678426536084 stripped
@@ -2220,6 +2238,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!114 &4214506723283201584 stripped
@@ -2981,6 +3007,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: eList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0880cd94d45d6f4dbddab8e429c1a4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!114 &6644434281872189633 stripped

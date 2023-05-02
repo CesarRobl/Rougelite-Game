@@ -1,0 +1,2268 @@
+fileFormatVersion: 2
+guid: a04b2c2bd90968a4fb11dcad32766199
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 257
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c005bcae3b2fcb640b6971f69f205e10
+      internalID: -1108446130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef20bd59e646464d8f6d117660888b9
+      internalID: -569146233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 296
+        width: 120
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c295112cef29f8c4596981ad63948723
+      internalID: 1597831861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70263ab0a667d2d44940fb316b4a6219
+      internalID: -1419590173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 296
+        width: 120
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2788e5dd5295f14459d8269ef6ba5351
+      internalID: -1959758127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 296
+        width: 121
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56df42f044ec8a94fbf6126e85eec2d8
+      internalID: 1273262174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 296
+        width: 58
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb13da75a401d0346981cbe0fad711f2
+      internalID: 1219677880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a3f5ada512d0b46b786ca41b8f8fb5
+      internalID: -2041950324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 296
+        width: 58
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a595fd695000d54a9c1d11d3a2ef47c
+      internalID: -2048983280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8723a153af38f49aab2a3245470bbd
+      internalID: -1827404539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92863cad5ce5cd4418b8ed8e896a967f
+      internalID: -1244904379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 242
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05eb48f3d4049048a95586e2aa05f71
+      internalID: 1826185363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8114b036dfd6924e88aafe5b39f9d44
+      internalID: -639332940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffd3062ee4ee5b4aa60c2c5fffc6735
+      internalID: -574904273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 296
+        width: 50
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a7c6150e95e3147b3118c106684853
+      internalID: 217605225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dae293782b3f64cade0cd5801c4385
+      internalID: -1187211153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1156000049102b84dba2c8992bc2007e
+      internalID: -1140187174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9f91893cc2884bb5dc401f64f3b41
+      internalID: 666609677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3988
+        y: 296
+        width: 124
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c1a4a5e4a726a45b9c10f87a98b6d5
+      internalID: -2010704800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 4289
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d96ef3729061694ab56ac4c60902897
+      internalID: -245382209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4552
+        y: 296
+        width: 197
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28caf65996ef41a46a344c1348054ba2
+      internalID: 1342620601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4889
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e957dae81c813454196bbd1e278ff08e
+      internalID: -1243827216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5189
+        y: 296
+        width: 130
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a257c779b8b504eb3991be59806e59
+      internalID: 30078739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 296
+        width: 128
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff446d2a93dd66f40bf94e81977d37dc
+      internalID: -1941270349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5790
+        y: 296
+        width: 138
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1e996d366537249a726d9aa5ec5aed
+      internalID: 855974017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 6090
+        y: 296
+        width: 138
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcba1211cdb74174a8a4da33e8cb2cd1
+      internalID: -1384820623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff0e63a90b28024ebc2ee6ff1453550
+      internalID: -548673364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 6691
+        y: 296
+        width: 130
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd46b5695d04aa044a2b2b004f5c9f01
+      internalID: 688244748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 6991
+        y: 296
+        width: 138
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdad3fd5087315429c4c15dc1649495
+      internalID: 135830737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 7291
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e20cd6268e6d7b43a51e802dba37d93
+      internalID: 110560108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9167829dfcd12f54b88dd8d023c52bbe
+      internalID: -179006009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 7891
+        y: 296
+        width: 117
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e421800ba456b9c41987eeeba36150f4
+      internalID: 905637059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 8188
+        y: 296
+        width: 120
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e10dfd9f85e1a2448524b0a1b7516aa
+      internalID: 1356452270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 8487
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33bfc59b683fa34b94214de4147e042
+      internalID: 1331856263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 8787
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db25c4c52361d8d47a7f794f9ac64a69
+      internalID: -735801151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 9087
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c320c12468354ec41bf0edb1a0c43f24
+      internalID: 272022173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 9387
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d7e44e071f14340914abb322c56b27
+      internalID: -2127798895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 9687
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea52a691eeed4640a41c200d6b95540
+      internalID: 50902239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 9987
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d499f4215b24c1d40a9667aef7ef2ba4
+      internalID: -2079326877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 10287
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2a7e5eb7498284f9fc599b842e2dab
+      internalID: -1053446863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 10587
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b577e6530d4a4d4884eb33a8a432944
+      internalID: -737654401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 0
+        width: 261
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf640135f28993428c46b208afa4fac
+      internalID: -900288004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 11100
+        y: 0
+        width: 259
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252e1a57eb44f454f8b032fe34281512
+      internalID: -792756148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 11188
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffef5d4e03f09a42bafddc7082a8828
+      internalID: -931095419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cda8b17a264fa4788720d7d85a62bc
+      internalID: -1634808055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 11488
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a725eb76c5baaa40b40d010220e3e96
+      internalID: -1224254995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 11700
+        y: 0
+        width: 263
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5aa0ad2a3ec09438a7ddda32f440ee
+      internalID: 1036842639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 11788
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c708281835f7ee74abb50c2b4c58b95a
+      internalID: -349578287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 12017
+        y: 296
+        width: 194
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de0f6787c8cc8c4b9c5b890553b9896
+      internalID: -1751934883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 12300
+        y: 0
+        width: 257
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1cc1179294fb84b9a243c1b400d0db
+      internalID: 581134270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 12389
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf75f02da3544cb47b6aa2b4818e37cf
+      internalID: -1352968986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 12601
+        y: 0
+        width: 256
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6dc9781c38e5b4daad4e7e50dcd63f
+      internalID: 1588929753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 12915
+        y: 0
+        width: 242
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aa25a1d6691bb4eaa7e09825cd4e10
+      internalID: 1701941576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 13289
+        y: 296
+        width: 123
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e8aca56d1d31e4f9894a5555ea9c8e
+      internalID: -2054376512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 13531
+        y: 296
+        width: 50
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0faa1ca4d6893f43896aaf60263cadb
+      internalID: -1130317492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 13590
+        y: 296
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ba8b4bdeb027247a7d412f99a16e12
+      internalID: 838004171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 13890
+        y: 296
+        width: 121
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadd2575410a17e4ba786c2c757f4187
+      internalID: -985737411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 14190
+        y: 296
+        width: 120
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50491fb3cddb7748977f67751e5d70e
+      internalID: 835804628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 14428
+        y: 296
+        width: 54
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea6609cb6b29664a84bb4f9a12ca7b2
+      internalID: -65992150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 14490
+        y: 296
+        width: 120
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd6d880da8f103458fc568de4e706e1
+      internalID: -964448549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 14791
+        y: 296
+        width: 116
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ed2ff1f70a242499c45bcb2bb7369a
+      internalID: -442643177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 0
+        width: 270
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3494abc13ba73740b632da0615bf8ee
+      internalID: 2023883572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 0
+        width: 270
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402b7827b8ef1e94e8373e3a51ac95fa
+      internalID: -1298250740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 0
+        width: 248
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72bb548ff0263e40a9c42de9242366c
+      internalID: 2079060297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 0
+        width: 241
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bad8301253660541bd1c9787c722c3a
+      internalID: -728977618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 0
+        width: 249
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14970296fd85fd14496531bf8479cf00
+      internalID: 1472220718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 0
+        width: 252
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef97e032c137c54ab792f42c43759a6
+      internalID: -1435629282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 3938
+        y: 0
+        width: 247
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd6754c1c246114fb1aaddac4566311
+      internalID: -868064622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 4238
+        y: 0
+        width: 255
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33226b39f02607429b4c77eb392f1ad
+      internalID: 1178247153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 4537
+        y: 0
+        width: 220
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419b6a4ebd8dc024aad3c06a767f5ad3
+      internalID: 1642390722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 4838
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79036a691a470e4a8291e86f72f13cc
+      internalID: 497571290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a860c4e91d94f6a4193475aa4ce28d35
+      internalID: -736209238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 5438
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da87d73a9de612f4eb513ddf19b13bb8
+      internalID: 428904071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 5731
+        y: 0
+        width: 223
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a508606f88f0bb04a8bab9dfebdd7bbc
+      internalID: 1546421318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 6031
+        y: 0
+        width: 220
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255b1fa30f9393f449e3b0b01a9092ca
+      internalID: 1636334959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 6339
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0301f6d63540ea74ababde06c8ba2a87
+      internalID: -371622443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 6639
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f7e3564557f9b4ab2d9bcb946ec386
+      internalID: -1565525872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 6939
+        y: 0
+        width: 205
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21868ba5507f10e4595506671c97299f
+      internalID: -1643027585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 7240
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5816f9a8ade624ea3b3888065250a5
+      internalID: 1858842617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 0
+        width: 205
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cf2f645afdbe247aa38e72d6ebcae2
+      internalID: -1552002419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 7855
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23b2745dc02e554cb98b2186b81dcd0
+      internalID: -236082255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 8155
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c02e6f40aaa4848907401bcd96f2a6
+      internalID: -263529477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 8455
+        y: 0
+        width: 205
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853ced6067318c44990b8eb54e68d0d3
+      internalID: 841114375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 8748
+        y: 0
+        width: 220
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6c4be3a612de747bfb2d1c8582cbd5
+      internalID: -1987394969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 9045
+        y: 0
+        width: 223
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f678b7f473adff547abb6932d7d51072
+      internalID: -1177690438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 9350
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0721480d32e4bc143aaab8a6864700ec
+      internalID: -684971988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 9650
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e78db21049a1047b7e41cdd8281ad7
+      internalID: 934845027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 9950
+        y: 0
+        width: 211
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b19134d79219374ab80ec3619c083f4
+      internalID: -848202506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 10250
+        y: 0
+        width: 211
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6143f60f942fbf747852b8b71f63382a
+      internalID: -341648243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 10550
+        y: 0
+        width: 211
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca12f033967ffe40b4eb9800e321ed4
+      internalID: -728915357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 264
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc8e882282a8e546ba9b3b3240391f8
+      internalID: 291470570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 13208
+        y: 0
+        width: 249
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5b5989349bac8488e36da8b830483b
+      internalID: -1553514982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 13516
+        y: 0
+        width: 242
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6663b7f7ef25c774da24fa658e31611c
+      internalID: 2041103217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 13809
+        y: 0
+        width: 249
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a0b92c698ae524b9e2d4d6e84d49ae
+      internalID: -1617887649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 14109
+        y: 0
+        width: 249
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf5207ec1f251c4fbac9c4169720885
+      internalID: 1454619888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 14417
+        y: 0
+        width: 241
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc96b1073f54ba4fa5dd50d0c39509e
+      internalID: -209514742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedChickenSandwich-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 14710
+        y: 0
+        width: 249
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74883a1cc058e5147927ed45ef3f2310
+      internalID: 1718458098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rangedChickenSandwich-Sheet_6: 1219677880
+      rangedChickenSandwich-Sheet_51: 1588929753
+      rangedChickenSandwich-Sheet_0: -1108446130
+      rangedChickenSandwich-Sheet_81: -263529477
+      rangedChickenSandwich-Sheet_91: -1553514982
+      rangedChickenSandwich-Sheet_38: -2079326877
+      rangedChickenSandwich-Sheet_65: 1472220718
+      rangedChickenSandwich-Sheet_41: -900288004
+      rangedChickenSandwich-Sheet_49: 581134270
+      rangedChickenSandwich-Sheet_83: -1987394969
+      rangedChickenSandwich-Sheet_95: -209514742
+      rangedChickenSandwich-Sheet_16: -1140187174
+      rangedChickenSandwich-Sheet_31: 905637059
+      rangedChickenSandwich-Sheet_89: -728915357
+      rangedChickenSandwich-Sheet_58: -65992150
+      rangedChickenSandwich-Sheet_43: -931095419
+      rangedChickenSandwich-Sheet_25: -1384820623
+      rangedChickenSandwich-Sheet_50: -1352968986
+      rangedChickenSandwich-Sheet_14: 217605225
+      rangedChickenSandwich-Sheet_17: 666609677
+      rangedChickenSandwich-Sheet_20: 1342620601
+      rangedChickenSandwich-Sheet_40: -737654401
+      rangedChickenSandwich-Sheet_13: -574904273
+      rangedChickenSandwich-Sheet_55: 838004171
+      rangedChickenSandwich-Sheet_8: -2048983280
+      rangedChickenSandwich-Sheet_32: 1356452270
+      rangedChickenSandwich-Sheet_46: 1036842639
+      rangedChickenSandwich-Sheet_85: -684971988
+      rangedChickenSandwich-Sheet_27: 688244748
+      rangedChickenSandwich-Sheet_84: -1177690438
+      rangedChickenSandwich-Sheet_79: -1552002419
+      rangedChickenSandwich-Sheet_2: 1597831861
+      rangedChickenSandwich-Sheet_11: 1826185363
+      rangedChickenSandwich-Sheet_86: 934845027
+      rangedChickenSandwich-Sheet_59: -964448549
+      rangedChickenSandwich-Sheet_52: 1701941576
+      rangedChickenSandwich-Sheet_60: -442643177
+      rangedChickenSandwich-Sheet_76: -1565525872
+      rangedChickenSandwich-Sheet_36: -2127798895
+      rangedChickenSandwich-Sheet_73: 1546421318
+      rangedChickenSandwich-Sheet_10: -1244904379
+      rangedChickenSandwich-Sheet_75: -371622443
+      rangedChickenSandwich-Sheet_47: -349578287
+      rangedChickenSandwich-Sheet_7: -2041950324
+      rangedChickenSandwich-Sheet_53: -2054376512
+      rangedChickenSandwich-Sheet_71: -736209238
+      rangedChickenSandwich-Sheet_70: 497571290
+      rangedChickenSandwich-Sheet_29: 110560108
+      rangedChickenSandwich-Sheet_82: 841114375
+      rangedChickenSandwich-Sheet_69: 1642390722
+      rangedChickenSandwich-Sheet_57: 835804628
+      rangedChickenSandwich-Sheet_74: 1636334959
+      rangedChickenSandwich-Sheet_34: -735801151
+      rangedChickenSandwich-Sheet_78: 1858842617
+      rangedChickenSandwich-Sheet_44: -1634808055
+      rangedChickenSandwich-Sheet_5: 1273262174
+      rangedChickenSandwich-Sheet_39: -1053446863
+      rangedChickenSandwich-Sheet_22: 30078739
+      rangedChickenSandwich-Sheet_80: -236082255
+      rangedChickenSandwich-Sheet_77: -1643027585
+      rangedChickenSandwich-Sheet_45: -1224254995
+      rangedChickenSandwich-Sheet_93: -1617887649
+      rangedChickenSandwich-Sheet_37: 50902239
+      rangedChickenSandwich-Sheet_33: 1331856263
+      rangedChickenSandwich-Sheet_68: 1178247153
+      rangedChickenSandwich-Sheet_96: 1718458098
+      rangedChickenSandwich-Sheet_15: -1187211153
+      rangedChickenSandwich-Sheet_64: -728977618
+      rangedChickenSandwich-Sheet_94: 1454619888
+      rangedChickenSandwich-Sheet_63: 2079060297
+      rangedChickenSandwich-Sheet_66: -1435629282
+      rangedChickenSandwich-Sheet_4: -1959758127
+      rangedChickenSandwich-Sheet_1: -569146233
+      rangedChickenSandwich-Sheet_18: -2010704800
+      rangedChickenSandwich-Sheet_56: -985737411
+      rangedChickenSandwich-Sheet_3: -1419590173
+      rangedChickenSandwich-Sheet_54: -1130317492
+      rangedChickenSandwich-Sheet_24: 855974017
+      rangedChickenSandwich-Sheet_61: 2023883572
+      rangedChickenSandwich-Sheet_28: 135830737
+      rangedChickenSandwich-Sheet_62: -1298250740
+      rangedChickenSandwich-Sheet_67: -868064622
+      rangedChickenSandwich-Sheet_19: -245382209
+      rangedChickenSandwich-Sheet_87: -848202506
+      rangedChickenSandwich-Sheet_42: -792756148
+      rangedChickenSandwich-Sheet_9: -1827404539
+      rangedChickenSandwich-Sheet_23: -1941270349
+      rangedChickenSandwich-Sheet_48: -1751934883
+      rangedChickenSandwich-Sheet_30: -179006009
+      rangedChickenSandwich-Sheet_21: -1243827216
+      rangedChickenSandwich-Sheet_90: 291470570
+      rangedChickenSandwich-Sheet_88: -341648243
+      rangedChickenSandwich-Sheet_92: 2041103217
+      rangedChickenSandwich-Sheet_35: 272022173
+      rangedChickenSandwich-Sheet_12: -639332940
+      rangedChickenSandwich-Sheet_26: -548673364
+      rangedChickenSandwich-Sheet_72: 428904071
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

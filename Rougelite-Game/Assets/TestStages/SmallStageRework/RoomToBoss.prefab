@@ -325,19 +325,20 @@ MonoBehaviour:
   - {fileID: 3491048598747354599}
   - {fileID: 2942576133955441373}
   - {fileID: 5899020782805809676}
+  maps: []
   startingloc:
   - {fileID: 1403905048594193607}
   - {fileID: 2667394547055953952}
   - {fileID: 4039387560556896281}
   - {fileID: 6882541920199546325}
   enemycount: []
-  spawner:
-  - {fileID: 5531362888684302195}
+  spawner: []
   bossdoorsprite:
   - {fileID: 893800426736457566}
   - {fileID: 7901550976602797112}
   - {fileID: 4458622805810697112}
   - {fileID: 8831322289336077244}
+  hiddenColor: []
 --- !u!61 &3927383769935053745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2703,6 +2704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 382082689575835954, guid: 470941730b7e2484b80161fcc181b051, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470941730b7e2484b80161fcc181b051, type: 3}
 --- !u!4 &5531362888684302193 stripped
@@ -2710,17 +2715,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 382082689575835953, guid: 470941730b7e2484b80161fcc181b051, type: 3}
   m_PrefabInstance: {fileID: 5300234366963693120}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5531362888684302195 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 382082689575835955, guid: 470941730b7e2484b80161fcc181b051, type: 3}
-  m_PrefabInstance: {fileID: 5300234366963693120}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239712151ab363345a04633a06d3bba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5418523820672145079
 PrefabInstance:
   m_ObjectHideFlags: 0

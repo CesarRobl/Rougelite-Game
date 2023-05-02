@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Turret
   m_EditorClassIdentifier: 
   enemy: {fileID: 3798077269924964430, guid: 1da93b2e5d59ae847a3794029be635ff, type: 3}
+  spawnChance: 40

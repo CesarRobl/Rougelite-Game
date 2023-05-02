@@ -7,20 +7,62 @@ using Random = UnityEngine.Random;
 public class SpawnController : MonoBehaviour
 {
     [SerializeField] private int ran;
-    [SerializeField] public GameObject enemy;
+    [SerializeField] public GameObject enemy, spawnEnemy;
     [SerializeField] private ETypeList enemyType;
+    [SerializeField] private List<ETypeList> eList;
     [SerializeField] private GameObject boss;
     private RoomController rc;
-    private bool stop;
+    private bool stop, _dontSpawn;
     void Awake()
     {
         if (enemyType != null) enemy = enemyType.enemy;
       rc = GetComponentInParent<RoomController>();
+      GetEnemy();
     }
 
     private void Update()
     {
         
+       
+    }
+
+        void GetEnemy()
+    {
+        int ran = Random.Range(1, 101);
+        List<ETypeList> possibleEnemy = new List<ETypeList>();
+        foreach (var enemies in eList)
+        {
+            if(ran <= enemies.spawnChance ) possibleEnemy.Add(enemies);
+            
+        }
+
+        if (possibleEnemy.Count > 0)
+        {
+            
+           
+            // ETypeList spawnEnemy = possibleEnemy[Random.Range(0, possibleEnemy.Count)];
+            // Debug.Log(spawnEnemy.enemy.name);
+            // this.spawnEnemy = spawnEnemy.enemy;
+            // return;
+            for (int i = 0; i < possibleEnemy.Count; i++)
+            {
+               
+               
+            
+            
+                float inf = Mathf.Infinity;
+                if (possibleEnemy[i].spawnChance < inf)
+                {
+                    ETypeList spawnEnemy = possibleEnemy[i];
+                    // Debug.Log(spawnEnemy.enemy.name);
+                    this.spawnEnemy = spawnEnemy.enemy;
+                    return;
+                }
+            }
+        }
+        
+        // Debug.Log("No enemies?");
+        _dontSpawn = true;
        
     }
     void SpawnSingleEnemy()
@@ -37,14 +79,16 @@ public class SpawnController : MonoBehaviour
     {
         if (!stop)
         {
-            ran = Random.Range(0, 100);
-            if (ran <= 60)
+            Debug.Log("Dont Spawn is " + _dontSpawn);
+            if (spawnEnemy != null)
             {
-                int enemytype = Random.Range(0, GMController.gm.oc.elist.etype.Length );
-                GameObject ec = Instantiate(GMController.gm.oc.elist.etype[enemytype], transform.position, Quaternion.Euler(0,0,0));
+                GameObject enemyObject = spawnEnemy;
+
+                GameObject ec = Instantiate(enemyObject, transform.position, Quaternion.Euler(0, 0, 0));
                 rc.enemycount.Add(ec);
                 ec = null;
             }
+
             stop = true;
         }
     }

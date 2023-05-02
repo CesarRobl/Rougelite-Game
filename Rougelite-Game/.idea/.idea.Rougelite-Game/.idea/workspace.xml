@@ -20,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Collectable Prefabs/dawdwf.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAnimations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Charger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/PotShotEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/Shooter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +53,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../BuildMac\New Unity Project.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build\New Unity Project.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\cesar\Documents\BuildMac" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -219,6 +220,10 @@
       <workItem from="1682491727717" duration="15028000" />
       <workItem from="1682515430936" duration="7322000" />
       <workItem from="1682529977992" duration="46000" />
+      <workItem from="1682966455226" duration="7499000" />
+      <workItem from="1682986405484" duration="7496000" />
+      <workItem from="1683018413926" duration="4238000" />
+      <workItem from="1683031832892" duration="2638000" />
     </task>
     <servers />
   </component>

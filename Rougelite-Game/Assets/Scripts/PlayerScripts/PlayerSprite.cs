@@ -40,12 +40,12 @@ public class PlayerSprite : MonoBehaviour
         
         else if (GMController.gm.holder.eulerAngles.z <= 45 || GMController.gm.holder.eulerAngles.z > 315)
         {
-            Debug.Log("FaceRight");
+            
             num = 2;
         }
         else if (GMController.gm.holder.eulerAngles.z > 135 && GMController.gm.holder.eulerAngles.z <= 225)
         {
-            Debug.Log("FaceLeft");
+           
             num = 3;
         }
 

@@ -23,6 +23,9 @@ public class TestAI : MonoBehaviour
     [HideInInspector] public bool Stop,stun,attacking,anim,cooldown,soundDelay;
     [HideInInspector] public ParticleSystem ps;
     [HideInInspector] public AIPath ai;
+     public EnemyAnimations enemyAni;
+    [HideInInspector] public string[] animDir = new[] { "Back", "Front", "Left", "Right","Nothing" }, walk= new[] { "WalkBack", "WalkFront", "WalkLeft", "WalkRight" }, stand = new[] { "StandBack", "StandFront", "StandLeft", "StandRight" };
+   public Animator ani;
      public HurtFunction ow;
     private TempPlayer pc;
    
@@ -55,10 +58,13 @@ public class TestAI : MonoBehaviour
         ps = GetComponentInChildren<ParticleSystem>();
         ai = GetComponent<AIPath>();
         ow = GetComponent<HurtFunction>();
+        enemyAni = GetComponentInChildren<EnemyAnimations>();
         pastpos= transform.position;
         pastCool = cooldownInt;
     }
 
+    
+    
     virtual public void Attack()
     {
         
@@ -123,12 +129,12 @@ public class TestAI : MonoBehaviour
       // }
     public void SpriteDir(Sprite[] sprites)
       {
-         movementDir.ChangeSprite(movementDir.Dir(ai.steeringTarget), sprites, GetComponent<SpriteRenderer>());
+         movementDir.ChangeSprite(movementDir.Dir(ai.steeringTarget));
       }
 
     public void AttackDir(Sprite[] sprites)
     {
-        movementDir.ChangeSprite(movementDir.PlayerDir(), sprites, GetComponent<SpriteRenderer>());
+        movementDir.ChangeSprite(movementDir.PlayerDir());
     }
 
     public void ChangeSprite(Sprite[] sprites, SpriteRenderer render)
@@ -165,7 +171,12 @@ public class TestAI : MonoBehaviour
             Hurt();
             ow.hurt = false;
         }
-        if(HP <= 0) GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+
+        if (HP <= 0)
+        {
+           
+            GMController.gm.Die(gameObject, GetComponent<LootSystem>());
+        }
        
     }
 

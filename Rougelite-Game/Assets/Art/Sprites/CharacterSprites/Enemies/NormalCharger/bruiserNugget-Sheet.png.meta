@@ -1,0 +1,1324 @@
+fileFormatVersion: 2
+guid: 20f0b4d9e88bf15458cd2c5d17e23e4e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 225
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 7063
+        width: 859
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663160c9f2033e346bd0695711313531
+      internalID: 677211502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 7063
+        width: 873
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97536c14dc19464aa3b89cf5519b1f0
+      internalID: -183590830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 7063
+        width: 873
+        height: 837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58747df84ae34364fa6a0ead63f5689d
+      internalID: -2140439808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 7063
+        width: 841
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a96c0b6fa8598b4ba43c41d7445eb18
+      internalID: 365847017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 7063
+        width: 823
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2709bc0b2ce01ce42a30c60381b8af31
+      internalID: -415429286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 5929
+        y: 7063
+        width: 805
+        height: 841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b953b4d55a062b84eb75c69470990fa5
+      internalID: -1200851813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 7081
+        y: 7063
+        width: 823
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3ec58f9169b264d876fbb86e4d49b6
+      internalID: 1976797592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 8242
+        y: 7063
+        width: 805
+        height: 841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365dad40c0752e743870d8421ccd015e
+      internalID: 807256413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5911
+        width: 673
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f997db34b25e74d44802e1c8a7b846f1
+      internalID: 1208653654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 5911
+        width: 673
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27fb47f01c4946499c5bf05f88caf22
+      internalID: 1445802276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 5911
+        width: 673
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b477b3e2be89a4a8bf2cab684a5963
+      internalID: -774330830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 5911
+        width: 673
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6866d5a6bed431147b4c7a1762bb6a22
+      internalID: -1022595080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 4878
+        y: 5911
+        width: 673
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c47c848e1b5f5f429c48eba1abd8747
+      internalID: 357430159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5902
+        y: 5911
+        width: 859
+        height: 857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b2d9c4f04f0714887bee5b3e0c1ea5
+      internalID: -1278166023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7045
+        y: 5911
+        width: 873
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4faa962557c19e94f8deb14deddb2ecf
+      internalID: -898437772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 8197
+        y: 5911
+        width: 873
+        height: 837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208fbb9d4491c004c89df334bc794923
+      internalID: 896084745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 4759
+        width: 841
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b1adefbe5b2d942992b3559518a417
+      internalID: -1395575635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 4759
+        width: 823
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450a3196292eca3449f229bece34cfc7
+      internalID: 16745774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 4759
+        width: 805
+        height: 841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cc0901db46be64a8ecc6a229e5ee1f
+      internalID: -1338885654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 4759
+        width: 841
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31263abe369e3f948a0ec4118602e479
+      internalID: -878179372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4777
+        y: 4759
+        width: 823
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcdb22875f331342864fd9dc4506f22
+      internalID: 1127552679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 5938
+        y: 4759
+        width: 805
+        height: 841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca433c6220d9624bbeaba769570c50b
+      internalID: -671018682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 7117
+        y: 4759
+        width: 675
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc40827bc0ea52841b651173e58180ec
+      internalID: -1486898304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 8269
+        y: 4759
+        width: 675
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacb5c992c3d6e649afb4c7332d2d697
+      internalID: 1893443203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 3607
+        width: 675
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d15888ce001474eb087fbd584f4409
+      internalID: 1582291863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 3607
+        width: 675
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74853da1e3bb5be4cb08a08e6259deec
+      internalID: -748866145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 3607
+        width: 675
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328c6b7dc55b7d24ea18d2726641ea60
+      internalID: 2030264411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 3607
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138fb5ff6ff0fa9489352ce543145a7f
+      internalID: -2091126497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4961
+        y: 3607
+        width: 432
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f5a704a42f2694c8e94a32f81c4ab8
+      internalID: -1873057100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6104
+        y: 3607
+        width: 455
+        height: 814
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e932da6f1b61643acefd4d86d27b4e
+      internalID: -907826535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 7274
+        y: 3607
+        width: 418
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c3ba63729369646b6ef247e835d675
+      internalID: 350271807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 8426
+        y: 3607
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121bc0b265b48dd4aa63b5ec3926612b
+      internalID: -1289450238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 2455
+        width: 418
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe14a9e6d38566c42adddb31424d8c5f
+      internalID: 1837224816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2455
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbacdb62d7685f4299103c943b11b4c
+      internalID: -422017863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 2455
+        width: 418
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a21b0f78f1826449ffc070dcf5f798
+      internalID: 1657732586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 2455
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978f98b1da9049d44b97f1f5b80e4266
+      internalID: 203255975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 4822
+        y: 2455
+        width: 639
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57e1a3b116597a42a1811bd42cb127d
+      internalID: -662234011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 2455
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b3e4a56b83c254daf75475b8c192e7
+      internalID: 1888959681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 7126
+        y: 2455
+        width: 639
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb5268ea314d5c4690474626a26fee1
+      internalID: 752610983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 8278
+        y: 2455
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8665f37059f58e94c97a4d75d9515544
+      internalID: 86524924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1279
+        width: 780
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c23dd704e72240429f0ba77c5003228
+      internalID: 1740817644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1303
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f189d72e12968748a969e5db7193b7f
+      internalID: 247974430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 1303
+        width: 432
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61d76006e0084d4889a446242de4f91
+      internalID: -215634180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 1303
+        width: 455
+        height: 814
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f8b2982847f964e87b2ae5fe90ca90
+      internalID: -1234146510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 4980
+        y: 1303
+        width: 418
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2753c592e02051e4d9c2cd0d1d94195a
+      internalID: 626375940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 6132
+        y: 1303
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37026636ad30bba42a6fb0a07f8b8492
+      internalID: -760305928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 1303
+        width: 418
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a1bf3556400a643b7f512fcdd9ac73
+      internalID: 1425619825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 8436
+        y: 1303
+        width: 418
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2163867dbf4654480e76d1f2906b38
+      internalID: -1163025253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 151
+        width: 418
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4d5cc8f41e09046b9cabab10576330
+      internalID: -660945917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 151
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0662f34ca7fb8244fa3edb9388365b1e
+      internalID: -1180780975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 151
+        width: 639
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dbff56bd76f6e4e82263586df2906c
+      internalID: -531062982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3755
+        y: 151
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1b060849e52e5479c24c8a4fedfddd
+      internalID: -1071720752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 4907
+        y: 151
+        width: 639
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30c28a50369da34aad34392a955a673
+      internalID: 1389036074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bruiserNugget-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 151
+        width: 639
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178e515701da7254d8f8573c6dcc65b6
+      internalID: 546221474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bruiserNugget-Sheet_17: 16745774
+      bruiserNugget-Sheet_4: -415429286
+      bruiserNugget-Sheet_6: 1976797592
+      bruiserNugget-Sheet_35: 203255975
+      bruiserNugget-Sheet_47: -760305928
+      bruiserNugget-Sheet_15: 896084745
+      bruiserNugget-Sheet_23: 1893443203
+      bruiserNugget-Sheet_7: 807256413
+      bruiserNugget-Sheet_11: -1022595080
+      bruiserNugget-Sheet_8: 1208653654
+      bruiserNugget-Sheet_14: -898437772
+      bruiserNugget-Sheet_19: -878179372
+      bruiserNugget-Sheet_51: -1180780975
+      bruiserNugget-Sheet_55: 546221474
+      bruiserNugget-Sheet_38: 752610983
+      bruiserNugget-Sheet_0: 677211502
+      bruiserNugget-Sheet_22: -1486898304
+      bruiserNugget-Sheet_41: 1740817644
+      bruiserNugget-Sheet_34: 1657732586
+      bruiserNugget-Sheet_52: -531062982
+      bruiserNugget-Sheet_42: 1478025179
+      bruiserNugget-Sheet_53: -1071720752
+      bruiserNugget-Sheet_49: -1163025253
+      bruiserNugget-Sheet_37: 1888959681
+      bruiserNugget-Sheet_30: 350271807
+      bruiserNugget-Sheet_21: -671018682
+      bruiserNugget-Sheet_45: -1234146510
+      bruiserNugget-Sheet_25: -748866145
+      bruiserNugget-Sheet_50: -660945917
+      bruiserNugget-Sheet_27: -2091126497
+      bruiserNugget-Sheet_29: -907826535
+      bruiserNugget-Sheet_28: -1873057100
+      bruiserNugget-Sheet_54: 1389036074
+      bruiserNugget-Sheet_40: -511983082
+      bruiserNugget-Sheet_9: 1445802276
+      bruiserNugget-Sheet_26: 2030264411
+      bruiserNugget-Sheet_18: -1338885654
+      bruiserNugget-Sheet_36: -662234011
+      bruiserNugget-Sheet_16: -1395575635
+      bruiserNugget-Sheet_33: -422017863
+      bruiserNugget-Sheet_31: -1289450238
+      bruiserNugget-Sheet_10: -774330830
+      bruiserNugget-Sheet_13: -1278166023
+      bruiserNugget-Sheet_39: 86524924
+      bruiserNugget-Sheet_48: 1425619825
+      bruiserNugget-Sheet_20: 1127552679
+      bruiserNugget-Sheet_12: 357430159
+      bruiserNugget-Sheet_44: -215634180
+      bruiserNugget-Sheet_32: 1837224816
+      bruiserNugget-Sheet_2: -2140439808
+      bruiserNugget-Sheet_3: 365847017
+      bruiserNugget-Sheet_46: 626375940
+      bruiserNugget-Sheet_24: 1582291863
+      bruiserNugget-Sheet_1: -183590830
+      bruiserNugget-Sheet_43: 247974430
+      bruiserNugget-Sheet_5: -1200851813
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

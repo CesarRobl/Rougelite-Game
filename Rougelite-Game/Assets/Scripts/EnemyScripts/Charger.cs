@@ -16,7 +16,7 @@ public class Charger : TestAI
     [SerializeField] private GameObject chargeField;
     void Awake()
     {
-       
+        StartCoroutine(enemyAni.Idle());
     }
 
     // Update is called once per frame
@@ -28,17 +28,23 @@ public class Charger : TestAI
 
     void AI()
     {
+      
         if (found & !stun & !anim)
         {
             MoveToPlayer();
-            SpriteDir(GMController.gm.oc.normalEnemy);
+            SpriteDir(GMController.gm.oc.charger);
+            enemyAni.idleStop = true;
+            if (!enemyAni.walkPlaying) StartCoroutine(enemyAni.WalkAni());
+
         }
         
         if (attack & !attacking & !anim)
         {
-           
+          
             Attack();
         }
+        
+        if(anim || attacking) movementDir.GetSpriteNum();
         
         AttackRange(~(1<<0 | 1<< 2));
         SeekPlayer();
@@ -51,6 +57,8 @@ public class Charger : TestAI
         ai.destination = transform.position;
         ai.enabled = false;
         attacking = true;
+        enemyAni.walkStop = true;
+        enemyAni.walkPlaying = false;
         StartCoroutine(Charge());
         
     }
@@ -65,14 +73,18 @@ public class Charger : TestAI
     IEnumerator Charge()
     {
         anim = true;
+        
         attackSign.SetActive(true);
-        _sprite.sprite = prepareCharge[movementDir.spriteNum];
         PlayScream();
+        _sprite.sprite = charge[movementDir.spriteNum];
+        enemyAni.attackStop = false;
         yield return new WaitForSeconds(attackDelay);
+        enemyAni.SwitchAttack();
+        StartCoroutine(enemyAni.AttackAni());
         _charging = true;
         chargeField.SetActive(true);
         Vector3 posDir = GMController.gm.temp.transform.position - transform.position;
-        _sprite.sprite = charge[movementDir.spriteNum];
+        
         attackSign.SetActive(false);
         RB.velocity = posDir.normalized * chargePower;
         StartCoroutine(SpawnAfterImage(.1f, _sprite));
@@ -82,6 +94,8 @@ public class Charger : TestAI
 
     public override IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
     {
+        enemyAni.StopAttack();
+        _sprite.sprite = GMController.gm.oc.charger[movementDir.spriteNum];
         _charging = false;
         chargeField.SetActive(false);
         spriteColor.color = Color.gray;

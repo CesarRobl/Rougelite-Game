@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Phantom
   m_EditorClassIdentifier: 
   enemy: {fileID: 5349953043128159509, guid: 38d3d2a21476cfb4ba8d726d686650bb, type: 3}
+  spawnChance: 20

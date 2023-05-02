@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Charger
   m_EditorClassIdentifier: 
   enemy: {fileID: 8940100164337763708, guid: 4789fa85b4960c24481b69a368685d93, type: 3}
+  spawnChance: 20

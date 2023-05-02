@@ -1,0 +1,1925 @@
+fileFormatVersion: 2
+guid: ba1d6617c6b0dce4f98c036ea2e1e7c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 9419
+        width: 886
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b7666aa24ccb64ea02de341dbb38b7
+      internalID: -573747135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 9416
+        width: 1025
+        height: 552
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9e38d78a962c742a5f9e13437d207d
+      internalID: -650898632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 9394
+        width: 1003
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b297647c6d71873418eb25e3f2c12676
+      internalID: 396956923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 9383
+        width: 1000
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcb250721a28b643a1f27bb82e3c081
+      internalID: 425905576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 9404
+        width: 886
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869937d3136482844b6c6c2376ea6342
+      internalID: 234995002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5890
+        y: 9419
+        width: 886
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e54bfa4f5ea96488a399c41c1bf591
+      internalID: 265010099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 7044
+        y: 9419
+        width: 886
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada8ee63b85598a4ba1633faeb3602d0
+      internalID: 1034695592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 8194
+        y: 9419
+        width: 891
+        height: 577
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9256c4d290569741b01bd1d207ca924
+      internalID: -642048444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 9328
+        y: 9419
+        width: 911
+        height: 541
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ac58c42e2cb6b4a9255a19e67302d3
+      internalID: 1727078151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 8265
+        width: 911
+        height: 543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ccc912345963a46b56c2a9dbcb7e21
+      internalID: -1502746641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 8265
+        width: 906
+        height: 551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4682a3e5a07a69449831ee13b5d6b743
+      internalID: -134596328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 8265
+        width: 942
+        height: 580
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b495da9aa420454f8bf4225185ccc45
+      internalID: 873819025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3536
+        y: 8265
+        width: 940
+        height: 603
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366617b6e2afb15499da47cf40a5621a
+      internalID: 1981495576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4649
+        y: 8265
+        width: 978
+        height: 613
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be34966dfcdf874583c694cb1ddde27
+      internalID: 1006277082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5827
+        y: 8265
+        width: 949
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c51deba67f7814d911e05f34a6e9df
+      internalID: -1688531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 6968
+        y: 8265
+        width: 962
+        height: 603
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695038d5fce318244968e40b1efa5caf
+      internalID: -491205612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 8122
+        y: 8265
+        width: 963
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3990c06b307c95f4f9358f8dae9fb098
+      internalID: 813839061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 9576
+        y: 8082
+        width: 658
+        height: 750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1708ca838339441a6c8b78121e989f
+      internalID: 1669385157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 6928
+        width: 658
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab18780331acc3f4182ec3154c4e9df5
+      internalID: -564961224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 6908
+        width: 657
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54bc21a9fe918841a3944bcf2a433fb
+      internalID: -286997438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 7115
+        width: 920
+        height: 542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab00924ec0adbd4480250c3dfc61328
+      internalID: -9151325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 7115
+        width: 911
+        height: 542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed21b4435695854b9ec5a900e2457a9
+      internalID: -1623841990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 7115
+        width: 911
+        height: 552
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4e91d844523a64c828474606683585
+      internalID: 1606745569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 5890
+        y: 7115
+        width: 913
+        height: 573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389e44ccd52306d4c8c9cb2a197fb517
+      internalID: 530141751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 7044
+        y: 7115
+        width: 953
+        height: 575
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1c31442afceaf40993b0745aead9b5
+      internalID: 1818004460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 8194
+        y: 7115
+        width: 939
+        height: 581
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf03c3f95fe51a245be02b22ee6f27b8
+      internalID: 2011388901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 9348
+        y: 7115
+        width: 917
+        height: 586
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54b764e45ca2a5469587bd3c5545f3d
+      internalID: -740096624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 5961
+        width: 958
+        height: 593
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b626a1eff41a04daee9dade05d2431
+      internalID: 962284737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 5961
+        width: 964
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eba27f505f6da94882e490cf01f1eea
+      internalID: 911736237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 5779
+        width: 653
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4930edf4095d8f249a99e2351f6c604c
+      internalID: 1148183480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 5779
+        width: 658
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9c08b6fa4ee8843aac818b82286f72
+      internalID: -1810896335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 5754
+        width: 653
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6107e85d689226d4b87fd059b112cec4
+      internalID: 1320233228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 7181
+        y: 5941
+        width: 542
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4ba08e13ac481498fd743e874acb19
+      internalID: -139093976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 8335
+        y: 5936
+        width: 542
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c597eb4e15acb46ad7a6f3204785a0
+      internalID: -1205032310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 9480
+        y: 5936
+        width: 556
+        height: 567
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686a682c734aa49418a9b488180efd42
+      internalID: 452974549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 5914
+        y: 5979
+        width: 802
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f13c3b4e425b4b4191554a9d33f2939
+      internalID: 314662649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4807
+        width: 531
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbd6009c0138bb4cac5d99bffef1ff1
+      internalID: -1617508062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 4792
+        width: 567
+        height: 617
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b03a970d702fa4b92221afe5c22d3d
+      internalID: 1175936491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 4792
+        width: 572
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7963731c6e9c44b958ac6e87d69a96
+      internalID: -843934598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 3724
+        y: 4792
+        width: 577
+        height: 627
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc22443f6bb257f41a2da26f3f43c194
+      internalID: -945652189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 4878
+        y: 4792
+        width: 582
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a0bc18518cc29489a1aed05a522179
+      internalID: 1455013824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 6028
+        y: 4792
+        width: 586
+        height: 637
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5622ce95ecc3cfc45809669b6a9a326a
+      internalID: -1231180088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 7181
+        y: 4792
+        width: 587
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7fe3cca6cbd87469119c1acc956d75
+      internalID: -1015353761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 8219
+        y: 4790
+        width: 658
+        height: 584
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550a771a313fbf44ea9631d11125dd97
+      internalID: -594553099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 9363
+        y: 4792
+        width: 663
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeeb392fa40e4743b74961529024aa0
+      internalID: 1373650289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3632
+        width: 669
+        height: 593
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f489b598d7f70d4ea74344308abade6
+      internalID: -855276603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 3637
+        width: 542
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae5f288c650b784586e7dc70e7ce379
+      internalID: 1892295039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 3632
+        width: 542
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a3450ea4d93bf4c8ae7841d9d1c9cb
+      internalID: -122794856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 3632
+        width: 557
+        height: 567
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d64a9bc19256fc41b8fdd3f153ea596
+      internalID: -1194429263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 3658
+        width: 531
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7678e560f1f70424dbb315cebc965146
+      internalID: -572263266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 6078
+        y: 3637
+        width: 566
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1521c35c37bab846b6fe668ca83948f
+      internalID: 1098308952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 7222
+        y: 3637
+        width: 572
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7f4d9916c550746bb2632658a48787
+      internalID: -1413606361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 8371
+        y: 3637
+        width: 577
+        height: 628
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdf0ce4df5d60e4dad226a86c551d3d
+      internalID: -162138534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 9516
+        y: 3637
+        width: 581
+        height: 633
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352c01a17c9bd2b49b9efb2b8f54aff4
+      internalID: 1474888461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 2483
+        width: 587
+        height: 643
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f4b9ff9140f8c43b3058393e8ecd2c
+      internalID: -1430019921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 2483
+        width: 588
+        height: 643
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93751552dbc0d3e408626bf87f27fe8c
+      internalID: -988629009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 2483
+        width: 658
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451c3929e03fdae4e80edc35a4172457
+      internalID: 1027345046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 3794
+        y: 2483
+        width: 669
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786bb7182c29af14886d3c28ba451088
+      internalID: 83654978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 4949
+        y: 2478
+        width: 667
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7254e27afc9ec1b46ab209b3607b3f43
+      internalID: -718451044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 5890
+        y: 2504
+        width: 886
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ccb867738d0af46973af18f90f18f1
+      internalID: 1954285844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 7034
+        y: 2493
+        width: 957
+        height: 567
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e356603c1376845b326a8fbcd7d398
+      internalID: 1726488324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 8173
+        y: 2483
+        width: 1000
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb944e43a349b8d4da5a60793253014e
+      internalID: -1850200108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 9336
+        y: 2473
+        width: 947
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb7a0976de0b145b4230061eca4996
+      internalID: 670899980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1354
+        width: 961
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7628dec647a9be842910a76df7af46f2
+      internalID: -1221709918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1354
+        width: 993
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd669a17512328f4da0f7161476df79b
+      internalID: 1537884508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 1358
+        width: 989
+        height: 580
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45f885bd386b114dab070c3be7ed628
+      internalID: -963521875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 3508
+        y: 1354
+        width: 969
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d4899a8ac5fbb4da5dc283742378ac
+      internalID: 1271005232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 4659
+        y: 1354
+        width: 968
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541f3be8804a44a4f8e71835aa8fdf57
+      internalID: 297226392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 6123
+        y: 1354
+        width: 653
+        height: 679
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec03224dc033744494bf90918b38023
+      internalID: -609342309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 7272
+        y: 1354
+        width: 658
+        height: 684
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e8a693cc8b34428b5a2003e16e491
+      internalID: 169098298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 8427
+        y: 1354
+        width: 658
+        height: 689
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3365111eae952b4694eeaa429f2bcbb
+      internalID: 345871389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 9348
+        y: 1354
+        width: 959
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744109917cc27764b8932bf7b7408738
+      internalID: -1734166400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 200
+        width: 948
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3456959943af934fb8686064bcfff7c
+      internalID: 1242563997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 205
+        width: 976
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cf3845c023221498e2f94f7ab3513b
+      internalID: 2048763842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 200
+        width: 965
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de105da3db5f37b47855f969e648161e
+      internalID: -1887993303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 200
+        width: 974
+        height: 601
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5f299d328ba684aab8669d4dc3ee64
+      internalID: 391186425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 200
+        width: 658
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a9d773339345e46b8206b21a1e0c7a
+      internalID: -339276549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 5891
+        y: 200
+        width: 657
+        height: 688
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279e6fbcb9396a14c9bbcfd7a587606c
+      internalID: -1187423785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomNugget-Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 7044
+        y: 200
+        width: 659
+        height: 693
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8613dcf85caa5fd4baaf8b91559d48e7
+      internalID: 1734700623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      phantomNugget-Sheet_95: 1737815318
+      phantomNugget-Sheet_19: 2033624685
+      phantomNugget-Sheet_91: -967487328
+      phantomNugget-Sheet_103: 1271005232
+      phantomNugget-Sheet_69: -945652189
+      phantomNugget-Sheet_90: 1726488324
+      phantomNugget-Sheet_64: 314662649
+      phantomNugget-Sheet_44: -392199403
+      phantomNugget-Sheet_80: 1098308952
+      phantomNugget-Sheet_100: -2121232005
+      phantomNugget-Sheet_4: 396956923
+      phantomNugget-Sheet_74: 1373650289
+      phantomNugget-Sheet_115: 1862746186
+      phantomNugget-Sheet_117: 1242563997
+      phantomNugget-Sheet_59: -1205032310
+      phantomNugget-Sheet_101: -963521875
+      phantomNugget-Sheet_102: 486119712
+      phantomNugget-Sheet_106: -609342309
+      phantomNugget-Sheet_116: 1043867739
+      phantomNugget-Sheet_26: 813839061
+      phantomNugget-Sheet_93: -360815611
+      phantomNugget-Sheet_121: -1887993303
+      phantomNugget-Sheet_122: -1572316351
+      phantomNugget-Sheet_2: -650898632
+      phantomNugget-Sheet_54: -1968828969
+      phantomNugget-Sheet_119: 2048763842
+      phantomNugget-Sheet_127: 1734700623
+      phantomNugget-Sheet_20: 1006277082
+      phantomNugget-Sheet_38: 1606745569
+      phantomNugget-Sheet_33: -460386193
+      phantomNugget-Sheet_110: 319187715
+      phantomNugget-Sheet_123: 391186425
+      phantomNugget-Sheet_18: 1981495576
+      phantomNugget-Sheet_32: 98145970
+      phantomNugget-Sheet_55: 1148183480
+      phantomNugget-Sheet_62: -1699497962
+      phantomNugget-Sheet_125: -339276549
+      phantomNugget-Sheet_49: 119344587
+      phantomNugget-Sheet_109: -1734166400
+      phantomNugget-Sheet_130: 1914921199
+      phantomNugget-Sheet_5: -2098023383
+      phantomNugget-Sheet_30: 1056079056
+      phantomNugget-Sheet_63: -352506209
+      phantomNugget-Sheet_126: -1187423785
+      phantomNugget-Sheet_45: -740096624
+      phantomNugget-Sheet_65: 620228303
+      phantomNugget-Sheet_22: -1688531
+      phantomNugget-Sheet_89: 1954285844
+      phantomNugget-Sheet_83: 1474888461
+      phantomNugget-Sheet_28: -708993635
+      phantomNugget-Sheet_50: 914415238
+      phantomNugget-Sheet_8: 234995002
+      phantomNugget-Sheet_86: 1027345046
+      phantomNugget-Sheet_31: -1948402652
+      phantomNugget-Sheet_124: -1299077651
+      phantomNugget-Sheet_85: -988629009
+      phantomNugget-Sheet_51: 962284737
+      phantomNugget-Sheet_72: -1015353761
+      phantomNugget-Sheet_56: -1810896335
+      phantomNugget-Sheet_68: -843934598
+      phantomNugget-Sheet_104: 1607183673
+      phantomNugget-Sheet_25: 1425769590
+      phantomNugget-Sheet_94: 670899980
+      phantomNugget-Sheet_99: 1537884508
+      phantomNugget-Sheet_114: -1288678164
+      phantomNugget-Sheet_16: 873819025
+      phantomNugget-Sheet_98: 1373833207
+      phantomNugget-Sheet_10: 1034695592
+      phantomNugget-Sheet_79: -572263266
+      phantomNugget-Sheet_78: -1194429263
+      phantomNugget-Sheet_3: 2000281172
+      phantomNugget-Sheet_75: -855276603
+      phantomNugget-Sheet_96: -1369796018
+      phantomNugget-Sheet_37: -1623841990
+      phantomNugget-Sheet_66: -1617508062
+      phantomNugget-Sheet_24: -491205612
+      phantomNugget-Sheet_35: -286997438
+      phantomNugget-Sheet_34: -564961224
+      phantomNugget-Sheet_76: 1892295039
+      phantomNugget-Sheet_108: 345871389
+      phantomNugget-Sheet_97: -1221709918
+      phantomNugget-Sheet_118: -461101626
+      phantomNugget-Sheet_11: -642048444
+      phantomNugget-Sheet_7: 1822516426
+      phantomNugget-Sheet_88: -718451044
+      phantomNugget-Sheet_71: -1231180088
+      phantomNugget-Sheet_120: -2003176846
+      phantomNugget-Sheet_14: -134596328
+      phantomNugget-Sheet_48: 1316426152
+      phantomNugget-Sheet_107: 169098298
+      phantomNugget-Sheet_43: 2011388901
+      phantomNugget-Sheet_70: 1455013824
+      phantomNugget-Sheet_128: -2107255466
+      phantomNugget-Sheet_13: -1502746641
+      phantomNugget-Sheet_42: 1572299658
+      phantomNugget-Sheet_58: -139093976
+      phantomNugget-Sheet_82: -162138534
+      phantomNugget-Sheet_0: -573747135
+      phantomNugget-Sheet_131: -1545246867
+      phantomNugget-Sheet_112: 266569724
+      phantomNugget-Sheet_41: 1818004460
+      phantomNugget-Sheet_12: 1727078151
+      phantomNugget-Sheet_36: -9151325
+      phantomNugget-Sheet_129: 448859595
+      phantomNugget-Sheet_105: 297226392
+      phantomNugget-Sheet_111: -1029267137
+      phantomNugget-Sheet_52: 969708836
+      phantomNugget-Sheet_39: 530141751
+      phantomNugget-Sheet_57: 1320233228
+      phantomNugget-Sheet_87: 83654978
+      phantomNugget-Sheet_92: -1850200108
+      phantomNugget-Sheet_6: 425905576
+      phantomNugget-Sheet_77: -122794856
+      phantomNugget-Sheet_84: -1430019921
+      phantomNugget-Sheet_40: 298286333
+      phantomNugget-Sheet_9: 265010099
+      phantomNugget-Sheet_15: 593003228
+      phantomNugget-Sheet_21: -1631444204
+      phantomNugget-Sheet_61: 1391892514
+      phantomNugget-Sheet_23: -1090592570
+      phantomNugget-Sheet_29: 372813432
+      phantomNugget-Sheet_73: -594553099
+      phantomNugget-Sheet_47: 479789287
+      phantomNugget-Sheet_1: 1952306179
+      phantomNugget-Sheet_46: 555090822
+      phantomNugget-Sheet_27: 1669385157
+      phantomNugget-Sheet_113: 2123142087
+      phantomNugget-Sheet_17: 730626900
+      phantomNugget-Sheet_81: -1413606361
+      phantomNugget-Sheet_60: 452974549
+      phantomNugget-Sheet_67: 1175936491
+      phantomNugget-Sheet_53: 911736237
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,6 +20,10 @@ public class PotShotEnemy : TestAI
         Setup();
         collide = GetComponent<BoxCollider2D>();
         slash = GetComponentInChildren<Animator>();
+
+        enemyAni.slashes = slashes;
+        enemyAni._rot = _rot;
+        StartCoroutine(enemyAni.Idle());
     }
 
     // Update is called once per frame
@@ -33,8 +37,9 @@ public class PotShotEnemy : TestAI
     {
         
         currentpos = transform.position;
-        if(!attacking)ChangeSprite(GMController.gm.oc.phantom, GetComponent<SpriteRenderer>());
-        AttackDir(GMController.gm.oc.phantom);
+      
+        if(anim)AttackDir(GMController.gm.oc.phantom);
+        else SpriteDir(GMController.gm.oc.phantom);
         
         dist = Vector2.Distance(currentpos, pos);
         dist2 = Vector2.Distance(transform.position, lastpos);
@@ -48,6 +53,8 @@ public class PotShotEnemy : TestAI
             if (found & !stun & !anim)
             {
                 MoveToPlayer();
+                enemyAni.idleStop = true;
+                if(!enemyAni.walkPlaying)StartCoroutine(enemyAni.WalkAni());
             }
 
             if (attack & !anim) Attack();
@@ -57,10 +64,13 @@ public class PotShotEnemy : TestAI
     }
     public override void Attack()
     {
+        enemyAni.idleStop = true;
             anim = true;
             attacking = true;
             lastpos = transform.position;
             pos = GMController.gm.player.position;
+            enemyAni.walkStop = true;
+            enemyAni.walkPlaying = false;
             if (pos != Vector3.zero)
             {
                 // Debug.Log(pos);
@@ -68,6 +78,7 @@ public class PotShotEnemy : TestAI
             }
             else
             {
+                enemyAni.walkStop = false;
                 attack = false;
                 attacking = false;
                 anim = false;
@@ -83,7 +94,10 @@ public class PotShotEnemy : TestAI
         // ai.destination = transform.position;
         ai.enabled = false;
         collide.isTrigger = true;
-        
+        enemyAni.walkStop = true;
+        enemyAni.walkPlaying = false;
+        enemyAni.attackStop = false;
+       
        
         attackSign.SetActive(true);
         SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.phantomNoise);
@@ -100,29 +114,29 @@ public class PotShotEnemy : TestAI
 
     IEnumerator SlashAttack()
     {
+       
         collide.isTrigger = false;
         GetComponent<SpriteRenderer>().color = Color.white;
         attackSign.SetActive(false);
+        
         yield return new WaitForSeconds(attackDelay);
         attackSign.SetActive(true);
-        GetComponent<SpriteRenderer>().sprite = attackSprites[0];
-        yield return new WaitForSeconds(attackDelay);
+        StartCoroutine(enemyAni.PhantomSlash(slash));
+        // GetComponent<SpriteRenderer>().sprite = attackSprites[0];
+        yield return new WaitForSeconds(attackDelay );
         attackSign.SetActive(false);
-        GetComponent<SpriteRenderer>().sprite = attackSprites[1];
-        slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
-        Debug.Log(movementDir.spriteNum);
-        slash.SetTrigger("Slash");
-        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
-        yield return new WaitForSeconds(.5f);
-        attackSign.SetActive(true);
-        GetComponent<SpriteRenderer>().sprite = attackSprites[0];
-        yield return new WaitForSeconds(attackDelay * .5f);
-        attackSign.SetActive(false);
-        GetComponent<SpriteRenderer>().sprite = attackSprites[1];
-        slashes.transform.eulerAngles = _rot[movementDir.spriteNum];
-        Debug.Log(movementDir.spriteNum);
-        slash.SetTrigger("Slash");
-        SoundControl.Soundcntrl.EnemyAS.PlayOneShot(TempSound.soundtemp.swordclips[0]);
+      
+        // GetComponent<SpriteRenderer>().sprite = attackSprites[1];
+       
+        
+       
+       
+        yield return new WaitForSeconds(attackDelay + .9f);
+       
+        // GetComponent<SpriteRenderer>().sprite = attackSprites[1];
+       
+        
+        
         yield return new WaitForSeconds(.1f);
         StartCoroutine(DownTime(GetComponent<SpriteRenderer>(), new Color(256, 256, 256, .5f)));
     }
@@ -146,6 +160,7 @@ public class PotShotEnemy : TestAI
 
     public override IEnumerator DownTime(SpriteRenderer spriteColor, Color ogColor)
     {
+       enemyAni.StopSlash();
         spriteColor.color = Color.grey;
         yield return new WaitForSeconds(cooldownRate);
         spriteColor.color = ogColor;

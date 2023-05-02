@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8075ef24ae2e3941af6ab570caa77f1, type: 3}
   m_Name: BlueTable
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 347059a2446e1e645bbe048d68f6acd5, type: 3}
-  spriteAlt: {fileID: 21300000, guid: 13afc62b40002ce478d4b0089c829d9e, type: 3}
+  sprite: {fileID: 21300000, guid: 4dd1d3b1289664d4e816ed2b34155c04, type: 3}
+  spriteAlt: {fileID: 21300000, guid: ccf0bbbaa9c36fa46b1d0f61b7ba68c7, type: 3}
   objectName: Blue Table
   chance: 100

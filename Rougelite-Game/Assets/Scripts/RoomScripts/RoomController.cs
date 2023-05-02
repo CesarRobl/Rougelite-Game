@@ -23,7 +23,8 @@ public class RoomController : MonoBehaviour
     [HideInInspector]public List<GameObject> enemycount;
      public SpawnController[] spawner;
      [SerializeField] private GameObject[] bossdoorsprite;
-     
+     [HideInInspector] public List<SpriteRenderer> hiddenColor;
+
      private AstarPath path;
 
      private bool stop, stop2;
@@ -113,6 +114,7 @@ public class RoomController : MonoBehaviour
 
                 GameObject wall = Instantiate(GMController.gm.oc.doorwalls, doors[i].transform.position, Quaternion.Euler(rot));
                 wall.GetComponent<SpriteRenderer>().color = Color.grey;
+                hiddenColor.Add(wall.GetComponent<SpriteRenderer>());
                
             }
 
@@ -208,6 +210,10 @@ public class RoomController : MonoBehaviour
         {
           
             for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.yellow;
+            for (int i = 0; i < hiddenColor.Count; i++)
+            {
+                hiddenColor[i].color = Color.yellow;
+            }
             if (maps.Count > 0)
             {
                 for (int i = 0; i < maps.Count; i++)
@@ -226,6 +232,10 @@ public class RoomController : MonoBehaviour
         {
             
             for (int i = 0; i < mapwalls.Length; i++) mapwalls[i].GetComponent<SpriteRenderer>().color = Color.white;
+            for (int i = 0; i < hiddenColor.Count; i++)
+            {
+                hiddenColor[i].color = Color.white;
+            }
             if (maps.Count > 0)
             {
                 for (int i = 0; i < maps.Count; i++)

@@ -21,11 +21,12 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject crosshair;
     [SerializeField] private Slider[] sliders;
     [SerializeField] private Transform mapRender;
+    [SerializeField] private GameObject[] ui;
     private bool buttonPressed,stopAni,changeScene, _stopMenu;
     private int sceneNum;
 
     [HideInInspector] public bool showmenu;
-    private bool stop;
+    private bool stop, _stop2;
     void Start()
     {
        Invoke("Camera",.1f);
@@ -57,7 +58,7 @@ public class UIController : MonoBehaviour
     }
      void ShowMenuTab()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) & GMController.gm.loading)
+        if (Input.GetKeyDown(KeyCode.Escape) & GMController.gm.loading & !GMController.gm.playerDead)
         {
             if (!showmenu)
             {
@@ -194,17 +195,20 @@ public class UIController : MonoBehaviour
      {
          StartCoroutine(FadeDeathButton(sceneNum));
      }
+
      IEnumerator FadeScreen()
      {
          yield return new WaitForSeconds(2f);
-         loadscreen[0].GetComponent<RawImage>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+         loadscreen[0].GetComponent<Image>().color -=
+             new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
          // loadscreen[1].GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
-         loadscreen[2].GetComponent<TextMeshProUGUI>().color -= new Color(0, 0, 0, GMController.fadespeed * Time.deltaTime);
+
          yield return new WaitForSeconds(.1f);
-         if (loadscreen[0].GetComponent<RawImage>().color.a <= 0)
+         
+     if (loadscreen[0].GetComponent<Image>().color.a <= 0)
          {
+             
              loadscreen[0].SetActive(false);
-             loadscreen[1].SetActive(false);
              stop = true;
          }
      }

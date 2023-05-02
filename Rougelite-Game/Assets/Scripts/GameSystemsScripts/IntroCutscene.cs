@@ -24,7 +24,7 @@ public class IntroCutscene : MonoBehaviour
         audio = GetComponent<AudioSource>();
         audio.volume = GMController.MusicVolume;
         StartCoroutine(ChangeMusic());
-        StartCoroutine(StartCountDown());
+       
     }
 
     // Update is called once per frame
@@ -52,7 +52,7 @@ public class IntroCutscene : MonoBehaviour
 
     IEnumerator StartCountDown()
     {
-        yield return new WaitForSeconds(105f);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("RandomLevel");
     }
 
@@ -67,8 +67,10 @@ public class IntroCutscene : MonoBehaviour
                     SceneInt++;
                     startFade = false;
                 }
-                
-               
+
+                else StartCoroutine(StartCountDown());
+
+
             }
         
     }

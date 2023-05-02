@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6165929809796948070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1817303, y: 2.206389, z: 0}
+  m_LocalPosition: {x: -4.1817303, y: 2.206389, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 4
   cooldownInt: 0
+  cooldownMax: 0
   found: 0
   drange: 10
   cooldownRate: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   attacking: 0
   anim: 0
   cooldown: 0
+  soundDelay: 0
   ps: {fileID: 0}
   ai: {fileID: 8015337556194349403}
   ow: {fileID: 0}

@@ -350,6 +350,13 @@ MonoBehaviour:
   shield: {fileID: 8837672101451724717}
   tele: {fileID: 3603025163040586340}
   minions: []
+  wendyBrooms:
+  - {fileID: 21300000, guid: 28d85ff5b47fca84088fff54887a5559, type: 3}
+  - {fileID: 21300000, guid: 7d71ecb97388b29479f913f9b470c74a, type: 3}
+  - {fileID: 21300000, guid: c37cbbcf469707443ad37a52e1752c80, type: 3}
+  - {fileID: 21300000, guid: 1645cd661ee50994d8e6ca422fdbf644, type: 3}
+  - {fileID: 21300000, guid: 72aa65db647397d4f982a262fde34dc7, type: 3}
+  - {fileID: 21300000, guid: 1ae36471c83fae64dbe2ca0474e61e2e, type: 3}
   shootDelay: 0
 --- !u!114 &-7771246802295038354
 MonoBehaviour:
@@ -623,6 +630,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 52948114868200592, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: dir
+      value: 
+      objectReference: {fileID: 5669886393377399694}
+    - target: {fileID: 52948114868200592, guid: 36fa8ae181286454cbc277b189985531, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 8580895745338643053}
     - target: {fileID: 7222679487461871696, guid: 36fa8ae181286454cbc277b189985531, type: 3}
       propertyPath: m_Name
       value: EnemyAnimations
@@ -782,3 +797,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4174617050041878790, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
   m_PrefabInstance: {fileID: 8592942532334037641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5669886393377399694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4174617050041878791, guid: 21865b91afc4a36448f7ac18e5d22c90, type: 3}
+  m_PrefabInstance: {fileID: 8592942532334037641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a3330c6b5b380479c7378b97f1c0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
